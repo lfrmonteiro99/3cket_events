@@ -16,6 +16,7 @@ class RouterTest extends TestCase
 {
     /** @var Container&MockObject */
     private MockObject $container;
+
     private Router $router;
 
     public function testAddRoute(): void

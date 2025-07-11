@@ -61,7 +61,7 @@ class Router
 
         // Extract route parameters
         $parameters = $route->extractParameters($path);
-        
+
         // Call controller method with parameters
         if (empty($parameters)) {
             $controller->$action();

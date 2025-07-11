@@ -9,6 +9,7 @@ use App\Domain\Entity\Event;
 use App\Domain\Repository\EventRepositoryInterface;
 use App\Domain\ValueObject\EventId;
 use App\Infrastructure\Cache\CacheInterface;
+use App\Infrastructure\Logging\LoggerInterface;
 
 class CachedEventRepository implements EventRepositoryInterface
 {
@@ -16,17 +17,20 @@ class CachedEventRepository implements EventRepositoryInterface
     private CacheInterface $cache;
     private int $defaultTtl;
     private string $keyPrefix;
+    private ?LoggerInterface $logger;
 
     public function __construct(
         EventRepositoryInterface $repository,
         CacheInterface $cache,
         int $defaultTtl = 3600,
-        string $keyPrefix = 'events:'
+        string $keyPrefix = 'events:',
+        ?LoggerInterface $logger = null
     ) {
         $this->repository = $repository;
         $this->cache = $cache;
         $this->defaultTtl = $defaultTtl;
         $this->keyPrefix = $keyPrefix;
+        $this->logger = $logger;
     }
 
     public function findAll(): array
@@ -37,13 +41,13 @@ class CachedEventRepository implements EventRepositoryInterface
         $cached = $this->cache->get($cacheKey);
 
         if ($cached !== null) {
-            error_log('CachedEventRepository: Cache HIT for findAll()');
+            $this->logger?->logCacheOperation('Cache HIT for findAll()');
 
             return $cached;
         }
 
         // Cache miss - get from repository
-        error_log('CachedEventRepository: Cache MISS for findAll() - fetching from repository');
+        $this->logger?->logCacheOperation('Cache MISS for findAll() - fetching from repository');
         $events = $this->repository->findAll();
 
         // Store in cache
@@ -122,46 +126,6 @@ class CachedEventRepository implements EventRepositoryInterface
         return $count;
     }
 
-    public function save(Event $event): Event
-    {
-        // Save the event in the repository
-        $savedEvent = $this->repository->save($event);
-
-        // Invalidate related cache entries since data has changed
-        $this->invalidateListCaches();
-
-        // Cache the saved event
-        if ($savedEvent->getId() !== null) {
-            $cacheKey = $this->keyPrefix . 'id:' . $savedEvent->getId()->getValue();
-            $this->cache->set($cacheKey, $savedEvent, $this->defaultTtl);
-        }
-
-        error_log('CachedEventRepository: Saved event and invalidated list caches');
-
-        return $savedEvent;
-    }
-
-    public function delete(EventId $id): bool
-    {
-        // Delete from repository
-        $result = $this->repository->delete($id);
-
-        if ($result) {
-            // Invalidate related cache entries
-            $this->invalidateListCaches();
-            $this->cache->delete($this->keyPrefix . 'id:' . $id->getValue());
-
-            error_log("CachedEventRepository: Deleted event {$id->getValue()} and invalidated caches");
-        }
-
-        return $result;
-    }
-
-    public function nextId(): EventId
-    {
-        return $this->repository->nextId();
-    }
-
     /**
      * Clear all cache entries for this repository.
      */
@@ -196,25 +160,9 @@ class CachedEventRepository implements EventRepositoryInterface
     public function getCacheStats(): array
     {
         if (method_exists($this->cache, 'getStats')) {
-            /** @var array<string, mixed> $stats */
-            $stats = call_user_func([$this->cache, 'getStats']);
-            return $stats;
+            return call_user_func([$this->cache, 'getStats']);
         }
 
         return ['message' => 'Cache statistics not available'];
-    }
-
-    /**
-     * Invalidate list-related cache entries (all, count, paginated).
-     */
-    private function invalidateListCaches(): void
-    {
-        $this->cache->delete($this->keyPrefix . 'all');
-        $this->cache->delete($this->keyPrefix . 'count');
-        
-        // Clear paginated cache entries - we can't easily clear all keys with a prefix
-        // in all cache implementations, so we'll clear the main cache during save/delete
-        // This is a limitation that could be improved with a more sophisticated cache implementation
-        $this->cache->clear();
     }
 }

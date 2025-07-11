@@ -5,8 +5,6 @@ declare(strict_types=1);
 namespace Tests\Unit\Domain\Entity;
 
 use App\Domain\Entity\Event;
-use App\Domain\Event\EventCreated;
-use App\Domain\Event\EventUpdated;
 use App\Domain\ValueObject\Coordinates;
 use App\Domain\ValueObject\EventId;
 use App\Domain\ValueObject\EventName;
@@ -30,72 +28,6 @@ class EventTest extends TestCase
         $this->assertEquals($coordinates, $event->getCoordinates());
         $this->assertInstanceOf(\DateTimeImmutable::class, $event->getCreatedAt());
         $this->assertInstanceOf(\DateTimeImmutable::class, $event->getUpdatedAt());
-    }
-
-    public function testEventWithoutIdRaisesDomainEvent(): void
-    {
-        $name = new EventName('Test Event');
-        $location = new Location('Test Location');
-        $coordinates = new Coordinates(40.7128, -74.0060);
-
-        $event = new Event($name, $location, $coordinates);
-
-        $domainEvents = $event->getDomainEvents();
-        $this->assertCount(1, $domainEvents);
-        $this->assertInstanceOf(EventCreated::class, $domainEvents[0]);
-    }
-
-    public function testEventUpdateName(): void
-    {
-        $event = $this->createTestEvent();
-        $newName = new EventName('Updated Event');
-
-        $event->updateName($newName);
-
-        $this->assertEquals($newName, $event->getName());
-
-        $domainEvents = $event->getDomainEvents();
-        $this->assertCount(1, $domainEvents);
-        $this->assertInstanceOf(EventUpdated::class, $domainEvents[0]);
-    }
-
-    public function testEventUpdateNameWithSameNameDoesNotRaiseDomainEvent(): void
-    {
-        $name = new EventName('Test Event');
-        $event = $this->createTestEvent($name);
-
-        $event->updateName($name);
-
-        $domainEvents = $event->getDomainEvents();
-        $this->assertCount(0, $domainEvents);
-    }
-
-    public function testEventUpdateLocation(): void
-    {
-        $event = $this->createTestEvent();
-        $newLocation = new Location('Updated Location');
-
-        $event->updateLocation($newLocation);
-
-        $this->assertEquals($newLocation, $event->getLocation());
-
-        $domainEvents = $event->getDomainEvents();
-        $this->assertCount(1, $domainEvents);
-        $this->assertInstanceOf(EventUpdated::class, $domainEvents[0]);
-    }
-
-    public function testEventUpdateCoordinates(): void
-    {
-        $event = $this->createTestEvent();
-        $newCoordinates = new Coordinates(34.0522, -118.2437);
-
-        $event->updateCoordinates($newCoordinates);
-
-        $this->assertEquals($newCoordinates, $event->getCoordinates());
-
-        $domainEvents = $event->getDomainEvents();
-        $this->assertCount(1, $domainEvents);
-        $this->assertInstanceOf(EventUpdated::class, $domainEvents[0]);
     }
 
     public function testEventDistanceTo(): void
@@ -150,19 +82,6 @@ class EventTest extends TestCase
         $this->assertEquals(1, $array['id']);
         $this->assertArrayHasKey('created_at', $array);
         $this->assertArrayHasKey('updated_at', $array);
-    }
-
-    public function testClearDomainEvents(): void
-    {
-        $event = $this->createTestEvent();
-        $newName = new EventName('Updated Event');
-        $event->updateName($newName);
-
-        $this->assertCount(1, $event->getDomainEvents());
-
-        $event->clearDomainEvents();
-
-        $this->assertCount(0, $event->getDomainEvents());
     }
 
     private function createTestEvent(

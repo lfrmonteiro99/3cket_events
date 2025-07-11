@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace App\Domain\Entity;
 
-use App\Domain\Event\EventCreated;
-use App\Domain\Event\EventUpdated;
 use App\Domain\ValueObject\Coordinates;
 use App\Domain\ValueObject\EventId;
 use App\Domain\ValueObject\EventName;
@@ -21,9 +19,6 @@ final class Event
     private DateTimeImmutable $createdAt;
     private DateTimeImmutable $updatedAt;
 
-    /** @var array<object> */
-    private array $domainEvents = [];
-
     public function __construct(
         EventName $name,
         Location $location,
@@ -36,11 +31,6 @@ final class Event
         $this->coordinates = $coordinates;
         $this->createdAt = new DateTimeImmutable();
         $this->updatedAt = new DateTimeImmutable();
-
-        // Raise domain event if this is a new event
-        if ($id === null) {
-            $this->raiseDomainEvent(new EventCreated($this));
-        }
     }
 
     public function getId(): ?EventId
@@ -73,33 +63,6 @@ final class Event
         return $this->updatedAt;
     }
 
-    public function updateName(EventName $name): void
-    {
-        if (!$this->name->equals($name)) {
-            $this->name = $name;
-            $this->updatedAt = new DateTimeImmutable();
-            $this->raiseDomainEvent(new EventUpdated($this));
-        }
-    }
-
-    public function updateLocation(Location $location): void
-    {
-        if (!$this->location->equals($location)) {
-            $this->location = $location;
-            $this->updatedAt = new DateTimeImmutable();
-            $this->raiseDomainEvent(new EventUpdated($this));
-        }
-    }
-
-    public function updateCoordinates(Coordinates $coordinates): void
-    {
-        if (!$this->coordinates->equals($coordinates)) {
-            $this->coordinates = $coordinates;
-            $this->updatedAt = new DateTimeImmutable();
-            $this->raiseDomainEvent(new EventUpdated($this));
-        }
-    }
-
     public function distanceTo(self $other): float
     {
         return $this->coordinates->distanceTo($other->coordinates);
@@ -110,19 +73,6 @@ final class Event
         return $this->id !== null &&
                $other->id !== null &&
                $this->id->equals($other->id);
-    }
-
-    /**
-     * @return array<object>
-     */
-    public function getDomainEvents(): array
-    {
-        return $this->domainEvents;
-    }
-
-    public function clearDomainEvents(): void
-    {
-        $this->domainEvents = [];
     }
 
     /**
@@ -146,8 +96,11 @@ final class Event
         return $data;
     }
 
-    private function raiseDomainEvent(object $event): void
+    /**
+     * @return array<string>
+     */
+    public function __sleep(): array
     {
-        $this->domainEvents[] = $event;
+        return ['id', 'name', 'location', 'coordinates', 'createdAt', 'updatedAt'];
     }
 }

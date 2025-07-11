@@ -18,10 +18,10 @@ class ResponseManager
     }
 
     /**
-     * Send successful response
+     * Send successful response.
      *
      * @param array<string, mixed> $data
-     * @param HttpStatus $status
+     * @param HttpStatus           $status
      */
     public function sendSuccess(array $data, HttpStatus $status = HttpStatus::OK): void
     {
@@ -30,10 +30,10 @@ class ResponseManager
     }
 
     /**
-     * Send error response
+     * Send error response.
      *
-     * @param string $message
-     * @param HttpStatus $status
+     * @param string               $message
+     * @param HttpStatus           $status
      * @param array<string, mixed> $details
      */
     public function sendError(string $message, HttpStatus $status = HttpStatus::BAD_REQUEST, array $details = []): void
@@ -43,7 +43,7 @@ class ResponseManager
     }
 
     /**
-     * Send 404 Not Found response
+     * Send 404 Not Found response.
      */
     public function sendNotFound(string $message = 'Resource not found'): void
     {
@@ -51,7 +51,7 @@ class ResponseManager
     }
 
     /**
-     * Get the current format strategy
+     * Get the current format strategy.
      */
     public function getStrategy(): ResponseFormatStrategy
     {
@@ -59,7 +59,7 @@ class ResponseManager
     }
 
     /**
-     * Get the current formatter
+     * Get the current formatter.
      */
     public function getFormatter(): ResponseFormatterInterface
     {
@@ -67,7 +67,23 @@ class ResponseManager
     }
 
     /**
-     * Detect response format from request
+     * Create ResponseManager from environment/request.
+     */
+    public static function createFromRequest(): self
+    {
+        return new self();
+    }
+
+    /**
+     * Create ResponseManager with specific format.
+     */
+    public static function createWithFormat(ResponseFormatStrategy $strategy): self
+    {
+        return new self($strategy);
+    }
+
+    /**
+     * Detect response format from request.
      */
     private function detectFormat(): ResponseFormatStrategy
     {
@@ -78,11 +94,12 @@ class ResponseManager
 
         // Priority 2: Accept header
         $acceptHeader = $_SERVER['HTTP_ACCEPT'] ?? 'application/json';
+
         return ResponseFormatStrategy::fromAcceptHeader($acceptHeader);
     }
 
     /**
-     * Send the formatted response
+     * Send the formatted response.
      */
     private function sendResponse(string $content, HttpStatus $status): void
     {
@@ -100,22 +117,4 @@ class ResponseManager
         // Output the content
         echo $content;
     }
-
-
-
-    /**
-     * Create ResponseManager from environment/request
-     */
-    public static function createFromRequest(): self
-    {
-        return new self();
-    }
-
-    /**
-     * Create ResponseManager with specific format
-     */
-    public static function createWithFormat(ResponseFormatStrategy $strategy): self
-    {
-        return new self($strategy);
-    }
-} 
+}

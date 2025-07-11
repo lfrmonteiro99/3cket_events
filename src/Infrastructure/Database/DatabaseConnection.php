@@ -43,13 +43,7 @@ class DatabaseConnection
         ];
 
         try {
-            $connection = new PDO($dsn, $this->username, $this->password, $options);
-
-            // Log connection creation for monitoring
-            error_log('DatabaseConnection: New PDO persistent connection created for process ' . getmypid());
-
-            return $connection;
-
+            return new PDO($dsn, $this->username, $this->password, $options);
         } catch (PDOException $e) {
             throw new PDOException('Connection failed: ' . $e->getMessage(), $e->getCode());
         }

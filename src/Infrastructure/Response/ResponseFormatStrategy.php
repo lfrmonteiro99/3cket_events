@@ -6,11 +6,6 @@ namespace App\Infrastructure\Response;
 
 enum ResponseFormatStrategy: string
 {
-    case JSON = 'json';
-    case XML = 'xml';
-    case CSV = 'csv';
-    case HTML = 'html';
-
     public static function fromString(string $value): self
     {
         return self::tryFrom(strtolower($value)) ?? self::JSON;
@@ -20,19 +15,19 @@ enum ResponseFormatStrategy: string
     {
         // Parse Accept header to determine preferred format
         $acceptHeader = strtolower($acceptHeader);
-        
+
         if (str_contains($acceptHeader, 'application/xml') || str_contains($acceptHeader, 'text/xml')) {
             return self::XML;
         }
-        
+
         if (str_contains($acceptHeader, 'text/csv') || str_contains($acceptHeader, 'application/csv')) {
             return self::CSV;
         }
-        
+
         if (str_contains($acceptHeader, 'text/html')) {
             return self::HTML;
         }
-        
+
         // Default to JSON
         return self::JSON;
     }
@@ -66,4 +61,8 @@ enum ResponseFormatStrategy: string
             self::HTML => new HtmlResponseFormatter(),
         };
     }
-} 
+    case JSON = 'json';
+    case XML = 'xml';
+    case CSV = 'csv';
+    case HTML = 'html';
+}

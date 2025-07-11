@@ -25,16 +25,16 @@ final class GetPaginatedEventsUseCase implements GetPaginatedEventsUseCaseInterf
     public function execute(GetPaginatedEventsQuery $query): PaginatedResponse
     {
         $pagination = $query->pagination;
-        
+
         // Get paginated events from repository (with caching)
         $events = $this->eventRepository->findPaginated($pagination);
-        
+
         // Get total count for pagination metadata
         $totalCount = $this->eventRepository->count();
-        
+
         // Convert events to DTOs
         $eventDtos = EventMapper::toDtoArray($events);
-        
+
         // Create paginated response
         return PaginatedResponse::create(
             $eventDtos,
@@ -43,4 +43,4 @@ final class GetPaginatedEventsUseCase implements GetPaginatedEventsUseCaseInterf
             $pagination->pageSize
         );
     }
-} 
+}

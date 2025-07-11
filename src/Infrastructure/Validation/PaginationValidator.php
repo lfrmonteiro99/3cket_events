@@ -17,6 +17,7 @@ class PaginationValidator implements ValidatorInterface
         // Validate page parameter
         if (isset($value['page'])) {
             $pageResult = $this->validatePage($value['page']);
+
             if (!$pageResult->isValid()) {
                 $errors = array_merge($errors, $pageResult->getErrors());
             }
@@ -25,6 +26,7 @@ class PaginationValidator implements ValidatorInterface
         // Validate page size parameter
         if (isset($value['page_size'])) {
             $pageSizeResult = $this->validatePageSize($value['page_size']);
+
             if (!$pageSizeResult->isValid()) {
                 $errors = array_merge($errors, $pageSizeResult->getErrors());
             }
@@ -33,6 +35,7 @@ class PaginationValidator implements ValidatorInterface
         // Validate sort by parameter
         if (isset($value['sort_by'])) {
             $sortByResult = $this->validateSortBy($value['sort_by']);
+
             if (!$sortByResult->isValid()) {
                 $errors = array_merge($errors, $sortByResult->getErrors());
             }
@@ -41,6 +44,7 @@ class PaginationValidator implements ValidatorInterface
         // Validate sort direction parameter
         if (isset($value['sort_direction'])) {
             $sortDirectionResult = $this->validateSortDirection($value['sort_direction']);
+
             if (!$sortDirectionResult->isValid()) {
                 $errors = array_merge($errors, $sortDirectionResult->getErrors());
             }
@@ -70,8 +74,8 @@ class PaginationValidator implements ValidatorInterface
     private function validateSortBy(mixed $sortBy): ValidationResult
     {
         $validSortFields = ['id', 'event_name', 'location', 'created_at'];
-        
-        if (!is_string($sortBy) || !in_array($sortBy, $validSortFields)) {
+
+        if (!is_string($sortBy) || !in_array($sortBy, $validSortFields, true)) {
             return ValidationResult::failure(['Invalid sort field. Valid fields: ' . implode(', ', $validSortFields)]);
         }
 
@@ -81,11 +85,11 @@ class PaginationValidator implements ValidatorInterface
     private function validateSortDirection(mixed $sortDirection): ValidationResult
     {
         $validDirections = ['ASC', 'DESC'];
-        
-        if (!is_string($sortDirection) || !in_array(strtoupper($sortDirection), $validDirections)) {
+
+        if (!is_string($sortDirection) || !in_array(strtoupper($sortDirection), $validDirections, true)) {
             return ValidationResult::failure(['Sort direction must be ASC or DESC']);
         }
 
         return ValidationResult::success();
     }
-} 
+}

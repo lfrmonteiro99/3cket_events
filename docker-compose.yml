@@ -1,9 +1,10 @@
 services:
   app:
+    image: 3cket/php-app:dev
     build:
       context: .
       dockerfile: Dockerfile
-    image: 3cket-php-app
+      target: development
     container_name: 3cket-app
     restart: unless-stopped
     working_dir: /var/www

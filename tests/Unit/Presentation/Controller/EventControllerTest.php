@@ -6,12 +6,7 @@ namespace Tests\Unit\Presentation\Controller;
 
 use App\Application\DTO\EventDto;
 use App\Application\DTO\PaginatedResponse;
-use App\Application\Query\GetAllEventsQuery;
-use App\Application\Query\GetEventByIdQuery;
-use App\Application\Query\GetPaginatedEventsQuery;
-use App\Application\UseCase\GetAllEventsUseCaseInterface;
-use App\Application\UseCase\GetEventByIdUseCaseInterface;
-use App\Application\UseCase\GetPaginatedEventsUseCaseInterface;
+use App\Application\Service\EventServiceInterface;
 use App\Domain\Repository\EventRepositoryInterface;
 use App\Infrastructure\Response\ResponseManager;
 use App\Infrastructure\Validation\EventIdValidator;
@@ -23,48 +18,63 @@ use PHPUnit\Framework\TestCase;
 
 class EventControllerTest extends TestCase
 {
-    /** @var GetAllEventsUseCaseInterface&MockObject */
-    private $getAllEventsUseCase;
-
-    /** @var GetEventByIdUseCaseInterface&MockObject */
-    private $getEventByIdUseCase;
-
-    /** @var GetPaginatedEventsUseCaseInterface&MockObject */
-    private $getPaginatedEventsUseCase;
+    /** @var EventServiceInterface&MockObject */
+    private $eventService;
 
     /** @var EventRepositoryInterface&MockObject */
     private $eventRepository;
 
-    /** @var PaginationValidator&MockObject */
+    /** @var MockObject&PaginationValidator */
     private $paginationValidator;
 
     /** @var EventIdValidator&MockObject */
     private $eventIdValidator;
 
-    /** @var ResponseManager&MockObject */
+    /** @var MockObject&ResponseManager */
     private $responseManager;
 
     private EventController $controller;
 
-    public function testIndexReturnsAllEvents(): void
+    public function testIndexReturnsPaginatedEvents(): void
     {
         $events = [
             $this->createEventDto(1, 'Event 1', 'Location 1', 40.7128, -74.0060),
             $this->createEventDto(2, 'Event 2', 'Location 2', 34.0522, -118.2437),
         ];
 
-        $this->getAllEventsUseCase
+        $paginatedResponse = PaginatedResponse::create($events, 10, 1, 10);
+
+        // Mock validation to pass
+        $this->paginationValidator
             ->expects($this->once())
-            ->method('execute')
-            ->with($this->isInstanceOf(GetAllEventsQuery::class))
-            ->willReturn($events);
+            ->method('validate')
+            ->willReturn(ValidationResult::success());
+
+        $this->eventService
+            ->expects($this->once())
+            ->method('getAllEvents')
+            ->willReturn($paginatedResponse);
 
         // Mock the response manager to send success
         $expectedData = [
-            ['event_name' => 'Event 1', 'location' => 'Location 1', 'latitude' => 40.7128, 'longitude' => -74.0060, 'id' => 1, 'created_at' => '2023-01-01 00:00:00', 'updated_at' => '2023-01-01 00:00:00'],
-            ['event_name' => 'Event 2', 'location' => 'Location 2', 'latitude' => 34.0522, 'longitude' => -118.2437, 'id' => 2, 'created_at' => '2023-01-01 00:00:00', 'updated_at' => '2023-01-01 00:00:00']
+            'data' => [
+                ['event_name' => 'Event 1', 'location' => 'Location 1', 'latitude' => 40.7128, 'longitude' => -74.0060, 'id' => 1, 'created_at' => '2023-01-01 00:00:00', 'updated_at' => '2023-01-01 00:00:00'],
+                ['event_name' => 'Event 2', 'location' => 'Location 2', 'latitude' => 34.0522, 'longitude' => -118.2437, 'id' => 2, 'created_at' => '2023-01-01 00:00:00', 'updated_at' => '2023-01-01 00:00:00'],
+            ],
+            'pagination' => [
+                'current_page' => 1,
+                'page_size' => 10,
+                'total_items' => 10,
+                'total_pages' => 1,
+                'has_next_page' => false,
+                'has_previous_page' => false,
+                'next_page' => null,
+                'previous_page' => null,
+                'start_item' => 1,
+                'end_item' => 10,
+            ],
         ];
-        
+
         $this->responseManager
             ->expects($this->once())
             ->method('sendSuccess')
@@ -73,101 +83,196 @@ class EventControllerTest extends TestCase
         $this->controller->index();
     }
 
-    public function testIndexReturnsEmptyArrayWhenNoEvents(): void
+    public function testIndexReturnsEmptyPaginatedResponseWhenNoEvents(): void
     {
-        $this->getAllEventsUseCase
+        $paginatedResponse = PaginatedResponse::create([], 0, 1, 10);
+
+        // Mock validation to pass
+        $this->paginationValidator
             ->expects($this->once())
-            ->method('execute')
-            ->with($this->isInstanceOf(GetAllEventsQuery::class))
-            ->willReturn([]);
+            ->method('validate')
+            ->willReturn(ValidationResult::success());
 
-        ob_start();
+        $this->eventService
+            ->expects($this->once())
+            ->method('getAllEvents')
+            ->willReturn($paginatedResponse);
+
+        // Mock the response manager to send success
+        $expectedData = [
+            'data' => [],
+            'pagination' => [
+                'current_page' => 1,
+                'page_size' => 10,
+                'total_items' => 0,
+                'total_pages' => 0,
+                'has_next_page' => false,
+                'has_previous_page' => false,
+                'next_page' => null,
+                'previous_page' => null,
+                'start_item' => 0,
+                'end_item' => 0,
+            ],
+        ];
+
+        $this->responseManager
+            ->expects($this->once())
+            ->method('sendSuccess')
+            ->with($expectedData);
+
         $this->controller->index();
-        $output = ob_get_clean();
-
-        $this->assertIsString($output);
-        $this->assertJson($output);
-        $decodedOutput = json_decode($output, true);
-        $this->assertEquals([], $decodedOutput);
     }
 
-    public function testShowReturnsSpecificEvent(): void
+    public function testIndexWithQueryParameters(): void
     {
-        $event = $this->createEventDto(1, 'Test Event', 'Test Location', 40.7128, -74.0060);
+        $_GET['page'] = '2';
+        $_GET['page_size'] = '5';
+        $_GET['sort_by'] = 'event_name';
+        $_GET['sort_direction'] = 'DESC';
 
-        $this->getEventByIdUseCase
+        $events = [
+            $this->createEventDto(3, 'Event 3', 'Location 3', 51.5074, -0.1278),
+        ];
+
+        $paginatedResponse = PaginatedResponse::create($events, 12, 2, 5);
+
+        // Mock validation to pass
+        $this->paginationValidator
             ->expects($this->once())
-            ->method('execute')
-            ->with($this->isInstanceOf(GetEventByIdQuery::class))
-            ->willReturn($event);
+            ->method('validate')
+            ->willReturn(ValidationResult::success());
 
-        ob_start();
+        $this->eventService
+            ->expects($this->once())
+            ->method('getAllEvents')
+            ->willReturn($paginatedResponse);
+
+        // Mock the response manager to send success
+        $expectedData = [
+            'data' => [
+                ['event_name' => 'Event 3', 'location' => 'Location 3', 'latitude' => 51.5074, 'longitude' => -0.1278, 'id' => 3, 'created_at' => '2023-01-01 00:00:00', 'updated_at' => '2023-01-01 00:00:00'],
+            ],
+            'pagination' => [
+                'current_page' => 2,
+                'page_size' => 5,
+                'total_items' => 12,
+                'total_pages' => 3,
+                'has_next_page' => true,
+                'has_previous_page' => true,
+                'next_page' => 3,
+                'previous_page' => 1,
+                'start_item' => 6,
+                'end_item' => 10,
+            ],
+        ];
+
+        $this->responseManager
+            ->expects($this->once())
+            ->method('sendSuccess')
+            ->with($expectedData);
+
+        $this->controller->index();
+
+        // Clean up $_GET
+        unset($_GET['page'], $_GET['page_size'], $_GET['sort_by'], $_GET['sort_direction']);
+    }
+
+    public function testIndexWithInvalidParameters(): void
+    {
+        $_GET['page'] = '0';
+        $_GET['page_size'] = '101';
+
+        // Mock validation to fail
+        $this->paginationValidator
+            ->expects($this->once())
+            ->method('validate')
+            ->willReturn(ValidationResult::failure(['Page must be a positive integer']));
+
+        $this->responseManager
+            ->expects($this->once())
+            ->method('sendError')
+            ->with('Invalid pagination parameters: Page must be a positive integer', $this->anything());
+
+        $this->controller->index();
+
+        // Clean up $_GET
+        unset($_GET['page'], $_GET['page_size']);
+    }
+
+    public function testShowRequiresIdParameter(): void
+    {
+        $this->responseManager
+            ->expects($this->once())
+            ->method('sendError')
+            ->with('Event ID is required', $this->anything());
+
         $this->controller->show();
-        $output = ob_get_clean();
-
-        $this->assertIsString($output);
-        $this->assertJson($output);
-        $decodedOutput = json_decode($output, true);
-        $this->assertEquals('Test Event', $decodedOutput['event_name']);
-        $this->assertEquals('Test Location', $decodedOutput['location']);
-        $this->assertEquals(1, $decodedOutput['id']);
     }
 
     public function testShowReturnsErrorWhenEventNotFound(): void
     {
-        $this->getEventByIdUseCase
+        $this->eventIdValidator
             ->expects($this->once())
-            ->method('execute')
-            ->with($this->isInstanceOf(GetEventByIdQuery::class))
+            ->method('validate')
+            ->with('999')
+            ->willReturn(ValidationResult::success());
+
+        $this->eventService
+            ->expects($this->once())
+            ->method('getEventById')
+            ->with(999)
             ->willReturn(null);
 
-        ob_start();
-        $this->controller->show();
-        $output = ob_get_clean();
+        $this->responseManager
+            ->expects($this->once())
+            ->method('sendNotFound')
+            ->with('Event not found');
 
-        $this->assertIsString($output);
-        $this->assertJson($output);
-        $decodedOutput = json_decode($output, true);
-        $this->assertArrayHasKey('error', $decodedOutput);
-        $this->assertEquals('Event not found', $decodedOutput['error']);
+        $this->controller->show(['id' => '999']);
     }
 
     public function testShowWithValidIdParameter(): void
     {
         $event = $this->createEventDto(5, 'Event 5', 'Location 5', 48.8566, 2.3522);
 
-        $this->getEventByIdUseCase
+        $this->eventIdValidator
             ->expects($this->once())
-            ->method('execute')
-            ->with($this->callback(function (GetEventByIdQuery $query) {
-                return $query->id === 5;
-            }))
+            ->method('validate')
+            ->with('5')
+            ->willReturn(ValidationResult::success());
+
+        $this->eventService
+            ->expects($this->once())
+            ->method('getEventById')
+            ->with(5)
             ->willReturn($event);
 
-        ob_start();
-        $this->controller->show(['id' => '5']);
-        $output = ob_get_clean();
+        $expectedData = [
+            'event_name' => 'Event 5',
+            'location' => 'Location 5',
+            'latitude' => 48.8566,
+            'longitude' => 2.3522,
+            'id' => 5,
+            'created_at' => '2023-01-01 00:00:00',
+            'updated_at' => '2023-01-01 00:00:00',
+        ];
 
-        $this->assertIsString($output);
-        $this->assertJson($output);
-        $decodedOutput = json_decode($output, true);
-        $this->assertEquals('Event 5', $decodedOutput['event_name']);
-        $this->assertEquals('Location 5', $decodedOutput['location']);
-        $this->assertEquals(5, $decodedOutput['id']);
+        $this->responseManager
+            ->expects($this->once())
+            ->method('sendSuccess')
+            ->with($expectedData);
+
+        $this->controller->show(['id' => '5']);
     }
 
     public function testShowWithInvalidIdParameter(): void
     {
         // Mock the validator to return a validation error
-        $validationResult = $this->createMock(ValidationResult::class);
-        $validationResult->method('isValid')->willReturn(false);
-        $validationResult->method('getFirstError')->willReturn('Event ID must be a positive integer');
-        
         $this->eventIdValidator
             ->expects($this->once())
             ->method('validate')
             ->with('0')
-            ->willReturn($validationResult);
+            ->willReturn(ValidationResult::failure(['Event ID must be a positive integer']));
 
         // Mock the response manager to send error
         $this->responseManager
@@ -181,15 +286,11 @@ class EventControllerTest extends TestCase
     public function testShowWithNegativeIdParameter(): void
     {
         // Mock the validator to return a validation error
-        $validationResult = $this->createMock(ValidationResult::class);
-        $validationResult->method('isValid')->willReturn(false);
-        $validationResult->method('getFirstError')->willReturn('Event ID must be a positive integer');
-        
         $this->eventIdValidator
             ->expects($this->once())
             ->method('validate')
             ->with('-1')
-            ->willReturn($validationResult);
+            ->willReturn(ValidationResult::failure(['Event ID must be a positive integer']));
 
         // Mock the response manager to send error
         $this->responseManager
@@ -202,136 +303,39 @@ class EventControllerTest extends TestCase
 
     public function testDebugReturnsSystemInformation(): void
     {
-        $this->eventRepository
+        $this->eventService
             ->expects($this->once())
-            ->method('count')
+            ->method('getEventCount')
             ->willReturn(4);
 
-        ob_start();
+        $this->responseManager
+            ->expects($this->once())
+            ->method('sendSuccess')
+            ->with($this->callback(function ($data) {
+                return $data['event_count'] === 4
+                    && isset($data['process_id'])
+                    && isset($data['timestamp'])
+                    && $data['pooling_enabled'] === true;
+            }));
+
         $this->controller->debug();
-        $output = ob_get_clean();
-
-        $this->assertIsString($output);
-        $this->assertJson($output);
-        $decodedOutput = json_decode($output, true);
-        $this->assertEquals(4, $decodedOutput['event_count']);
-        $this->assertArrayHasKey('process_id', $decodedOutput);
-        $this->assertArrayHasKey('timestamp', $decodedOutput);
-        $this->assertTrue($decodedOutput['pooling_enabled']);
-    }
-
-    public function testPaginatedReturnsFirstPage(): void
-    {
-        $events = [
-            $this->createEventDto(1, 'Event 1', 'Location 1', 40.7128, -74.0060),
-            $this->createEventDto(2, 'Event 2', 'Location 2', 34.0522, -118.2437),
-        ];
-
-        $paginatedResponse = PaginatedResponse::create($events, 10, 1, 2);
-
-        $this->getPaginatedEventsUseCase
-            ->expects($this->once())
-            ->method('execute')
-            ->with($this->isInstanceOf(GetPaginatedEventsQuery::class))
-            ->willReturn($paginatedResponse);
-
-        ob_start();
-        $this->controller->paginated();
-        $output = ob_get_clean();
-
-        $this->assertIsString($output);
-        $this->assertJson($output);
-        $decodedOutput = json_decode($output, true);
-        
-        $this->assertCount(2, $decodedOutput['data']);
-        $this->assertEquals('Event 1', $decodedOutput['data'][0]['event_name']);
-        $this->assertEquals('Event 2', $decodedOutput['data'][1]['event_name']);
-        
-        $this->assertEquals(1, $decodedOutput['pagination']['current_page']);
-        $this->assertEquals(2, $decodedOutput['pagination']['page_size']);
-        $this->assertEquals(10, $decodedOutput['pagination']['total_items']);
-        $this->assertEquals(5, $decodedOutput['pagination']['total_pages']);
-    }
-
-    public function testPaginatedWithQueryParameters(): void
-    {
-        $_GET['page'] = '2';
-        $_GET['page_size'] = '5';
-        $_GET['sort_by'] = 'event_name';
-        $_GET['sort_direction'] = 'DESC';
-
-        $events = [
-            $this->createEventDto(3, 'Event 3', 'Location 3', 51.5074, -0.1278),
-        ];
-
-        $paginatedResponse = PaginatedResponse::create($events, 12, 2, 5);
-
-        $this->getPaginatedEventsUseCase
-            ->expects($this->once())
-            ->method('execute')
-            ->with($this->callback(function (GetPaginatedEventsQuery $query) {
-                return $query->pagination->page === 2
-                    && $query->pagination->pageSize === 5
-                    && $query->pagination->sortBy === 'event_name'
-                    && $query->pagination->sortDirection === 'DESC';
-            }))
-            ->willReturn($paginatedResponse);
-
-        ob_start();
-        $this->controller->paginated();
-        $output = ob_get_clean();
-
-        $this->assertIsString($output);
-        $this->assertJson($output);
-        $decodedOutput = json_decode($output, true);
-        
-        $this->assertCount(1, $decodedOutput['data']);
-        $this->assertEquals(2, $decodedOutput['pagination']['current_page']);
-        $this->assertEquals(5, $decodedOutput['pagination']['page_size']);
-
-        // Clean up $_GET
-        unset($_GET['page'], $_GET['page_size'], $_GET['sort_by'], $_GET['sort_direction']);
-    }
-
-    public function testPaginatedWithInvalidParameters(): void
-    {
-        $_GET['page'] = '0';
-        $_GET['page_size'] = '101';
-        $_GET['sort_by'] = 'invalid_field';
-
-        ob_start();
-        $this->controller->paginated();
-        $output = ob_get_clean();
-
-        $this->assertIsString($output);
-        $this->assertJson($output);
-        $decodedOutput = json_decode($output, true);
-        
-        $this->assertArrayHasKey('error', $decodedOutput);
-        $this->assertStringContainsString('Invalid pagination parameters', $decodedOutput['error']);
-
-        // Clean up $_GET
-        unset($_GET['page'], $_GET['page_size'], $_GET['sort_by']);
     }
 
     protected function setUp(): void
     {
-        $this->getAllEventsUseCase = $this->createMock(GetAllEventsUseCaseInterface::class);
-        $this->getEventByIdUseCase = $this->createMock(GetEventByIdUseCaseInterface::class);
-        $this->getPaginatedEventsUseCase = $this->createMock(GetPaginatedEventsUseCaseInterface::class);
+        $this->eventService = $this->createMock(EventServiceInterface::class);
         $this->eventRepository = $this->createMock(EventRepositoryInterface::class);
         $this->paginationValidator = $this->createMock(PaginationValidator::class);
         $this->eventIdValidator = $this->createMock(EventIdValidator::class);
         $this->responseManager = $this->createMock(ResponseManager::class);
 
         $this->controller = new EventController(
-            $this->getAllEventsUseCase,
-            $this->getEventByIdUseCase,
-            $this->getPaginatedEventsUseCase,
+            $this->eventService,
             $this->eventRepository,
             $this->paginationValidator,
             $this->eventIdValidator,
-            $this->responseManager
+            $this->responseManager,
+            new \App\Infrastructure\Logging\NullLogger()
         );
     }
 

@@ -1,187 +1,515 @@
 # 3cket Event Management System
 
-## 🎯 Project Overview
+A sophisticated event management system built with modern PHP 8.2+ following Domain-Driven Design (DDD) principles. The system provides comprehensive event management capabilities with enterprise-grade features including intelligent caching, pagination, connection pooling, specialized logging with **Monolog**, and extensive API functionality.
 
-A sophisticated event management system built with modern PHP 8.2+ following Domain-Driven Design (DDD) principles. The system provides comprehensive event management capabilities with enterprise-grade features including intelligent caching, pagination, connection pooling, and extensive API functionality.
+**Now featuring 25 authentic Portuguese events across 25 municipalities!**
 
-### ✨ Key Features
+## Requirements
 
-- **🏗️ Domain-Driven Design**: Clean architecture with separated concerns
-- **🚀 High Performance**: Multi-level caching and connection pooling
-- **📊 Pagination**: Advanced pagination with sorting and caching
-- **🔄 CQRS Pattern**: Command Query Responsibility Segregation
-- **🧪 Comprehensive Testing**: 208 tests with 604 assertions
-- **📈 Static Analysis**: PHPStan Level 8 compliance (0 errors)
-- **🐳 Docker Ready**: Complete containerized environment
-- **🔧 Quality Tools**: Automated code formatting and analysis
+### For Docker Usage (Recommended - Easy Setup)
+- **Docker**: 20.10+ 
+- **Docker Compose**: 2.0+
+- **Git**: For downloading the code
+
+> **That's it!** Docker automatically installs PHP, database, and all required extensions for you.
+
+### For Local Development (Manual Setup)
+- **PHP**: 8.2 or higher
+- **Composer**: 2.0 or higher
+- **MySQL/MariaDB**: 8.0+ database server
+- **Web Server**: Nginx, Apache, or use PHP's built-in server
+- **Git**: For downloading the code
+
+#### Required PHP Extensions (Local Development Only)
+- `ext-pdo` - Database connectivity
+- `ext-json` - JSON handling
+- `ext-mysql` or `ext-mysqli` - MySQL database support
+
+#### Optional PHP Extensions (Local Development Only)
+- `ext-redis` - Redis cache support (for better performance)
+- `ext-opcache` - PHP opcode caching (recommended for production)
+
+#### Development Tools (Local Development Only)
+- **PHPUnit**: 10.0+ (for running tests)
+- **PHPStan**: 2.1+ (for code analysis)
+- **PHP-CS-Fixer**: 3.82+ (for code formatting)
+
+> **Note**: If using Docker, all PHP extensions and development tools are automatically installed.
+
+## Installation
+
+Choose the installation method that works best for you:
+
+### Option 1: Docker Setup (Recommended - Super Easy!)
+
+> **Best for**: Beginners, quick testing, or if you don't want to install PHP manually
+
+1. **Download the code**
+   ```bash
+   git clone https://github.com/lfrmonteiro99/3cket_events.git
+   cd 3cket_events
+   ```
+
+2. **Copy environment configuration**
+   ```bash
+   cp env.sample .env
+   ```
+
+3. **Build the application containers (using Docker Buildx for 99% faster builds)**
+   ```bash
+   docker buildx bake --load
+   ```
+
+4. **Start the application services**
+   ```bash
+   docker-compose up -d
+   ```
+
+5. **Install dependencies**
+   ```bash
+   docker-compose exec app composer install
+   ```
+
+6. **That's it!** 
+   - Open your browser and go to: `http://localhost:8000/events`
+   - The application is now running with everything configured automatically
+
+### Option 2: Local Development (Manual Setup)
+
+1. **Download the code**
+   ```bash
+   git clone https://github.com/lfrmonteiro99/3cket_events.git
+   cd 3cket_events
+   ```
+
+2. **Copy configuration file**
+   ```bash
+   cp env.sample .env
+   ```
+
+3. **Install PHP dependencies**
+   ```bash
+   composer install
+   ```
+
+4. **Set up your database**
+   ```bash
+   # Create a MySQL database named '3cket_events'
+   # Update the .env file with your database settings:
+   # DB_HOST=localhost
+   # DB_USERNAME=your_username
+   # DB_PASSWORD=your_password
+   ```
+
+5. **Start the application**
+   ```bash
+   php -S localhost:8000 -t public/
+   ```
+
+6. **Test it works**
+   - Open your browser and go to: `http://localhost:8000/events`
+
+### Option 3: Production Deployment
+
+> **Best for**: Deploying to a live server
+
+1. **Download the code**
+   ```bash
+   git clone https://github.com/lfrmonteiro99/3cket_events.git
+   cd 3cket_events
+   ```
+
+2. **Install production dependencies**
+   ```bash
+   composer install --no-dev --optimize-autoloader
+   ```
+
+3. **Configure for production**
+   ```bash
+   cp env.sample .env
+   # Edit .env file and set:
+   # APP_ENV=production
+   # APP_DEBUG=false
+   # Configure your database settings
+   ```
+
+4. **Set up web server**
+   - Point your web server (Nginx/Apache) to the `public/` directory
+   - Ensure the web server can write to the `logs/` directory
+
+5. **Test your deployment**
+   - Visit your domain and check: `https://your-domain.com/events`
 
 ---
 
-## 🏗️ Architecture
+## Verify Your Installation
 
-### Domain-Driven Design (DDD) Structure
+After installation, test these URLs in your browser:
+
+- **API Test**: `http://localhost:8000/events` - Should show 25 Portuguese events
+- **System Info**: `http://localhost:8000/debug` - Should show system information
+- **Health Check**: `http://localhost:8000/cache?action=stats` - Should show cache statistics
+
+If you see JSON data with Portuguese events, congratulations! Your installation is working.
+
+## Usage
+
+### Basic API Usage
+
+The system provides a RESTful API for event management featuring **25 authentic Portuguese events** across municipalities including Lisboa, Porto, Coimbra, Braga, Aveiro, and more:
+
+#### List Events (with pagination)
+```bash
+# Get all events with default pagination
+curl http://localhost:8000/events
+
+# Get events with custom pagination
+curl "http://localhost:8000/events?page=2&page_size=5&sort_by=event_name&sort_direction=DESC"
+```
+
+#### Get Specific Event
+```bash
+# Get event by ID
+curl http://localhost:8000/events/1
+```
+
+#### Debug Information
+```bash
+# Get system debug information
+curl http://localhost:8000/debug
+
+# Get cache statistics
+curl http://localhost:8000/cache?action=stats
+
+# Clear cache
+curl http://localhost:8000/cache?action=clear
+```
+
+### Response Formats
+
+The API supports multiple response formats:
+
+#### JSON (default)
+```bash
+curl -H "Accept: application/json" http://localhost:8000/events
+```
+
+#### XML
+```bash
+curl -H "Accept: application/xml" http://localhost:8000/events
+```
+
+#### CSV
+```bash
+curl -H "Accept: text/csv" http://localhost:8000/events
+```
+
+#### HTML
+```bash
+curl -H "Accept: text/html" http://localhost:8000/events
+```
+
+### Development Commands
+
+#### Testing
+```bash
+# Run all tests
+composer test
+
+# Run tests with coverage
+composer test-coverage
+
+# Run specific test suite
+vendor/bin/phpunit tests/Unit/Application/Service/EventServiceTest.php
+```
+
+#### Code Quality
+```bash
+# Run static analysis
+composer analyse
+
+# Fix code style
+composer cs-fix
+
+# Check code style
+composer cs-check
+
+# Run all quality checks
+composer quality
+```
+
+#### Docker Development
+```bash
+# Build optimized containers
+docker buildx bake --load
+
+# Start development environment
+docker-compose up -d
+
+# View logs
+docker-compose logs -f app
+
+# Execute commands in container
+docker-compose exec app composer install
+```
+
+## Portuguese Events Data
+
+The application now contains **25 authentic Portuguese events** across **25 municipalities**:
+
+### Featured Events & Locations
+- **Festival de Fado** - Lisboa
+- **Feira de Artesanato** - Porto
+- **Concerto de Música Clássica** - Coimbra
+- **Festival Gastronómico** - Braga
+- **Mostra de Cinema** - Aveiro
+- **Feira Medieval** - Óbidos
+- **Festival de Verão** - Faro
+- **Encontro de Folclore** - Viana do Castelo
+- **Exposição de Arte** - Viseu
+- **Festival de Jazz** - Leiria
+- **Mercado de Natal** - Guimarães
+- **Corrida Popular** - Setúbal
+- **Festival de Teatro** - Évora
+- **Feira de Livros** - Santarém
+- **Concerto de Rock** - Beja
+- **Mostra de Vinhos** - Vila Real
+- **Festival de Dança** - Castelo Branco
+- **Feira de Produtos Regionais** - Portalegre
+- **Exposição de Fotografia** - Bragança
+- **Festival de Música Popular** - Guarda
+- **Concerto de Orquestra** - Funchal
+- **Festival de Folclore** - Angra do Heroísmo
+- **Mostra de Artesanato** - Torres Vedras
+- **Festival de Verão** - Caldas da Rainha
+- **Feira de Antiguidades** - Lamego
+
+All events include accurate GPS coordinates and realistic Portuguese event names!
+
+## Key Features
+
+### Domain-Driven Design Architecture
+- **Clean Architecture**: Separated concerns with clear boundaries
+- **Rich Domain Model**: Entities with business logic
+- **Value Objects**: Immutable objects with validation
+- **Domain Services**: Business logic spanning multiple entities
+- **CQRS Pattern**: Command Query Responsibility Segregation
+
+### High Performance
+- **Multi-level Caching**: Repository-level caching with multiple backends
+- **Connection Pooling**: Persistent database connections
+- **Intelligent Data Sources**: Auto-fallback between database and CSV
+- **Optimized Queries**: Efficient pagination and sorting
+
+### Advanced Pagination
+- **Flexible Parameters**: Page size, sorting, direction
+- **Cached Results**: Intelligent caching of paginated data
+- **Metadata**: Complete pagination information
+- **Performance**: 37x faster with caching
+
+### Specialized Logging with Monolog
+- **Separate Log Files**: Errors, performance, requests, application
+- **Automatic Routing**: Smart log categorization
+- **Structured Data**: JSON context for better analysis
+- **Production Ready**: Configurable levels and formats
+- **Enterprise Grade**: Built with Monolog 3.0
+
+### Comprehensive Testing
+- **151 Tests**: Complete test coverage
+- **413 Assertions**: Thorough validation
+- **Multiple Layers**: Unit, integration, and service tests
+- **Quality Assurance**: PHPStan Level 8 compliance (0 errors)
+
+## Architecture
+
+### Domain-Driven Design Structure
 
 ```
 src/
-├── Domain/              # 🎯 Core Business Logic
+├── Domain/              # Core Business Logic
 │   ├── Entity/          # Domain Entities (Event)
 │   ├── ValueObject/     # Value Objects (Coordinates, EventName, Location, EventId)
 │   ├── Service/         # Domain Services (EventDomainService)
 │   ├── Event/           # Domain Events
 │   └── Repository/      # Repository Interfaces
 │
-├── Application/         # 🚀 Use Cases & Application Logic
+├── Application/         # Use Cases & Application Logic
 │   ├── UseCase/         # Use Cases (GetAllEvents, GetEventById, GetPaginatedEvents)
+│   ├── Service/         # Application Services (EventService)
 │   ├── DTO/             # Data Transfer Objects (EventDto, PaginatedResponse)
 │   ├── Query/           # Query Objects (CQRS)
 │   ├── Command/         # Command Objects (CQRS)
 │   └── Mapper/          # Entity ↔ DTO Mapping
 │
-├── Infrastructure/      # 🔧 External Concerns
+├── Infrastructure/      # External Concerns
 │   ├── Repository/      # Repository Implementations (Database, CSV, Cached)
 │   ├── Cache/           # Caching (InMemory, Redis, Null, Strategy Enums)
 │   ├── Database/        # Database Connections
-│   └── Router/          # HTTP Routing
+│   ├── Logging/         # Specialized Monolog Logging System
+│   ├── Response/        # Response Formatters
+│   └── Validation/      # Input Validation
 │
-├── Presentation/        # 🌐 User Interface
+├── Presentation/        # User Interface
 │   ├── Controller/      # HTTP Controllers
-│   └── Response/        # Response Formatters (JsonResponse, HttpStatus)
+│   └── Response/        # Response Objects
 │
-└── Service/            # 🏭 DI Container & Configuration
+└── Service/            # DI Container & Configuration
+    └── Providers/       # Service Providers
 ```
 
-### Core Domain Model
+## Configuration
 
-#### Entities
-```php
-// Rich domain entity with business logic
-final class Event
-{
-    private ?EventId $id;
-    private EventName $name;
-    private Location $location;
-    private Coordinates $coordinates;
+### Environment Variables
 
-    public function distanceTo(Event $other): float
-    {
-        return $this->coordinates->distanceTo($other->coordinates);
-    }
-
-    public function updateName(EventName $name): void
-    {
-        if (!$this->name->equals($name)) {
-            $this->name = $name;
-            $this->raiseDomainEvent(new EventUpdated($this));
-        }
-    }
-}
+#### Application Settings
+```bash
+APP_ENV=development          # Environment (development, production)
+APP_DEBUG=true              # Debug mode
+APP_NAME="3cket PHP Challenge"
 ```
 
-#### Value Objects
-```php
-// Immutable value objects with validation
-final class Coordinates
-{
-    public function __construct(private float $latitude, private float $longitude)
-    {
-        if ($latitude < -90 || $latitude > 90) {
-            throw new InvalidArgumentException('Invalid latitude');
-        }
-        if ($longitude < -180 || $longitude > 180) {
-            throw new InvalidArgumentException('Invalid longitude');
-        }
-    }
-
-    public function distanceTo(Coordinates $other): float
-    {
-        // Haversine formula implementation for geographic distance
-    }
-}
+#### Database Configuration
+```bash
+DB_HOST=db                  # Database host
+DB_PORT=3306               # Database port
+DB_DATABASE=3cket_events   # Database name
+DB_USERNAME=3cket_user     # Database username
+DB_PASSWORD=3cket_password # Database password
 ```
 
-#### Domain Services
-```php
-// Business logic that spans multiple entities
-final class EventDomainService
-{
-    public function findEventsWithinRadius(Coordinates $center, float $radiusInKm): array
-    {
-        // Geographic search logic
-    }
-
-    public function isEventNameUnique(string $eventName): bool
-    {
-        // Business rule validation
-    }
-}
+#### Cache Configuration
+```bash
+CACHE_STRATEGY=auto        # Cache strategy (auto, redis, memory, none)
+CACHE_TTL=3600            # Cache TTL in seconds
+CACHE_PREFIX=3cket:       # Cache key prefix
+REDIS_HOST=redis          # Redis host
+REDIS_PORT=6379           # Redis port
 ```
 
----
+#### Logging Configuration
+```bash
+LOG_LEVEL=INFO            # Log level (DEBUG, INFO, WARNING, ERROR)
+LOG_FORMAT=line           # Log format (line, json)
+LOG_HANDLER=file          # Log handler (file, stdout, stderr, rotating)
+```
 
-## 🚀 Performance Features
+#### Data Source Configuration
+```bash
+DATA_SOURCE_STRATEGY=auto # Data source strategy (auto, database, csv)
+```
+
+## Performance Features
 
 ### Multi-Level Caching Strategy
 
-#### 1. Application-Level Caching (Repository Decorator)
-```php
-// Transparent caching without changing domain logic
-class CachedEventRepository implements EventRepositoryInterface
-{
-    public function findAll(): array
-    {
-        $cached = $this->cache->get('events:all');
-        if ($cached !== null) {
-            return $cached; // Cache HIT
-        }
-        
-        $events = $this->repository->findAll(); // Cache MISS
-        $this->cache->set('events:all', $events, $this->ttl);
-        return $events;
-    }
-}
-```
-
-#### 2. Cache Backends
-- **InMemoryCache**: Fast, single-process caching (default)
-- **RedisCache**: Distributed caching for multi-server setups
-- **NullCache**: Disabled caching for testing/development
-- **Auto Strategy**: Intelligent backend selection
-
-#### 3. Cache Performance
+#### Cache Performance Results
 | Operation | No Cache | With Cache | Improvement |
 |-----------|----------|------------|-------------|
 | **findAll()** | ~50ms | ~1ms | **50x faster** |
 | **findById()** | ~10ms | ~0.5ms | **20x faster** |
 | **Pagination** | ~30ms | ~0.8ms | **37x faster** |
 
-### Connection Pooling Strategy
+#### Cache Backends
+- **InMemoryCache**: Fast, single-process caching
+- **RedisCache**: Distributed caching for multi-server setups
+- **NullCache**: Disabled caching for testing
+- **Auto Strategy**: Intelligent backend selection
 
-#### Three-Tier Connection Pooling
-1. **Container-Managed Instances**: DI container singleton pattern
-2. **PDO Persistent Connections**: Cross-request connection reuse
-3. **PHP-FPM Process Pooling**: Multiple processes handle concurrent requests
+### Connection Pooling
+- **Container-Managed**: DI container singleton pattern
+- **PDO Persistent**: Cross-request connection reuse
+- **PHP-FPM Pooling**: Multiple processes for concurrency
 
-```php
-// Intelligent connection management
-$options = [
-    PDO::ATTR_PERSISTENT => true,           // Connection reuse
-    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-];
+## Logging System
+
+### Specialized Log Files with Monolog
+
+The application uses **Monolog 3.0** with specialized logging that routes different types of events to separate files:
+
+```
+logs/
+├── application.log   # General application events, business logic, database operations
+├── errors.log        # All error levels, security events, warnings
+├── performance.log   # Performance metrics, slow operations, memory usage
+└── requests.log      # HTTP requests and responses, API access logs
 ```
 
----
+### Logging Features
 
-## 📊 Pagination System
+#### Automatic Log Routing
+- **Errors & Warnings**: Automatically routed to `errors.log`
+- **Performance Metrics**: Automatically routed to `performance.log`
+- **HTTP Requests/Responses**: Automatically routed to `requests.log`
+- **Application Events**: Routed to `application.log`
 
-### Advanced Pagination with Caching
+#### Smart Response Logging
+- **2xx responses**: Logged as INFO in requests.log
+- **4xx/5xx responses**: Logged as WARNING in requests.log
+- **Security events**: Also logged in errors.log
 
-The system provides comprehensive pagination support with intelligent caching:
+#### Performance Monitoring
+- **Fast operations** (< 1s): Logged as INFO
+- **Slow operations** (≥ 1s): Logged as WARNING
+- **Memory usage**: Tracked for each request
 
-#### Query Parameters
+### Custom Logging Methods
+
 ```php
-GET /events/paginated?page=1&page_size=10&sort_by=event_name&sort_direction=ASC
+use App\Infrastructure\Logging\LoggerInterface;
+
+class MyService
+{
+    public function __construct(private LoggerInterface $logger) {}
+    
+    public function doSomething(): void
+    {
+        // Goes to application.log
+        $this->logger->logBusinessEvent('Event created', ['id' => 123]);
+        $this->logger->logDatabaseOperation('SELECT', ['table' => 'events']);
+        
+        // Goes to performance.log
+        $this->logger->logPerformance('operation', 1.5, ['context' => 'data']);
+        
+        // Goes to requests.log
+        $this->logger->logRequest('GET', '/api/endpoint', ['params' => 'value']);
+        $this->logger->logResponse(200, 'GET', '/api/endpoint', ['duration' => 0.1]);
+        
+        // Goes to errors.log
+        $this->logger->error('Something went wrong', ['error' => 'details']);
+        $this->logger->logSecurityEvent('Unauthorized access', ['ip' => '127.0.0.1']);
+    }
+}
 ```
+
+### Log Monitoring
+
+```bash
+# Monitor errors in real-time
+tail -f logs/errors.log
+
+# Check performance issues
+grep "WARNING" logs/performance.log
+
+# Monitor API access
+tail -f logs/requests.log
+
+# Debug application flow
+tail -f logs/application.log
+```
+
+## API Documentation
+
+### Available Endpoints
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/events` | List all events with pagination |
+| GET | `/events/{id}` | Get specific event by ID |
+| GET | `/debug` | System debug information |
+| GET | `/cache` | Cache statistics |
+| GET | `/cache?action=clear` | Clear cache |
+
+### Pagination Parameters
 
 | Parameter | Type | Default | Range | Description |
 |-----------|------|---------|-------|-------------|
@@ -190,25 +518,27 @@ GET /events/paginated?page=1&page_size=10&sort_by=event_name&sort_direction=ASC
 | sort_by | string | 'id' | id, event_name, location, created_at | Sort field |
 | sort_direction | string | 'ASC' | ASC, DESC | Sort direction |
 
-#### Response Structure
+### Response Structure
+
+#### Event List Response
 ```json
 {
   "data": [
     {
       "id": 1,
-      "event_name": "Event Name",
-      "location": "Event Location",
-      "latitude": 40.7128,
-      "longitude": -74.0060,
-      "created_at": "2023-01-01 00:00:00",
-      "updated_at": "2023-01-01 00:00:00"
+      "event_name": "Festival de Fado",
+      "location": "Lisboa",
+      "latitude": 38.7223,
+      "longitude": -9.1393,
+      "created_at": "2024-01-15 09:00:00",
+      "updated_at": "2024-01-15 09:00:00"
     }
   ],
   "pagination": {
     "current_page": 1,
     "page_size": 10,
-    "total_items": 100,
-    "total_pages": 10,
+    "total_items": 25,
+    "total_pages": 3,
     "has_next_page": true,
     "has_previous_page": false,
     "next_page": 2,
@@ -219,471 +549,227 @@ GET /events/paginated?page=1&page_size=10&sort_by=event_name&sort_direction=ASC
 }
 ```
 
-#### Pagination Caching
-- **Smart Cache Keys**: `events:paginated:pagination_{sortBy}_{sortDirection}_{page}_{pageSize}`
-- **Cache TTL**: 1800 seconds (optimized for dynamic content)
-- **Auto Invalidation**: Cache cleared on data modifications
-- **Performance**: 90% reduction in database queries for repeated requests
-
----
-
-## 🌐 API Documentation
-
-### Available Endpoints
-
-#### Events API
-```bash
-# Get all events (cached)
-GET /events
-
-# Get paginated events with sorting
-GET /events/paginated?page=2&page_size=5&sort_by=event_name&sort_direction=DESC
-
-# Get specific event by ID
-GET /events/{id}  # Returns event with specified ID (e.g., /events/5)
-
-# Legacy endpoint
-GET /address      # Returns event with ID 1 (legacy compatibility)
-```
-
-#### System Management
-```bash
-# System debug information
-GET /debug
-
-# Cache management
-GET /cache?action=stats   # View cache statistics
-GET /cache?action=clear   # Clear all cache
-```
-
-#### Example Responses
-
-**Event List Response:**
-```json
-[
-  {
-    "id": 1,
-    "event_name": "Sample Event",
-    "location": "New York",
-    "latitude": 40.7128,
-    "longitude": -74.0060,
-    "created_at": "2023-01-01 00:00:00",
-    "updated_at": "2023-01-01 00:00:00"
-  }
-]
-```
-
-**Debug Response:**
+#### Single Event Response
 ```json
 {
-  "process_id": 1,
-  "event_count": 4,
-  "timestamp": "2024-01-15 10:30:00",
-  "pooling_enabled": true,
-  "caching_enabled": true,
-  "cache_stats": {
-    "total_items": 3,
-    "memory_usage": 2048576
-  },
-  "message": "Connection pooling and caching active"
+  "id": 1,
+  "event_name": "Festival de Fado",
+  "location": "Lisboa",
+  "latitude": 38.7223,
+  "longitude": -9.1393,
+  "created_at": "2024-01-15 09:00:00",
+  "updated_at": "2024-01-15 09:00:00"
 }
 ```
 
----
+#### Error Response
+```json
+{
+  "error": "Error message"
+}
+```
 
-## 🐳 Docker Environment
+### HTTP Status Codes
+
+| Status Code | Description | When Used |
+|-------------|-------------|-----------|
+| 200 OK | Success | Valid requests |
+| 400 Bad Request | Invalid parameters | Invalid pagination, sort parameters, or IDs |
+| 404 Not Found | Resource not found | Non-existent events or routes |
+| 500 Internal Server Error | Server error | Unexpected errors |
+
+## Docker Buildx (99% Faster Builds)
 
 ### Quick Start
-
 ```bash
-# Build and start containers
-docker-compose up -d --build
+# Build with Buildx (recommended)
+docker buildx bake --load
 
-# Install dependencies
-docker-compose exec app composer install
-
-# Run tests
-docker-compose exec app composer test
-
-# Run quality checks
-docker-compose exec app composer quality
+# Traditional build (slower)
+docker-compose build
 ```
 
-### Services
+### Performance Comparison
+- **Traditional Build**: ~9 minutes
+- **Buildx Build**: ~14 seconds
+- **Improvement**: 99% faster
 
-#### **Application (PHP 8.2 + FPM)**
-- **Port**: 8000
-- **Features**: PHP-FPM with connection pooling, Redis extension
-- **Configuration**: Optimized for performance and scaling
+### Buildx Features
+- **Multi-stage builds**: Optimized layer caching
+- **Parallel processing**: Concurrent build stages
+- **Cache optimization**: Intelligent dependency caching
+- **Cross-platform**: ARM64 and AMD64 support
 
-#### **Database (MySQL 8.0)**
-- **Port**: 3306
-- **Database**: 3cket_events
-- **Credentials**: 3cket_user / 3cket_password
-- **Features**: Automatic seeding, persistent storage
+## Testing
 
-#### **Cache (Redis 7)**
-- **Port**: 6379
-- **Features**: AOF persistence, ready for distributed caching
-- **Usage**: Configurable via CACHE_STRATEGY environment variable
-
-#### **Web Server (Nginx)**
-- **Port**: 8000 (external)
-- **Features**: Optimized for PHP-FPM, static file serving
-
-### Environment Configuration
-
-```bash
-# Cache strategy options
-CACHE_STRATEGY=auto     # Intelligent selection (default)
-CACHE_STRATEGY=redis    # Redis backend
-CACHE_STRATEGY=memory   # In-memory backend
-CACHE_STRATEGY=none     # Disabled caching
-
-# Database configuration
-DB_HOST=db
-DB_NAME=3cket_events
-DB_USER=3cket_user
-DB_PASSWORD=3cket_password
-
-# Cache configuration
-CACHE_TTL=3600         # Cache time-to-live (seconds)
-CACHE_PREFIX=events:   # Cache key prefix
-```
-
----
-
-## 🔧 Quality Assurance
-
-### Static Analysis (PHPStan Level 8)
-
-```bash
-# Run static analysis (maximum strictness)
-docker-compose exec app composer analyse
-
-# Generate baseline for existing issues
-docker-compose exec app composer analyse-baseline
-```
-
-**Features:**
-- **Level 8**: Maximum static analysis strictness
-- **Type Safety**: Full generic type support with `@template` annotations
-- **Zero Errors**: Perfect compliance maintained
-
-### Code Formatting (PHP-CS-Fixer)
-
-```bash
-# Check code style (PSR-12 + custom rules)
-docker-compose exec app composer cs-check
-
-# Fix code style automatically
-docker-compose exec app composer cs-fix
-```
-
-**Features:**
-- **PSR-12 Compliance**: Modern PHP coding standards
-- **80+ Rules**: Comprehensive formatting configuration
-- **Automated**: Import organization, method ordering, spacing
-
-### Testing Suite
-
-```bash
-# Run all tests
-docker-compose exec app composer test
-
-# Run specific test suites
-docker-compose exec app vendor/bin/phpunit tests/Unit
-docker-compose exec app vendor/bin/phpunit tests/Integration
-```
-
-**Coverage:**
-- **208 Tests**: Comprehensive test coverage
-- **604 Assertions**: Detailed verification
-- **100% Pass Rate**: Reliable test suite
-- **Unit + Integration**: Multiple testing levels
-
-### Quality Workflow
-
-```bash
-# Complete quality check
-docker-compose exec app composer quality
-
-# Fix issues and run analysis
-docker-compose exec app composer quality-fix
-```
-
----
-
-## 🧪 Testing
-
-### Test Structure
-
-```
-tests/
-├── Unit/                     # 🔬 Unit Tests
-│   ├── Application/          # Use Cases, DTOs, Queries
-│   ├── Domain/              # Entities, Value Objects, Services
-│   ├── Infrastructure/      # Repositories, Cache
-│   └── Presentation/        # Controllers, Responses
-└── Integration/             # 🔗 Integration Tests
-    └── Repository/          # Database integration tests
-```
+### Test Statistics
+- **Total Tests**: 151
+- **Total Assertions**: 413
+- **Coverage**: Comprehensive unit and integration tests
+- **Quality**: PHPStan Level 8 (0 errors)
 
 ### Test Categories
-
-#### Unit Tests (184 tests)
-- **Domain Logic**: Entity behavior, value object validation
-- **Application Services**: Use case orchestration
-- **Pagination**: Comprehensive pagination logic testing
-- **Caching**: Cache hit/miss scenarios
-- **Controllers**: HTTP request/response handling
-
-#### Integration Tests (24 tests)
-- **Database Operations**: Real database interactions
-- **Repository Implementations**: Data persistence testing
-- **Cache Integration**: Multi-backend cache testing
+- **Unit Tests**: Domain entities, value objects, services
+- **Integration Tests**: Repository implementations, caching
+- **Service Tests**: Application services, use cases
+- **Controller Tests**: HTTP endpoints, response formatting
 
 ### Running Tests
-
 ```bash
-# All tests
+# Run all tests
 composer test
 
-# Watch mode for development
-composer test-watch
-
-# Coverage report
+# Run with coverage
 composer test-coverage
 
-# Specific test class
-vendor/bin/phpunit tests/Unit/Domain/Entity/EventTest.php
+# Run specific test file
+vendor/bin/phpunit tests/Unit/Application/Service/EventServiceTest.php
+
+# Run test suite
+vendor/bin/phpunit tests/Unit/Domain/
 ```
 
----
+## Development Tools
 
-## 🚀 Performance Metrics
-
-### Benchmarks
-
-#### Response Times
-- **Cached Requests**: 1-5ms
-- **Database Requests**: 10-50ms
-- **Paginated Results**: 2-8ms (cached), 15-80ms (uncached)
-
-#### Cache Performance
-- **Hit Rate**: 85-95% for typical usage patterns
-- **Memory Efficiency**: Optimized key design, minimal overhead
-- **Invalidation**: Smart cache clearing on data changes
-
-#### Database Optimization
-- **Connection Pooling**: 90% reduction in connection overhead
-- **Query Optimization**: Efficient LIMIT/OFFSET pagination
-- **Index Usage**: Leverages database indexes for sorting
-
-### Scalability Features
-
-#### Horizontal Scaling
-- **Stateless Architecture**: Easy to scale across multiple instances
-- **Redis Caching**: Shared cache across application instances
-- **Connection Pooling**: Efficient database connection management
-
-#### Vertical Scaling
-- **Memory Efficient**: Optimized memory usage patterns
-- **CPU Efficient**: Minimal computational overhead
-- **I/O Optimized**: Reduced database and cache operations
-
----
-
-## 🛠️ Development
-
-### Requirements
-
-- **PHP**: 8.2+ with extensions (pdo_mysql, redis, mbstring)
-- **Database**: MySQL 8.0+
-- **Cache**: Redis 7+ (optional, auto-detected)
-- **Tools**: Composer, Docker, Docker Compose
-
-### Local Development
-
+### Code Quality
 ```bash
-# Clone repository
-git clone <repository-url>
-cd code-challenge-master
+# Static analysis (PHPStan Level 8)
+composer analyse
+
+# Code formatting (PHP-CS-Fixer)
+composer cs-fix
+
+# Code style check
+composer cs-check
+
+# Run all quality checks
+composer quality
+
+# Fix code style and run analysis
+composer quality-fix
+```
+
+### Docker Development
+```bash
+# Build containers
+docker buildx bake --load
 
 # Start development environment
 docker-compose up -d
 
-# Install dependencies
+# View application logs
+docker-compose logs -f app
+
+# Execute commands in container
 docker-compose exec app composer install
-
-# Run development server
-# Access: http://localhost:8000
 ```
 
-### Adding Features
+## Production Deployment
 
-#### 1. Domain-First Approach
-```php
-// 1. Start with domain entities
-class NewEntity {
-    // Business logic here
-}
+### Optimization Checklist
+- [ ] Set `APP_ENV=production`
+- [ ] Set `APP_DEBUG=false`
+- [ ] Use `LOG_LEVEL=WARNING` or `LOG_LEVEL=ERROR`
+- [ ] Configure Redis caching (`CACHE_STRATEGY=redis`)
+- [ ] Use rotating log files (`LOG_HANDLER=rotating`)
+- [ ] Set up proper web server configuration
+- [ ] Configure database connection pooling
+- [ ] Set up monitoring and alerting
 
-// 2. Create value objects
-class NewValueObject {
-    // Validation and behavior
-}
+### Web Server Configuration
 
-// 3. Add domain services if needed
-class NewDomainService {
-    // Cross-entity business logic
-}
-```
+#### Nginx Configuration
+```nginx
+server {
+    listen 80;
+    server_name your-domain.com;
+    root /path/to/3cket_events/public;
+    index index.php;
 
-#### 2. Application Layer
-```php
-// 4. Create use cases
-class NewUseCase {
-    // Orchestrate domain operations
-}
+    location / {
+        try_files $uri $uri/ /index.php?$query_string;
+    }
 
-// 5. Define DTOs
-class NewDto {
-    // Data transfer structure
-}
-```
+    location ~ \.php$ {
+        fastcgi_pass unix:/var/run/php/php8.2-fpm.sock;
+        fastcgi_index index.php;
+        fastcgi_param SCRIPT_FILENAME $realpath_root$fastcgi_script_name;
+        include fastcgi_params;
+    }
 
-#### 3. Infrastructure
-```php
-// 6. Repository implementations
-class NewRepository implements NewRepositoryInterface {
-    // Data persistence
-}
-
-// 7. Add caching if needed
-class CachedNewRepository {
-    // Transparent caching layer
+    location ~ /\.ht {
+        deny all;
+    }
 }
 ```
 
-#### 4. Presentation
-```php
-// 8. Controllers
-class NewController {
-    // HTTP handling
-}
-```
+## Container Information
 
-### Code Standards
+### Docker Services
+- **App**: PHP 8.2-FPM with all extensions
+- **Database**: MySQL 8.0 with Portuguese events data
+- **Redis**: Redis 7-alpine for caching
+- **Webserver**: Nginx alpine serving on port 8000
 
-#### Domain Rules
-- **Entities**: Business identity and lifecycle
-- **Value Objects**: Immutable, validated concepts
-- **Domain Services**: Cross-entity business logic
-- **Events**: Capture domain changes
+### Port Mapping
+- **HTTP**: `http://localhost:8000` (Nginx → PHP-FPM)
+- **MySQL**: `localhost:3306` (for direct database access)
+- **Redis**: `localhost:6379` (for cache management)
 
-#### Application Rules
-- **Use Cases**: Single responsibility, stateless
-- **DTOs**: Simple data structures, no behavior
-- **Mappers**: Entity ↔ DTO conversion
-- **CQRS**: Separate read/write operations
+## Troubleshooting
 
-#### Infrastructure Rules
-- **Repositories**: Interface-based, testable
-- **Caching**: Transparent, configurable
-- **Database**: Connection pooled, optimized
-- **External Services**: Adapter pattern
+### Common Issues
 
----
-
-## 📈 Monitoring & Debugging
-
-### Cache Monitoring
-
+#### Port Already in Use
 ```bash
-# View cache statistics
-curl http://localhost:8000/cache?action=stats
+# Check what's using port 8000
+lsof -i :8000
 
-# Monitor cache hits/misses in logs
-docker-compose logs app | grep "Cache HIT\|Cache MISS"
-
-# Redis monitoring (if using Redis)
-docker-compose exec redis redis-cli MONITOR
+# Stop containers and restart
+docker-compose down
+docker-compose up -d
 ```
 
-### Performance Monitoring
-
+#### Database Connection Issues
 ```bash
-# Connection pool status
-curl http://localhost:8000/debug
-
-# Database connections
-docker-compose logs app | grep "PDO connection"
-
-# PHP-FPM status
-docker-compose exec app php-fpm -t
-```
-
-### Debugging Tools
-
-```bash
-# Application logs
-docker-compose logs app
-
-# Database logs
+# Check database logs
 docker-compose logs db
 
-# Cache logs
-docker-compose logs redis
-
-# Access containers
-docker-compose exec app bash
-docker-compose exec db mysql -u3cket_user -p3cket_password 3cket_events
-docker-compose exec redis redis-cli
+# Verify database is running
+docker-compose ps
 ```
 
+#### Cache Issues
+```bash
+# Clear cache
+curl http://localhost:8000/cache?action=clear
+
+# Check Redis connection
+docker-compose exec redis redis-cli ping
+```
+
+### Logs Location
+- **Application logs**: `logs/` directory
+- **Docker logs**: `docker-compose logs [service]`
+- **Nginx logs**: Inside webserver container
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Run tests: `composer test`
+5. Run quality checks: `composer quality`
+6. Submit a pull request
+
+## License
+
+This project is licensed under the MIT License.
+
+## Support
+
+For support, please open an issue on the GitHub repository or contact the development team.
+
 ---
 
-## 🎯 Project Benefits
-
-### For Developers
-- **Type Safety**: Full generic type support prevents runtime errors
-- **Testability**: 100% mockable dependencies with DI
-- **Maintainability**: Clear architecture with separated concerns
-- **Extensibility**: Easy to add new features following established patterns
-
-### For Operations
-- **Performance**: Multi-level optimization for high throughput
-- **Scalability**: Horizontal and vertical scaling capabilities
-- **Monitoring**: Comprehensive logging and metrics
-- **Reliability**: Robust error handling and fault tolerance
-
-### For Business
-- **Fast Development**: Clear patterns accelerate feature delivery
-- **Quality Assurance**: Automated testing and static analysis
-- **Cost Efficiency**: Optimized resource usage and caching
-- **Future-Proof**: Modern architecture supports long-term growth
-
----
-
-## 📚 Additional Resources
-
-### Architecture Documentation
-- **Domain-Driven Design**: Clean separation of business logic
-- **CQRS Pattern**: Command Query Responsibility Segregation
-- **Repository Pattern**: Abstract data access layer
-- **Decorator Pattern**: Transparent caching implementation
-
-### Performance Features
-- **Connection Pooling**: Multi-tier database optimization
-- **Intelligent Caching**: Configurable cache backends
-- **Pagination**: Efficient large dataset handling
-- **Query Optimization**: Database performance tuning
-
-### Quality Assurance
-- **Static Analysis**: PHPStan Level 8 compliance
-- **Code Formatting**: PSR-12 + custom rules
-- **Testing**: Comprehensive unit and integration tests
-- **CI/CD Ready**: Automated quality checks
-
-This project represents a modern, enterprise-grade PHP application with comprehensive features, optimal performance, and maintainable architecture following industry best practices.
+**Built with ❤️ in Portugal** 🇵🇹

@@ -14,4 +14,4 @@ interface GetPaginatedEventsUseCaseInterface
      * @return PaginatedResponse<EventDto>
      */
     public function execute(GetPaginatedEventsQuery $query): PaginatedResponse;
-} 
+}

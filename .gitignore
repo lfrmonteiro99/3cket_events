@@ -96,6 +96,7 @@ yarn.lock
 # Docker
 .dockerignore
 docker-compose.override.yml
+.buildx-cache/
 
 # Testing
 .phpunit.result.cache

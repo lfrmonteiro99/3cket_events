@@ -18,10 +18,11 @@ class CsvResponseFormatter implements ResponseFormatterInterface
         if (isset($data[0]) && is_array($data[0])) {
             // Array of events
             return $this->arrayToCsv($data);
-        } else {
-            // Single event or other data structure
-            return $this->arrayToCsv([$data]);
         }
+
+        // Single event or other data structure
+        return $this->arrayToCsv([$data]);
+
     }
 
     public function formatError(string $message, HttpStatus $status = HttpStatus::BAD_REQUEST, array $details = []): string
@@ -48,9 +49,10 @@ class CsvResponseFormatter implements ResponseFormatterInterface
     }
 
     /**
-     * Convert array to CSV string
+     * Convert array to CSV string.
      *
      * @param array<array<string, mixed>> $data
+     *
      * @return string
      */
     private function arrayToCsv(array $data): string
@@ -60,7 +62,7 @@ class CsvResponseFormatter implements ResponseFormatterInterface
         }
 
         $output = fopen('php://temp', 'r+');
-        
+
         if ($output === false) {
             throw new \RuntimeException('Failed to create temporary file for CSV output');
         }
@@ -72,6 +74,7 @@ class CsvResponseFormatter implements ResponseFormatterInterface
         // Write data rows
         foreach ($data as $row) {
             $values = [];
+
             foreach ($headers as $header) {
                 $values[] = $row[$header] ?? '';
             }
@@ -84,4 +87,4 @@ class CsvResponseFormatter implements ResponseFormatterInterface
 
         return $csvContent ?: '';
     }
-} 
+}

@@ -10,7 +10,7 @@ class JsonResponseFormatter implements ResponseFormatterInterface
 {
     public function formatSuccess(array $data, HttpStatus $status = HttpStatus::OK): string
     {
-        return json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
+        return json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES) ?: '{}';
     }
 
     public function formatError(string $message, HttpStatus $status = HttpStatus::BAD_REQUEST, array $details = []): string
@@ -21,7 +21,7 @@ class JsonResponseFormatter implements ResponseFormatterInterface
             $errorData['details'] = $details;
         }
 
-        return json_encode($errorData, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
+        return json_encode($errorData, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES) ?: '{"error":"JSON encoding failed"}';
     }
 
     public function getContentType(): string
@@ -35,4 +35,4 @@ class JsonResponseFormatter implements ResponseFormatterInterface
             'Cache-Control' => 'no-cache, must-revalidate',
         ];
     }
-} 
+}

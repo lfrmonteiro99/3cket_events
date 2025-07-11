@@ -168,4 +168,4 @@ class GetPaginatedEventsUseCaseTest extends TestCase
             new EventId($id)
         );
     }
-} 
+}

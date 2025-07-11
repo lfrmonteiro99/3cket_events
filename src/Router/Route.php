@@ -51,6 +51,7 @@ class Route
     public function matchesPath(string $path): bool
     {
         $pattern = $this->convertToRegex($this->path);
+
         return preg_match($pattern, $path) === 1;
     }
 
@@ -61,12 +62,12 @@ class Route
     {
         $pattern = $this->convertToRegex($this->path);
         $parameters = [];
-        
+
         if (preg_match($pattern, $path, $matches)) {
             // Extract parameter names from the route path
             if (preg_match_all('/\{(\w+)\}/', $this->path, $paramMatches)) {
                 $paramNames = $paramMatches[1];
-                
+
                 // Skip the first match (full string) and map parameters
                 for ($i = 1; $i < count($matches); $i++) {
                     if (isset($paramNames[$i - 1])) {
@@ -75,7 +76,7 @@ class Route
                 }
             }
         }
-        
+
         return $parameters;
     }
 
@@ -83,13 +84,13 @@ class Route
     {
         // Simple approach: manually build the regex pattern
         $pattern = $path;
-        
+
         // Escape forward slashes for regex delimiters
         $pattern = str_replace('/', '\/', $pattern);
-        
+
         // Replace {parameter} with capture groups
         $pattern = preg_replace('/\{(\w+)\}/', '([^\/]+)', $pattern);
-        
+
         // Add anchors
         return '/^' . $pattern . '$/';
     }

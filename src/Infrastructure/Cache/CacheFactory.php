@@ -20,7 +20,7 @@ class CacheFactory
     {
         $strategyValue = $_ENV['CACHE_STRATEGY'] ?? $_ENV['CACHE_DRIVER'] ?? 'auto';
         $strategy = CacheStrategy::fromString($strategyValue);
-        
+
         return self::createFromStrategy($strategy);
     }
 
@@ -30,6 +30,7 @@ class CacheFactory
             return RedisCache::createFromEnvironment();
         } catch (\Exception $e) {
             error_log('Redis cache creation failed: ' . $e->getMessage());
+
             throw $e;
         }
     }
@@ -49,4 +50,4 @@ class CacheFactory
         // Fallback to in-memory cache
         return new InMemoryCache();
     }
-} 
+}

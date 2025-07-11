@@ -11,21 +11,25 @@ use App\Domain\ValueObject\Coordinates;
 use App\Domain\ValueObject\EventId;
 use App\Domain\ValueObject\EventName;
 use App\Domain\ValueObject\Location;
-use App\Exception\EventNotFoundException;
+use App\Infrastructure\Logging\LoggerInterface;
 use PDO;
 use PDOException;
 
 class DatabaseEventRepository implements EventRepositoryInterface
 {
     private PDO $connection;
+    private LoggerInterface $logger;
 
-    public function __construct(PDO $connection)
+    public function __construct(PDO $connection, LoggerInterface $logger)
     {
         $this->connection = $connection;
+        $this->logger = $logger;
     }
 
     public function findAll(): array
     {
+        $startTime = microtime(true);
+
         try {
             $stmt = $this->connection->prepare('SELECT * FROM events ORDER BY id');
             $stmt->execute();
@@ -36,8 +40,19 @@ class DatabaseEventRepository implements EventRepositoryInterface
                 $events[] = $this->mapRowToEvent($row);
             }
 
+            $duration = microtime(true) - $startTime;
+            $this->logger->logDatabaseOperation('findAll', [
+                'count' => count($events),
+                'duration' => $duration,
+            ]);
+
             return $events;
         } catch (PDOException $e) {
+            $this->logger->error('Database error in findAll', [
+                'error' => $e->getMessage(),
+                'code' => $e->getCode(),
+            ]);
+
             throw new \RuntimeException('Database error: ' . $e->getMessage(), $e->getCode());
         }
     }
@@ -101,99 +116,13 @@ class DatabaseEventRepository implements EventRepositoryInterface
         }
     }
 
-    public function save(Event $event): Event
-    {
-        try {
-            $eventId = $event->getId();
-
-            if ($eventId === null) {
-                // Create new event
-                $stmt = $this->connection->prepare(
-                    'INSERT INTO events (name, location, latitude, longitude) VALUES (?, ?, ?, ?)'
-                );
-
-                $stmt->execute([
-                    $event->getName()->getValue(),
-                    $event->getLocation()->getValue(),
-                    $event->getCoordinates()->getLatitude(),
-                    $event->getCoordinates()->getLongitude(),
-                ]);
-
-                $id = new EventId((int) $this->connection->lastInsertId());
-                $foundEvent = $this->findById($id);
-
-                if ($foundEvent === null) {
-                    throw new \RuntimeException('Failed to retrieve created event');
-                }
-
-                return $foundEvent;
-            }
-            // Update existing event
-            $stmt = $this->connection->prepare(
-                'UPDATE events SET name = ?, location = ?, latitude = ?, longitude = ? WHERE id = ?'
-            );
-
-            $stmt->execute([
-                $event->getName()->getValue(),
-                $event->getLocation()->getValue(),
-                $event->getCoordinates()->getLatitude(),
-                $event->getCoordinates()->getLongitude(),
-                $eventId->getValue(),
-            ]);
-
-            if ($stmt->rowCount() === 0) {
-                throw new EventNotFoundException("Event with ID {$eventId->getValue()} not found");
-            }
-
-            $foundEvent = $this->findById($eventId);
-
-            if ($foundEvent === null) {
-                throw new EventNotFoundException("Event with ID {$eventId->getValue()} not found after update");
-            }
-
-            return $foundEvent;
-
-        } catch (PDOException $e) {
-            throw new \RuntimeException('Database error: ' . $e->getMessage(), $e->getCode());
-        }
-    }
-
-    public function delete(EventId $id): bool
-    {
-        try {
-            $stmt = $this->connection->prepare('DELETE FROM events WHERE id = ?');
-            $stmt->execute([$id->getValue()]);
-
-            return $stmt->rowCount() > 0;
-        } catch (PDOException $e) {
-            throw new \RuntimeException('Database error: ' . $e->getMessage(), $e->getCode());
-        }
-    }
-
-    public function nextId(): EventId
-    {
-        try {
-            $stmt = $this->connection->query('SELECT MAX(id) FROM events');
-
-            if ($stmt === false) {
-                throw new \RuntimeException('Failed to prepare max id query');
-            }
-
-            $maxId = $stmt->fetchColumn();
-
-            return new EventId($maxId ? (int) $maxId + 1 : 1);
-        } catch (PDOException $e) {
-            throw new \RuntimeException('Database error: ' . $e->getMessage(), $e->getCode());
-        }
-    }
-
     /**
      * @param array<string, mixed> $row
      */
     private function mapRowToEvent(array $row): Event
     {
         return new Event(
-            new EventName((string) $row['name']),
+            new EventName((string) $row['event_name']),
             new Location((string) $row['location']),
             new Coordinates((float) $row['latitude'], (float) $row['longitude']),
             new EventId((int) $row['id'])
@@ -204,7 +133,7 @@ class DatabaseEventRepository implements EventRepositoryInterface
     {
         return match ($sortBy) {
             'id' => 'id',
-            'event_name' => 'name',
+            'event_name' => 'event_name',
             'location' => 'location',
             'created_at' => 'created_at',
             default => 'id'

@@ -6,12 +6,6 @@ namespace App\Infrastructure\DataSource;
 
 enum DataSourceStrategy: string
 {
-    case DATABASE_FIRST = 'database_first';
-    case CSV_FIRST = 'csv_first';
-    case DATABASE_ONLY = 'database_only';
-    case CSV_ONLY = 'csv_only';
-    case AUTO = 'auto';
-
     public static function fromString(string $value): self
     {
         return self::tryFrom($value) ?? self::AUTO;
@@ -27,4 +21,9 @@ enum DataSourceStrategy: string
             self::AUTO => 'Auto-detect Best Available',
         };
     }
-} 
+    case DATABASE_FIRST = 'database_first';
+    case CSV_FIRST = 'csv_first';
+    case DATABASE_ONLY = 'database_only';
+    case CSV_ONLY = 'csv_only';
+    case AUTO = 'auto';
+}

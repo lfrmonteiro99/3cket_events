@@ -22,7 +22,8 @@
         "php": "^8.2",
         "ext-pdo": "*",
         "ext-json": "*",
-        "vlucas/phpdotenv": "^5.5"
+        "vlucas/phpdotenv": "^5.5",
+        "monolog/monolog": "^3.0"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.82",
@@ -35,8 +36,7 @@
         "sort-packages": true
     },
     "scripts": {
-        "test": "vendor/bin/phpunit",
-        "test-coverage": "vendor/bin/phpunit --coverage-html coverage",
+        "test": "vendor/bin/phpunit tests/",
         "analyse": "vendor/bin/phpstan analyse --memory-limit=512M",
         "analyse-baseline": "vendor/bin/phpstan analyse --memory-limit=512M --generate-baseline",
         "cs-fix": "vendor/bin/php-cs-fixer fix --allow-risky=yes",

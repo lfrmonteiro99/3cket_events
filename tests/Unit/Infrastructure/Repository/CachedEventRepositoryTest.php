@@ -181,65 +181,6 @@ class CachedEventRepositoryTest extends TestCase
         $this->assertEquals(5, $result);
     }
 
-    public function testSaveInvalidatesCacheAndCallsInnerRepository(): void
-    {
-        $event = new Event(
-            new EventName('Test Event'),
-            new Location('Test Location'),
-            new Coordinates(40.7128, -74.0060),
-            new EventId(1)
-        );
-
-        $this->mockRepository->expects($this->once())
-            ->method('save')
-            ->with($event)
-            ->willReturn($event);
-
-        $this->mockCache->expects($this->exactly(2))
-            ->method('delete')
-            ->with($this->callback(function ($key) {
-                return in_array($key, ['events:all', 'events:count'], true);
-            }));
-
-        $this->mockCache->expects($this->once())
-            ->method('set')
-            ->with('events:id:1', $event, 3600);
-
-        $result = $this->cachedRepository->save($event);
-        $this->assertEquals($event, $result);
-    }
-
-    public function testDeleteInvalidatesCacheAndCallsInnerRepository(): void
-    {
-        $eventId = new EventId(1);
-
-        $this->mockRepository->expects($this->once())
-            ->method('delete')
-            ->with($eventId)
-            ->willReturn(true);
-
-        $this->mockCache->expects($this->exactly(3))
-            ->method('delete')
-            ->with($this->callback(function ($key) {
-                return in_array($key, ['events:all', 'events:count', 'events:id:1'], true);
-            }));
-
-        $result = $this->cachedRepository->delete($eventId);
-        $this->assertTrue($result);
-    }
-
-    public function testNextIdCallsInnerRepositoryDirectly(): void
-    {
-        $eventId = new EventId(42);
-
-        $this->mockRepository->expects($this->once())
-            ->method('nextId')
-            ->willReturn($eventId);
-
-        $result = $this->cachedRepository->nextId();
-        $this->assertEquals($eventId, $result);
-    }
-
     public function testClearCacheInvalidatesAllEventCaches(): void
     {
         $this->mockCache->expects($this->exactly(2))

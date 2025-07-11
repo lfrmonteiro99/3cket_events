@@ -37,26 +37,27 @@ class XmlResponseFormatter implements ResponseFormatterInterface
     }
 
     /**
-     * Convert array to XML string
+     * Convert array to XML string.
      *
      * @param array<string, mixed> $data
-     * @param string $rootElement
+     * @param string               $rootElement
+     *
      * @return string
      */
     private function arrayToXml(array $data, string $rootElement = 'root'): string
     {
         $xml = new \SimpleXMLElement("<?xml version='1.0' encoding='UTF-8'?><{$rootElement}></{$rootElement}>");
-        
+
         $this->addArrayToXml($data, $xml);
-        
+
         return $xml->asXML() ?: '';
     }
 
     /**
-     * Recursively add array elements to XML
+     * Recursively add array elements to XML.
      *
      * @param array<string, mixed> $data
-     * @param \SimpleXMLElement $xml
+     * @param \SimpleXMLElement    $xml
      */
     private function addArrayToXml(array $data, \SimpleXMLElement $xml): void
     {
@@ -75,4 +76,4 @@ class XmlResponseFormatter implements ResponseFormatterInterface
             }
         }
     }
-} 
+}

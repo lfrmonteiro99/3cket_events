@@ -14,7 +14,7 @@ class EventIdValidator implements ValidatorInterface
         }
 
         // Check if value is an integer (not a float)
-        if ((int) $value != $value) {
+        if (!ctype_digit((string) $value)) {
             return ValidationResult::failure(['Event ID must be a positive integer']);
         }
 
@@ -27,10 +27,11 @@ class EventIdValidator implements ValidatorInterface
 
         // Check maximum reasonable ID value (optional rule)
         $maxId = $rules['max_id'] ?? PHP_INT_MAX;
+
         if ($id > $maxId) {
             return ValidationResult::failure(["Event ID cannot be greater than {$maxId}"]);
         }
 
         return ValidationResult::success();
     }
-} 
+}

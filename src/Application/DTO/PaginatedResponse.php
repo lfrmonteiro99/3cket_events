@@ -11,10 +11,10 @@ readonly class PaginatedResponse
 {
     /**
      * @param array<T> $data
-     * @param int $totalItems
-     * @param int $currentPage
-     * @param int $pageSize
-     * @param int $totalPages
+     * @param int      $totalItems
+     * @param int      $currentPage
+     * @param int      $pageSize
+     * @param int      $totalPages
      */
     public function __construct(
         public array $data,
@@ -24,12 +24,13 @@ readonly class PaginatedResponse
         public int $totalPages
     ) {
     }
-    
+
     /**
      * @param array<T> $data
-     * @param int $totalItems
-     * @param int $currentPage
-     * @param int $pageSize
+     * @param int      $totalItems
+     * @param int      $currentPage
+     * @param int      $pageSize
+     *
      * @return PaginatedResponse<T>
      */
     public static function create(
@@ -39,7 +40,7 @@ readonly class PaginatedResponse
         int $pageSize
     ): self {
         $totalPages = (int) ceil($totalItems / $pageSize);
-        
+
         return new self(
             $data,
             $totalItems,
@@ -48,42 +49,42 @@ readonly class PaginatedResponse
             $totalPages
         );
     }
-    
+
     public function hasNextPage(): bool
     {
         return $this->currentPage < $this->totalPages;
     }
-    
+
     public function hasPreviousPage(): bool
     {
         return $this->currentPage > 1;
     }
-    
+
     public function getNextPage(): ?int
     {
         return $this->hasNextPage() ? $this->currentPage + 1 : null;
     }
-    
+
     public function getPreviousPage(): ?int
     {
         return $this->hasPreviousPage() ? $this->currentPage - 1 : null;
     }
-    
+
     public function isEmpty(): bool
     {
         return empty($this->data);
     }
-    
+
     public function getStartItem(): int
     {
         return $this->isEmpty() ? 0 : (($this->currentPage - 1) * $this->pageSize) + 1;
     }
-    
+
     public function getEndItem(): int
     {
         return $this->isEmpty() ? 0 : min($this->totalItems, $this->currentPage * $this->pageSize);
     }
-    
+
     /**
      * @return array<string, mixed>
      */
@@ -105,4 +106,4 @@ readonly class PaginatedResponse
             ],
         ];
     }
-} 
+}

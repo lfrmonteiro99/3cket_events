@@ -4,53 +4,34 @@ declare(strict_types=1);
 
 namespace App\Presentation\Controller;
 
-use App\Application\Query\GetAllEventsQuery;
-use App\Application\Query\GetEventByIdQuery;
-use App\Application\Query\GetPaginatedEventsQuery;
 use App\Application\Query\PaginationQuery;
-use App\Application\UseCase\GetAllEventsUseCaseInterface;
-use App\Application\UseCase\GetEventByIdUseCaseInterface;
-use App\Application\UseCase\GetPaginatedEventsUseCaseInterface;
+use App\Application\Service\EventServiceInterface;
 use App\Domain\Repository\EventRepositoryInterface;
 use App\Infrastructure\Cache\CacheAction;
+use App\Infrastructure\Logging\LoggerInterface;
 use App\Infrastructure\Repository\CachedEventRepository;
 use App\Infrastructure\Response\ResponseManager;
 use App\Infrastructure\Validation\EventIdValidator;
 use App\Infrastructure\Validation\PaginationValidator;
 use App\Presentation\Response\HttpStatus;
-use App\Presentation\Response\JsonResponse;
 use InvalidArgumentException;
 
 class EventController
 {
     public function __construct(
-        private readonly GetAllEventsUseCaseInterface $getAllEventsUseCase,
-        private readonly GetEventByIdUseCaseInterface $getEventByIdUseCase,
-        private readonly GetPaginatedEventsUseCaseInterface $getPaginatedEventsUseCase,
+        private readonly EventServiceInterface $eventService,
         private readonly EventRepositoryInterface $eventRepository,
         private readonly PaginationValidator $paginationValidator,
         private readonly EventIdValidator $eventIdValidator,
-        private readonly ResponseManager $responseManager
+        private readonly ResponseManager $responseManager,
+        private readonly LoggerInterface $logger
     ) {
     }
 
     public function index(): void
     {
         try {
-            $query = new GetAllEventsQuery();
-            $eventDtos = $this->getAllEventsUseCase->execute($query);
-
-            $result = array_map(fn ($dto) => $dto->toArray(), $eventDtos);
-            $this->responseManager->sendSuccess($result);
-        } catch (\Exception $e) {
-            $this->responseManager->sendError('Internal server error', HttpStatus::INTERNAL_SERVER_ERROR);
-        }
-    }
-
-    public function paginated(): void
-    {
-        try {
-            // Get pagination parameters from query string
+            // Always use pagination with default values for /events endpoint
             $paginationData = [
                 'page' => $_GET['page'] ?? 1,
                 'page_size' => $_GET['page_size'] ?? 10,
@@ -60,11 +41,13 @@ class EventController
 
             // Validate pagination parameters using strategy
             $validationResult = $this->paginationValidator->validate($paginationData);
+
             if (!$validationResult->isValid()) {
                 $this->responseManager->sendError(
                     'Invalid pagination parameters: ' . $validationResult->getFirstError(),
                     HttpStatus::BAD_REQUEST
                 );
+
                 return;
             }
 
@@ -75,23 +58,40 @@ class EventController
             $sortDirection = $paginationData['sort_direction'];
 
             $paginationQuery = new PaginationQuery($page, $pageSize, $sortBy, $sortDirection);
-            $query = new GetPaginatedEventsQuery($paginationQuery);
-            
-            $paginatedResponse = $this->getPaginatedEventsUseCase->execute($query);
-            
+
+            // Use service layer for business logic
+            $paginatedResponse = $this->eventService->getAllEvents($paginationQuery);
+
             // Convert DTOs to arrays
             $data = array_map(fn ($dto) => $dto->toArray(), $paginatedResponse->data);
-            
+
             // Create response with pagination metadata
             $response = [
                 'data' => $data,
                 'pagination' => $paginatedResponse->toArray()['pagination'],
             ];
-            
+
+            $paginationArray = $paginatedResponse->toArray()['pagination'];
+            $this->logger->logBusinessEvent('Events listed', [
+                'count' => count($data),
+                'page' => $page,
+                'page_size' => $pageSize,
+                'total' => $paginationArray['total'] ?? 0,
+            ]);
+
             $this->responseManager->sendSuccess($response);
         } catch (InvalidArgumentException $e) {
+            $this->logger->warning('Invalid pagination parameters', [
+                'error' => $e->getMessage(),
+                'parameters' => $paginationData,
+            ]);
             $this->responseManager->sendError('Invalid pagination parameters: ' . $e->getMessage(), HttpStatus::BAD_REQUEST);
         } catch (\Exception $e) {
+            $this->logger->error('Unhandled exception in index', [
+                'exception' => get_class($e),
+                'message' => $e->getMessage(),
+                'trace' => $e->getTraceAsString(),
+            ]);
             $this->responseManager->sendError('Internal server error', HttpStatus::INTERNAL_SERVER_ERROR);
         }
     }
@@ -101,31 +101,55 @@ class EventController
      */
     public function show(array $parameters = []): void
     {
+        $idParam = $parameters['id'] ?? null;
+
         try {
-            // Extract ID from parameters, fallback to 1 for backwards compatibility with /address
-            $idParam = isset($parameters['id']) ? $parameters['id'] : '1';
-            
+            // ID parameter is required
+            if (!isset($parameters['id'])) {
+                $this->responseManager->sendError('Event ID is required', HttpStatus::BAD_REQUEST);
+
+                return;
+            }
+
             // Validate event ID using strategy
             $validationResult = $this->eventIdValidator->validate($idParam);
+
             if (!$validationResult->isValid()) {
-                $this->responseManager->sendError($validationResult->getFirstError(), HttpStatus::BAD_REQUEST);
+                $this->responseManager->sendError($validationResult->getFirstError() ?? 'Invalid event ID', HttpStatus::BAD_REQUEST);
+
                 return;
             }
-            
+
             $id = (int) $idParam;
 
-            $query = new GetEventByIdQuery($id);
-            $eventDto = $this->getEventByIdUseCase->execute($query);
+            // Use service layer for business logic
+            $eventDto = $this->eventService->getEventById($id);
 
             if ($eventDto === null) {
+                $this->logger->logBusinessEvent('Event not found', ['id' => $id]);
                 $this->responseManager->sendNotFound('Event not found');
+
                 return;
             }
+
+            $this->logger->logBusinessEvent('Event retrieved', [
+                'id' => $id,
+                'event_name' => $eventDto->name,
+            ]);
 
             $this->responseManager->sendSuccess($eventDto->toArray());
         } catch (InvalidArgumentException $e) {
+            $this->logger->warning('Invalid event ID', [
+                'error' => $e->getMessage(),
+                'id_param' => $idParam ?? 'not_set',
+            ]);
             $this->responseManager->sendError('Invalid event ID', HttpStatus::BAD_REQUEST);
         } catch (\Exception $e) {
+            $this->logger->error('Unhandled exception in show', [
+                'exception' => get_class($e),
+                'message' => $e->getMessage(),
+                'trace' => $e->getTraceAsString(),
+            ]);
             $this->responseManager->sendError('Internal server error', HttpStatus::INTERNAL_SERVER_ERROR);
         }
     }
@@ -133,7 +157,8 @@ class EventController
     public function debug(): void
     {
         try {
-            $count = $this->eventRepository->count();
+            // Use service layer for business metrics
+            $count = $this->eventService->getEventCount();
             $processId = getmypid();
 
             $cacheStats = [];
@@ -163,6 +188,7 @@ class EventController
         try {
             if (!$this->eventRepository instanceof CachedEventRepository) {
                 $this->responseManager->sendError('Caching is not enabled', HttpStatus::BAD_REQUEST);
+
                 return;
             }
 

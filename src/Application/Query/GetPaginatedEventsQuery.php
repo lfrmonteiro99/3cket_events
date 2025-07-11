@@ -10,4 +10,4 @@ readonly class GetPaginatedEventsQuery
         public PaginationQuery $pagination
     ) {
     }
-} 
+}

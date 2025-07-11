@@ -23,10 +23,4 @@ interface EventRepositoryInterface
     public function findById(EventId $id): ?Event;
 
     public function count(): int;
-
-    public function save(Event $event): Event;
-
-    public function delete(EventId $id): bool;
-
-    public function nextId(): EventId;
 }

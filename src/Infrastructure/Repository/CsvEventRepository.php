@@ -39,7 +39,7 @@ class CsvEventRepository implements EventRepositoryInterface
         $this->loadEventsIfNeeded();
 
         $events = array_values($this->events);
-        
+
         // Sort events
         usort($events, function (Event $a, Event $b) use ($query) {
             $comparison = match ($query->sortBy) {
@@ -78,24 +78,6 @@ class CsvEventRepository implements EventRepositoryInterface
         $this->loadEventsIfNeeded();
 
         return count($this->events);
-    }
-
-    public function save(Event $event): Event
-    {
-        throw new \RuntimeException('CSV repository is read-only. Save operations are not supported.');
-    }
-
-    public function delete(EventId $id): bool
-    {
-        throw new \RuntimeException('CSV repository is read-only. Delete operations are not supported.');
-    }
-
-    public function nextId(): EventId
-    {
-        $this->loadEventsIfNeeded();
-        $maxId = empty($this->events) ? 0 : max(array_keys($this->events));
-
-        return new EventId($maxId + 1);
     }
 
     private function loadEventsIfNeeded(): void

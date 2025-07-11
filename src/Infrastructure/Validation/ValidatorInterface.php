@@ -7,10 +7,11 @@ namespace App\Infrastructure\Validation;
 interface ValidatorInterface
 {
     /**
-     * Validate input data
+     * Validate input data.
      *
-     * @param mixed $value
+     * @param mixed                $value
      * @param array<string, mixed> $rules
+     *
      * @return ValidationResult
      */
     public function validate(mixed $value, array $rules): ValidationResult;
@@ -18,6 +19,9 @@ interface ValidatorInterface
 
 final class ValidationResult
 {
+    /**
+     * @param array<string> $errors
+     */
     public function __construct(
         private readonly bool $isValid,
         private readonly array $errors = []
@@ -29,6 +33,9 @@ final class ValidationResult
         return $this->isValid;
     }
 
+    /**
+     * @return array<string>
+     */
     public function getErrors(): array
     {
         return $this->errors;
@@ -44,8 +51,11 @@ final class ValidationResult
         return new self(true);
     }
 
+    /**
+     * @param array<string> $errors
+     */
     public static function failure(array $errors): self
     {
         return new self(false, $errors);
     }
-} 
+}

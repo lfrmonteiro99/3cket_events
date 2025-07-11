@@ -1,0 +1,81 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: 3cket-php-app
+    container_name: 3cket-app
+    restart: unless-stopped
+    working_dir: /var/www
+    volumes:
+      - .:/var/www
+      - ./docker/php/local.ini:/usr/local/etc/php/conf.d/local.ini
+    env_file:
+      - .env
+    environment:
+      - DB_HOST=${DB_HOST:-db}
+      - DB_PORT=${DB_PORT:-3306}
+      - DB_DATABASE=${DB_DATABASE:-3cket_events}
+      - DB_USERNAME=${DB_USERNAME:-3cket_user}
+      - DB_PASSWORD=${DB_PASSWORD:-3cket_password}
+      - CACHE_STRATEGY=${CACHE_STRATEGY:-auto}
+      - CACHE_TTL=${CACHE_TTL:-3600}
+      - CACHE_PREFIX=${CACHE_PREFIX:-3cket:}
+      - REDIS_HOST=${REDIS_HOST:-redis}
+      - REDIS_PORT=${REDIS_PORT:-6379}
+    depends_on:
+      - db
+    networks:
+      - app-network
+
+  webserver:
+    image: nginx:alpine
+    container_name: 3cket-webserver
+    restart: unless-stopped
+    ports:
+      - "8000:80"
+    volumes:
+      - .:/var/www
+      - ./docker/nginx/conf.d/:/etc/nginx/conf.d/
+    depends_on:
+      - app
+    networks:
+      - app-network
+
+  db:
+    image: mysql:8.0
+    container_name: 3cket-db
+    restart: unless-stopped
+    environment:
+      - MYSQL_DATABASE=3cket_events
+      - MYSQL_USER=3cket_user
+      - MYSQL_PASSWORD=3cket_password
+      - MYSQL_ROOT_PASSWORD=root_password
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./docker/mysql/init.sql:/docker-entrypoint-initdb.d/init.sql
+    command: --default-authentication-plugin=mysql_native_password
+    networks:
+      - app-network
+
+  redis:
+    image: redis:7-alpine
+    container_name: 3cket-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    command: redis-server --appendonly yes
+    networks:
+      - app-network
+
+volumes:
+  db_data:
+  redis_data:
+
+networks:
+  app-network:
+    driver: bridge 

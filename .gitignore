@@ -1,0 +1,101 @@
+# PHP
+*.log
+*.tmp
+*.temp
+*.cache
+*.swp
+*.swo
+*.bak
+*.orig
+*.rej
+~*
+
+# Dependencies
+/vendor/
+composer.phar
+composer.lock
+
+# Environment files
+.env
+.env.local
+.env.*.local
+.env.production
+.env.staging
+.env.development
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Cache and temporary files
+/storage/
+/cache/
+/tmp/
+*.cache
+*.tmp
+*.temp
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.komodoproject
+.komodotools
+*.brackets.json
+.project
+.settings/
+.buildpath
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# PHPUnit
+/phpunit.xml
+/.phpunit.result.cache
+
+# Coverage reports
+/coverage/
+/build/
+clover.xml
+
+# Backup files
+*.bak
+*.backup
+*.old
+*~
+
+# Session files
+/sessions/
+
+# Uploaded files
+/uploads/
+
+# Build artifacts
+/dist/
+/build/
+/public/build/
+
+# Package managers
+node_modules/
+bower_components/
+package-lock.json
+yarn.lock
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+
+# Testing
+.phpunit.result.cache

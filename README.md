@@ -2,8 +2,6 @@
 
 A sophisticated event management system built with modern PHP 8.2+ following Domain-Driven Design (DDD) principles. The system provides comprehensive event management capabilities with enterprise-grade features including intelligent caching, pagination, connection pooling, specialized logging with **Monolog**, and extensive API functionality.
 
-**Now featuring 25 authentic Portuguese events across 25 municipalities!**
-
 ## Requirements
 
 ### For Docker Usage (Recommended - Easy Setup)

@@ -1,6 +1,8 @@
 # 3cket Event Management System
 
-A sophisticated event management system built with modern PHP 8.2+ following Domain-Driven Design (DDD) principles. The system provides comprehensive event management capabilities with enterprise-grade features including intelligent caching, pagination, connection pooling, specialized logging with **Monolog**, and extensive API functionality.
+A sophisticated **read-only** event management system built with modern PHP 8.2+ following Domain-Driven Design (DDD) principles. The system provides comprehensive event retrieval and display capabilities with enterprise-grade features including intelligent caching, pagination, connection pooling, specialized logging with **Monolog**, and extensive API functionality.
+
+> **Note**: This system is designed as a read-only API for event data retrieval. It does not support creating, updating, or deleting events.
 
 ## Requirements
 
@@ -154,7 +156,7 @@ If you see JSON data with Portuguese events, congratulations! Your installation 
 
 ### Basic API Usage
 
-The system provides a RESTful API for event management featuring **25 authentic Portuguese events** across municipalities including Lisboa, Porto, Coimbra, Braga, Aveiro, and more:
+The system provides a **read-only** RESTful API for event data retrieval featuring **25 authentic Portuguese events** across municipalities including Lisboa, Porto, Coimbra, Braga, Aveiro, and more:
 
 #### List Events (with pagination)
 ```bash
@@ -499,6 +501,8 @@ tail -f logs/application.log
 
 ### Available Endpoints
 
+> **Important**: This system provides **read-only access only**. No create, update, or delete operations are supported.
+
 | Method | Endpoint | Description |
 |--------|----------|-------------|
 | GET | `/events` | List all events with pagination |
@@ -506,6 +510,17 @@ tail -f logs/application.log
 | GET | `/debug` | System debug information |
 | GET | `/cache` | Cache statistics |
 | GET | `/cache?action=clear` | Clear cache |
+
+### Removed Functionality
+
+The following functionality has been **intentionally removed** to make this a read-only system:
+
+- ❌ **POST** `/events` - Create new events
+- ❌ **PUT** `/events/{id}` - Update existing events  
+- ❌ **DELETE** `/events/{id}` - Delete events
+- ❌ **Event creation commands and use cases**
+- ❌ **Event update/modification capabilities**
+- ❌ **Domain events for create/update operations**
 
 ### Pagination Parameters
 
@@ -601,8 +616,8 @@ docker-compose build
 ## Testing
 
 ### Test Statistics
-- **Total Tests**: 151
-- **Total Assertions**: 413
+- **Total Tests**: 134
+- **Total Assertions**: 354
 - **Coverage**: Comprehensive unit and integration tests
 - **Quality**: PHPStan Level 8 (0 errors)
 

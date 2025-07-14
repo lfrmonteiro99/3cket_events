@@ -27,7 +27,23 @@ class CacheFactory
     private static function createRedisCache(): CacheInterface
     {
         try {
-            return RedisCache::createFromEnvironment();
+            $redis = new \Redis();
+            $host = $_ENV['REDIS_HOST'] ?? 'redis';
+            $port = (int) ($_ENV['REDIS_PORT'] ?? 6379);
+            $password = $_ENV['REDIS_PASSWORD'] ?? null;
+            $database = (int) ($_ENV['REDIS_DATABASE'] ?? 0);
+
+            $redis->connect($host, $port, 2.5);
+
+            if ($password) {
+                $redis->auth($password);
+            }
+
+            if ($database > 0) {
+                $redis->select($database);
+            }
+
+            return new RedisCache($redis);
         } catch (\Exception $e) {
             error_log('Redis cache creation failed: ' . $e->getMessage());
 
@@ -41,7 +57,23 @@ class CacheFactory
         try {
             // Check if Redis extension is available
             if (extension_loaded('redis')) {
-                return RedisCache::createFromEnvironment();
+                $redis = new \Redis();
+                $host = $_ENV['REDIS_HOST'] ?? 'redis';
+                $port = (int) ($_ENV['REDIS_PORT'] ?? 6379);
+                $password = $_ENV['REDIS_PASSWORD'] ?? null;
+                $database = (int) ($_ENV['REDIS_DATABASE'] ?? 0);
+
+                $redis->connect($host, $port, 2.5);
+
+                if ($password) {
+                    $redis->auth($password);
+                }
+
+                if ($database > 0) {
+                    $redis->select($database);
+                }
+
+                return new RedisCache($redis);
             }
         } catch (\Exception $e) {
             error_log('Redis cache not available, falling back to in-memory cache: ' . $e->getMessage());

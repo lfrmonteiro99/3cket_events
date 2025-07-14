@@ -7,17 +7,17 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
   array (
     '/var/www/tests/Unit/ContainerTest.php' => 
     array (
-      0 => '021a51d53bd0b3e5cccc93eeb3cf0d8c2d4ffdab',
+      0 => 'c6397d589097af31397603f2c67524b8ce02b30a',
       1 => 
       array (
         0 => 'tests\\unit\\containertest',
       ),
       2 => 
       array (
-        0 => 'tests\\unit\\testpdoinstanceissingleton',
-        1 => 'tests\\unit\\testeventrepositorycreation',
-        2 => 'tests\\unit\\testeventcontrollercreation',
-        3 => 'tests\\unit\\testcontainerinstancesarecached',
+        0 => 'tests\\unit\\testcontainercanbecreated',
+        1 => 'tests\\unit\\testcontainercanbindandretrieveservices',
+        2 => 'tests\\unit\\testcontainerreturnssameinstanceforsingleton',
+        3 => 'tests\\unit\\testcontainerthrowsexceptionforunboundservice',
         4 => 'tests\\unit\\setup',
       ),
       3 => 
@@ -26,7 +26,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/var/www/tests/Unit/Application/DTO/PaginatedResponseTest.php' => 
     array (
-      0 => '3d372bcc3331a4fdf2accd7bc80ea1bf2f36fc43',
+      0 => '1a56cb1bccc8d587c54252e9691845e02b7c110f',
       1 => 
       array (
         0 => 'tests\\unit\\application\\dto\\paginatedresponsetest',
@@ -94,28 +94,9 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
       array (
       ),
     ),
-    '/var/www/tests/Unit/Application/UseCase/CreateEventUseCaseTest.php' => 
-    array (
-      0 => 'bc5a438129d77df96130a856321c321c66f078d0',
-      1 => 
-      array (
-        0 => 'tests\\unit\\application\\usecase\\createeventusecasetest',
-      ),
-      2 => 
-      array (
-        0 => 'tests\\unit\\application\\usecase\\testexecutecreateseventandreturnsdto',
-        1 => 'tests\\unit\\application\\usecase\\testexecutecallsrepositorysaveonce',
-        2 => 'tests\\unit\\application\\usecase\\testexecutecreateseventwithcorrectvalueobjects',
-        3 => 'tests\\unit\\application\\usecase\\testexecutereturnscorrectdtostructure',
-        4 => 'tests\\unit\\application\\usecase\\setup',
-      ),
-      3 => 
-      array (
-      ),
-    ),
     '/var/www/tests/Unit/Application/UseCase/GetPaginatedEventsUseCaseTest.php' => 
     array (
-      0 => '21beac82b13fddb39c21d98b1b49e232e18a3405',
+      0 => '331bf18b4ecda33279833177a625c36d0b54a15e',
       1 => 
       array (
         0 => 'tests\\unit\\application\\usecase\\getpaginatedeventsusecasetest',
@@ -135,7 +116,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/var/www/tests/Unit/Application/Query/PaginationQueryTest.php' => 
     array (
-      0 => '98ada433bc050aaf91dc5621556a92fe52e980dc',
+      0 => '752c8e061e8483bfdd2f6c2adacbd5c33a8a802a',
       1 => 
       array (
         0 => 'tests\\unit\\application\\query\\paginationquerytest',
@@ -186,7 +167,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/var/www/tests/Unit/RouterTest.php' => 
     array (
-      0 => '2edf111320bc0ff42220fca273da66c29aa00bac',
+      0 => '65e7e598b252a08cac588633f18d1515bdea44d1',
       1 => 
       array (
         0 => 'tests\\unit\\routertest',
@@ -209,27 +190,26 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/var/www/tests/Unit/Presentation/Controller/EventControllerTest.php' => 
     array (
-      0 => '83c8a2e12621341c8b868224be9d74b44ee39452',
+      0 => '77adfa8696f8cccb932f307b243ad8730abfc577',
       1 => 
       array (
         0 => 'tests\\unit\\presentation\\controller\\eventcontrollertest',
       ),
       2 => 
       array (
-        0 => 'tests\\unit\\presentation\\controller\\testindexreturnsallevents',
-        1 => 'tests\\unit\\presentation\\controller\\testindexreturnsemptyarraywhennoevents',
-        2 => 'tests\\unit\\presentation\\controller\\testshowreturnsspecificevent',
-        3 => 'tests\\unit\\presentation\\controller\\testshowreturnserrorwheneventnotfound',
-        4 => 'tests\\unit\\presentation\\controller\\testshowwithvalididparameter',
-        5 => 'tests\\unit\\presentation\\controller\\testshowwithinvalididparameter',
-        6 => 'tests\\unit\\presentation\\controller\\testshowwithnegativeidparameter',
-        7 => 'tests\\unit\\presentation\\controller\\testdebugreturnssysteminformation',
-        8 => 'tests\\unit\\presentation\\controller\\testpaginatedreturnsfirstpage',
-        9 => 'tests\\unit\\presentation\\controller\\testpaginatedwithqueryparameters',
-        10 => 'tests\\unit\\presentation\\controller\\testpaginatedwithinvalidparameters',
-        11 => 'tests\\unit\\presentation\\controller\\setup',
-        12 => 'tests\\unit\\presentation\\controller\\teardown',
-        13 => 'tests\\unit\\presentation\\controller\\createeventdto',
+        0 => 'tests\\unit\\presentation\\controller\\testindexreturnspaginatedevents',
+        1 => 'tests\\unit\\presentation\\controller\\testindexreturnsemptypaginatedresponsewhennoevents',
+        2 => 'tests\\unit\\presentation\\controller\\testindexwithqueryparameters',
+        3 => 'tests\\unit\\presentation\\controller\\testindexwithinvalidparameters',
+        4 => 'tests\\unit\\presentation\\controller\\testshowrequiresidparameter',
+        5 => 'tests\\unit\\presentation\\controller\\testshowreturnserrorwheneventnotfound',
+        6 => 'tests\\unit\\presentation\\controller\\testshowwithvalididparameter',
+        7 => 'tests\\unit\\presentation\\controller\\testshowwithinvalididparameter',
+        8 => 'tests\\unit\\presentation\\controller\\testshowwithnegativeidparameter',
+        9 => 'tests\\unit\\presentation\\controller\\testdebugreturnssysteminformation',
+        10 => 'tests\\unit\\presentation\\controller\\setup',
+        11 => 'tests\\unit\\presentation\\controller\\teardown',
+        12 => 'tests\\unit\\presentation\\controller\\createeventdto',
       ),
       3 => 
       array (
@@ -237,7 +217,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/var/www/tests/Unit/Infrastructure/Repository/DatabaseEventRepositoryTest.php' => 
     array (
-      0 => 'f4d05b32cfe3dd0af1f5c95e9564bf45d4bdada5',
+      0 => '0ff3fddb5f9c891a54b6440789d04e6cf0198672',
       1 => 
       array (
         0 => 'tests\\unit\\infrastructure\\repository\\databaseeventrepositorytest',
@@ -248,13 +228,9 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         1 => 'tests\\unit\\infrastructure\\repository\\testfindbyidreturnseventwhenfound',
         2 => 'tests\\unit\\infrastructure\\repository\\testfindbyidreturnsnullwhennotfound',
         3 => 'tests\\unit\\infrastructure\\repository\\testcountreturnscorrectnumber',
-        4 => 'tests\\unit\\infrastructure\\repository\\testsaveinsertsneweventwhennoid',
-        5 => 'tests\\unit\\infrastructure\\repository\\testsaveupdatesexistingeventwhenhasid',
-        6 => 'tests\\unit\\infrastructure\\repository\\testdeleteremovesevent',
-        7 => 'tests\\unit\\infrastructure\\repository\\testnextidreturnsneweventid',
-        8 => 'tests\\unit\\infrastructure\\repository\\testprepareiscalledonceperquery',
-        9 => 'tests\\unit\\infrastructure\\repository\\teststatementexecuteiscalledwithcorrectparameters',
-        10 => 'tests\\unit\\infrastructure\\repository\\setup',
+        4 => 'tests\\unit\\infrastructure\\repository\\testprepareiscalledonceperquery',
+        5 => 'tests\\unit\\infrastructure\\repository\\teststatementexecuteiscalledwithcorrectparameters',
+        6 => 'tests\\unit\\infrastructure\\repository\\setup',
       ),
       3 => 
       array (
@@ -262,7 +238,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/var/www/tests/Unit/Infrastructure/Repository/CachedEventRepositoryTest.php' => 
     array (
-      0 => '97a4c2d19d0fe0280ce550ba12974e6b592f5bde',
+      0 => 'ee5873006e730ec8713f2001e632b3fa5244be3e',
       1 => 
       array (
         0 => 'tests\\unit\\infrastructure\\repository\\cachedeventrepositorytest',
@@ -276,14 +252,11 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         4 => 'tests\\unit\\infrastructure\\repository\\testfindbyidreturnsnullwheneventnotfound',
         5 => 'tests\\unit\\infrastructure\\repository\\testcountreturnscachedresultwhenavailable',
         6 => 'tests\\unit\\infrastructure\\repository\\testcountfetchesfromrepositorywhennotcached',
-        7 => 'tests\\unit\\infrastructure\\repository\\testsaveinvalidatescacheandcallsinnerrepository',
-        8 => 'tests\\unit\\infrastructure\\repository\\testdeleteinvalidatescacheandcallsinnerrepository',
-        9 => 'tests\\unit\\infrastructure\\repository\\testnextidcallsinnerrepositorydirectly',
-        10 => 'tests\\unit\\infrastructure\\repository\\testclearcacheinvalidatesalleventcaches',
-        11 => 'tests\\unit\\infrastructure\\repository\\testgetcachestatsreturnsdefaultwhennotavailable',
-        12 => 'tests\\unit\\infrastructure\\repository\\testcachekeygenerationforevents',
-        13 => 'tests\\unit\\infrastructure\\repository\\testmultiplecacheoperationsinsequence',
-        14 => 'tests\\unit\\infrastructure\\repository\\setup',
+        7 => 'tests\\unit\\infrastructure\\repository\\testclearcacheinvalidatesalleventcaches',
+        8 => 'tests\\unit\\infrastructure\\repository\\testgetcachestatsreturnsdefaultwhennotavailable',
+        9 => 'tests\\unit\\infrastructure\\repository\\testcachekeygenerationforevents',
+        10 => 'tests\\unit\\infrastructure\\repository\\testmultiplecacheoperationsinsequence',
+        11 => 'tests\\unit\\infrastructure\\repository\\setup',
       ),
       3 => 
       array (
@@ -343,7 +316,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/var/www/tests/Unit/Domain/Entity/EventTest.php' => 
     array (
-      0 => '1c603895382db3fbe0c8459cf950dff2f6ae1cf5',
+      0 => '3d5ca7f67623b3c6898bee5ad4c79ce4dd87dc45',
       1 => 
       array (
         0 => 'tests\\unit\\domain\\entity\\eventtest',
@@ -351,16 +324,58 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
       2 => 
       array (
         0 => 'tests\\unit\\domain\\entity\\testeventcanbecreated',
-        1 => 'tests\\unit\\domain\\entity\\testeventwithoutidraisesdomainevent',
-        2 => 'tests\\unit\\domain\\entity\\testeventupdatename',
-        3 => 'tests\\unit\\domain\\entity\\testeventupdatenamewithsamenamedoesnotraisedomainevent',
-        4 => 'tests\\unit\\domain\\entity\\testeventupdatelocation',
-        5 => 'tests\\unit\\domain\\entity\\testeventupdatecoordinates',
-        6 => 'tests\\unit\\domain\\entity\\testeventdistanceto',
-        7 => 'tests\\unit\\domain\\entity\\testeventequals',
-        8 => 'tests\\unit\\domain\\entity\\testeventtoarray',
-        9 => 'tests\\unit\\domain\\entity\\testcleardomainevents',
-        10 => 'tests\\unit\\domain\\entity\\createtestevent',
+        1 => 'tests\\unit\\domain\\entity\\testeventdistanceto',
+        2 => 'tests\\unit\\domain\\entity\\testeventequals',
+        3 => 'tests\\unit\\domain\\entity\\testeventtoarray',
+        4 => 'tests\\unit\\domain\\entity\\createtestevent',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/var/www/tests/Unit/Application/Service/EventServiceTest.php' => 
+    array (
+      0 => 'f3b9c258b9696b01c6638ee437ea3cba7ec267a2',
+      1 => 
+      array (
+        0 => 'tests\\unit\\application\\service\\eventservicetest',
+      ),
+      2 => 
+      array (
+        0 => 'tests\\unit\\application\\service\\testgetalleventsreturnspaginatedresponse',
+        1 => 'tests\\unit\\application\\service\\testgeteventbyidreturnseventdto',
+        2 => 'tests\\unit\\application\\service\\testgeteventbyidreturnsnullwhennotfound',
+        3 => 'tests\\unit\\application\\service\\testgeteventcountreturnscorrectcount',
+        4 => 'tests\\unit\\application\\service\\testeventexistsreturnstruewheneventexists',
+        5 => 'tests\\unit\\application\\service\\testeventexistsreturnsfalsewheneventdoesnotexist',
+        6 => 'tests\\unit\\application\\service\\testeventexistsreturnsfalseforinvalidid',
+        7 => 'tests\\unit\\application\\service\\testvalidatepaginationbusinessrulesthrowsexceptionforlargepagesize',
+        8 => 'tests\\unit\\application\\service\\testvalidateeventidthrowsexceptionforinvalidid',
+        9 => 'tests\\unit\\application\\service\\testvalidateeventidthrowsexceptionfortoolargeid',
+        10 => 'tests\\unit\\application\\service\\setup',
+        11 => 'tests\\unit\\application\\service\\createevent',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/var/www/tests/Unit/Presentation/Controller/EventControllerServiceTest.php' => 
+    array (
+      0 => '6a94b460f33bc9c070d7246d67395a2ac69e5659',
+      1 => 
+      array (
+        0 => 'tests\\unit\\presentation\\controller\\eventcontrollerservicetest',
+      ),
+      2 => 
+      array (
+        0 => 'tests\\unit\\presentation\\controller\\testindexusesservicelayer',
+        1 => 'tests\\unit\\presentation\\controller\\testshowusesservicelayer',
+        2 => 'tests\\unit\\presentation\\controller\\testshowreturnsnotfoundwhenservicereturnsnull',
+        3 => 'tests\\unit\\presentation\\controller\\testdebugusesservicelayer',
+        4 => 'tests\\unit\\presentation\\controller\\testshowrequiresidparameter',
+        5 => 'tests\\unit\\presentation\\controller\\testindexwithinvalidparameters',
+        6 => 'tests\\unit\\presentation\\controller\\setup',
+        7 => 'tests\\unit\\presentation\\controller\\createeventdto',
       ),
       3 => 
       array (

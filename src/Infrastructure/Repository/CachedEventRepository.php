@@ -5,164 +5,226 @@ declare(strict_types=1);
 namespace App\Infrastructure\Repository;
 
 use App\Application\Query\PaginationQuery;
+use App\Application\Query\SearchQuery;
 use App\Domain\Entity\Event;
 use App\Domain\Repository\EventRepositoryInterface;
 use App\Domain\ValueObject\EventId;
+use App\Infrastructure\Cache\CacheAnalytics;
 use App\Infrastructure\Cache\CacheInterface;
-use App\Infrastructure\Logging\LoggerInterface;
 
 class CachedEventRepository implements EventRepositoryInterface
 {
     private EventRepositoryInterface $repository;
     private CacheInterface $cache;
+    private CacheAnalytics $analytics;
     private int $defaultTtl;
-    private string $keyPrefix;
-    private ?LoggerInterface $logger;
 
     public function __construct(
         EventRepositoryInterface $repository,
         CacheInterface $cache,
-        int $defaultTtl = 3600,
-        string $keyPrefix = 'events:',
-        ?LoggerInterface $logger = null
+        CacheAnalytics $analytics,
+        int $defaultTtl = 3600
     ) {
         $this->repository = $repository;
         $this->cache = $cache;
+        $this->analytics = $analytics;
         $this->defaultTtl = $defaultTtl;
-        $this->keyPrefix = $keyPrefix;
-        $this->logger = $logger;
     }
 
     public function findAll(): array
     {
-        $cacheKey = $this->keyPrefix . 'all';
-
-        // Try to get from cache first
-        $cached = $this->cache->get($cacheKey);
+        $key = 'events:all';
+        $cached = $this->cache->get($key);
 
         if ($cached !== null) {
-            $this->logger?->logCacheOperation('Cache HIT for findAll()');
+            $this->analytics->trackKeyAccess($key, true);
 
             return $cached;
         }
 
-        // Cache miss - get from repository
-        $this->logger?->logCacheOperation('Cache MISS for findAll() - fetching from repository');
+        $this->analytics->trackKeyAccess($key, false);
         $events = $this->repository->findAll();
 
-        // Store in cache
-        $this->cache->set($cacheKey, $events, $this->defaultTtl);
+        if (!empty($events)) {
+            $this->cache->setWithSmartTtl($key, $events, $this->defaultTtl);
+            $this->cache->tagMultiple($key, ['events', 'list', 'all_events']);
+        }
 
         return $events;
     }
 
     public function findPaginated(PaginationQuery $query): array
     {
-        $cacheKey = $this->keyPrefix . 'paginated:' . $query->getCacheKey();
-
-        // Try to get from cache first
-        $cached = $this->cache->get($cacheKey);
+        $key = 'events:paginated:' . $query->getCacheKey();
+        $cached = $this->cache->get($key);
 
         if ($cached !== null) {
-            error_log("CachedEventRepository: Cache HIT for findPaginated({$query->getCacheKey()})");
+            $this->analytics->trackKeyAccess($key, true);
 
             return $cached;
         }
 
-        // Cache miss - get from repository
-        error_log("CachedEventRepository: Cache MISS for findPaginated({$query->getCacheKey()}) - fetching from repository");
+        $this->analytics->trackKeyAccess($key, false);
         $events = $this->repository->findPaginated($query);
 
-        // Store in cache with shorter TTL since paginated results can change frequently
-        $this->cache->set($cacheKey, $events, $this->defaultTtl / 2);
+        if (!empty($events)) {
+            $this->cache->setWithSmartTtl($key, $events, $this->defaultTtl);
+            $this->cache->tagMultiple($key, ['events', 'list', 'paginated']);
+        }
 
         return $events;
     }
 
     public function findById(EventId $id): ?Event
     {
-        $idValue = $id->getValue();
-        $cacheKey = $this->keyPrefix . 'id:' . $idValue;
-
-        // Try to get from cache first
-        $cached = $this->cache->get($cacheKey);
+        $key = "event:{$id->getValue()}";
+        $cached = $this->cache->get($key);
 
         if ($cached !== null) {
-            error_log("CachedEventRepository: Cache HIT for findById({$idValue})");
+            $this->analytics->trackKeyAccess($key, true);
 
             return $cached;
         }
 
-        // Cache miss - get from repository
-        error_log("CachedEventRepository: Cache MISS for findById({$idValue}) - fetching from repository");
+        $this->analytics->trackKeyAccess($key, false);
         $event = $this->repository->findById($id);
 
-        // Store in cache (even if null to prevent repeated lookups)
-        $this->cache->set($cacheKey, $event, $this->defaultTtl);
+        if ($event) {
+            $this->cache->setWithSmartTtl($key, $event, $this->defaultTtl);
+            $this->cache->tagMultiple($key, ['events', 'specific', 'event_id']);
+        }
 
         return $event;
     }
 
     public function count(): int
     {
-        $cacheKey = $this->keyPrefix . 'count';
-
-        // Try to get from cache first
-        $cached = $this->cache->get($cacheKey);
+        $key = 'events:count';
+        $cached = $this->cache->get($key);
 
         if ($cached !== null) {
-            error_log('CachedEventRepository: Cache HIT for count()');
+            $this->analytics->trackKeyAccess($key, true);
 
             return $cached;
         }
 
-        // Cache miss - get from repository
-        error_log('CachedEventRepository: Cache MISS for count() - fetching from repository');
+        $this->analytics->trackKeyAccess($key, false);
         $count = $this->repository->count();
 
-        // Store in cache with shorter TTL since count changes more frequently
-        $this->cache->set($cacheKey, $count, $this->defaultTtl / 2);
+        $this->cache->setWithSmartTtl($key, $count, $this->defaultTtl * 2); // Longer TTL for count
+        $this->cache->tagMultiple($key, ['events', 'count', 'metadata']);
 
         return $count;
     }
 
-    /**
-     * Clear all cache entries for this repository.
-     */
-    public function clearCache(): bool
+    public function search(SearchQuery $query): array
     {
-        // Since we can't easily get all keys with a prefix in all cache implementations,
-        // we'll clear the main cache entries we know about
-        $keys = [
-            $this->keyPrefix . 'all',
-            $this->keyPrefix . 'count',
-        ];
+        $key = 'events:search:' . $query->getCacheKey();
+        $cached = $this->cache->get($key);
 
-        $success = true;
+        if ($cached !== null) {
+            $this->analytics->trackKeyAccess($key, true);
 
-        foreach ($keys as $key) {
-            if (!$this->cache->delete($key)) {
-                $success = false;
-            }
+            return $cached;
         }
 
-        error_log('CachedEventRepository: Cleared all cache entries');
+        $this->analytics->trackKeyAccess($key, false);
+        $events = $this->repository->search($query);
 
-        return $success;
+        if (!empty($events)) {
+            $this->cache->setWithSmartTtl($key, $events, $this->defaultTtl);
+            $this->cache->tagMultiple($key, ['events', 'search', 'search_results']);
+        }
+
+        return $events;
     }
 
-    /**
-     * Get cache statistics.
-     */
+    public function countSearch(SearchQuery $query): int
+    {
+        $key = 'events:search_count:' . $query->getCacheKey();
+        $cached = $this->cache->get($key);
+
+        if ($cached !== null) {
+            $this->analytics->trackKeyAccess($key, true);
+
+            return $cached;
+        }
+
+        $this->analytics->trackKeyAccess($key, false);
+        $count = $this->repository->countSearch($query);
+
+        $this->cache->setWithSmartTtl($key, $count, $this->defaultTtl * 2); // Longer TTL for count
+        $this->cache->tagMultiple($key, ['events', 'search', 'count', 'metadata']);
+
+        return $count;
+    }
+
+    public function invalidateEventCache(string $eventId): void
+    {
+        $keys = [
+            "event:{$eventId}",
+            'events:count',
+        ];
+
+        $this->cache->deleteMultiple($keys);
+        $this->cache->invalidateByTags(['events', 'specific']);
+    }
+
+    public function invalidateSearchCache(): void
+    {
+        $this->cache->invalidateByTags(['search', 'search_results']);
+    }
+
+    public function invalidateAllCache(): void
+    {
+        $this->cache->invalidateByTags(['events', 'list', 'search', 'count']);
+    }
+
     /**
      * @return array<string, mixed>
      */
     public function getCacheStats(): array
     {
-        if (method_exists($this->cache, 'getStats')) {
-            return call_user_func([$this->cache, 'getStats']);
+        return $this->cache->getStats();
+    }
+
+    /**
+     * @return array<string, mixed>
+     */
+    public function getCacheAnalytics(): array
+    {
+        return $this->analytics->generateReport();
+    }
+
+    public function warmUpCache(): void
+    {
+        // Warm up popular events
+        $popularEvents = $this->repository->findAll();
+        $firstTen = array_slice($popularEvents, 0, 10);
+
+        foreach ($firstTen as $event) {
+            $eventId = $event->getId();
+
+            if ($eventId !== null) {
+                $key = "event:{$eventId->getValue()}";
+                $this->cache->setWithSmartTtl($key, $event, $this->defaultTtl);
+                $this->cache->tagMultiple($key, ['events', 'popular', 'warmed']);
+            }
         }
 
-        return ['message' => 'Cache statistics not available'];
+        // Warm up count
+        $this->count();
+
+        // Warm up common searches
+        $commonSearches = [
+            new SearchQuery(search: 'concert'),
+            new SearchQuery(search: 'festival'),
+            new SearchQuery(search: 'sports'),
+        ];
+
+        foreach ($commonSearches as $search) {
+            $this->search($search);
+            $this->countSearch($search);
+        }
     }
 }

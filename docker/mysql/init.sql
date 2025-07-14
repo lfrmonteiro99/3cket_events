@@ -38,5 +38,25 @@ INSERT INTO events (id, event_name, location, latitude, longitude, created_at, u
 (25, 'Feira de Antiguidades', 'Lamego', 41.0968, -7.8096, '2024-05-30 11:00:00', '2024-05-30 11:00:00');
 
 -- Create indexes for better performance
+
+-- Basic indexes for common queries
 CREATE INDEX idx_events_location ON events(location);
-CREATE INDEX idx_events_coordinates ON events(latitude, longitude); 
+CREATE INDEX idx_events_event_name ON events(event_name);
+CREATE INDEX idx_events_created_at ON events(created_at);
+CREATE INDEX idx_events_updated_at ON events(updated_at);
+
+-- Composite indexes for geographic searches
+CREATE INDEX idx_events_coordinates ON events(latitude, longitude);
+
+-- Full-text search index for text searches
+CREATE FULLTEXT INDEX idx_events_fulltext ON events(event_name, location);
+
+-- Composite indexes for common query patterns
+CREATE INDEX idx_events_location_created ON events(location, created_at);
+CREATE INDEX idx_events_name_location ON events(event_name, location);
+
+-- Covering index for pagination queries (includes all commonly selected columns)
+CREATE INDEX idx_events_pagination_covering ON events(id, event_name, location, latitude, longitude, created_at, updated_at);
+
+-- Analyze tables for better query optimization
+ANALYZE TABLE events; 

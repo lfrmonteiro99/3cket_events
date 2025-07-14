@@ -29,6 +29,11 @@ class Router
         $this->addRoute(HttpMethod::GET, $path, $controller, $action);
     }
 
+    public function post(string $path, string $controller, string $action): void
+    {
+        $this->addRoute(HttpMethod::POST, $path, $controller, $action);
+    }
+
     public function resolve(string $method, string $path): Route
     {
         $httpMethod = HttpMethod::fromString($method);

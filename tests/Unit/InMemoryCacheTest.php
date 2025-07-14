@@ -26,17 +26,17 @@ class InMemoryCacheTest extends TestCase
     {
         $this->cache->set('existing_key', 'value');
 
-        $this->assertTrue($this->cache->exists('existing_key'));
-        $this->assertFalse($this->cache->exists('nonexistent_key'));
+        $this->assertTrue($this->cache->has('existing_key'));
+        $this->assertFalse($this->cache->has('nonexistent_key'));
     }
 
     public function testDelete(): void
     {
         $this->cache->set('delete_me', 'value');
-        $this->assertTrue($this->cache->exists('delete_me'));
+        $this->assertTrue($this->cache->has('delete_me'));
 
         $this->assertTrue($this->cache->delete('delete_me'));
-        $this->assertFalse($this->cache->exists('delete_me'));
+        $this->assertFalse($this->cache->has('delete_me'));
     }
 
     public function testClear(): void
@@ -61,7 +61,7 @@ class InMemoryCacheTest extends TestCase
 
         // Should be expired now
         $this->assertNull($this->cache->get('ttl_key'));
-        $this->assertFalse($this->cache->exists('ttl_key'));
+        $this->assertFalse($this->cache->has('ttl_key'));
     }
 
     public function testZeroTtlNeverExpires(): void
@@ -71,7 +71,7 @@ class InMemoryCacheTest extends TestCase
         // Simulate time passing (we can't actually wait)
         // But the key should still exist
         $this->assertEquals('value', $this->cache->get('permanent_key'));
-        $this->assertTrue($this->cache->exists('permanent_key'));
+        $this->assertTrue($this->cache->has('permanent_key'));
     }
 
     public function testMultipleOperations(): void
@@ -99,7 +99,7 @@ class InMemoryCacheTest extends TestCase
 
         $stats = $this->cache->getStats();
 
-        $this->assertEquals(2, $stats['total_items']);
+        $this->assertEquals(2, $stats['total_keys']);
     }
 
     protected function setUp(): void

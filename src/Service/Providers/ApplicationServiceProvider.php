@@ -6,10 +6,13 @@ namespace App\Service\Providers;
 
 use App\Application\Service\EventService;
 use App\Application\Service\EventServiceInterface;
+use App\Application\Service\SearchService;
+use App\Application\Service\SearchServiceInterface;
 use App\Application\UseCase\GetAllEventsUseCase;
 use App\Application\UseCase\GetEventByIdUseCase;
 use App\Application\UseCase\GetPaginatedEventsUseCase;
 use App\Domain\Repository\EventRepositoryInterface;
+use App\Infrastructure\Logging\LoggerInterface;
 use App\Infrastructure\Validation\EventIdValidator;
 use App\Infrastructure\Validation\PaginationValidator;
 use App\Service\Container;
@@ -28,6 +31,13 @@ class ApplicationServiceProvider implements ServiceProvider
     {
         $container->bind(EventServiceInterface::class, function (Container $container) {
             return new EventService($container->get(EventRepositoryInterface::class));
+        });
+
+        $container->bind(SearchServiceInterface::class, function (Container $container) {
+            return new SearchService(
+                $container->get(EventRepositoryInterface::class),
+                $container->get(LoggerInterface::class)
+            );
         });
     }
 

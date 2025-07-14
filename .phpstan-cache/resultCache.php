@@ -1,30 +1,30 @@
 <?php declare(strict_types = 1);
 
 return [
-	'lastFullAnalysisTime' => 1752230976,
+	'lastFullAnalysisTime' => 1752496448,
 	'meta' => array (
   'cacheVersion' => 'v12-linesToIgnore',
   'phpstanVersion' => '2.1.17',
   'metaExtensions' => 
   array (
   ),
-  'phpVersion' => 80229,
-  'projectConfig' => '{parameters: {level: 8, paths: [/var/www/src, /var/www/tests], excludePaths: {analyseAndScan: [/var/www/vendor, /var/www/public/index.php], analyse: []}, treatPhpDocTypesAsCertain: false, bootstrapFiles: [/var/www/vendor/autoload.php], tmpDir: /var/www/.phpstan-cache}}',
+  'phpVersion' => 80408,
+  'projectConfig' => '{parameters: {level: 8, paths: [/Users/luis.monteiro.ext/Documents/3cket_events/src, /Users/luis.monteiro.ext/Documents/3cket_events/tests], excludePaths: {analyseAndScan: [/Users/luis.monteiro.ext/Documents/3cket_events/vendor, /Users/luis.monteiro.ext/Documents/3cket_events/public/index.php], analyse: []}, treatPhpDocTypesAsCertain: false, bootstrapFiles: [/Users/luis.monteiro.ext/Documents/3cket_events/vendor/autoload.php], tmpDir: /Users/luis.monteiro.ext/Documents/3cket_events/.phpstan-cache}}',
   'analysedPaths' => 
   array (
-    0 => '/var/www/src',
-    1 => '/var/www/tests',
+    0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src',
+    1 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests',
   ),
   'scannedFiles' => 
   array (
   ),
   'composerLocks' => 
   array (
-    '/var/www/composer.lock' => 'fa78b74d598da3cd16dbb476c42d3cda9f33f09c',
+    '/Users/luis.monteiro.ext/Documents/3cket_events/composer.lock' => 'ceeb670fde143ab0d7eb3bbbfd4d326832370f27',
   ),
   'composerInstalled' => 
   array (
-    '/var/www/vendor/composer/installed.php' => 
+    '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/installed.php' => 
     array (
       'versions' => 
       array (
@@ -34,7 +34,7 @@ return [
           'version' => '1.3.0.0',
           'reference' => '392dc165fce93b5bb5c637b67e59619223c931b0',
           'type' => 'library',
-          'install_path' => '/var/www/vendor/composer/../clue/ndjson-react',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/../clue/ndjson-react',
           'aliases' => 
           array (
           ),
@@ -46,7 +46,7 @@ return [
           'version' => '3.3.2.0',
           'reference' => 'b2bed4734f0cc156ee1fe9c0da2550420d99a21e',
           'type' => 'library',
-          'install_path' => '/var/www/vendor/composer/./pcre',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/./pcre',
           'aliases' => 
           array (
           ),
@@ -58,7 +58,7 @@ return [
           'version' => '3.4.3.0',
           'reference' => '4313d26ada5e0c4edfbd1dc481a92ff7bff91f12',
           'type' => 'library',
-          'install_path' => '/var/www/vendor/composer/./semver',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/./semver',
           'aliases' => 
           array (
           ),
@@ -70,7 +70,7 @@ return [
           'version' => '3.0.5.0',
           'reference' => '6c1925561632e83d60a44492e0b344cf48ab85ef',
           'type' => 'library',
-          'install_path' => '/var/www/vendor/composer/./xdebug-handler',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/./xdebug-handler',
           'aliases' => 
           array (
           ),
@@ -82,7 +82,7 @@ return [
           'version' => '3.0.2.0',
           'reference' => '0a16b0d71ab13284339abb99d9d2bd813640efbc',
           'type' => 'library',
-          'install_path' => '/var/www/vendor/composer/../evenement/evenement',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/../evenement/evenement',
           'aliases' => 
           array (
           ),
@@ -94,7 +94,7 @@ return [
           'version' => '1.2.0.0',
           'reference' => '8520451a140d3f46ac33042715115e290cf5785f',
           'type' => 'library',
-          'install_path' => '/var/www/vendor/composer/../fidry/cpu-core-counter',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/../fidry/cpu-core-counter',
           'aliases' => 
           array (
           ),
@@ -106,7 +106,7 @@ return [
           'version' => '3.82.2.0',
           'reference' => '684ed3ab41008a2a4848de8bde17eb168c596247',
           'type' => 'application',
-          'install_path' => '/var/www/vendor/composer/../friendsofphp/php-cs-fixer',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/../friendsofphp/php-cs-fixer',
           'aliases' => 
           array (
           ),
@@ -118,7 +118,19 @@ return [
           'version' => '1.1.3.0',
           'reference' => '3ba905c11371512af9d9bdd27d99b782216b6945',
           'type' => 'library',
-          'install_path' => '/var/www/vendor/composer/../graham-campbell/result-type',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/../graham-campbell/result-type',
+          'aliases' => 
+          array (
+          ),
+          'dev_requirement' => false,
+        ),
+        'monolog/monolog' => 
+        array (
+          'pretty_version' => '3.9.0',
+          'version' => '3.9.0.0',
+          'reference' => '10d85740180ecba7896c87e06a166e0c95a0e3b6',
+          'type' => 'library',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/../monolog/monolog',
           'aliases' => 
           array (
           ),
@@ -130,7 +142,7 @@ return [
           'version' => '1.13.3.0',
           'reference' => 'faed855a7b5f4d4637717c2b3863e277116beb36',
           'type' => 'library',
-          'install_path' => '/var/www/vendor/composer/../myclabs/deep-copy',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/../myclabs/deep-copy',
           'aliases' => 
           array (
           ),
@@ -142,7 +154,7 @@ return [
           'version' => '5.5.0.0',
           'reference' => 'ae59794362fe85e051a58ad36b289443f57be7a9',
           'type' => 'library',
-          'install_path' => '/var/www/vendor/composer/../nikic/php-parser',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/../nikic/php-parser',
           'aliases' => 
           array (
           ),
@@ -154,7 +166,7 @@ return [
           'version' => '2.0.4.0',
           'reference' => '54750ef60c58e43759730615a392c31c80e23176',
           'type' => 'library',
-          'install_path' => '/var/www/vendor/composer/../phar-io/manifest',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/../phar-io/manifest',
           'aliases' => 
           array (
           ),
@@ -166,7 +178,7 @@ return [
           'version' => '3.2.1.0',
           'reference' => '4f7fd7836c6f332bb2933569e566a0d6c4cbed74',
           'type' => 'library',
-          'install_path' => '/var/www/vendor/composer/../phar-io/version',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/../phar-io/version',
           'aliases' => 
           array (
           ),
@@ -178,7 +190,7 @@ return [
           'version' => '1.9.3.0',
           'reference' => 'e3fac8b24f56113f7cb96af14958c0dd16330f54',
           'type' => 'library',
-          'install_path' => '/var/www/vendor/composer/../phpoption/phpoption',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/../phpoption/phpoption',
           'aliases' => 
           array (
           ),
@@ -190,7 +202,7 @@ return [
           'version' => '2.1.17.0',
           'reference' => '89b5ef665716fa2a52ecd2633f21007a6a349053',
           'type' => 'library',
-          'install_path' => '/var/www/vendor/composer/../phpstan/phpstan',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/../phpstan/phpstan',
           'aliases' => 
           array (
           ),
@@ -202,7 +214,7 @@ return [
           'version' => '10.1.16.0',
           'reference' => '7e308268858ed6baedc8704a304727d20bc07c77',
           'type' => 'library',
-          'install_path' => '/var/www/vendor/composer/../phpunit/php-code-coverage',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/../phpunit/php-code-coverage',
           'aliases' => 
           array (
           ),
@@ -214,7 +226,7 @@ return [
           'version' => '4.1.0.0',
           'reference' => 'a95037b6d9e608ba092da1b23931e537cadc3c3c',
           'type' => 'library',
-          'install_path' => '/var/www/vendor/composer/../phpunit/php-file-iterator',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/../phpunit/php-file-iterator',
           'aliases' => 
           array (
           ),
@@ -226,7 +238,7 @@ return [
           'version' => '4.0.0.0',
           'reference' => 'f5e568ba02fa5ba0ddd0f618391d5a9ea50b06d7',
           'type' => 'library',
-          'install_path' => '/var/www/vendor/composer/../phpunit/php-invoker',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/../phpunit/php-invoker',
           'aliases' => 
           array (
           ),
@@ -238,7 +250,7 @@ return [
           'version' => '3.0.1.0',
           'reference' => '0c7b06ff49e3d5072f057eb1fa59258bf287a748',
           'type' => 'library',
-          'install_path' => '/var/www/vendor/composer/../phpunit/php-text-template',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/../phpunit/php-text-template',
           'aliases' => 
           array (
           ),
@@ -250,7 +262,7 @@ return [
           'version' => '6.0.0.0',
           'reference' => 'e2a2d67966e740530f4a3343fe2e030ffdc1161d',
           'type' => 'library',
-          'install_path' => '/var/www/vendor/composer/../phpunit/php-timer',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/../phpunit/php-timer',
           'aliases' => 
           array (
           ),
@@ -258,11 +270,11 @@ return [
         ),
         'phpunit/phpunit' => 
         array (
-          'pretty_version' => '10.5.47',
-          'version' => '10.5.47.0',
-          'reference' => '3637b3e50d32ab3a0d1a33b3b6177169ec3d95a3',
+          'pretty_version' => '10.5.48',
+          'version' => '10.5.48.0',
+          'reference' => '6e0a2bc39f6fae7617989d690d76c48e6d2eb541',
           'type' => 'library',
-          'install_path' => '/var/www/vendor/composer/../phpunit/phpunit',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/../phpunit/phpunit',
           'aliases' => 
           array (
           ),
@@ -274,7 +286,7 @@ return [
           'version' => '2.0.2.0',
           'reference' => 'c71ecc56dfe541dbd90c5360474fbc405f8d5963',
           'type' => 'library',
-          'install_path' => '/var/www/vendor/composer/../psr/container',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/../psr/container',
           'aliases' => 
           array (
           ),
@@ -286,7 +298,7 @@ return [
           'version' => '1.0.0.0',
           'reference' => 'dbefd12671e8a14ec7f180cab83036ed26714bb0',
           'type' => 'library',
-          'install_path' => '/var/www/vendor/composer/../psr/event-dispatcher',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/../psr/event-dispatcher',
           'aliases' => 
           array (
           ),
@@ -306,18 +318,19 @@ return [
           'version' => '3.0.2.0',
           'reference' => 'f16e1d5863e37f8d8c2a01719f5b34baa2b714d3',
           'type' => 'library',
-          'install_path' => '/var/www/vendor/composer/../psr/log',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/../psr/log',
           'aliases' => 
           array (
           ),
-          'dev_requirement' => true,
+          'dev_requirement' => false,
         ),
         'psr/log-implementation' => 
         array (
-          'dev_requirement' => true,
+          'dev_requirement' => false,
           'provided' => 
           array (
             0 => '1.0|2.0|3.0',
+            1 => '3.0.0',
           ),
         ),
         'react/cache' => 
@@ -326,7 +339,7 @@ return [
           'version' => '1.2.0.0',
           'reference' => 'd47c472b64aa5608225f47965a484b75c7817d5b',
           'type' => 'library',
-          'install_path' => '/var/www/vendor/composer/../react/cache',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/../react/cache',
           'aliases' => 
           array (
           ),
@@ -338,7 +351,7 @@ return [
           'version' => '0.6.6.0',
           'reference' => '1721e2b93d89b745664353b9cfc8f155ba8a6159',
           'type' => 'library',
-          'install_path' => '/var/www/vendor/composer/../react/child-process',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/../react/child-process',
           'aliases' => 
           array (
           ),
@@ -350,7 +363,7 @@ return [
           'version' => '1.13.0.0',
           'reference' => 'eb8ae001b5a455665c89c1df97f6fb682f8fb0f5',
           'type' => 'library',
-          'install_path' => '/var/www/vendor/composer/../react/dns',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/../react/dns',
           'aliases' => 
           array (
           ),
@@ -362,7 +375,7 @@ return [
           'version' => '1.5.0.0',
           'reference' => 'bbe0bd8c51ffc05ee43f1729087ed3bdf7d53354',
           'type' => 'library',
-          'install_path' => '/var/www/vendor/composer/../react/event-loop',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/../react/event-loop',
           'aliases' => 
           array (
           ),
@@ -374,7 +387,7 @@ return [
           'version' => '3.2.0.0',
           'reference' => '8a164643313c71354582dc850b42b33fa12a4b63',
           'type' => 'library',
-          'install_path' => '/var/www/vendor/composer/../react/promise',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/../react/promise',
           'aliases' => 
           array (
           ),
@@ -386,7 +399,7 @@ return [
           'version' => '1.16.0.0',
           'reference' => '23e4ff33ea3e160d2d1f59a0e6050e4b0fb0eac1',
           'type' => 'library',
-          'install_path' => '/var/www/vendor/composer/../react/socket',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/../react/socket',
           'aliases' => 
           array (
           ),
@@ -398,7 +411,7 @@ return [
           'version' => '1.4.0.0',
           'reference' => '1e5b0acb8fe55143b5b426817155190eb6f5b18d',
           'type' => 'library',
-          'install_path' => '/var/www/vendor/composer/../react/stream',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/../react/stream',
           'aliases' => 
           array (
           ),
@@ -410,7 +423,7 @@ return [
           'version' => '2.0.1.0',
           'reference' => 'c34583b87e7b7a8055bf6c450c2c77ce32a24084',
           'type' => 'library',
-          'install_path' => '/var/www/vendor/composer/../sebastian/cli-parser',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/../sebastian/cli-parser',
           'aliases' => 
           array (
           ),
@@ -422,7 +435,7 @@ return [
           'version' => '2.0.0.0',
           'reference' => 'a81fee9eef0b7a76af11d121767abc44c104e503',
           'type' => 'library',
-          'install_path' => '/var/www/vendor/composer/../sebastian/code-unit',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/../sebastian/code-unit',
           'aliases' => 
           array (
           ),
@@ -434,7 +447,7 @@ return [
           'version' => '3.0.0.0',
           'reference' => '5e3a687f7d8ae33fb362c5c0743794bbb2420a1d',
           'type' => 'library',
-          'install_path' => '/var/www/vendor/composer/../sebastian/code-unit-reverse-lookup',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/../sebastian/code-unit-reverse-lookup',
           'aliases' => 
           array (
           ),
@@ -446,7 +459,7 @@ return [
           'version' => '5.0.3.0',
           'reference' => 'a18251eb0b7a2dcd2f7aa3d6078b18545ef0558e',
           'type' => 'library',
-          'install_path' => '/var/www/vendor/composer/../sebastian/comparator',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/../sebastian/comparator',
           'aliases' => 
           array (
           ),
@@ -458,7 +471,7 @@ return [
           'version' => '3.2.0.0',
           'reference' => '68ff824baeae169ec9f2137158ee529584553799',
           'type' => 'library',
-          'install_path' => '/var/www/vendor/composer/../sebastian/complexity',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/../sebastian/complexity',
           'aliases' => 
           array (
           ),
@@ -470,7 +483,7 @@ return [
           'version' => '5.1.1.0',
           'reference' => 'c41e007b4b62af48218231d6c2275e4c9b975b2e',
           'type' => 'library',
-          'install_path' => '/var/www/vendor/composer/../sebastian/diff',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/../sebastian/diff',
           'aliases' => 
           array (
           ),
@@ -482,7 +495,7 @@ return [
           'version' => '6.1.0.0',
           'reference' => '8074dbcd93529b357029f5cc5058fd3e43666984',
           'type' => 'library',
-          'install_path' => '/var/www/vendor/composer/../sebastian/environment',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/../sebastian/environment',
           'aliases' => 
           array (
           ),
@@ -494,7 +507,7 @@ return [
           'version' => '5.1.2.0',
           'reference' => '955288482d97c19a372d3f31006ab3f37da47adf',
           'type' => 'library',
-          'install_path' => '/var/www/vendor/composer/../sebastian/exporter',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/../sebastian/exporter',
           'aliases' => 
           array (
           ),
@@ -506,7 +519,7 @@ return [
           'version' => '6.0.2.0',
           'reference' => '987bafff24ecc4c9ac418cab1145b96dd6e9cbd9',
           'type' => 'library',
-          'install_path' => '/var/www/vendor/composer/../sebastian/global-state',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/../sebastian/global-state',
           'aliases' => 
           array (
           ),
@@ -518,7 +531,7 @@ return [
           'version' => '2.0.2.0',
           'reference' => '856e7f6a75a84e339195d48c556f23be2ebf75d0',
           'type' => 'library',
-          'install_path' => '/var/www/vendor/composer/../sebastian/lines-of-code',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/../sebastian/lines-of-code',
           'aliases' => 
           array (
           ),
@@ -530,7 +543,7 @@ return [
           'version' => '5.0.0.0',
           'reference' => '202d0e344a580d7f7d04b3fafce6933e59dae906',
           'type' => 'library',
-          'install_path' => '/var/www/vendor/composer/../sebastian/object-enumerator',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/../sebastian/object-enumerator',
           'aliases' => 
           array (
           ),
@@ -542,7 +555,7 @@ return [
           'version' => '3.0.0.0',
           'reference' => '24ed13d98130f0e7122df55d06c5c4942a577957',
           'type' => 'library',
-          'install_path' => '/var/www/vendor/composer/../sebastian/object-reflector',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/../sebastian/object-reflector',
           'aliases' => 
           array (
           ),
@@ -554,7 +567,7 @@ return [
           'version' => '5.0.0.0',
           'reference' => '05909fb5bc7df4c52992396d0116aed689f93712',
           'type' => 'library',
-          'install_path' => '/var/www/vendor/composer/../sebastian/recursion-context',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/../sebastian/recursion-context',
           'aliases' => 
           array (
           ),
@@ -566,7 +579,7 @@ return [
           'version' => '4.0.0.0',
           'reference' => '462699a16464c3944eefc02ebdd77882bd3925bf',
           'type' => 'library',
-          'install_path' => '/var/www/vendor/composer/../sebastian/type',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/../sebastian/type',
           'aliases' => 
           array (
           ),
@@ -578,7 +591,7 @@ return [
           'version' => '4.0.1.0',
           'reference' => 'c51fa83a5d8f43f1402e3f32a005e6262244ef17',
           'type' => 'library',
-          'install_path' => '/var/www/vendor/composer/../sebastian/version',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/../sebastian/version',
           'aliases' => 
           array (
           ),
@@ -590,7 +603,7 @@ return [
           'version' => '7.3.1.0',
           'reference' => '9e27aecde8f506ba0fd1d9989620c04a87697101',
           'type' => 'library',
-          'install_path' => '/var/www/vendor/composer/../symfony/console',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/../symfony/console',
           'aliases' => 
           array (
           ),
@@ -602,7 +615,7 @@ return [
           'version' => '3.6.0.0',
           'reference' => '63afe740e99a13ba87ec199bb07bbdee937a5b62',
           'type' => 'library',
-          'install_path' => '/var/www/vendor/composer/../symfony/deprecation-contracts',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/../symfony/deprecation-contracts',
           'aliases' => 
           array (
           ),
@@ -614,7 +627,7 @@ return [
           'version' => '7.3.0.0',
           'reference' => '497f73ac996a598c92409b44ac43b6690c4f666d',
           'type' => 'library',
-          'install_path' => '/var/www/vendor/composer/../symfony/event-dispatcher',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/../symfony/event-dispatcher',
           'aliases' => 
           array (
           ),
@@ -626,7 +639,7 @@ return [
           'version' => '3.6.0.0',
           'reference' => '59eb412e93815df44f05f342958efa9f46b1e586',
           'type' => 'library',
-          'install_path' => '/var/www/vendor/composer/../symfony/event-dispatcher-contracts',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/../symfony/event-dispatcher-contracts',
           'aliases' => 
           array (
           ),
@@ -646,7 +659,7 @@ return [
           'version' => '7.3.0.0',
           'reference' => 'b8dce482de9d7c9fe2891155035a7248ab5c7fdb',
           'type' => 'library',
-          'install_path' => '/var/www/vendor/composer/../symfony/filesystem',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/../symfony/filesystem',
           'aliases' => 
           array (
           ),
@@ -658,7 +671,7 @@ return [
           'version' => '7.3.0.0',
           'reference' => 'ec2344cf77a48253bbca6939aa3d2477773ea63d',
           'type' => 'library',
-          'install_path' => '/var/www/vendor/composer/../symfony/finder',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/../symfony/finder',
           'aliases' => 
           array (
           ),
@@ -670,7 +683,7 @@ return [
           'version' => '7.3.0.0',
           'reference' => 'afb9a8038025e5dbc657378bfab9198d75f10fca',
           'type' => 'library',
-          'install_path' => '/var/www/vendor/composer/../symfony/options-resolver',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/../symfony/options-resolver',
           'aliases' => 
           array (
           ),
@@ -682,7 +695,7 @@ return [
           'version' => '1.32.0.0',
           'reference' => 'a3cc8b044a6ea513310cbd48ef7333b384945638',
           'type' => 'library',
-          'install_path' => '/var/www/vendor/composer/../symfony/polyfill-ctype',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/../symfony/polyfill-ctype',
           'aliases' => 
           array (
           ),
@@ -694,7 +707,7 @@ return [
           'version' => '1.32.0.0',
           'reference' => 'b9123926e3b7bc2f98c02ad54f6a4b02b91a8abe',
           'type' => 'library',
-          'install_path' => '/var/www/vendor/composer/../symfony/polyfill-intl-grapheme',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/../symfony/polyfill-intl-grapheme',
           'aliases' => 
           array (
           ),
@@ -706,7 +719,7 @@ return [
           'version' => '1.32.0.0',
           'reference' => '3833d7255cc303546435cb650316bff708a1c75c',
           'type' => 'library',
-          'install_path' => '/var/www/vendor/composer/../symfony/polyfill-intl-normalizer',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/../symfony/polyfill-intl-normalizer',
           'aliases' => 
           array (
           ),
@@ -718,7 +731,7 @@ return [
           'version' => '1.32.0.0',
           'reference' => '6d857f4d76bd4b343eac26d6b539585d2bc56493',
           'type' => 'library',
-          'install_path' => '/var/www/vendor/composer/../symfony/polyfill-mbstring',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/../symfony/polyfill-mbstring',
           'aliases' => 
           array (
           ),
@@ -730,7 +743,7 @@ return [
           'version' => '1.32.0.0',
           'reference' => '0cc9dd0f17f61d8131e7df6b84bd344899fe2608',
           'type' => 'library',
-          'install_path' => '/var/www/vendor/composer/../symfony/polyfill-php80',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/../symfony/polyfill-php80',
           'aliases' => 
           array (
           ),
@@ -742,7 +755,7 @@ return [
           'version' => '1.32.0.0',
           'reference' => '4a4cfc2d253c21a5ad0e53071df248ed48c6ce5c',
           'type' => 'library',
-          'install_path' => '/var/www/vendor/composer/../symfony/polyfill-php81',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/../symfony/polyfill-php81',
           'aliases' => 
           array (
           ),
@@ -754,7 +767,7 @@ return [
           'version' => '7.3.0.0',
           'reference' => '40c295f2deb408d5e9d2d32b8ba1dd61e36f05af',
           'type' => 'library',
-          'install_path' => '/var/www/vendor/composer/../symfony/process',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/../symfony/process',
           'aliases' => 
           array (
           ),
@@ -766,7 +779,7 @@ return [
           'version' => '3.6.0.0',
           'reference' => 'f021b05a130d35510bd6b25fe9053c2a8a15d5d4',
           'type' => 'library',
-          'install_path' => '/var/www/vendor/composer/../symfony/service-contracts',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/../symfony/service-contracts',
           'aliases' => 
           array (
           ),
@@ -778,7 +791,7 @@ return [
           'version' => '7.3.0.0',
           'reference' => '5a49289e2b308214c8b9c2fda4ea454d8b8ad7cd',
           'type' => 'library',
-          'install_path' => '/var/www/vendor/composer/../symfony/stopwatch',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/../symfony/stopwatch',
           'aliases' => 
           array (
           ),
@@ -790,7 +803,7 @@ return [
           'version' => '7.3.0.0',
           'reference' => 'f3570b8c61ca887a9e2938e85cb6458515d2b125',
           'type' => 'library',
-          'install_path' => '/var/www/vendor/composer/../symfony/string',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/../symfony/string',
           'aliases' => 
           array (
           ),
@@ -802,7 +815,7 @@ return [
           'version' => '1.2.3.0',
           'reference' => '737eda637ed5e28c3413cb1ebe8bb52cbf1ca7a2',
           'type' => 'library',
-          'install_path' => '/var/www/vendor/composer/../theseer/tokenizer',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/../theseer/tokenizer',
           'aliases' => 
           array (
           ),
@@ -814,7 +827,7 @@ return [
           'version' => '5.6.2.0',
           'reference' => '24ac4c74f91ee2c193fa1aaa5c249cb0822809af',
           'type' => 'library',
-          'install_path' => '/var/www/vendor/composer/../vlucas/phpdotenv',
+          'install_path' => '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/../vlucas/phpdotenv',
           'aliases' => 
           array (
           ),
@@ -825,54 +838,78 @@ return [
   ),
   'executedFilesHashes' => 
   array (
-    '/var/www/vendor/autoload.php' => '1b2092b68dd0a24731621b9ad5651dc2c0bf20d0',
-    'phar:///var/www/vendor/phpstan/phpstan/phpstan.phar/stubs/runtime/Attribute.php' => 'eaf9127f074e9c7ebc65043ec4050f9fed60c2bb',
-    'phar:///var/www/vendor/phpstan/phpstan/phpstan.phar/stubs/runtime/ReflectionAttribute.php' => '0b4b78277eb6545955d2ce5e09bff28f1f8052c8',
-    'phar:///var/www/vendor/phpstan/phpstan/phpstan.phar/stubs/runtime/ReflectionIntersectionType.php' => 'a3e6299b87ee5d407dae7651758edfa11a74cb11',
-    'phar:///var/www/vendor/phpstan/phpstan/phpstan.phar/stubs/runtime/ReflectionUnionType.php' => '1b349aa997a834faeafe05fa21bc31cae22bf2e2',
+    '/Users/luis.monteiro.ext/Documents/3cket_events/vendor/autoload.php' => 'a74f05cf0d62c0747fd743e97acd8ed4d59659a0',
+    'phar:///Users/luis.monteiro.ext/Documents/3cket_events/vendor/phpstan/phpstan/phpstan.phar/stubs/runtime/Attribute.php' => 'eaf9127f074e9c7ebc65043ec4050f9fed60c2bb',
+    'phar:///Users/luis.monteiro.ext/Documents/3cket_events/vendor/phpstan/phpstan/phpstan.phar/stubs/runtime/ReflectionAttribute.php' => '0b4b78277eb6545955d2ce5e09bff28f1f8052c8',
+    'phar:///Users/luis.monteiro.ext/Documents/3cket_events/vendor/phpstan/phpstan/phpstan.phar/stubs/runtime/ReflectionIntersectionType.php' => 'a3e6299b87ee5d407dae7651758edfa11a74cb11',
+    'phar:///Users/luis.monteiro.ext/Documents/3cket_events/vendor/phpstan/phpstan/phpstan.phar/stubs/runtime/ReflectionUnionType.php' => '1b349aa997a834faeafe05fa21bc31cae22bf2e2',
   ),
   'phpExtensions' => 
   array (
     0 => 'Core',
-    1 => 'PDO',
-    2 => 'Phar',
-    3 => 'Reflection',
-    4 => 'SPL',
-    5 => 'SimpleXML',
-    6 => 'Zend OPcache',
-    7 => 'bcmath',
-    8 => 'ctype',
-    9 => 'curl',
-    10 => 'date',
-    11 => 'dom',
-    12 => 'exif',
-    13 => 'fileinfo',
-    14 => 'filter',
-    15 => 'gd',
-    16 => 'hash',
-    17 => 'iconv',
-    18 => 'json',
-    19 => 'libxml',
-    20 => 'mbstring',
-    21 => 'mysqlnd',
-    22 => 'openssl',
-    23 => 'pcntl',
-    24 => 'pcre',
-    25 => 'pdo_mysql',
-    26 => 'pdo_sqlite',
-    27 => 'posix',
-    28 => 'random',
-    29 => 'readline',
-    30 => 'redis',
-    31 => 'session',
-    32 => 'sodium',
-    33 => 'sqlite3',
-    34 => 'standard',
-    35 => 'tokenizer',
-    36 => 'xml',
-    37 => 'xmlreader',
-    38 => 'xmlwriter',
-    39 => 'zlib',
+    1 => 'FFI',
+    2 => 'PDO',
+    3 => 'PDO_ODBC',
+    4 => 'Phar',
+    5 => 'Reflection',
+    6 => 'SPL',
+    7 => 'SimpleXML',
+    8 => 'Zend OPcache',
+    9 => 'bcmath',
+    10 => 'bz2',
+    11 => 'calendar',
+    12 => 'ctype',
+    13 => 'curl',
+    14 => 'date',
+    15 => 'dba',
+    16 => 'dom',
+    17 => 'exif',
+    18 => 'fileinfo',
+    19 => 'filter',
+    20 => 'ftp',
+    21 => 'gd',
+    22 => 'gettext',
+    23 => 'gmp',
+    24 => 'hash',
+    25 => 'iconv',
+    26 => 'intl',
+    27 => 'json',
+    28 => 'ldap',
+    29 => 'libxml',
+    30 => 'mbstring',
+    31 => 'mysqli',
+    32 => 'mysqlnd',
+    33 => 'odbc',
+    34 => 'openssl',
+    35 => 'pcntl',
+    36 => 'pcre',
+    37 => 'pdo_dblib',
+    38 => 'pdo_mysql',
+    39 => 'pdo_pgsql',
+    40 => 'pdo_sqlite',
+    41 => 'pgsql',
+    42 => 'posix',
+    43 => 'random',
+    44 => 'readline',
+    45 => 'session',
+    46 => 'shmop',
+    47 => 'snmp',
+    48 => 'soap',
+    49 => 'sockets',
+    50 => 'sodium',
+    51 => 'sqlite3',
+    52 => 'standard',
+    53 => 'sysvmsg',
+    54 => 'sysvsem',
+    55 => 'sysvshm',
+    56 => 'tidy',
+    57 => 'tokenizer',
+    58 => 'xml',
+    59 => 'xmlreader',
+    60 => 'xmlwriter',
+    61 => 'xsl',
+    62 => 'zip',
+    63 => 'zlib',
   ),
   'stubFiles' => 
   array (
@@ -890,14 +927,23 @@ return [
 	'unmatchedLineIgnores' => array (
 ),
 	'collectedDataCallback' => static function (): array { return array (
-  '/var/www/src/Application/Command/CreateEventCommand.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Bootstrap.php' => 
   array (
-    'PHPStan\\Rules\\DeadCode\\ConstructorWithoutImpurePointsCollector' => 
+    'PHPStan\\Rules\\DeadCode\\PossiblyPureFuncCallCollector' => 
     array (
-      0 => 'App\\Application\\Command\\CreateEventCommand',
+      0 => 
+      array (
+        0 => 'error_reporting',
+        1 => 177,
+      ),
+      1 => 
+      array (
+        0 => 'ini_set',
+        1 => 178,
+      ),
     ),
   ),
-  '/var/www/src/Application/DTO/EventDto.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/DTO/EventDto.php' => 
   array (
     'PHPStan\\Rules\\DeadCode\\ConstructorWithoutImpurePointsCollector' => 
     array (
@@ -913,102 +959,82 @@ return [
       ),
     ),
   ),
-  '/var/www/src/Application/DTO/PaginatedResponse.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/DTO/PaginatedResponse.php' => 
   array (
     'PHPStan\\Rules\\DeadCode\\ConstructorWithoutImpurePointsCollector' => 
     array (
       0 => 'App\\Application\\DTO\\PaginatedResponse',
     ),
-    'PHPStan\\Rules\\DeadCode\\MethodWithoutImpurePointsCollector' => 
-    array (
-      0 => 
-      array (
-        0 => 'App\\Application\\DTO\\PaginatedResponse',
-        1 => 'hasNextPage',
-        2 => 'App\\Application\\DTO\\PaginatedResponse',
-      ),
-      1 => 
-      array (
-        0 => 'App\\Application\\DTO\\PaginatedResponse',
-        1 => 'hasPreviousPage',
-        2 => 'App\\Application\\DTO\\PaginatedResponse',
-      ),
-      2 => 
-      array (
-        0 => 'App\\Application\\DTO\\PaginatedResponse',
-        1 => 'isEmpty',
-        2 => 'App\\Application\\DTO\\PaginatedResponse',
-      ),
-    ),
   ),
-  '/var/www/src/Application/Query/GetAllEventsQuery.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Query/GetAllEventsQuery.php' => 
   array (
     'PHPStan\\Rules\\DeadCode\\ConstructorWithoutImpurePointsCollector' => 
     array (
       0 => 'App\\Application\\Query\\GetAllEventsQuery',
     ),
   ),
-  '/var/www/src/Application/Query/GetEventByIdQuery.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Query/GetEventByIdQuery.php' => 
   array (
     'PHPStan\\Rules\\DeadCode\\ConstructorWithoutImpurePointsCollector' => 
     array (
       0 => 'App\\Application\\Query\\GetEventByIdQuery',
     ),
   ),
-  '/var/www/src/Application/Query/GetPaginatedEventsQuery.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Query/GetPaginatedEventsQuery.php' => 
   array (
     'PHPStan\\Rules\\DeadCode\\ConstructorWithoutImpurePointsCollector' => 
     array (
       0 => 'App\\Application\\Query\\GetPaginatedEventsQuery',
     ),
   ),
-  '/var/www/src/Application/Query/PaginationQuery.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Query/SearchQuery.php' => 
   array (
-    'PHPStan\\Rules\\DeadCode\\MethodWithoutImpurePointsCollector' => 
+    'PHPStan\\Rules\\DeadCode\\PossiblyPureStaticCallCollector' => 
     array (
       0 => 
       array (
         0 => 'App\\Application\\Query\\PaginationQuery',
-        1 => 'getOffset',
-        2 => 'App\\Application\\Query\\PaginationQuery',
-      ),
-      1 => 
-      array (
-        0 => 'App\\Application\\Query\\PaginationQuery',
-        1 => 'getLimit',
-        2 => 'App\\Application\\Query\\PaginationQuery',
+        1 => '__construct',
+        2 => 22,
       ),
     ),
   ),
-  '/var/www/src/Application/UseCase/CreateEventUseCase.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Service/EventService.php' => 
   array (
     'PHPStan\\Rules\\DeadCode\\ConstructorWithoutImpurePointsCollector' => 
     array (
-      0 => 'App\\Application\\UseCase\\CreateEventUseCase',
+      0 => 'App\\Application\\Service\\EventService',
     ),
   ),
-  '/var/www/src/Application/UseCase/GetAllEventsUseCase.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Service/SearchService.php' => 
+  array (
+    'PHPStan\\Rules\\DeadCode\\ConstructorWithoutImpurePointsCollector' => 
+    array (
+      0 => 'App\\Application\\Service\\SearchService',
+    ),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/UseCase/GetAllEventsUseCase.php' => 
   array (
     'PHPStan\\Rules\\DeadCode\\ConstructorWithoutImpurePointsCollector' => 
     array (
       0 => 'App\\Application\\UseCase\\GetAllEventsUseCase',
     ),
   ),
-  '/var/www/src/Application/UseCase/GetEventByIdUseCase.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/UseCase/GetEventByIdUseCase.php' => 
   array (
     'PHPStan\\Rules\\DeadCode\\ConstructorWithoutImpurePointsCollector' => 
     array (
       0 => 'App\\Application\\UseCase\\GetEventByIdUseCase',
     ),
   ),
-  '/var/www/src/Application/UseCase/GetPaginatedEventsUseCase.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/UseCase/GetPaginatedEventsUseCase.php' => 
   array (
     'PHPStan\\Rules\\DeadCode\\ConstructorWithoutImpurePointsCollector' => 
     array (
       0 => 'App\\Application\\UseCase\\GetPaginatedEventsUseCase',
     ),
   ),
-  '/var/www/src/Domain/Entity/Event.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Domain/Entity/Event.php' => 
   array (
     'PHPStan\\Rules\\DeadCode\\MethodWithoutImpurePointsCollector' => 
     array (
@@ -1051,67 +1077,19 @@ return [
       6 => 
       array (
         0 => 'App\\Domain\\Entity\\Event',
-        1 => 'getDomainEvents',
+        1 => '__sleep',
         2 => 'App\\Domain\\Entity\\Event',
       ),
     ),
   ),
-  '/var/www/src/Domain/Event/EventCreated.php' => 
-  array (
-    'PHPStan\\Rules\\DeadCode\\MethodWithoutImpurePointsCollector' => 
-    array (
-      0 => 
-      array (
-        0 => 'App\\Domain\\Event\\EventCreated',
-        1 => 'getEvent',
-        2 => 'App\\Domain\\Event\\EventCreated',
-      ),
-      1 => 
-      array (
-        0 => 'App\\Domain\\Event\\EventCreated',
-        1 => 'getOccurredAt',
-        2 => 'App\\Domain\\Event\\EventCreated',
-      ),
-      2 => 
-      array (
-        0 => 'App\\Domain\\Event\\EventCreated',
-        1 => 'getEventName',
-        2 => 'App\\Domain\\Event\\EventCreated',
-      ),
-    ),
-  ),
-  '/var/www/src/Domain/Event/EventUpdated.php' => 
-  array (
-    'PHPStan\\Rules\\DeadCode\\MethodWithoutImpurePointsCollector' => 
-    array (
-      0 => 
-      array (
-        0 => 'App\\Domain\\Event\\EventUpdated',
-        1 => 'getEvent',
-        2 => 'App\\Domain\\Event\\EventUpdated',
-      ),
-      1 => 
-      array (
-        0 => 'App\\Domain\\Event\\EventUpdated',
-        1 => 'getOccurredAt',
-        2 => 'App\\Domain\\Event\\EventUpdated',
-      ),
-      2 => 
-      array (
-        0 => 'App\\Domain\\Event\\EventUpdated',
-        1 => 'getEventName',
-        2 => 'App\\Domain\\Event\\EventUpdated',
-      ),
-    ),
-  ),
-  '/var/www/src/Domain/Service/EventDomainService.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Domain/Service/EventDomainService.php' => 
   array (
     'PHPStan\\Rules\\DeadCode\\ConstructorWithoutImpurePointsCollector' => 
     array (
       0 => 'App\\Domain\\Service\\EventDomainService',
     ),
   ),
-  '/var/www/src/Domain/ValueObject/Coordinates.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Domain/ValueObject/Coordinates.php' => 
   array (
     'PHPStan\\Rules\\DeadCode\\MethodWithoutImpurePointsCollector' => 
     array (
@@ -1147,7 +1125,7 @@ return [
       ),
     ),
   ),
-  '/var/www/src/Domain/ValueObject/EventId.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Domain/ValueObject/EventId.php' => 
   array (
     'PHPStan\\Rules\\DeadCode\\MethodWithoutImpurePointsCollector' => 
     array (
@@ -1171,7 +1149,7 @@ return [
       ),
     ),
   ),
-  '/var/www/src/Domain/ValueObject/EventName.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Domain/ValueObject/EventName.php' => 
   array (
     'PHPStan\\Rules\\DeadCode\\MethodWithoutImpurePointsCollector' => 
     array (
@@ -1195,7 +1173,7 @@ return [
       ),
     ),
   ),
-  '/var/www/src/Domain/ValueObject/Location.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Domain/ValueObject/Location.php' => 
   array (
     'PHPStan\\Rules\\DeadCode\\MethodWithoutImpurePointsCollector' => 
     array (
@@ -1219,7 +1197,7 @@ return [
       ),
     ),
   ),
-  '/var/www/src/Infrastructure/Cache/CacheAction.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Cache/CacheAction.php' => 
   array (
     'PHPStan\\Rules\\DeadCode\\MethodWithoutImpurePointsCollector' => 
     array (
@@ -1231,7 +1209,114 @@ return [
       ),
     ),
   ),
-  '/var/www/src/Infrastructure/Cache/CacheStrategy.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Cache/CacheAnalytics.php' => 
+  array (
+    'PHPStan\\Rules\\DeadCode\\ConstructorWithoutImpurePointsCollector' => 
+    array (
+      0 => 'App\\Infrastructure\\Cache\\CacheAnalytics',
+    ),
+    'PHPStan\\Rules\\DeadCode\\MethodWithoutImpurePointsCollector' => 
+    array (
+      0 => 
+      array (
+        0 => 'App\\Infrastructure\\Cache\\CacheAnalytics',
+        1 => 'generateRecommendations',
+        2 => 'App\\Infrastructure\\Cache\\CacheAnalytics',
+      ),
+      1 => 
+      array (
+        0 => 'App\\Infrastructure\\Cache\\CacheAnalytics',
+        1 => 'determineHealthStatus',
+        2 => 'App\\Infrastructure\\Cache\\CacheAnalytics',
+      ),
+      2 => 
+      array (
+        0 => 'App\\Infrastructure\\Cache\\CacheAnalytics',
+        1 => 'getHitRateHealth',
+        2 => 'App\\Infrastructure\\Cache\\CacheAnalytics',
+      ),
+      3 => 
+      array (
+        0 => 'App\\Infrastructure\\Cache\\CacheAnalytics',
+        1 => 'identifyPeakHours',
+        2 => 'App\\Infrastructure\\Cache\\CacheAnalytics',
+      ),
+      4 => 
+      array (
+        0 => 'App\\Infrastructure\\Cache\\CacheAnalytics',
+        1 => 'identifyColdKeys',
+        2 => 'App\\Infrastructure\\Cache\\CacheAnalytics',
+      ),
+    ),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Cache/CacheFactory.php' => 
+  array (
+    'PHPStan\\Rules\\DeadCode\\PossiblyPureMethodCallCollector' => 
+    array (
+      0 => 
+      array (
+        0 => 
+        array (
+          0 => 'Redis',
+        ),
+        1 => 'connect',
+        2 => 36,
+      ),
+      1 => 
+      array (
+        0 => 
+        array (
+          0 => 'Redis',
+        ),
+        1 => 'auth',
+        2 => 39,
+      ),
+      2 => 
+      array (
+        0 => 
+        array (
+          0 => 'Redis',
+        ),
+        1 => 'select',
+        2 => 43,
+      ),
+      3 => 
+      array (
+        0 => 
+        array (
+          0 => 'Redis',
+        ),
+        1 => 'connect',
+        2 => 66,
+      ),
+      4 => 
+      array (
+        0 => 
+        array (
+          0 => 'Redis',
+        ),
+        1 => 'auth',
+        2 => 69,
+      ),
+      5 => 
+      array (
+        0 => 
+        array (
+          0 => 'Redis',
+        ),
+        1 => 'select',
+        2 => 73,
+      ),
+    ),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Cache/CacheManager.php' => 
+  array (
+    'PHPStan\\Rules\\DeadCode\\ConstructorWithoutImpurePointsCollector' => 
+    array (
+      0 => 'App\\Infrastructure\\Cache\\CacheManager',
+    ),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Cache/CacheStrategy.php' => 
   array (
     'PHPStan\\Rules\\DeadCode\\MethodWithoutImpurePointsCollector' => 
     array (
@@ -1249,61 +1334,110 @@ return [
       ),
     ),
   ),
-  '/var/www/src/Infrastructure/Cache/NullCache.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Cache/CacheWarmer.php' => 
+  array (
+    'PHPStan\\Rules\\DeadCode\\ConstructorWithoutImpurePointsCollector' => 
+    array (
+      0 => 'App\\Infrastructure\\Cache\\CacheWarmer',
+    ),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Cache/InMemoryCache.php' => 
+  array (
+    'PHPStan\\Rules\\DeadCode\\MethodWithoutImpurePointsCollector' => 
+    array (
+      0 => 
+      array (
+        0 => 'App\\Infrastructure\\Cache\\InMemoryCache',
+        1 => 'getTotalRequests',
+        2 => 'App\\Infrastructure\\Cache\\InMemoryCache',
+      ),
+      1 => 
+      array (
+        0 => 'App\\Infrastructure\\Cache\\InMemoryCache',
+        1 => 'getTotalHits',
+        2 => 'App\\Infrastructure\\Cache\\InMemoryCache',
+      ),
+      2 => 
+      array (
+        0 => 'App\\Infrastructure\\Cache\\InMemoryCache',
+        1 => 'getTotalMisses',
+        2 => 'App\\Infrastructure\\Cache\\InMemoryCache',
+      ),
+      3 => 
+      array (
+        0 => 'App\\Infrastructure\\Cache\\InMemoryCache',
+        1 => 'calculateOptimalTtl',
+        2 => 'App\\Infrastructure\\Cache\\InMemoryCache',
+      ),
+    ),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Cache/NullCache.php' => 
   array (
     'PHPStan\\Rules\\DeadCode\\MethodWithoutImpurePointsCollector' => 
     array (
       0 => 
       array (
         0 => 'App\\Infrastructure\\Cache\\NullCache',
-        1 => 'get',
+        1 => 'has',
         2 => 'App\\Infrastructure\\Cache\\NullCache',
       ),
       1 => 
       array (
         0 => 'App\\Infrastructure\\Cache\\NullCache',
-        1 => 'set',
+        1 => 'getMultiple',
         2 => 'App\\Infrastructure\\Cache\\NullCache',
       ),
       2 => 
       array (
         0 => 'App\\Infrastructure\\Cache\\NullCache',
-        1 => 'delete',
+        1 => 'invalidateByTag',
         2 => 'App\\Infrastructure\\Cache\\NullCache',
       ),
       3 => 
       array (
         0 => 'App\\Infrastructure\\Cache\\NullCache',
-        1 => 'clear',
+        1 => 'invalidateByTags',
         2 => 'App\\Infrastructure\\Cache\\NullCache',
       ),
       4 => 
       array (
         0 => 'App\\Infrastructure\\Cache\\NullCache',
-        1 => 'exists',
+        1 => 'tag',
         2 => 'App\\Infrastructure\\Cache\\NullCache',
       ),
       5 => 
       array (
         0 => 'App\\Infrastructure\\Cache\\NullCache',
-        1 => 'getMultiple',
+        1 => 'tagMultiple',
         2 => 'App\\Infrastructure\\Cache\\NullCache',
       ),
       6 => 
       array (
         0 => 'App\\Infrastructure\\Cache\\NullCache',
-        1 => 'setMultiple',
+        1 => 'getTotalRequests',
         2 => 'App\\Infrastructure\\Cache\\NullCache',
       ),
       7 => 
       array (
         0 => 'App\\Infrastructure\\Cache\\NullCache',
-        1 => 'getStats',
+        1 => 'getTotalHits',
+        2 => 'App\\Infrastructure\\Cache\\NullCache',
+      ),
+      8 => 
+      array (
+        0 => 'App\\Infrastructure\\Cache\\NullCache',
+        1 => 'getTotalMisses',
+        2 => 'App\\Infrastructure\\Cache\\NullCache',
+      ),
+      9 => 
+      array (
+        0 => 'App\\Infrastructure\\Cache\\NullCache',
+        1 => 'calculateOptimalTtl',
         2 => 'App\\Infrastructure\\Cache\\NullCache',
       ),
     ),
   ),
-  '/var/www/src/Infrastructure/Cache/RedisCache.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Cache/RedisCache.php' => 
   array (
     'PHPStan\\Rules\\DeadCode\\ConstructorWithoutImpurePointsCollector' => 
     array (
@@ -1314,56 +1448,137 @@ return [
       0 => 
       array (
         0 => 'App\\Infrastructure\\Cache\\RedisCache',
-        1 => 'prefixKey',
+        1 => 'getTotalRequests',
         2 => 'App\\Infrastructure\\Cache\\RedisCache',
-      ),
-    ),
-    'PHPStan\\Rules\\DeadCode\\PossiblyPureMethodCallCollector' => 
-    array (
-      0 => 
-      array (
-        0 => 
-        array (
-          0 => 'Redis',
-        ),
-        1 => 'connect',
-        2 => 197,
       ),
       1 => 
       array (
-        0 => 
-        array (
-          0 => 'Redis',
-        ),
-        1 => 'auth',
-        2 => 200,
+        0 => 'App\\Infrastructure\\Cache\\RedisCache',
+        1 => 'getTotalHits',
+        2 => 'App\\Infrastructure\\Cache\\RedisCache',
       ),
       2 => 
       array (
-        0 => 
-        array (
-          0 => 'Redis',
-        ),
-        1 => 'select',
-        2 => 204,
+        0 => 'App\\Infrastructure\\Cache\\RedisCache',
+        1 => 'getTotalMisses',
+        2 => 'App\\Infrastructure\\Cache\\RedisCache',
       ),
     ),
   ),
-  '/var/www/src/Infrastructure/Database/DatabaseConnection.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/DataSource/DataSourceFactory.php' => 
+  array (
+    'PHPStan\\Rules\\DeadCode\\ConstructorWithoutImpurePointsCollector' => 
+    array (
+      0 => 'App\\Infrastructure\\DataSource\\DataSourceFactory',
+    ),
+    'PHPStan\\Rules\\DeadCode\\MethodWithoutImpurePointsCollector' => 
+    array (
+      0 => 
+      array (
+        0 => 'App\\Infrastructure\\DataSource\\DataSourceFactory',
+        1 => 'getStrategy',
+        2 => 'App\\Infrastructure\\DataSource\\DataSourceFactory',
+      ),
+      1 => 
+      array (
+        0 => 'App\\Infrastructure\\DataSource\\DataSourceFactory',
+        1 => 'getCsvPath',
+        2 => 'App\\Infrastructure\\DataSource\\DataSourceFactory',
+      ),
+    ),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/DataSource/DataSourceStrategy.php' => 
+  array (
+    'PHPStan\\Rules\\DeadCode\\MethodWithoutImpurePointsCollector' => 
+    array (
+      0 => 
+      array (
+        0 => 'App\\Infrastructure\\DataSource\\DataSourceStrategy',
+        1 => 'getDisplayName',
+        2 => 'App\\Infrastructure\\DataSource\\DataSourceStrategy',
+      ),
+    ),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Database/DatabaseConnection.php' => 
   array (
     'PHPStan\\Rules\\DeadCode\\ConstructorWithoutImpurePointsCollector' => 
     array (
       0 => 'App\\Infrastructure\\Database\\DatabaseConnection',
     ),
   ),
-  '/var/www/src/Infrastructure/Repository/CachedEventRepository.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Logging/ApplicationLogger.php' => 
+  array (
+    'PHPStan\\Rules\\DeadCode\\ConstructorWithoutImpurePointsCollector' => 
+    array (
+      0 => 'App\\Infrastructure\\Logging\\ApplicationLogger',
+    ),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Logging/LoggerFactory.php' => 
+  array (
+    'PHPStan\\Rules\\DeadCode\\PossiblyPureMethodCallCollector' => 
+    array (
+      0 => 
+      array (
+        0 => 
+        array (
+          0 => 'Monolog\\Logger',
+        ),
+        1 => 'pushHandler',
+        2 => 45,
+      ),
+      1 => 
+      array (
+        0 => 
+        array (
+          0 => 'Monolog\\Handler\\AbstractProcessingHandler',
+        ),
+        1 => 'setFormatter',
+        2 => 103,
+      ),
+      2 => 
+      array (
+        0 => 
+        array (
+          0 => 'Monolog\\Handler\\AbstractProcessingHandler',
+        ),
+        1 => 'setFormatter',
+        2 => 114,
+      ),
+      3 => 
+      array (
+        0 => 
+        array (
+          0 => 'Monolog\\Handler\\AbstractProcessingHandler',
+        ),
+        1 => 'setFormatter',
+        2 => 122,
+      ),
+      4 => 
+      array (
+        0 => 
+        array (
+          0 => 'Monolog\\Handler\\AbstractProcessingHandler',
+        ),
+        1 => 'setFormatter',
+        2 => 130,
+      ),
+    ),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Logging/MonologAdapter.php' => 
+  array (
+    'PHPStan\\Rules\\DeadCode\\ConstructorWithoutImpurePointsCollector' => 
+    array (
+      0 => 'App\\Infrastructure\\Logging\\MonologAdapter',
+    ),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Repository/CachedEventRepository.php' => 
   array (
     'PHPStan\\Rules\\DeadCode\\ConstructorWithoutImpurePointsCollector' => 
     array (
       0 => 'App\\Infrastructure\\Repository\\CachedEventRepository',
     ),
   ),
-  '/var/www/src/Infrastructure/Repository/CsvEventRepository.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Repository/CsvEventRepository.php' => 
   array (
     'PHPStan\\Rules\\DeadCode\\ConstructorWithoutImpurePointsCollector' => 
     array (
@@ -1374,11 +1589,16 @@ return [
       0 => 
       array (
         0 => 'usort',
-        1 => 44,
+        1 => 45,
+      ),
+      1 => 
+      array (
+        0 => 'usort',
+        1 => 213,
       ),
     ),
   ),
-  '/var/www/src/Infrastructure/Repository/DatabaseEventRepository.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Repository/DatabaseEventRepository.php' => 
   array (
     'PHPStan\\Rules\\DeadCode\\ConstructorWithoutImpurePointsCollector' => 
     array (
@@ -1394,14 +1614,192 @@ return [
       ),
     ),
   ),
-  '/var/www/src/Presentation/Controller/EventController.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Response/CsvResponseFormatter.php' => 
+  array (
+    'PHPStan\\Rules\\DeadCode\\MethodWithoutImpurePointsCollector' => 
+    array (
+      0 => 
+      array (
+        0 => 'App\\Infrastructure\\Response\\CsvResponseFormatter',
+        1 => 'getContentType',
+        2 => 'App\\Infrastructure\\Response\\CsvResponseFormatter',
+      ),
+      1 => 
+      array (
+        0 => 'App\\Infrastructure\\Response\\CsvResponseFormatter',
+        1 => 'getHeaders',
+        2 => 'App\\Infrastructure\\Response\\CsvResponseFormatter',
+      ),
+    ),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Response/HtmlResponseFormatter.php' => 
+  array (
+    'PHPStan\\Rules\\DeadCode\\MethodWithoutImpurePointsCollector' => 
+    array (
+      0 => 
+      array (
+        0 => 'App\\Infrastructure\\Response\\HtmlResponseFormatter',
+        1 => 'getContentType',
+        2 => 'App\\Infrastructure\\Response\\HtmlResponseFormatter',
+      ),
+      1 => 
+      array (
+        0 => 'App\\Infrastructure\\Response\\HtmlResponseFormatter',
+        1 => 'getHeaders',
+        2 => 'App\\Infrastructure\\Response\\HtmlResponseFormatter',
+      ),
+      2 => 
+      array (
+        0 => 'App\\Infrastructure\\Response\\HtmlResponseFormatter',
+        1 => 'createHtmlPage',
+        2 => 'App\\Infrastructure\\Response\\HtmlResponseFormatter',
+      ),
+    ),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Response/JsonResponseFormatter.php' => 
+  array (
+    'PHPStan\\Rules\\DeadCode\\MethodWithoutImpurePointsCollector' => 
+    array (
+      0 => 
+      array (
+        0 => 'App\\Infrastructure\\Response\\JsonResponseFormatter',
+        1 => 'getContentType',
+        2 => 'App\\Infrastructure\\Response\\JsonResponseFormatter',
+      ),
+      1 => 
+      array (
+        0 => 'App\\Infrastructure\\Response\\JsonResponseFormatter',
+        1 => 'getHeaders',
+        2 => 'App\\Infrastructure\\Response\\JsonResponseFormatter',
+      ),
+    ),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Response/ResponseFormatStrategy.php' => 
+  array (
+    'PHPStan\\Rules\\DeadCode\\MethodWithoutImpurePointsCollector' => 
+    array (
+      0 => 
+      array (
+        0 => 'App\\Infrastructure\\Response\\ResponseFormatStrategy',
+        1 => 'getDisplayName',
+        2 => 'App\\Infrastructure\\Response\\ResponseFormatStrategy',
+      ),
+      1 => 
+      array (
+        0 => 'App\\Infrastructure\\Response\\ResponseFormatStrategy',
+        1 => 'getFileExtension',
+        2 => 'App\\Infrastructure\\Response\\ResponseFormatStrategy',
+      ),
+      2 => 
+      array (
+        0 => 'App\\Infrastructure\\Response\\ResponseFormatStrategy',
+        1 => 'createFormatter',
+        2 => 'App\\Infrastructure\\Response\\ResponseFormatStrategy',
+      ),
+    ),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Response/ResponseManager.php' => 
+  array (
+    'PHPStan\\Rules\\DeadCode\\MethodWithoutImpurePointsCollector' => 
+    array (
+      0 => 
+      array (
+        0 => 'App\\Infrastructure\\Response\\ResponseManager',
+        1 => 'getStrategy',
+        2 => 'App\\Infrastructure\\Response\\ResponseManager',
+      ),
+      1 => 
+      array (
+        0 => 'App\\Infrastructure\\Response\\ResponseManager',
+        1 => 'getFormatter',
+        2 => 'App\\Infrastructure\\Response\\ResponseManager',
+      ),
+    ),
+    'PHPStan\\Rules\\DeadCode\\PossiblyPureFuncCallCollector' => 
+    array (
+      0 => 
+      array (
+        0 => 'http_response_code',
+        1 => 107,
+      ),
+    ),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Response/XmlResponseFormatter.php' => 
+  array (
+    'PHPStan\\Rules\\DeadCode\\MethodWithoutImpurePointsCollector' => 
+    array (
+      0 => 
+      array (
+        0 => 'App\\Infrastructure\\Response\\XmlResponseFormatter',
+        1 => 'getContentType',
+        2 => 'App\\Infrastructure\\Response\\XmlResponseFormatter',
+      ),
+      1 => 
+      array (
+        0 => 'App\\Infrastructure\\Response\\XmlResponseFormatter',
+        1 => 'getHeaders',
+        2 => 'App\\Infrastructure\\Response\\XmlResponseFormatter',
+      ),
+    ),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Validation/ValidatorBag.php' => 
+  array (
+    'PHPStan\\Rules\\DeadCode\\ConstructorWithoutImpurePointsCollector' => 
+    array (
+      0 => 'App\\Infrastructure\\Validation\\ValidatorBag',
+    ),
+    'PHPStan\\Rules\\DeadCode\\MethodWithoutImpurePointsCollector' => 
+    array (
+      0 => 
+      array (
+        0 => 'App\\Infrastructure\\Validation\\ValidatorBag',
+        1 => 'eventId',
+        2 => 'App\\Infrastructure\\Validation\\ValidatorBag',
+      ),
+      1 => 
+      array (
+        0 => 'App\\Infrastructure\\Validation\\ValidatorBag',
+        1 => 'pagination',
+        2 => 'App\\Infrastructure\\Validation\\ValidatorBag',
+      ),
+    ),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Validation/ValidatorInterface.php' => 
+  array (
+    'PHPStan\\Rules\\DeadCode\\ConstructorWithoutImpurePointsCollector' => 
+    array (
+      0 => 'App\\Infrastructure\\Validation\\ValidationResult',
+    ),
+    'PHPStan\\Rules\\DeadCode\\MethodWithoutImpurePointsCollector' => 
+    array (
+      0 => 
+      array (
+        0 => 'App\\Infrastructure\\Validation\\ValidationResult',
+        1 => 'isValid',
+        2 => 'App\\Infrastructure\\Validation\\ValidationResult',
+      ),
+      1 => 
+      array (
+        0 => 'App\\Infrastructure\\Validation\\ValidationResult',
+        1 => 'getErrors',
+        2 => 'App\\Infrastructure\\Validation\\ValidationResult',
+      ),
+      2 => 
+      array (
+        0 => 'App\\Infrastructure\\Validation\\ValidationResult',
+        1 => 'getFirstError',
+        2 => 'App\\Infrastructure\\Validation\\ValidationResult',
+      ),
+    ),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Presentation/Controller/EventController.php' => 
   array (
     'PHPStan\\Rules\\DeadCode\\ConstructorWithoutImpurePointsCollector' => 
     array (
       0 => 'App\\Presentation\\Controller\\EventController',
     ),
   ),
-  '/var/www/src/Presentation/Response/HttpStatus.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Presentation/Response/HttpStatus.php' => 
   array (
     'PHPStan\\Rules\\DeadCode\\MethodWithoutImpurePointsCollector' => 
     array (
@@ -1431,7 +1829,7 @@ return [
       ),
     ),
   ),
-  '/var/www/src/Presentation/Response/JsonResponse.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Presentation/Response/JsonResponse.php' => 
   array (
     'PHPStan\\Rules\\DeadCode\\PossiblyPureFuncCallCollector' => 
     array (
@@ -1442,7 +1840,7 @@ return [
       ),
     ),
   ),
-  '/var/www/src/Router/HttpMethod.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Router/HttpMethod.php' => 
   array (
     'PHPStan\\Rules\\DeadCode\\MethodWithoutImpurePointsCollector' => 
     array (
@@ -1460,7 +1858,7 @@ return [
       ),
     ),
   ),
-  '/var/www/src/Router/Route.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Router/Route.php' => 
   array (
     'PHPStan\\Rules\\DeadCode\\ConstructorWithoutImpurePointsCollector' => 
     array (
@@ -1494,14 +1892,90 @@ return [
       ),
     ),
   ),
-  '/var/www/src/Router/Router.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Router/Router.php' => 
   array (
     'PHPStan\\Rules\\DeadCode\\ConstructorWithoutImpurePointsCollector' => 
     array (
       0 => 'App\\Router\\Router',
     ),
   ),
-  '/var/www/tests/Unit/Application/Query/PaginationQueryTest.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Providers/InfrastructureServiceProvider.php' => 
+  array (
+    'PHPStan\\Rules\\DeadCode\\PossiblyPureMethodCallCollector' => 
+    array (
+      0 => 
+      array (
+        0 => 
+        array (
+          0 => 'Redis',
+        ),
+        1 => 'connect',
+        2 => 55,
+      ),
+      1 => 
+      array (
+        0 => 
+        array (
+          0 => 'Redis',
+        ),
+        1 => 'auth',
+        2 => 58,
+      ),
+      2 => 
+      array (
+        0 => 
+        array (
+          0 => 'Redis',
+        ),
+        1 => 'select',
+        2 => 62,
+      ),
+      3 => 
+      array (
+        0 => 
+        array (
+          0 => 'Redis',
+        ),
+        1 => 'connect',
+        2 => 84,
+      ),
+      4 => 
+      array (
+        0 => 
+        array (
+          0 => 'Redis',
+        ),
+        1 => 'auth',
+        2 => 87,
+      ),
+      5 => 
+      array (
+        0 => 
+        array (
+          0 => 'Redis',
+        ),
+        1 => 'select',
+        2 => 91,
+      ),
+    ),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Integration/EndpointTest.php' => 
+  array (
+    'PHPStan\\Rules\\DeadCode\\PossiblyPureFuncCallCollector' => 
+    array (
+      0 => 
+      array (
+        0 => 'error_reporting',
+        1 => 586,
+      ),
+      1 => 
+      array (
+        0 => 'ob_start',
+        1 => 618,
+      ),
+    ),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/Query/PaginationQueryTest.php' => 
   array (
     'PHPStan\\Rules\\DeadCode\\PossiblyPureNewCollector' => 
     array (
@@ -1532,7 +2006,7 @@ return [
       ),
     ),
   ),
-  '/var/www/tests/Unit/Application/UseCase/CreateEventUseCaseTest.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/Service/EventServiceTest.php' => 
   array (
     'PHPStan\\Rules\\DeadCode\\PossiblyPureMethodCallCollector' => 
     array (
@@ -1542,8 +2016,8 @@ return [
         array (
           0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
         ),
-        1 => 'willReturnCallback',
-        2 => 33,
+        1 => 'willReturn',
+        2 => 36,
       ),
       1 => 
       array (
@@ -1551,7 +2025,76 @@ return [
         array (
           0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
         ),
-        1 => 'willReturnCallback',
+        1 => 'willReturn',
+        2 => 42,
+      ),
+      2 => 
+      array (
+        0 => 
+        array (
+          0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
+        ),
+        1 => 'willReturn',
+        2 => 65,
+      ),
+      3 => 
+      array (
+        0 => 
+        array (
+          0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
+        ),
+        1 => 'willReturn',
+        2 => 83,
+      ),
+      4 => 
+      array (
+        0 => 
+        array (
+          0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
+        ),
+        1 => 'willReturn',
+        2 => 95,
+      ),
+      5 => 
+      array (
+        0 => 
+        array (
+          0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
+        ),
+        1 => 'willReturn',
+        2 => 109,
+      ),
+      6 => 
+      array (
+        0 => 
+        array (
+          0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
+        ),
+        1 => 'willReturn',
+        2 => 121,
+      ),
+    ),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/Service/SearchServiceTest.php' => 
+  array (
+    'PHPStan\\Rules\\DeadCode\\PossiblyPureMethodCallCollector' => 
+    array (
+      0 => 
+      array (
+        0 => 
+        array (
+          0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
+        ),
+        1 => 'willReturn',
+        2 => 64,
+      ),
+      1 => 
+      array (
+        0 => 
+        array (
+          0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
+        ),
+        1 => 'willReturn',
         2 => 70,
       ),
       2 => 
@@ -1560,8 +2103,8 @@ return [
         array (
           0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
         ),
-        1 => 'willReturnCallback',
-        2 => 98,
+        1 => 'willReturn',
+        2 => 138,
       ),
       3 => 
       array (
@@ -1569,12 +2112,66 @@ return [
         array (
           0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
         ),
-        1 => 'willReturnCallback',
-        2 => 132,
+        1 => 'willReturn',
+        2 => 144,
+      ),
+      4 => 
+      array (
+        0 => 
+        array (
+          0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
+        ),
+        1 => 'willReturn',
+        2 => 186,
+      ),
+      5 => 
+      array (
+        0 => 
+        array (
+          0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
+        ),
+        1 => 'willReturn',
+        2 => 192,
+      ),
+      6 => 
+      array (
+        0 => 
+        array (
+          0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
+        ),
+        1 => 'willReturn',
+        2 => 236,
+      ),
+      7 => 
+      array (
+        0 => 
+        array (
+          0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
+        ),
+        1 => 'willReturn',
+        2 => 242,
+      ),
+      8 => 
+      array (
+        0 => 
+        array (
+          0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
+        ),
+        1 => 'willReturn',
+        2 => 284,
+      ),
+      9 => 
+      array (
+        0 => 
+        array (
+          0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
+        ),
+        1 => 'willReturn',
+        2 => 290,
       ),
     ),
   ),
-  '/var/www/tests/Unit/Application/UseCase/GetAllEventsUseCaseTest.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/UseCase/GetAllEventsUseCaseTest.php' => 
   array (
     'PHPStan\\Rules\\DeadCode\\PossiblyPureMethodCallCollector' => 
     array (
@@ -1598,7 +2195,7 @@ return [
       ),
     ),
   ),
-  '/var/www/tests/Unit/Application/UseCase/GetEventByIdUseCaseTest.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/UseCase/GetEventByIdUseCaseTest.php' => 
   array (
     'PHPStan\\Rules\\DeadCode\\PossiblyPureMethodCallCollector' => 
     array (
@@ -1631,7 +2228,7 @@ return [
       ),
     ),
   ),
-  '/var/www/tests/Unit/Application/UseCase/GetPaginatedEventsUseCaseTest.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/UseCase/GetPaginatedEventsUseCaseTest.php' => 
   array (
     'PHPStan\\Rules\\DeadCode\\PossiblyPureMethodCallCollector' => 
     array (
@@ -1709,7 +2306,7 @@ return [
       ),
     ),
   ),
-  '/var/www/tests/Unit/Domain/Service/EventDomainServiceTest.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Domain/Service/EventDomainServiceTest.php' => 
   array (
     'PHPStan\\Rules\\DeadCode\\PossiblyPureMethodCallCollector' => 
     array (
@@ -1841,7 +2438,7 @@ return [
       ),
     ),
   ),
-  '/var/www/tests/Unit/Domain/ValueObject/CoordinatesTest.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Domain/ValueObject/CoordinatesTest.php' => 
   array (
     'PHPStan\\Rules\\DeadCode\\PossiblyPureNewCollector' => 
     array (
@@ -1867,7 +2464,7 @@ return [
       ),
     ),
   ),
-  '/var/www/tests/Unit/InMemoryCacheTest.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/InMemoryCacheTest.php' => 
   array (
     'PHPStan\\Rules\\DeadCode\\PossiblyPureFuncCallCollector' => 
     array (
@@ -1878,7 +2475,7 @@ return [
       ),
     ),
   ),
-  '/var/www/tests/Unit/Infrastructure/Repository/CachedEventRepositoryTest.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Infrastructure/Repository/CachedEventRepositoryTest.php' => 
   array (
     'PHPStan\\Rules\\DeadCode\\PossiblyPureMethodCallCollector' => 
     array (
@@ -1961,7 +2558,7 @@ return [
           0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
         ),
         1 => 'willReturn',
-        2 => 153,
+        2 => 150,
       ),
       9 => 
       array (
@@ -1970,7 +2567,7 @@ return [
           0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
         ),
         1 => 'willReturn',
-        2 => 167,
+        2 => 164,
       ),
       10 => 
       array (
@@ -1979,7 +2576,7 @@ return [
           0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
         ),
         1 => 'willReturn',
-        2 => 172,
+        2 => 169,
       ),
       11 => 
       array (
@@ -1988,7 +2585,7 @@ return [
           0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
         ),
         1 => 'willReturn',
-        2 => 193,
+        2 => 185,
       ),
       12 => 
       array (
@@ -1997,7 +2594,7 @@ return [
           0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
         ),
         1 => 'willReturn',
-        2 => 216,
+        2 => 190,
       ),
       13 => 
       array (
@@ -2005,8 +2602,8 @@ return [
         array (
           0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
         ),
-        1 => 'willReturn',
-        2 => 235,
+        1 => 'willReturnOnConsecutiveCalls',
+        2 => 203,
       ),
       14 => 
       array (
@@ -2015,7 +2612,7 @@ return [
           0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
         ),
         1 => 'willReturn',
-        2 => 245,
+        2 => 210,
       ),
       15 => 
       array (
@@ -2024,47 +2621,11 @@ return [
           0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
         ),
         1 => 'willReturn',
-        2 => 266,
-      ),
-      16 => 
-      array (
-        0 => 
-        array (
-          0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
-        ),
-        1 => 'willReturn',
-        2 => 271,
-      ),
-      17 => 
-      array (
-        0 => 
-        array (
-          0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
-        ),
-        1 => 'willReturnOnConsecutiveCalls',
-        2 => 287,
-      ),
-      18 => 
-      array (
-        0 => 
-        array (
-          0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
-        ),
-        1 => 'willReturn',
-        2 => 294,
-      ),
-      19 => 
-      array (
-        0 => 
-        array (
-          0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
-        ),
-        1 => 'willReturn',
-        2 => 298,
+        2 => 214,
       ),
     ),
   ),
-  '/var/www/tests/Unit/Infrastructure/Repository/DatabaseEventRepositoryTest.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Infrastructure/Repository/DatabaseEventRepositoryTest.php' => 
   array (
     'PHPStan\\Rules\\DeadCode\\PossiblyPureMethodCallCollector' => 
     array (
@@ -2075,7 +2636,7 @@ return [
           0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
         ),
         1 => 'willReturn',
-        2 => 38,
+        2 => 35,
       ),
       1 => 
       array (
@@ -2084,7 +2645,7 @@ return [
           0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
         ),
         1 => 'willReturn',
-        2 => 43,
+        2 => 40,
       ),
       2 => 
       array (
@@ -2093,7 +2654,7 @@ return [
           0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
         ),
         1 => 'willReturnOnConsecutiveCalls',
-        2 => 47,
+        2 => 44,
       ),
       3 => 
       array (
@@ -2102,7 +2663,7 @@ return [
           0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
         ),
         1 => 'willReturn',
-        2 => 68,
+        2 => 65,
       ),
       4 => 
       array (
@@ -2111,7 +2672,7 @@ return [
           0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
         ),
         1 => 'willReturn',
-        2 => 73,
+        2 => 70,
       ),
       5 => 
       array (
@@ -2120,7 +2681,7 @@ return [
           0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
         ),
         1 => 'willReturn',
-        2 => 78,
+        2 => 75,
       ),
       6 => 
       array (
@@ -2129,7 +2690,7 @@ return [
           0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
         ),
         1 => 'willReturn',
-        2 => 92,
+        2 => 89,
       ),
       7 => 
       array (
@@ -2138,7 +2699,7 @@ return [
           0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
         ),
         1 => 'willReturn',
-        2 => 97,
+        2 => 94,
       ),
       8 => 
       array (
@@ -2147,7 +2708,7 @@ return [
           0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
         ),
         1 => 'willReturn',
-        2 => 102,
+        2 => 99,
       ),
       9 => 
       array (
@@ -2156,7 +2717,7 @@ return [
           0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
         ),
         1 => 'willReturn',
-        2 => 113,
+        2 => 110,
       ),
       10 => 
       array (
@@ -2165,7 +2726,7 @@ return [
           0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
         ),
         1 => 'willReturn',
-        2 => 118,
+        2 => 115,
       ),
       11 => 
       array (
@@ -2174,7 +2735,7 @@ return [
           0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
         ),
         1 => 'willReturn',
-        2 => 136,
+        2 => 126,
       ),
       12 => 
       array (
@@ -2183,9 +2744,27 @@ return [
           0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
         ),
         1 => 'willReturn',
-        2 => 144,
+        2 => 131,
       ),
       13 => 
+      array (
+        0 => 
+        array (
+          0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
+        ),
+        1 => 'willReturn',
+        2 => 142,
+      ),
+      14 => 
+      array (
+        0 => 
+        array (
+          0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
+        ),
+        1 => 'willReturn',
+        2 => 147,
+      ),
+      15 => 
       array (
         0 => 
         array (
@@ -2194,203 +2773,10 @@ return [
         1 => 'willReturn',
         2 => 152,
       ),
-      14 => 
-      array (
-        0 => 
-        array (
-          0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
-        ),
-        1 => 'willReturn',
-        2 => 156,
-      ),
-      15 => 
-      array (
-        0 => 
-        array (
-          0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
-        ),
-        1 => 'willReturn',
-        2 => 183,
-      ),
-      16 => 
-      array (
-        0 => 
-        array (
-          0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
-        ),
-        1 => 'willReturn',
-        2 => 191,
-      ),
-      17 => 
-      array (
-        0 => 
-        array (
-          0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
-        ),
-        1 => 'willReturn',
-        2 => 199,
-      ),
-      18 => 
-      array (
-        0 => 
-        array (
-          0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
-        ),
-        1 => 'willReturn',
-        2 => 203,
-      ),
-      19 => 
-      array (
-        0 => 
-        array (
-          0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
-        ),
-        1 => 'willReturn',
-        2 => 221,
-      ),
-      20 => 
-      array (
-        0 => 
-        array (
-          0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
-        ),
-        1 => 'willReturn',
-        2 => 226,
-      ),
-      21 => 
-      array (
-        0 => 
-        array (
-          0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
-        ),
-        1 => 'willReturn',
-        2 => 231,
-      ),
-      22 => 
-      array (
-        0 => 
-        array (
-          0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
-        ),
-        1 => 'willReturn',
-        2 => 242,
-      ),
-      23 => 
-      array (
-        0 => 
-        array (
-          0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
-        ),
-        1 => 'willReturn',
-        2 => 247,
-      ),
-      24 => 
-      array (
-        0 => 
-        array (
-          0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
-        ),
-        1 => 'willReturn',
-        2 => 258,
-      ),
-      25 => 
-      array (
-        0 => 
-        array (
-          0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
-        ),
-        1 => 'willReturn',
-        2 => 263,
-      ),
-      26 => 
-      array (
-        0 => 
-        array (
-          0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
-        ),
-        1 => 'willReturn',
-        2 => 274,
-      ),
-      27 => 
-      array (
-        0 => 
-        array (
-          0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
-        ),
-        1 => 'willReturn',
-        2 => 279,
-      ),
-      28 => 
-      array (
-        0 => 
-        array (
-          0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
-        ),
-        1 => 'willReturn',
-        2 => 284,
-      ),
     ),
   ),
-  '/var/www/tests/Unit/Presentation/Controller/EventControllerTest.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Presentation/Controller/EventControllerServiceTest.php' => 
   array (
-    'PHPStan\\Rules\\DeadCode\\PossiblyPureFuncCallCollector' => 
-    array (
-      0 => 
-      array (
-        0 => 'ob_start',
-        1 => 50,
-      ),
-      1 => 
-      array (
-        0 => 'ob_start',
-        1 => 70,
-      ),
-      2 => 
-      array (
-        0 => 'ob_start',
-        1 => 90,
-      ),
-      3 => 
-      array (
-        0 => 'ob_start',
-        1 => 110,
-      ),
-      4 => 
-      array (
-        0 => 'ob_start',
-        1 => 133,
-      ),
-      5 => 
-      array (
-        0 => 'ob_start',
-        1 => 147,
-      ),
-      6 => 
-      array (
-        0 => 'ob_start',
-        1 => 160,
-      ),
-      7 => 
-      array (
-        0 => 'ob_start',
-        1 => 178,
-      ),
-      8 => 
-      array (
-        0 => 'ob_start',
-        1 => 206,
-      ),
-      9 => 
-      array (
-        0 => 'ob_start',
-        1 => 248,
-      ),
-      10 => 
-      array (
-        0 => 'ob_start',
-        1 => 270,
-      ),
-    ),
     'PHPStan\\Rules\\DeadCode\\PossiblyPureMethodCallCollector' => 
     array (
       0 => 
@@ -2400,7 +2786,7 @@ return [
           0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
         ),
         1 => 'willReturn',
-        2 => 43,
+        2 => 73,
       ),
       1 => 
       array (
@@ -2409,7 +2795,7 @@ return [
           0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
         ),
         1 => 'willReturn',
-        2 => 64,
+        2 => 78,
       ),
       2 => 
       array (
@@ -2418,7 +2804,7 @@ return [
           0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
         ),
         1 => 'willReturn',
-        2 => 84,
+        2 => 115,
       ),
       3 => 
       array (
@@ -2427,7 +2813,7 @@ return [
           0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
         ),
         1 => 'willReturn',
-        2 => 104,
+        2 => 121,
       ),
       4 => 
       array (
@@ -2436,7 +2822,7 @@ return [
           0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
         ),
         1 => 'willReturn',
-        2 => 125,
+        2 => 147,
       ),
       5 => 
       array (
@@ -2445,7 +2831,7 @@ return [
           0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
         ),
         1 => 'willReturn',
-        2 => 173,
+        2 => 153,
       ),
       6 => 
       array (
@@ -2454,7 +2840,7 @@ return [
           0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
         ),
         1 => 'willReturn',
-        2 => 200,
+        2 => 169,
       ),
       7 => 
       array (
@@ -2463,661 +2849,1242 @@ return [
           0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
         ),
         1 => 'willReturn',
-        2 => 237,
+        2 => 201,
+      ),
+      8 => 
+      array (
+        0 => 
+        array (
+          0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
+        ),
+        1 => 'willReturn',
+        2 => 228,
+      ),
+      9 => 
+      array (
+        0 => 
+        array (
+          0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
+        ),
+        1 => 'willReturn',
+        2 => 229,
+      ),
+    ),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Presentation/Controller/EventControllerTest.php' => 
+  array (
+    'PHPStan\\Rules\\DeadCode\\PossiblyPureMethodCallCollector' => 
+    array (
+      0 => 
+      array (
+        0 => 
+        array (
+          0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
+        ),
+        1 => 'willReturn',
+        2 => 68,
+      ),
+      1 => 
+      array (
+        0 => 
+        array (
+          0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
+        ),
+        1 => 'willReturn',
+        2 => 73,
+      ),
+      2 => 
+      array (
+        0 => 
+        array (
+          0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
+        ),
+        1 => 'willReturn',
+        2 => 113,
+      ),
+      3 => 
+      array (
+        0 => 
+        array (
+          0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
+        ),
+        1 => 'willReturn',
+        2 => 136,
+      ),
+      4 => 
+      array (
+        0 => 
+        array (
+          0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
+        ),
+        1 => 'willReturn',
+        2 => 141,
+      ),
+      5 => 
+      array (
+        0 => 
+        array (
+          0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
+        ),
+        1 => 'willReturn',
+        2 => 174,
+      ),
+      6 => 
+      array (
+        0 => 
+        array (
+          0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
+        ),
+        1 => 'willReturn',
+        2 => 179,
+      ),
+      7 => 
+      array (
+        0 => 
+        array (
+          0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
+        ),
+        1 => 'willThrowException',
+        2 => 188,
+      ),
+      8 => 
+      array (
+        0 => 
+        array (
+          0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
+        ),
+        1 => 'willReturn',
+        2 => 218,
+      ),
+      9 => 
+      array (
+        0 => 
+        array (
+          0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
+        ),
+        1 => 'willReturn',
+        2 => 223,
+      ),
+      10 => 
+      array (
+        0 => 
+        array (
+          0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
+        ),
+        1 => 'willReturn',
+        2 => 228,
+      ),
+      11 => 
+      array (
+        0 => 
+        array (
+          0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
+        ),
+        1 => 'willReturn',
+        2 => 242,
+      ),
+      12 => 
+      array (
+        0 => 
+        array (
+          0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
+        ),
+        1 => 'willReturn',
+        2 => 283,
+      ),
+      13 => 
+      array (
+        0 => 
+        array (
+          0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
+        ),
+        1 => 'willReturn',
+        2 => 288,
+      ),
+      14 => 
+      array (
+        0 => 
+        array (
+          0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
+        ),
+        1 => 'willReturn',
+        2 => 293,
+      ),
+      15 => 
+      array (
+        0 => 
+        array (
+          0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
+        ),
+        1 => 'willReturn',
+        2 => 314,
+      ),
+      16 => 
+      array (
+        0 => 
+        array (
+          0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
+        ),
+        1 => 'willReturn',
+        2 => 319,
+      ),
+      17 => 
+      array (
+        0 => 
+        array (
+          0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
+        ),
+        1 => 'willReturn',
+        2 => 331,
+      ),
+      18 => 
+      array (
+        0 => 
+        array (
+          0 => 'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker',
+        ),
+        1 => 'willReturn',
+        2 => 338,
       ),
     ),
   ),
 ); },
 	'dependencies' => array (
-  '/var/www/src/Application/Command/CreateEventCommand.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Bootstrap.php' => 
   array (
-    'fileHash' => 'd4994d711f11b382857da0cab9677f211bc44892',
+    'fileHash' => 'df7a49a6bfe21d6757bc09016825b97ba25b8e89',
     'dependentFiles' => 
     array (
-      0 => '/var/www/src/Application/UseCase/CreateEventUseCase.php',
-      1 => '/var/www/src/Application/UseCase/CreateEventUseCaseInterface.php',
-      2 => '/var/www/tests/Unit/Application/UseCase/CreateEventUseCaseTest.php',
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Integration/EndpointTest.php',
     ),
   ),
-  '/var/www/src/Application/DTO/EventDto.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/DTO/EventDto.php' => 
   array (
     'fileHash' => '94a6a6930f521cdad933976dd6f6227810064e93',
     'dependentFiles' => 
     array (
-      0 => '/var/www/src/Application/Mapper/EventMapper.php',
-      1 => '/var/www/src/Application/UseCase/CreateEventUseCase.php',
-      2 => '/var/www/src/Application/UseCase/CreateEventUseCaseInterface.php',
-      3 => '/var/www/src/Application/UseCase/GetAllEventsUseCase.php',
-      4 => '/var/www/src/Application/UseCase/GetAllEventsUseCaseInterface.php',
-      5 => '/var/www/src/Application/UseCase/GetEventByIdUseCase.php',
-      6 => '/var/www/src/Application/UseCase/GetEventByIdUseCaseInterface.php',
-      7 => '/var/www/src/Application/UseCase/GetPaginatedEventsUseCase.php',
-      8 => '/var/www/src/Application/UseCase/GetPaginatedEventsUseCaseInterface.php',
-      9 => '/var/www/src/Presentation/Controller/EventController.php',
-      10 => '/var/www/tests/Unit/Application/UseCase/CreateEventUseCaseTest.php',
-      11 => '/var/www/tests/Unit/Application/UseCase/GetAllEventsUseCaseTest.php',
-      12 => '/var/www/tests/Unit/Application/UseCase/GetEventByIdUseCaseTest.php',
-      13 => '/var/www/tests/Unit/Application/UseCase/GetPaginatedEventsUseCaseTest.php',
-      14 => '/var/www/tests/Unit/Presentation/Controller/EventControllerTest.php',
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Mapper/EventMapper.php',
+      1 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Service/EventService.php',
+      2 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Service/EventServiceInterface.php',
+      3 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Service/SearchService.php',
+      4 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Service/SearchServiceInterface.php',
+      5 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/UseCase/GetAllEventsUseCase.php',
+      6 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/UseCase/GetAllEventsUseCaseInterface.php',
+      7 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/UseCase/GetEventByIdUseCase.php',
+      8 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/UseCase/GetEventByIdUseCaseInterface.php',
+      9 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/UseCase/GetPaginatedEventsUseCase.php',
+      10 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/UseCase/GetPaginatedEventsUseCaseInterface.php',
+      11 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Presentation/Controller/EventController.php',
+      12 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/Service/EventServiceTest.php',
+      13 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/UseCase/GetAllEventsUseCaseTest.php',
+      14 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/UseCase/GetEventByIdUseCaseTest.php',
+      15 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/UseCase/GetPaginatedEventsUseCaseTest.php',
+      16 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Presentation/Controller/EventControllerServiceTest.php',
+      17 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Presentation/Controller/EventControllerTest.php',
     ),
   ),
-  '/var/www/src/Application/DTO/PaginatedResponse.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/DTO/PaginatedResponse.php' => 
   array (
-    'fileHash' => 'a231b11cfb678b12f294c0574aa2e5678ab96daf',
+    'fileHash' => 'ff4a01f0f1f488a0c8434a57af41cf3b51d5c255',
     'dependentFiles' => 
     array (
-      0 => '/var/www/src/Application/UseCase/GetPaginatedEventsUseCase.php',
-      1 => '/var/www/src/Application/UseCase/GetPaginatedEventsUseCaseInterface.php',
-      2 => '/var/www/src/Presentation/Controller/EventController.php',
-      3 => '/var/www/tests/Unit/Application/DTO/PaginatedResponseTest.php',
-      4 => '/var/www/tests/Unit/Application/UseCase/GetPaginatedEventsUseCaseTest.php',
-      5 => '/var/www/tests/Unit/Presentation/Controller/EventControllerTest.php',
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Service/EventService.php',
+      1 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Service/EventServiceInterface.php',
+      2 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Service/SearchService.php',
+      3 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Service/SearchServiceInterface.php',
+      4 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/UseCase/GetPaginatedEventsUseCase.php',
+      5 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/UseCase/GetPaginatedEventsUseCaseInterface.php',
+      6 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Presentation/Controller/EventController.php',
+      7 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/DTO/PaginatedResponseTest.php',
+      8 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/Service/EventServiceTest.php',
+      9 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/UseCase/GetPaginatedEventsUseCaseTest.php',
+      10 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Presentation/Controller/EventControllerServiceTest.php',
+      11 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Presentation/Controller/EventControllerTest.php',
     ),
   ),
-  '/var/www/src/Application/Mapper/EventMapper.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Mapper/EventMapper.php' => 
   array (
     'fileHash' => '6bfca643279363692518fe7c1423ea85d1eec08c',
     'dependentFiles' => 
     array (
-      0 => '/var/www/src/Application/UseCase/CreateEventUseCase.php',
-      1 => '/var/www/src/Application/UseCase/GetAllEventsUseCase.php',
-      2 => '/var/www/src/Application/UseCase/GetEventByIdUseCase.php',
-      3 => '/var/www/src/Application/UseCase/GetPaginatedEventsUseCase.php',
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Service/EventService.php',
+      1 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Service/SearchService.php',
+      2 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/UseCase/GetAllEventsUseCase.php',
+      3 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/UseCase/GetEventByIdUseCase.php',
+      4 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/UseCase/GetPaginatedEventsUseCase.php',
     ),
   ),
-  '/var/www/src/Application/Query/GetAllEventsQuery.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Query/GetAllEventsQuery.php' => 
   array (
     'fileHash' => 'db20a737ca5141364645e6034ab5a3c0a5c82b7d',
     'dependentFiles' => 
     array (
-      0 => '/var/www/src/Application/UseCase/GetAllEventsUseCase.php',
-      1 => '/var/www/src/Application/UseCase/GetAllEventsUseCaseInterface.php',
-      2 => '/var/www/src/Presentation/Controller/EventController.php',
-      3 => '/var/www/tests/Unit/Application/UseCase/GetAllEventsUseCaseTest.php',
-      4 => '/var/www/tests/Unit/Presentation/Controller/EventControllerTest.php',
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/UseCase/GetAllEventsUseCase.php',
+      1 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/UseCase/GetAllEventsUseCaseInterface.php',
+      2 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/UseCase/GetAllEventsUseCaseTest.php',
     ),
   ),
-  '/var/www/src/Application/Query/GetEventByIdQuery.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Query/GetEventByIdQuery.php' => 
   array (
     'fileHash' => 'd02ee3727ebfbaf44abadcc982873883e7271185',
     'dependentFiles' => 
     array (
-      0 => '/var/www/src/Application/UseCase/GetEventByIdUseCase.php',
-      1 => '/var/www/src/Application/UseCase/GetEventByIdUseCaseInterface.php',
-      2 => '/var/www/src/Presentation/Controller/EventController.php',
-      3 => '/var/www/tests/Unit/Application/UseCase/GetEventByIdUseCaseTest.php',
-      4 => '/var/www/tests/Unit/Presentation/Controller/EventControllerTest.php',
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/UseCase/GetEventByIdUseCase.php',
+      1 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/UseCase/GetEventByIdUseCaseInterface.php',
+      2 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/UseCase/GetEventByIdUseCaseTest.php',
     ),
   ),
-  '/var/www/src/Application/Query/GetPaginatedEventsQuery.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Query/GetPaginatedEventsQuery.php' => 
   array (
-    'fileHash' => '84c2e1b339d052c97c7bd50cb04ccc74fd09b985',
+    'fileHash' => '340c7bda2a6a08184cc8d597f959b300939bb77c',
     'dependentFiles' => 
     array (
-      0 => '/var/www/src/Application/UseCase/GetPaginatedEventsUseCase.php',
-      1 => '/var/www/src/Application/UseCase/GetPaginatedEventsUseCaseInterface.php',
-      2 => '/var/www/src/Presentation/Controller/EventController.php',
-      3 => '/var/www/tests/Unit/Application/UseCase/GetPaginatedEventsUseCaseTest.php',
-      4 => '/var/www/tests/Unit/Presentation/Controller/EventControllerTest.php',
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/UseCase/GetPaginatedEventsUseCase.php',
+      1 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/UseCase/GetPaginatedEventsUseCaseInterface.php',
+      2 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/UseCase/GetPaginatedEventsUseCaseTest.php',
     ),
   ),
-  '/var/www/src/Application/Query/PaginationQuery.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Query/PaginationQuery.php' => 
   array (
-    'fileHash' => 'd6f947eb34e61a53f4485277932458aa16336279',
+    'fileHash' => 'c6bf4b592c60990ad4779321bfc6406b2bb6cf0f',
     'dependentFiles' => 
     array (
-      0 => '/var/www/src/Application/Query/GetPaginatedEventsQuery.php',
-      1 => '/var/www/src/Application/UseCase/GetPaginatedEventsUseCase.php',
-      2 => '/var/www/src/Domain/Repository/EventRepositoryInterface.php',
-      3 => '/var/www/src/Infrastructure/Repository/CachedEventRepository.php',
-      4 => '/var/www/src/Infrastructure/Repository/CsvEventRepository.php',
-      5 => '/var/www/src/Infrastructure/Repository/DatabaseEventRepository.php',
-      6 => '/var/www/src/Presentation/Controller/EventController.php',
-      7 => '/var/www/tests/Unit/Application/Query/PaginationQueryTest.php',
-      8 => '/var/www/tests/Unit/Application/UseCase/GetPaginatedEventsUseCaseTest.php',
-      9 => '/var/www/tests/Unit/Presentation/Controller/EventControllerTest.php',
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Query/GetPaginatedEventsQuery.php',
+      1 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Query/SearchQuery.php',
+      2 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Service/EventService.php',
+      3 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Service/EventServiceInterface.php',
+      4 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Service/SearchService.php',
+      5 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Service/SearchServiceInterface.php',
+      6 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/UseCase/GetPaginatedEventsUseCase.php',
+      7 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Domain/Repository/EventRepositoryInterface.php',
+      8 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Cache/CacheWarmer.php',
+      9 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Repository/CachedEventRepository.php',
+      10 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Repository/CsvEventRepository.php',
+      11 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Repository/DatabaseEventRepository.php',
+      12 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Presentation/Controller/EventController.php',
+      13 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/Query/PaginationQueryTest.php',
+      14 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/Service/EventServiceTest.php',
+      15 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/Service/SearchServiceTest.php',
+      16 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/UseCase/GetPaginatedEventsUseCaseTest.php',
+      17 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Presentation/Controller/EventControllerServiceTest.php',
     ),
   ),
-  '/var/www/src/Application/UseCase/CreateEventUseCase.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Query/SearchQuery.php' => 
   array (
-    'fileHash' => '928496b375078d5ff2e31385590541b007ae7e2b',
+    'fileHash' => '2fab6925a182a008fcebc3586a4c4ee8f44c69da',
     'dependentFiles' => 
     array (
-      0 => '/var/www/tests/Unit/Application/UseCase/CreateEventUseCaseTest.php',
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Service/SearchService.php',
+      1 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Service/SearchServiceInterface.php',
+      2 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Domain/Repository/EventRepositoryInterface.php',
+      3 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Cache/CacheWarmer.php',
+      4 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Repository/CachedEventRepository.php',
+      5 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Repository/CsvEventRepository.php',
+      6 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Repository/DatabaseEventRepository.php',
+      7 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Presentation/Controller/EventController.php',
+      8 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/Service/SearchServiceTest.php',
     ),
   ),
-  '/var/www/src/Application/UseCase/CreateEventUseCaseInterface.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Service/EventService.php' => 
   array (
-    'fileHash' => '59183eafd7834e33ad723e2aef74265c32a1f2f4',
+    'fileHash' => '6082e7978da4979b4659b1989113670dce08a931',
     'dependentFiles' => 
     array (
-      0 => '/var/www/src/Application/UseCase/CreateEventUseCase.php',
-      1 => '/var/www/tests/Unit/Application/UseCase/CreateEventUseCaseTest.php',
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Providers/ApplicationServiceProvider.php',
+      1 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/Service/EventServiceTest.php',
     ),
   ),
-  '/var/www/src/Application/UseCase/GetAllEventsUseCase.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Service/EventServiceInterface.php' => 
+  array (
+    'fileHash' => '7064a0fc19a442a4fce0caa65ba6448277eb8301',
+    'dependentFiles' => 
+    array (
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Service/EventService.php',
+      1 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Presentation/Controller/EventController.php',
+      2 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Providers/ApplicationServiceProvider.php',
+      3 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Providers/PresentationServiceProvider.php',
+      4 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/Service/EventServiceTest.php',
+      5 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Presentation/Controller/EventControllerServiceTest.php',
+      6 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Presentation/Controller/EventControllerTest.php',
+    ),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Service/SearchService.php' => 
+  array (
+    'fileHash' => 'c595ed1027ae950301e604398a204a087929850e',
+    'dependentFiles' => 
+    array (
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Providers/ApplicationServiceProvider.php',
+      1 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/Service/SearchServiceTest.php',
+    ),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Service/SearchServiceInterface.php' => 
+  array (
+    'fileHash' => 'c866dc521879bff7f3e9c39433575f541a813bdf',
+    'dependentFiles' => 
+    array (
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Service/SearchService.php',
+      1 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Presentation/Controller/EventController.php',
+      2 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Providers/ApplicationServiceProvider.php',
+      3 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Providers/PresentationServiceProvider.php',
+      4 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/Service/SearchServiceTest.php',
+      5 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Presentation/Controller/EventControllerServiceTest.php',
+      6 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Presentation/Controller/EventControllerTest.php',
+    ),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/UseCase/GetAllEventsUseCase.php' => 
   array (
     'fileHash' => 'fffeee567b5e9d56d57232f5a5e43e89b1dab27e',
     'dependentFiles' => 
     array (
-      0 => '/var/www/src/Service/Container.php',
-      1 => '/var/www/tests/Unit/Application/UseCase/GetAllEventsUseCaseTest.php',
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Providers/ApplicationServiceProvider.php',
+      1 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/UseCase/GetAllEventsUseCaseTest.php',
     ),
   ),
-  '/var/www/src/Application/UseCase/GetAllEventsUseCaseInterface.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/UseCase/GetAllEventsUseCaseInterface.php' => 
   array (
     'fileHash' => 'ea601232dbb0fecefa48d86f40749be275462040',
     'dependentFiles' => 
     array (
-      0 => '/var/www/src/Application/UseCase/GetAllEventsUseCase.php',
-      1 => '/var/www/src/Presentation/Controller/EventController.php',
-      2 => '/var/www/src/Service/Container.php',
-      3 => '/var/www/tests/Unit/Application/UseCase/GetAllEventsUseCaseTest.php',
-      4 => '/var/www/tests/Unit/Presentation/Controller/EventControllerTest.php',
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/UseCase/GetAllEventsUseCase.php',
+      1 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Providers/ApplicationServiceProvider.php',
+      2 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/UseCase/GetAllEventsUseCaseTest.php',
     ),
   ),
-  '/var/www/src/Application/UseCase/GetEventByIdUseCase.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/UseCase/GetEventByIdUseCase.php' => 
   array (
     'fileHash' => '7003bc52f10f986329118d5a864d016a9c2f21e6',
     'dependentFiles' => 
     array (
-      0 => '/var/www/src/Service/Container.php',
-      1 => '/var/www/tests/Unit/Application/UseCase/GetEventByIdUseCaseTest.php',
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Providers/ApplicationServiceProvider.php',
+      1 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/UseCase/GetEventByIdUseCaseTest.php',
     ),
   ),
-  '/var/www/src/Application/UseCase/GetEventByIdUseCaseInterface.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/UseCase/GetEventByIdUseCaseInterface.php' => 
   array (
     'fileHash' => '0125e2c2b85e42a78f1c419c6f9cc1988eb1244f',
     'dependentFiles' => 
     array (
-      0 => '/var/www/src/Application/UseCase/GetEventByIdUseCase.php',
-      1 => '/var/www/src/Presentation/Controller/EventController.php',
-      2 => '/var/www/src/Service/Container.php',
-      3 => '/var/www/tests/Unit/Application/UseCase/GetEventByIdUseCaseTest.php',
-      4 => '/var/www/tests/Unit/Presentation/Controller/EventControllerTest.php',
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/UseCase/GetEventByIdUseCase.php',
+      1 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Providers/ApplicationServiceProvider.php',
+      2 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/UseCase/GetEventByIdUseCaseTest.php',
     ),
   ),
-  '/var/www/src/Application/UseCase/GetPaginatedEventsUseCase.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/UseCase/GetPaginatedEventsUseCase.php' => 
   array (
-    'fileHash' => '59d5d57711d34695de4562f3888ff7a29a5aad62',
+    'fileHash' => 'c50602f27794cb297a93fac457169b16e48c578e',
     'dependentFiles' => 
     array (
-      0 => '/var/www/src/Service/Container.php',
-      1 => '/var/www/tests/Unit/Application/UseCase/GetPaginatedEventsUseCaseTest.php',
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Providers/ApplicationServiceProvider.php',
+      1 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/UseCase/GetPaginatedEventsUseCaseTest.php',
     ),
   ),
-  '/var/www/src/Application/UseCase/GetPaginatedEventsUseCaseInterface.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/UseCase/GetPaginatedEventsUseCaseInterface.php' => 
   array (
-    'fileHash' => '2488597df8280d4fc52ee0ab398b62abdcb2f708',
+    'fileHash' => '06fe1e3cd7903a5fd1b9416c63a25c0a41c4c999',
     'dependentFiles' => 
     array (
-      0 => '/var/www/src/Application/UseCase/GetPaginatedEventsUseCase.php',
-      1 => '/var/www/src/Presentation/Controller/EventController.php',
-      2 => '/var/www/src/Service/Container.php',
-      3 => '/var/www/tests/Unit/Application/UseCase/GetPaginatedEventsUseCaseTest.php',
-      4 => '/var/www/tests/Unit/Presentation/Controller/EventControllerTest.php',
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/UseCase/GetPaginatedEventsUseCase.php',
+      1 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Providers/ApplicationServiceProvider.php',
+      2 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/UseCase/GetPaginatedEventsUseCaseTest.php',
     ),
   ),
-  '/var/www/src/Domain/Entity/Event.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Domain/Entity/Event.php' => 
   array (
-    'fileHash' => '914fd9fa39efbcb1badd8118501720ee3cd65f02',
+    'fileHash' => '8e098d9bde885ac6e804e6371cc597c44cd11da9',
     'dependentFiles' => 
     array (
-      0 => '/var/www/src/Application/Mapper/EventMapper.php',
-      1 => '/var/www/src/Application/UseCase/CreateEventUseCase.php',
-      2 => '/var/www/src/Application/UseCase/GetAllEventsUseCase.php',
-      3 => '/var/www/src/Application/UseCase/GetEventByIdUseCase.php',
-      4 => '/var/www/src/Application/UseCase/GetPaginatedEventsUseCase.php',
-      5 => '/var/www/src/Domain/Event/EventCreated.php',
-      6 => '/var/www/src/Domain/Event/EventUpdated.php',
-      7 => '/var/www/src/Domain/Repository/EventRepositoryInterface.php',
-      8 => '/var/www/src/Domain/Service/EventDomainService.php',
-      9 => '/var/www/src/Infrastructure/Repository/CachedEventRepository.php',
-      10 => '/var/www/src/Infrastructure/Repository/CsvEventRepository.php',
-      11 => '/var/www/src/Infrastructure/Repository/DatabaseEventRepository.php',
-      12 => '/var/www/tests/Unit/Application/UseCase/CreateEventUseCaseTest.php',
-      13 => '/var/www/tests/Unit/Application/UseCase/GetAllEventsUseCaseTest.php',
-      14 => '/var/www/tests/Unit/Application/UseCase/GetEventByIdUseCaseTest.php',
-      15 => '/var/www/tests/Unit/Application/UseCase/GetPaginatedEventsUseCaseTest.php',
-      16 => '/var/www/tests/Unit/Domain/Entity/EventTest.php',
-      17 => '/var/www/tests/Unit/Domain/Service/EventDomainServiceTest.php',
-      18 => '/var/www/tests/Unit/Infrastructure/Repository/CachedEventRepositoryTest.php',
-      19 => '/var/www/tests/Unit/Infrastructure/Repository/DatabaseEventRepositoryTest.php',
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Mapper/EventMapper.php',
+      1 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Service/EventService.php',
+      2 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Service/SearchService.php',
+      3 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/UseCase/GetAllEventsUseCase.php',
+      4 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/UseCase/GetEventByIdUseCase.php',
+      5 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/UseCase/GetPaginatedEventsUseCase.php',
+      6 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Domain/Repository/EventRepositoryInterface.php',
+      7 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Domain/Service/EventDomainService.php',
+      8 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Cache/CacheWarmer.php',
+      9 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Repository/CachedEventRepository.php',
+      10 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Repository/CsvEventRepository.php',
+      11 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Repository/DatabaseEventRepository.php',
+      12 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/Service/EventServiceTest.php',
+      13 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/Service/SearchServiceTest.php',
+      14 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/UseCase/GetAllEventsUseCaseTest.php',
+      15 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/UseCase/GetEventByIdUseCaseTest.php',
+      16 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/UseCase/GetPaginatedEventsUseCaseTest.php',
+      17 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Domain/Entity/EventTest.php',
+      18 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Domain/Service/EventDomainServiceTest.php',
+      19 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Infrastructure/Repository/CachedEventRepositoryTest.php',
+      20 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Infrastructure/Repository/DatabaseEventRepositoryTest.php',
     ),
   ),
-  '/var/www/src/Domain/Event/EventCreated.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Domain/Repository/EventRepositoryInterface.php' => 
   array (
-    'fileHash' => '21c92ce123709b65847d9100213bce5523d7445d',
+    'fileHash' => '444ae54dbfa70d34804b9899298ca64896225152',
     'dependentFiles' => 
     array (
-      0 => '/var/www/src/Domain/Entity/Event.php',
-      1 => '/var/www/tests/Unit/Domain/Entity/EventTest.php',
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Service/EventService.php',
+      1 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Service/SearchService.php',
+      2 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/UseCase/GetAllEventsUseCase.php',
+      3 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/UseCase/GetEventByIdUseCase.php',
+      4 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/UseCase/GetPaginatedEventsUseCase.php',
+      5 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Domain/Service/EventDomainService.php',
+      6 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Cache/CacheManager.php',
+      7 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Cache/CacheWarmer.php',
+      8 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/DataSource/DataSourceFactory.php',
+      9 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Repository/CachedEventRepository.php',
+      10 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Repository/CsvEventRepository.php',
+      11 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Repository/DatabaseEventRepository.php',
+      12 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Presentation/Controller/EventController.php',
+      13 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Providers/ApplicationServiceProvider.php',
+      14 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Providers/InfrastructureServiceProvider.php',
+      15 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Providers/PresentationServiceProvider.php',
+      16 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/Service/EventServiceTest.php',
+      17 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/Service/SearchServiceTest.php',
+      18 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/UseCase/GetAllEventsUseCaseTest.php',
+      19 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/UseCase/GetEventByIdUseCaseTest.php',
+      20 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/UseCase/GetPaginatedEventsUseCaseTest.php',
+      21 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/ContainerTest.php',
+      22 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Domain/Service/EventDomainServiceTest.php',
+      23 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Infrastructure/Repository/CachedEventRepositoryTest.php',
+      24 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Infrastructure/Repository/DatabaseEventRepositoryTest.php',
+      25 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Presentation/Controller/EventControllerServiceTest.php',
+      26 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Presentation/Controller/EventControllerTest.php',
     ),
   ),
-  '/var/www/src/Domain/Event/EventUpdated.php' => 
-  array (
-    'fileHash' => '851c8e5f8d508111210a7d6b13e9ae6cb2f7eb91',
-    'dependentFiles' => 
-    array (
-      0 => '/var/www/src/Domain/Entity/Event.php',
-      1 => '/var/www/tests/Unit/Domain/Entity/EventTest.php',
-    ),
-  ),
-  '/var/www/src/Domain/Repository/EventRepositoryInterface.php' => 
-  array (
-    'fileHash' => '9c80f0b2eddb99a01ab9707627b306985e5f7f5e',
-    'dependentFiles' => 
-    array (
-      0 => '/var/www/src/Application/UseCase/CreateEventUseCase.php',
-      1 => '/var/www/src/Application/UseCase/GetAllEventsUseCase.php',
-      2 => '/var/www/src/Application/UseCase/GetEventByIdUseCase.php',
-      3 => '/var/www/src/Application/UseCase/GetPaginatedEventsUseCase.php',
-      4 => '/var/www/src/Domain/Service/EventDomainService.php',
-      5 => '/var/www/src/Infrastructure/Repository/CachedEventRepository.php',
-      6 => '/var/www/src/Infrastructure/Repository/CsvEventRepository.php',
-      7 => '/var/www/src/Infrastructure/Repository/DatabaseEventRepository.php',
-      8 => '/var/www/src/Presentation/Controller/EventController.php',
-      9 => '/var/www/src/Service/Container.php',
-      10 => '/var/www/tests/Unit/Application/UseCase/CreateEventUseCaseTest.php',
-      11 => '/var/www/tests/Unit/Application/UseCase/GetAllEventsUseCaseTest.php',
-      12 => '/var/www/tests/Unit/Application/UseCase/GetEventByIdUseCaseTest.php',
-      13 => '/var/www/tests/Unit/Application/UseCase/GetPaginatedEventsUseCaseTest.php',
-      14 => '/var/www/tests/Unit/ContainerTest.php',
-      15 => '/var/www/tests/Unit/Domain/Service/EventDomainServiceTest.php',
-      16 => '/var/www/tests/Unit/Infrastructure/Repository/CachedEventRepositoryTest.php',
-      17 => '/var/www/tests/Unit/Infrastructure/Repository/DatabaseEventRepositoryTest.php',
-      18 => '/var/www/tests/Unit/Presentation/Controller/EventControllerTest.php',
-    ),
-  ),
-  '/var/www/src/Domain/Service/EventDomainService.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Domain/Service/EventDomainService.php' => 
   array (
     'fileHash' => '7b78c12e07e7bd538caef5a7a6eb0dfaee9ff475',
     'dependentFiles' => 
     array (
-      0 => '/var/www/tests/Unit/Domain/Service/EventDomainServiceTest.php',
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Domain/Service/EventDomainServiceTest.php',
     ),
   ),
-  '/var/www/src/Domain/ValueObject/Coordinates.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Domain/ValueObject/Coordinates.php' => 
   array (
     'fileHash' => '05fd4114383b265e56e55f8640e51fd672e5888e',
     'dependentFiles' => 
     array (
-      0 => '/var/www/src/Application/Mapper/EventMapper.php',
-      1 => '/var/www/src/Application/UseCase/CreateEventUseCase.php',
-      2 => '/var/www/src/Domain/Entity/Event.php',
-      3 => '/var/www/src/Domain/Service/EventDomainService.php',
-      4 => '/var/www/src/Infrastructure/Repository/CsvEventRepository.php',
-      5 => '/var/www/src/Infrastructure/Repository/DatabaseEventRepository.php',
-      6 => '/var/www/tests/Unit/Application/UseCase/CreateEventUseCaseTest.php',
-      7 => '/var/www/tests/Unit/Application/UseCase/GetAllEventsUseCaseTest.php',
-      8 => '/var/www/tests/Unit/Application/UseCase/GetEventByIdUseCaseTest.php',
-      9 => '/var/www/tests/Unit/Application/UseCase/GetPaginatedEventsUseCaseTest.php',
-      10 => '/var/www/tests/Unit/Domain/Entity/EventTest.php',
-      11 => '/var/www/tests/Unit/Domain/Service/EventDomainServiceTest.php',
-      12 => '/var/www/tests/Unit/Domain/ValueObject/CoordinatesTest.php',
-      13 => '/var/www/tests/Unit/Infrastructure/Repository/CachedEventRepositoryTest.php',
-      14 => '/var/www/tests/Unit/Infrastructure/Repository/DatabaseEventRepositoryTest.php',
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Mapper/EventMapper.php',
+      1 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Domain/Entity/Event.php',
+      2 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Domain/Service/EventDomainService.php',
+      3 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Repository/CsvEventRepository.php',
+      4 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Repository/DatabaseEventRepository.php',
+      5 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/Service/EventServiceTest.php',
+      6 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/Service/SearchServiceTest.php',
+      7 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/UseCase/GetAllEventsUseCaseTest.php',
+      8 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/UseCase/GetEventByIdUseCaseTest.php',
+      9 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/UseCase/GetPaginatedEventsUseCaseTest.php',
+      10 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Domain/Entity/EventTest.php',
+      11 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Domain/Service/EventDomainServiceTest.php',
+      12 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Domain/ValueObject/CoordinatesTest.php',
+      13 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Infrastructure/Repository/CachedEventRepositoryTest.php',
     ),
   ),
-  '/var/www/src/Domain/ValueObject/EventId.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Domain/ValueObject/EventId.php' => 
   array (
     'fileHash' => '07fa88fa300afa48a9785dae4039dd67fd9ee4fa',
     'dependentFiles' => 
     array (
-      0 => '/var/www/src/Application/Mapper/EventMapper.php',
-      1 => '/var/www/src/Application/UseCase/GetEventByIdUseCase.php',
-      2 => '/var/www/src/Domain/Entity/Event.php',
-      3 => '/var/www/src/Domain/Event/EventCreated.php',
-      4 => '/var/www/src/Domain/Event/EventUpdated.php',
-      5 => '/var/www/src/Domain/Repository/EventRepositoryInterface.php',
-      6 => '/var/www/src/Infrastructure/Repository/CachedEventRepository.php',
-      7 => '/var/www/src/Infrastructure/Repository/CsvEventRepository.php',
-      8 => '/var/www/src/Infrastructure/Repository/DatabaseEventRepository.php',
-      9 => '/var/www/tests/Unit/Application/UseCase/CreateEventUseCaseTest.php',
-      10 => '/var/www/tests/Unit/Application/UseCase/GetAllEventsUseCaseTest.php',
-      11 => '/var/www/tests/Unit/Application/UseCase/GetEventByIdUseCaseTest.php',
-      12 => '/var/www/tests/Unit/Application/UseCase/GetPaginatedEventsUseCaseTest.php',
-      13 => '/var/www/tests/Unit/Domain/Entity/EventTest.php',
-      14 => '/var/www/tests/Unit/Domain/Service/EventDomainServiceTest.php',
-      15 => '/var/www/tests/Unit/Infrastructure/Repository/CachedEventRepositoryTest.php',
-      16 => '/var/www/tests/Unit/Infrastructure/Repository/DatabaseEventRepositoryTest.php',
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Mapper/EventMapper.php',
+      1 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Service/EventService.php',
+      2 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/UseCase/GetEventByIdUseCase.php',
+      3 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Domain/Entity/Event.php',
+      4 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Domain/Repository/EventRepositoryInterface.php',
+      5 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Cache/CacheWarmer.php',
+      6 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Repository/CachedEventRepository.php',
+      7 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Repository/CsvEventRepository.php',
+      8 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Repository/DatabaseEventRepository.php',
+      9 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/Service/EventServiceTest.php',
+      10 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/Service/SearchServiceTest.php',
+      11 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/UseCase/GetAllEventsUseCaseTest.php',
+      12 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/UseCase/GetEventByIdUseCaseTest.php',
+      13 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/UseCase/GetPaginatedEventsUseCaseTest.php',
+      14 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Domain/Entity/EventTest.php',
+      15 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Domain/Service/EventDomainServiceTest.php',
+      16 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Infrastructure/Repository/CachedEventRepositoryTest.php',
+      17 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Infrastructure/Repository/DatabaseEventRepositoryTest.php',
     ),
   ),
-  '/var/www/src/Domain/ValueObject/EventName.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Domain/ValueObject/EventName.php' => 
   array (
     'fileHash' => 'b2726c396913832625e55383c58f60a34390ce09',
     'dependentFiles' => 
     array (
-      0 => '/var/www/src/Application/Mapper/EventMapper.php',
-      1 => '/var/www/src/Application/UseCase/CreateEventUseCase.php',
-      2 => '/var/www/src/Domain/Entity/Event.php',
-      3 => '/var/www/src/Domain/Service/EventDomainService.php',
-      4 => '/var/www/src/Infrastructure/Repository/CsvEventRepository.php',
-      5 => '/var/www/src/Infrastructure/Repository/DatabaseEventRepository.php',
-      6 => '/var/www/tests/Unit/Application/UseCase/CreateEventUseCaseTest.php',
-      7 => '/var/www/tests/Unit/Application/UseCase/GetAllEventsUseCaseTest.php',
-      8 => '/var/www/tests/Unit/Application/UseCase/GetEventByIdUseCaseTest.php',
-      9 => '/var/www/tests/Unit/Application/UseCase/GetPaginatedEventsUseCaseTest.php',
-      10 => '/var/www/tests/Unit/Domain/Entity/EventTest.php',
-      11 => '/var/www/tests/Unit/Domain/Service/EventDomainServiceTest.php',
-      12 => '/var/www/tests/Unit/Infrastructure/Repository/CachedEventRepositoryTest.php',
-      13 => '/var/www/tests/Unit/Infrastructure/Repository/DatabaseEventRepositoryTest.php',
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Mapper/EventMapper.php',
+      1 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Service/SearchService.php',
+      2 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Domain/Entity/Event.php',
+      3 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Domain/Service/EventDomainService.php',
+      4 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Repository/CsvEventRepository.php',
+      5 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Repository/DatabaseEventRepository.php',
+      6 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/Service/EventServiceTest.php',
+      7 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/Service/SearchServiceTest.php',
+      8 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/UseCase/GetAllEventsUseCaseTest.php',
+      9 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/UseCase/GetEventByIdUseCaseTest.php',
+      10 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/UseCase/GetPaginatedEventsUseCaseTest.php',
+      11 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Domain/Entity/EventTest.php',
+      12 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Domain/Service/EventDomainServiceTest.php',
+      13 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Infrastructure/Repository/CachedEventRepositoryTest.php',
+      14 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Infrastructure/Repository/DatabaseEventRepositoryTest.php',
     ),
   ),
-  '/var/www/src/Domain/ValueObject/Location.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Domain/ValueObject/Location.php' => 
   array (
     'fileHash' => 'e4dc693db95b5ea899dac0da75a5609ba478711c',
     'dependentFiles' => 
     array (
-      0 => '/var/www/src/Application/Mapper/EventMapper.php',
-      1 => '/var/www/src/Application/UseCase/CreateEventUseCase.php',
-      2 => '/var/www/src/Domain/Entity/Event.php',
-      3 => '/var/www/src/Infrastructure/Repository/CsvEventRepository.php',
-      4 => '/var/www/src/Infrastructure/Repository/DatabaseEventRepository.php',
-      5 => '/var/www/tests/Unit/Application/UseCase/CreateEventUseCaseTest.php',
-      6 => '/var/www/tests/Unit/Application/UseCase/GetAllEventsUseCaseTest.php',
-      7 => '/var/www/tests/Unit/Application/UseCase/GetEventByIdUseCaseTest.php',
-      8 => '/var/www/tests/Unit/Application/UseCase/GetPaginatedEventsUseCaseTest.php',
-      9 => '/var/www/tests/Unit/Domain/Entity/EventTest.php',
-      10 => '/var/www/tests/Unit/Domain/Service/EventDomainServiceTest.php',
-      11 => '/var/www/tests/Unit/Infrastructure/Repository/CachedEventRepositoryTest.php',
-      12 => '/var/www/tests/Unit/Infrastructure/Repository/DatabaseEventRepositoryTest.php',
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Mapper/EventMapper.php',
+      1 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Service/SearchService.php',
+      2 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Domain/Entity/Event.php',
+      3 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Repository/CsvEventRepository.php',
+      4 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Repository/DatabaseEventRepository.php',
+      5 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/Service/EventServiceTest.php',
+      6 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/Service/SearchServiceTest.php',
+      7 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/UseCase/GetAllEventsUseCaseTest.php',
+      8 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/UseCase/GetEventByIdUseCaseTest.php',
+      9 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/UseCase/GetPaginatedEventsUseCaseTest.php',
+      10 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Domain/Entity/EventTest.php',
+      11 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Domain/Service/EventDomainServiceTest.php',
+      12 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Infrastructure/Repository/CachedEventRepositoryTest.php',
     ),
   ),
-  '/var/www/src/Exception/EventNotFoundException.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Exception/EventNotFoundException.php' => 
   array (
     'fileHash' => '877c5d737de0db190c82a04f2cb799b3c3934a0d',
     'dependentFiles' => 
     array (
-      0 => '/var/www/src/Infrastructure/Repository/DatabaseEventRepository.php',
     ),
   ),
-  '/var/www/src/Exception/FileNotFoundException.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Exception/FileNotFoundException.php' => 
   array (
     'fileHash' => 'f62286046999ba7d8214f38bb0b7254de284aadd',
     'dependentFiles' => 
     array (
-      0 => '/var/www/src/Infrastructure/Repository/CsvEventRepository.php',
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Repository/CsvEventRepository.php',
     ),
   ),
-  '/var/www/src/Exception/RouteNotFoundException.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Exception/RouteNotFoundException.php' => 
   array (
     'fileHash' => 'b14c4e6f24d53025923f0d02415fca67efdef486',
     'dependentFiles' => 
     array (
-      0 => '/var/www/src/Router/Router.php',
-      1 => '/var/www/tests/Unit/RouterTest.php',
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Bootstrap.php',
+      1 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Router/Router.php',
+      2 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/RouterTest.php',
     ),
   ),
-  '/var/www/src/Infrastructure/Cache/CacheAction.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Cache/CacheAction.php' => 
   array (
     'fileHash' => '77d443e89cfec917bf6527166ed080eb9b59e1a5',
     'dependentFiles' => 
     array (
-      0 => '/var/www/src/Presentation/Controller/EventController.php',
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Presentation/Controller/EventController.php',
     ),
   ),
-  '/var/www/src/Infrastructure/Cache/CacheInterface.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Cache/CacheAnalytics.php' => 
   array (
-    'fileHash' => '1a78cee7b7d9bbe04226ec66a19a6fb62ea783db',
+    'fileHash' => '2e9fedb51ada189be89ed33c6985df4c957fadae',
     'dependentFiles' => 
     array (
-      0 => '/var/www/src/Infrastructure/Cache/InMemoryCache.php',
-      1 => '/var/www/src/Infrastructure/Cache/NullCache.php',
-      2 => '/var/www/src/Infrastructure/Cache/RedisCache.php',
-      3 => '/var/www/src/Infrastructure/Repository/CachedEventRepository.php',
-      4 => '/var/www/src/Service/Container.php',
-      5 => '/var/www/tests/Unit/InMemoryCacheTest.php',
-      6 => '/var/www/tests/Unit/Infrastructure/Repository/CachedEventRepositoryTest.php',
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Cache/CacheManager.php',
+      1 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Repository/CachedEventRepository.php',
+      2 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Providers/InfrastructureServiceProvider.php',
+      3 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Infrastructure/Repository/CachedEventRepositoryTest.php',
     ),
   ),
-  '/var/www/src/Infrastructure/Cache/CacheStrategy.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Cache/CacheFactory.php' => 
+  array (
+    'fileHash' => '469dc6dc4242781e55accd9c52d17d594036a717',
+    'dependentFiles' => 
+    array (
+    ),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Cache/CacheInterface.php' => 
+  array (
+    'fileHash' => '4ca93b4167cd39b6ffe3bf5a0dd505c4fe63a5eb',
+    'dependentFiles' => 
+    array (
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Cache/CacheAnalytics.php',
+      1 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Cache/CacheFactory.php',
+      2 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Cache/CacheWarmer.php',
+      3 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Cache/InMemoryCache.php',
+      4 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Cache/NullCache.php',
+      5 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Cache/RedisCache.php',
+      6 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Repository/CachedEventRepository.php',
+      7 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Providers/InfrastructureServiceProvider.php',
+      8 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/InMemoryCacheTest.php',
+      9 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Infrastructure/Repository/CachedEventRepositoryTest.php',
+    ),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Cache/CacheManager.php' => 
+  array (
+    'fileHash' => '08bdd15e6e405a71397bb0543600c44ff2e760a2',
+    'dependentFiles' => 
+    array (
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Presentation/Controller/EventController.php',
+      1 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Providers/InfrastructureServiceProvider.php',
+      2 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Providers/PresentationServiceProvider.php',
+      3 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Presentation/Controller/EventControllerServiceTest.php',
+      4 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Presentation/Controller/EventControllerTest.php',
+    ),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Cache/CacheStrategy.php' => 
   array (
     'fileHash' => '2ca848bdffa22dcb7edbc1c2d836bcbec51db5c6',
     'dependentFiles' => 
     array (
-      0 => '/var/www/src/Service/Container.php',
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Cache/CacheFactory.php',
     ),
   ),
-  '/var/www/src/Infrastructure/Cache/InMemoryCache.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Cache/CacheWarmer.php' => 
   array (
-    'fileHash' => 'a74646a0e78dd1f7eb0f6f6dfad12750656300d8',
+    'fileHash' => '8936b7ae5ef903dc3d8b3847f33406ff3d5a7897',
     'dependentFiles' => 
     array (
-      0 => '/var/www/src/Service/Container.php',
-      1 => '/var/www/tests/Unit/InMemoryCacheTest.php',
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Cache/CacheManager.php',
+      1 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Providers/InfrastructureServiceProvider.php',
     ),
   ),
-  '/var/www/src/Infrastructure/Cache/NullCache.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Cache/InMemoryCache.php' => 
   array (
-    'fileHash' => '149ea83501bc61a042c635e0fb724b5dad92812d',
+    'fileHash' => '51320fc9afa2ce21857825a67cd1f263fda22556',
     'dependentFiles' => 
     array (
-      0 => '/var/www/src/Service/Container.php',
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Cache/CacheFactory.php',
+      1 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Providers/InfrastructureServiceProvider.php',
+      2 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/InMemoryCacheTest.php',
     ),
   ),
-  '/var/www/src/Infrastructure/Cache/RedisCache.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Cache/NullCache.php' => 
   array (
-    'fileHash' => '7a3e503b3205f09dd41d1ccf4820493301e56891',
+    'fileHash' => '81154e10c738852901894687d8f1bd12b8099601',
     'dependentFiles' => 
     array (
-      0 => '/var/www/src/Service/Container.php',
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Cache/CacheFactory.php',
+      1 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Providers/InfrastructureServiceProvider.php',
     ),
   ),
-  '/var/www/src/Infrastructure/Database/DatabaseConnection.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Cache/RedisCache.php' => 
   array (
-    'fileHash' => '5f5d2fdea856ea58c73ff5c6273dce14136c35d6',
+    'fileHash' => '3e50aa15bc56cd509723b114abf8b0a7f5438753',
     'dependentFiles' => 
     array (
-      0 => '/var/www/src/Service/Container.php',
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Cache/CacheFactory.php',
+      1 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Providers/InfrastructureServiceProvider.php',
     ),
   ),
-  '/var/www/src/Infrastructure/Repository/CachedEventRepository.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/DataSource/DataSourceFactory.php' => 
   array (
-    'fileHash' => '533fb6a645ab4dcc142df713e6403bf7b8ae7dd2',
+    'fileHash' => '27aecee986912362f6391e4e4b0e2f706ed04f79',
     'dependentFiles' => 
     array (
-      0 => '/var/www/src/Presentation/Controller/EventController.php',
-      1 => '/var/www/src/Service/Container.php',
-      2 => '/var/www/tests/Unit/Infrastructure/Repository/CachedEventRepositoryTest.php',
     ),
   ),
-  '/var/www/src/Infrastructure/Repository/CsvEventRepository.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/DataSource/DataSourceStrategy.php' => 
   array (
-    'fileHash' => '0389e98096c4210af993293c8a86bfe27ebed370',
+    'fileHash' => '0ce53083e90d7dd34130a9bad2b4a4a4db6b95f7',
     'dependentFiles' => 
     array (
-      0 => '/var/www/src/Service/Container.php',
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/DataSource/DataSourceFactory.php',
+      1 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Providers/InfrastructureServiceProvider.php',
     ),
   ),
-  '/var/www/src/Infrastructure/Repository/DatabaseEventRepository.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Database/DatabaseConnection.php' => 
   array (
-    'fileHash' => 'ec663a64e8d20123407f8871f86a3c5fb07b7388',
+    'fileHash' => '4b7e66aac9956a777025d6e74b54f34e81e8c073',
     'dependentFiles' => 
     array (
-      0 => '/var/www/src/Service/Container.php',
-      1 => '/var/www/tests/Unit/Infrastructure/Repository/DatabaseEventRepositoryTest.php',
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Providers/InfrastructureServiceProvider.php',
     ),
   ),
-  '/var/www/src/Presentation/Controller/EventController.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Logging/ApplicationLogger.php' => 
   array (
-    'fileHash' => '832bc5e86e431ca2599ca2babcb3fbe5372d2ef4',
+    'fileHash' => '800b6c43e38398333a227debc9f7acb786f5e051',
     'dependentFiles' => 
     array (
-      0 => '/var/www/src/Service/Container.php',
-      1 => '/var/www/tests/Unit/ContainerTest.php',
-      2 => '/var/www/tests/Unit/Presentation/Controller/EventControllerTest.php',
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Providers/InfrastructureServiceProvider.php',
     ),
   ),
-  '/var/www/src/Presentation/Response/HttpStatus.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Logging/LoggerFactory.php' => 
+  array (
+    'fileHash' => '9ba22121218408d0e9c75070ca5dc423089017d0',
+    'dependentFiles' => 
+    array (
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Logging/SpecializedLogger.php',
+      1 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Providers/InfrastructureServiceProvider.php',
+    ),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Logging/LoggerInterface.php' => 
+  array (
+    'fileHash' => 'a71e34c04a42cc98d4cdcd09233bb709cbf7c5e8',
+    'dependentFiles' => 
+    array (
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Bootstrap.php',
+      1 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Service/SearchService.php',
+      2 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Cache/CacheAnalytics.php',
+      3 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Cache/CacheManager.php',
+      4 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Cache/CacheWarmer.php',
+      5 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/DataSource/DataSourceFactory.php',
+      6 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Logging/ApplicationLogger.php',
+      7 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Logging/MonologAdapter.php',
+      8 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Logging/NullLogger.php',
+      9 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Logging/SpecializedLogger.php',
+      10 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Repository/DatabaseEventRepository.php',
+      11 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Presentation/Controller/EventController.php',
+      12 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Providers/ApplicationServiceProvider.php',
+      13 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Providers/InfrastructureServiceProvider.php',
+      14 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Providers/PresentationServiceProvider.php',
+      15 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/Service/SearchServiceTest.php',
+      16 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/ContainerTest.php',
+      17 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Infrastructure/Repository/DatabaseEventRepositoryTest.php',
+      18 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Presentation/Controller/EventControllerServiceTest.php',
+      19 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Presentation/Controller/EventControllerTest.php',
+    ),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Logging/MonologAdapter.php' => 
+  array (
+    'fileHash' => '0f2987aed15726f707e15868e1d337c65f6664a9',
+    'dependentFiles' => 
+    array (
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Providers/InfrastructureServiceProvider.php',
+    ),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Logging/NullLogger.php' => 
+  array (
+    'fileHash' => '80b8533227f61178403df95b02564e2f513a8d86',
+    'dependentFiles' => 
+    array (
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Infrastructure/Repository/DatabaseEventRepositoryTest.php',
+      1 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Presentation/Controller/EventControllerServiceTest.php',
+    ),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Logging/SpecializedLogger.php' => 
+  array (
+    'fileHash' => 'e2d50ea0f1383e5e7dced091c6804c62bb1ea4d3',
+    'dependentFiles' => 
+    array (
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Providers/InfrastructureServiceProvider.php',
+    ),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Repository/CachedEventRepository.php' => 
+  array (
+    'fileHash' => '65009ea3b38beccccb023f95b7dbc7ca8075b2bb',
+    'dependentFiles' => 
+    array (
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Cache/CacheManager.php',
+      1 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Presentation/Controller/EventController.php',
+      2 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Providers/InfrastructureServiceProvider.php',
+      3 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Infrastructure/Repository/CachedEventRepositoryTest.php',
+    ),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Repository/CsvEventRepository.php' => 
+  array (
+    'fileHash' => 'be2249788a908137064806d818565a921f5a5127',
+    'dependentFiles' => 
+    array (
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/DataSource/DataSourceFactory.php',
+      1 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Providers/InfrastructureServiceProvider.php',
+    ),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Repository/DatabaseEventRepository.php' => 
+  array (
+    'fileHash' => '4c9db4b8cc0eebd4c6bf611760025dbfa6961d4d',
+    'dependentFiles' => 
+    array (
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/DataSource/DataSourceFactory.php',
+      1 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Providers/InfrastructureServiceProvider.php',
+      2 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Infrastructure/Repository/DatabaseEventRepositoryTest.php',
+    ),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Response/CsvResponseFormatter.php' => 
+  array (
+    'fileHash' => 'aa078aa836342e75f30e67441dcadfab61edb821',
+    'dependentFiles' => 
+    array (
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Response/ResponseFormatStrategy.php',
+    ),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Response/HtmlResponseFormatter.php' => 
+  array (
+    'fileHash' => 'fb03f393be9fd508ecf7110a1c116d0d633d41a5',
+    'dependentFiles' => 
+    array (
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Response/ResponseFormatStrategy.php',
+    ),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Response/JsonResponseFormatter.php' => 
+  array (
+    'fileHash' => '15dc8c66941abcafa376d262405804c6ac82d280',
+    'dependentFiles' => 
+    array (
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Response/ResponseFormatStrategy.php',
+    ),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Response/ResponseFormatStrategy.php' => 
+  array (
+    'fileHash' => '328a1fe57b809db143de2ecfc2d5b978fe1a8301',
+    'dependentFiles' => 
+    array (
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Response/ResponseManager.php',
+      1 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Providers/InfrastructureServiceProvider.php',
+    ),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Response/ResponseFormatterInterface.php' => 
+  array (
+    'fileHash' => '3198ade8c27124042417d35a96bdd1358b34d677',
+    'dependentFiles' => 
+    array (
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Response/CsvResponseFormatter.php',
+      1 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Response/HtmlResponseFormatter.php',
+      2 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Response/JsonResponseFormatter.php',
+      3 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Response/ResponseFormatStrategy.php',
+      4 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Response/ResponseManager.php',
+      5 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Response/XmlResponseFormatter.php',
+      6 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Providers/InfrastructureServiceProvider.php',
+    ),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Response/ResponseManager.php' => 
+  array (
+    'fileHash' => 'f94823f5d09824cb9922d0fa35d31b32eb5818d7',
+    'dependentFiles' => 
+    array (
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Presentation/Controller/EventController.php',
+      1 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Providers/InfrastructureServiceProvider.php',
+      2 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Providers/PresentationServiceProvider.php',
+      3 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Presentation/Controller/EventControllerServiceTest.php',
+      4 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Presentation/Controller/EventControllerTest.php',
+    ),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Response/XmlResponseFormatter.php' => 
+  array (
+    'fileHash' => '9e72730c2607ec7803131e181e84edb7bd95df76',
+    'dependentFiles' => 
+    array (
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Response/ResponseFormatStrategy.php',
+    ),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Validation/EventIdValidator.php' => 
+  array (
+    'fileHash' => 'a98132c156e80f984741bf7fd9a7e40a4a69ccd4',
+    'dependentFiles' => 
+    array (
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Validation/ValidatorBag.php',
+      1 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Presentation/Controller/EventController.php',
+      2 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Providers/ApplicationServiceProvider.php',
+      3 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Providers/InfrastructureServiceProvider.php',
+      4 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Infrastructure/Validation/ValidatorBagTest.php',
+      5 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Presentation/Controller/EventControllerServiceTest.php',
+      6 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Presentation/Controller/EventControllerTest.php',
+    ),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Validation/PaginationValidator.php' => 
+  array (
+    'fileHash' => 'edd137e8ce27de561b94c7df28fd831b32711e20',
+    'dependentFiles' => 
+    array (
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Validation/ValidatorBag.php',
+      1 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Presentation/Controller/EventController.php',
+      2 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Providers/ApplicationServiceProvider.php',
+      3 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Providers/InfrastructureServiceProvider.php',
+      4 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Infrastructure/Validation/ValidatorBagTest.php',
+      5 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Presentation/Controller/EventControllerServiceTest.php',
+      6 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Presentation/Controller/EventControllerTest.php',
+    ),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Validation/ValidatorBag.php' => 
+  array (
+    'fileHash' => 'd6dd9157a1be21725552dd9c5754326dfcc1c4d6',
+    'dependentFiles' => 
+    array (
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Presentation/Controller/EventController.php',
+      1 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Providers/InfrastructureServiceProvider.php',
+      2 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Providers/PresentationServiceProvider.php',
+      3 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Infrastructure/Validation/ValidatorBagTest.php',
+      4 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Presentation/Controller/EventControllerServiceTest.php',
+      5 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Presentation/Controller/EventControllerTest.php',
+    ),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Validation/ValidatorInterface.php' => 
+  array (
+    'fileHash' => '5270208a225e92636dbdb10238d186fccf6b1282',
+    'dependentFiles' => 
+    array (
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Validation/EventIdValidator.php',
+      1 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Validation/PaginationValidator.php',
+      2 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Validation/ValidatorBag.php',
+      3 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Presentation/Controller/EventController.php',
+      4 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Providers/ApplicationServiceProvider.php',
+      5 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Providers/InfrastructureServiceProvider.php',
+      6 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Infrastructure/Validation/ValidatorBagTest.php',
+      7 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Presentation/Controller/EventControllerServiceTest.php',
+      8 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Presentation/Controller/EventControllerTest.php',
+    ),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Presentation/Controller/EventController.php' => 
+  array (
+    'fileHash' => '39344219aa7651003217ca5ebb7f74a7df0b4775',
+    'dependentFiles' => 
+    array (
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Router/RouteProvider.php',
+      1 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Providers/PresentationServiceProvider.php',
+      2 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Presentation/Controller/EventControllerServiceTest.php',
+      3 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Presentation/Controller/EventControllerTest.php',
+    ),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Presentation/Response/HttpStatus.php' => 
   array (
     'fileHash' => 'dde6f51791f83f3a6158523fe1ae8857130c2992',
     'dependentFiles' => 
     array (
-      0 => '/var/www/src/Presentation/Controller/EventController.php',
-      1 => '/var/www/src/Presentation/Response/JsonResponse.php',
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Bootstrap.php',
+      1 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Response/CsvResponseFormatter.php',
+      2 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Response/HtmlResponseFormatter.php',
+      3 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Response/JsonResponseFormatter.php',
+      4 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Response/ResponseFormatterInterface.php',
+      5 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Response/ResponseManager.php',
+      6 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Response/XmlResponseFormatter.php',
+      7 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Presentation/Controller/EventController.php',
+      8 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Presentation/Response/JsonResponse.php',
+      9 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Presentation/Controller/EventControllerTest.php',
     ),
   ),
-  '/var/www/src/Presentation/Response/JsonResponse.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Presentation/Response/JsonResponse.php' => 
   array (
     'fileHash' => '3a26e29267332f9ce1a37a1f8f4cc5941a9538b3',
     'dependentFiles' => 
     array (
-      0 => '/var/www/src/Presentation/Controller/EventController.php',
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Bootstrap.php',
     ),
   ),
-  '/var/www/src/Router/HttpMethod.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Router/HttpMethod.php' => 
   array (
     'fileHash' => '775cd41af632fa4ec5ed8cb7c9eb2d2e70d6619e',
     'dependentFiles' => 
     array (
-      0 => '/var/www/src/Router/Route.php',
-      1 => '/var/www/src/Router/Router.php',
-      2 => '/var/www/tests/Unit/RouterTest.php',
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Router/Route.php',
+      1 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Router/Router.php',
+      2 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/RouterTest.php',
     ),
   ),
-  '/var/www/src/Router/Route.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Router/Route.php' => 
   array (
-    'fileHash' => '6b5bc654c5378cbfebc61b8785891bf2684d1c37',
+    'fileHash' => 'f6ec0b16b0d9685c1205427a3155b06186ab4030',
     'dependentFiles' => 
     array (
-      0 => '/var/www/src/Router/Router.php',
-      1 => '/var/www/tests/Unit/RouterTest.php',
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Router/Router.php',
+      1 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/RouterTest.php',
     ),
   ),
-  '/var/www/src/Router/Router.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Router/RouteProvider.php' => 
   array (
-    'fileHash' => 'b048a7e162303aa6b23780faec55f53e892ab6c6',
+    'fileHash' => 'f56a090196a2e9f4b1df0abc70f2dafd89d10f8c',
     'dependentFiles' => 
     array (
-      0 => '/var/www/tests/Unit/RouterTest.php',
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Bootstrap.php',
     ),
   ),
-  '/var/www/src/Service/Container.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Router/Router.php' => 
   array (
-    'fileHash' => '8163984ac252b6629b59d600544d13039851d981',
+    'fileHash' => '689ddf91d1a2d34bf477502bb441caeb6240f569',
     'dependentFiles' => 
     array (
-      0 => '/var/www/src/Router/Router.php',
-      1 => '/var/www/tests/Unit/ContainerTest.php',
-      2 => '/var/www/tests/Unit/RouterTest.php',
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Bootstrap.php',
+      1 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Router/RouteProvider.php',
+      2 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/RouterTest.php',
     ),
   ),
-  '/var/www/tests/Unit/Application/DTO/PaginatedResponseTest.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Container.php' => 
   array (
-    'fileHash' => '3d372bcc3331a4fdf2accd7bc80ea1bf2f36fc43',
+    'fileHash' => 'f88eb0e9ff514856ae7691762745aab6ca5e8afc',
+    'dependentFiles' => 
+    array (
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Bootstrap.php',
+      1 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/DataSource/DataSourceFactory.php',
+      2 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Router/Router.php',
+      3 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Providers/ApplicationServiceProvider.php',
+      4 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Providers/InfrastructureServiceProvider.php',
+      5 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Providers/PresentationServiceProvider.php',
+      6 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/ServiceProvider.php',
+      7 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/ContainerTest.php',
+      8 => '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/RouterTest.php',
+    ),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Providers/ApplicationServiceProvider.php' => 
+  array (
+    'fileHash' => 'ea7adf147b65f4ca12b6431cd4a00f7bd9169977',
+    'dependentFiles' => 
+    array (
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Container.php',
+    ),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Providers/InfrastructureServiceProvider.php' => 
+  array (
+    'fileHash' => 'd9719d59362a43ca149dd6bbdf086faa93f334f4',
+    'dependentFiles' => 
+    array (
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Container.php',
+    ),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Providers/PresentationServiceProvider.php' => 
+  array (
+    'fileHash' => '80bf17927acc322a387a9d7d1cc33ee89d47d168',
+    'dependentFiles' => 
+    array (
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Container.php',
+    ),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/ServiceProvider.php' => 
+  array (
+    'fileHash' => '7eddfdb9f888de1ee247b4c45367a6bcfaf7885a',
+    'dependentFiles' => 
+    array (
+      0 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Container.php',
+      1 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Providers/ApplicationServiceProvider.php',
+      2 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Providers/InfrastructureServiceProvider.php',
+      3 => '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Providers/PresentationServiceProvider.php',
+    ),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Integration/EndpointTest.php' => 
+  array (
+    'fileHash' => '9497f6f0ea4dea9f2c28c0451b84c2a3d4839d01',
     'dependentFiles' => 
     array (
     ),
   ),
-  '/var/www/tests/Unit/Application/Query/PaginationQueryTest.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/DTO/PaginatedResponseTest.php' => 
   array (
-    'fileHash' => '98ada433bc050aaf91dc5621556a92fe52e980dc',
+    'fileHash' => '1a56cb1bccc8d587c54252e9691845e02b7c110f',
     'dependentFiles' => 
     array (
     ),
   ),
-  '/var/www/tests/Unit/Application/UseCase/CreateEventUseCaseTest.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/Query/PaginationQueryTest.php' => 
   array (
-    'fileHash' => 'bc5a438129d77df96130a856321c321c66f078d0',
+    'fileHash' => '752c8e061e8483bfdd2f6c2adacbd5c33a8a802a',
     'dependentFiles' => 
     array (
     ),
   ),
-  '/var/www/tests/Unit/Application/UseCase/GetAllEventsUseCaseTest.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/Service/EventServiceTest.php' => 
+  array (
+    'fileHash' => 'f3b9c258b9696b01c6638ee437ea3cba7ec267a2',
+    'dependentFiles' => 
+    array (
+    ),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/Service/SearchServiceTest.php' => 
+  array (
+    'fileHash' => '143abae88898fe31b14f0b3decdeba8f8d0fccb6',
+    'dependentFiles' => 
+    array (
+    ),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/UseCase/GetAllEventsUseCaseTest.php' => 
   array (
     'fileHash' => 'f2f6439a5d1aa98b5e244ff2b97904b188c7a4c7',
     'dependentFiles' => 
     array (
     ),
   ),
-  '/var/www/tests/Unit/Application/UseCase/GetEventByIdUseCaseTest.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/UseCase/GetEventByIdUseCaseTest.php' => 
   array (
     'fileHash' => '629ee9eb1c1d95db5cefd30861a42a3112b162ae',
     'dependentFiles' => 
     array (
     ),
   ),
-  '/var/www/tests/Unit/Application/UseCase/GetPaginatedEventsUseCaseTest.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/UseCase/GetPaginatedEventsUseCaseTest.php' => 
   array (
-    'fileHash' => '21beac82b13fddb39c21d98b1b49e232e18a3405',
+    'fileHash' => '331bf18b4ecda33279833177a625c36d0b54a15e',
     'dependentFiles' => 
     array (
     ),
   ),
-  '/var/www/tests/Unit/ContainerTest.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/ContainerTest.php' => 
   array (
-    'fileHash' => '021a51d53bd0b3e5cccc93eeb3cf0d8c2d4ffdab',
+    'fileHash' => 'c6397d589097af31397603f2c67524b8ce02b30a',
     'dependentFiles' => 
     array (
     ),
   ),
-  '/var/www/tests/Unit/Domain/Entity/EventTest.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Domain/Entity/EventTest.php' => 
   array (
-    'fileHash' => '1c603895382db3fbe0c8459cf950dff2f6ae1cf5',
+    'fileHash' => '3d5ca7f67623b3c6898bee5ad4c79ce4dd87dc45',
     'dependentFiles' => 
     array (
     ),
   ),
-  '/var/www/tests/Unit/Domain/Service/EventDomainServiceTest.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Domain/Service/EventDomainServiceTest.php' => 
   array (
     'fileHash' => '9f20cbffd6fb099ddc6928f73f02106cb9603401',
     'dependentFiles' => 
     array (
     ),
   ),
-  '/var/www/tests/Unit/Domain/ValueObject/CoordinatesTest.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Domain/ValueObject/CoordinatesTest.php' => 
   array (
     'fileHash' => '6cff6772d8235fbaeaebe3a76a7e98a55e393f0b',
     'dependentFiles' => 
     array (
     ),
   ),
-  '/var/www/tests/Unit/InMemoryCacheTest.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/InMemoryCacheTest.php' => 
   array (
-    'fileHash' => 'fa26ee7b18296690e2d866569cc46fcdd149eb8f',
+    'fileHash' => 'e88e151e4acc693f0b29763640353dda6d604d02',
     'dependentFiles' => 
     array (
     ),
   ),
-  '/var/www/tests/Unit/Infrastructure/Repository/CachedEventRepositoryTest.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Infrastructure/Repository/CachedEventRepositoryTest.php' => 
   array (
-    'fileHash' => '97a4c2d19d0fe0280ce550ba12974e6b592f5bde',
+    'fileHash' => '24c4326f8676d29ee208d4920836e6b2a8e25cb3',
     'dependentFiles' => 
     array (
     ),
   ),
-  '/var/www/tests/Unit/Infrastructure/Repository/DatabaseEventRepositoryTest.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Infrastructure/Repository/DatabaseEventRepositoryTest.php' => 
   array (
-    'fileHash' => 'f4d05b32cfe3dd0af1f5c95e9564bf45d4bdada5',
+    'fileHash' => '0ff3fddb5f9c891a54b6440789d04e6cf0198672',
     'dependentFiles' => 
     array (
     ),
   ),
-  '/var/www/tests/Unit/Presentation/Controller/EventControllerTest.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Infrastructure/Validation/ValidatorBagTest.php' => 
   array (
-    'fileHash' => '83c8a2e12621341c8b868224be9d74b44ee39452',
+    'fileHash' => '90bae821b1158914aa6d1df1ef14f76bb1f85843',
     'dependentFiles' => 
     array (
     ),
   ),
-  '/var/www/tests/Unit/RouterTest.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Presentation/Controller/EventControllerServiceTest.php' => 
   array (
-    'fileHash' => '2edf111320bc0ff42220fca273da66c29aa00bac',
+    'fileHash' => 'd6ab3ba8bccdf8ef0b49d3331a7be97f8bf31b46',
+    'dependentFiles' => 
+    array (
+    ),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Presentation/Controller/EventControllerTest.php' => 
+  array (
+    'fileHash' => '77487d6fdfa2e33dec7579188f2660cd30f60eb0',
+    'dependentFiles' => 
+    array (
+    ),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/RouterTest.php' => 
+  array (
+    'fileHash' => '65e7e598b252a08cac588633f18d1515bdea44d1',
     'dependentFiles' => 
     array (
     ),
   ),
 ),
 	'exportedNodesCallback' => static function (): array { return array (
-  '/var/www/src/Application/Command/CreateEventCommand.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Bootstrap.php' => 
   array (
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
-       'name' => 'App\\Application\\Command\\CreateEventCommand',
+       'name' => 'App\\Application\\Bootstrap',
        'phpDoc' => NULL,
        'abstract' => false,
-       'final' => true,
+       'final' => false,
        'extends' => NULL,
        'implements' => 
       array (
@@ -3143,50 +4110,61 @@ return [
            'returnType' => NULL,
            'parameters' => 
           array (
-            0 => 
-            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
-               'name' => 'name',
-               'type' => 'string',
-               'byRef' => false,
-               'variadic' => false,
-               'hasDefault' => false,
-               'attributes' => 
-              array (
-              ),
-            )),
-            1 => 
-            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
-               'name' => 'location',
-               'type' => 'string',
-               'byRef' => false,
-               'variadic' => false,
-               'hasDefault' => false,
-               'attributes' => 
-              array (
-              ),
-            )),
-            2 => 
-            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
-               'name' => 'latitude',
-               'type' => 'float',
-               'byRef' => false,
-               'variadic' => false,
-               'hasDefault' => false,
-               'attributes' => 
-              array (
-              ),
-            )),
-            3 => 
-            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
-               'name' => 'longitude',
-               'type' => 'float',
-               'byRef' => false,
-               'variadic' => false,
-               'hasDefault' => false,
-               'attributes' => 
-              array (
-              ),
-            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'handleRequest',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Handle a request for testing purposes.
+     */',
+             'namespace' => 'App\\Application',
+             'uses' => 
+            array (
+              'routenotfoundexception' => 'App\\Exception\\RouteNotFoundException',
+              'loggerinterface' => 'App\\Infrastructure\\Logging\\LoggerInterface',
+              'httpstatus' => 'App\\Presentation\\Response\\HttpStatus',
+              'jsonresponse' => 'App\\Presentation\\Response\\JsonResponse',
+              'routeprovider' => 'App\\Router\\RouteProvider',
+              'router' => 'App\\Router\\Router',
+              'container' => 'App\\Service\\Container',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        2 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'run',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
           ),
            'attributes' => 
           array (
@@ -3198,7 +4176,7 @@ return [
       ),
     )),
   ),
-  '/var/www/src/Application/DTO/EventDto.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/DTO/EventDto.php' => 
   array (
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
@@ -3349,7 +4327,7 @@ return [
       ),
     )),
   ),
-  '/var/www/src/Application/DTO/PaginatedResponse.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/DTO/PaginatedResponse.php' => 
   array (
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
@@ -3388,10 +4366,10 @@ return [
           \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
              'phpDocString' => '/**
      * @param array<T> $data
-     * @param int $totalItems
-     * @param int $currentPage
-     * @param int $pageSize
-     * @param int $totalPages
+     * @param int      $totalItems
+     * @param int      $currentPage
+     * @param int      $pageSize
+     * @param int      $totalPages
      */',
              'namespace' => 'App\\Application\\DTO',
              'uses' => 
@@ -3477,9 +4455,10 @@ return [
           \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
              'phpDocString' => '/**
      * @param array<T> $data
-     * @param int $totalItems
-     * @param int $currentPage
-     * @param int $pageSize
+     * @param int      $totalItems
+     * @param int      $currentPage
+     * @param int      $pageSize
+     *
      * @return PaginatedResponse<T>
      */',
              'namespace' => 'App\\Application\\DTO',
@@ -3710,7 +4689,7 @@ return [
       ),
     )),
   ),
-  '/var/www/src/Application/Mapper/EventMapper.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Mapper/EventMapper.php' => 
   array (
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
@@ -3810,7 +4789,7 @@ return [
       ),
     )),
   ),
-  '/var/www/src/Application/Query/GetAllEventsQuery.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Query/GetAllEventsQuery.php' => 
   array (
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
@@ -3854,7 +4833,7 @@ return [
       ),
     )),
   ),
-  '/var/www/src/Application/Query/GetEventByIdQuery.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Query/GetEventByIdQuery.php' => 
   array (
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
@@ -3909,7 +4888,7 @@ return [
       ),
     )),
   ),
-  '/var/www/src/Application/Query/GetPaginatedEventsQuery.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Query/GetPaginatedEventsQuery.php' => 
   array (
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
@@ -3964,7 +4943,7 @@ return [
       ),
     )),
   ),
-  '/var/www/src/Application/Query/PaginationQuery.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Query/PaginationQuery.php' => 
   array (
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
@@ -4124,18 +5103,291 @@ return [
       ),
     )),
   ),
-  '/var/www/src/Application/UseCase/CreateEventUseCase.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Query/SearchQuery.php' => 
   array (
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
-       'name' => 'App\\Application\\UseCase\\CreateEventUseCase',
+       'name' => 'App\\Application\\Query\\SearchQuery',
        'phpDoc' => NULL,
        'abstract' => false,
-       'final' => true,
+       'final' => false,
+       'extends' => 'App\\Application\\Query\\PaginationQuery',
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => '__construct',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => NULL,
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'search',
+               'type' => '?string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'location',
+               'type' => '?string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+            2 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'latitude',
+               'type' => '?float',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+            3 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'longitude',
+               'type' => '?float',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+            4 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'radius',
+               'type' => '?float',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+            5 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'dateFrom',
+               'type' => '?string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+            6 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'dateTo',
+               'type' => '?string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+            7 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'page',
+               'type' => 'int',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+            8 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'pageSize',
+               'type' => 'int',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+            9 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'sortBy',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+            10 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'sortDirection',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'hasSearch',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'bool',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        2 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'hasLocationFilter',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'bool',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        3 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'hasGeographicSearch',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'bool',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        4 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'hasDateFilter',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'bool',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        5 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'hasAnyFilter',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'bool',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        6 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getCacheKey',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'string',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Service/EventService.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Application\\Service\\EventService',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => false,
        'extends' => NULL,
        'implements' => 
       array (
-        0 => 'App\\Application\\UseCase\\CreateEventUseCaseInterface',
+        0 => 'App\\Application\\Service\\EventServiceInterface',
       ),
        'usedTraits' => 
       array (
@@ -4176,21 +5428,187 @@ return [
         )),
         1 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'execute',
-           'phpDoc' => NULL,
+           'name' => 'getAllEvents',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Get all events with pagination
+     * Business logic: Apply pagination, sorting, and data transformation.
+     *
+     * @param PaginationQuery $paginationQuery
+     *
+     * @return PaginatedResponse<EventDto>
+     */',
+             'namespace' => 'App\\Application\\Service',
+             'uses' => 
+            array (
+              'eventdto' => 'App\\Application\\DTO\\EventDto',
+              'paginatedresponse' => 'App\\Application\\DTO\\PaginatedResponse',
+              'eventmapper' => 'App\\Application\\Mapper\\EventMapper',
+              'paginationquery' => 'App\\Application\\Query\\PaginationQuery',
+              'eventrepositoryinterface' => 'App\\Domain\\Repository\\EventRepositoryInterface',
+              'eventid' => 'App\\Domain\\ValueObject\\EventId',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
            'byRef' => false,
            'public' => true,
            'private' => false,
            'abstract' => false,
            'final' => false,
            'static' => false,
-           'returnType' => 'App\\Application\\DTO\\EventDto',
+           'returnType' => 'App\\Application\\DTO\\PaginatedResponse',
            'parameters' => 
           array (
             0 => 
             \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
-               'name' => 'command',
-               'type' => 'App\\Application\\Command\\CreateEventCommand',
+               'name' => 'paginationQuery',
+               'type' => 'App\\Application\\Query\\PaginationQuery',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        2 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getEventById',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Get a single event by ID
+     * Business logic: Validate ID and handle not found cases.
+     *
+     * @param int $id
+     *
+     * @return null|EventDto
+     */',
+             'namespace' => 'App\\Application\\Service',
+             'uses' => 
+            array (
+              'eventdto' => 'App\\Application\\DTO\\EventDto',
+              'paginatedresponse' => 'App\\Application\\DTO\\PaginatedResponse',
+              'eventmapper' => 'App\\Application\\Mapper\\EventMapper',
+              'paginationquery' => 'App\\Application\\Query\\PaginationQuery',
+              'eventrepositoryinterface' => 'App\\Domain\\Repository\\EventRepositoryInterface',
+              'eventid' => 'App\\Domain\\ValueObject\\EventId',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => '?App\\Application\\DTO\\EventDto',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'id',
+               'type' => 'int',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        3 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getEventCount',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Get total count of events
+     * Business logic: Provide business metrics.
+     *
+     * @return int
+     */',
+             'namespace' => 'App\\Application\\Service',
+             'uses' => 
+            array (
+              'eventdto' => 'App\\Application\\DTO\\EventDto',
+              'paginatedresponse' => 'App\\Application\\DTO\\PaginatedResponse',
+              'eventmapper' => 'App\\Application\\Mapper\\EventMapper',
+              'paginationquery' => 'App\\Application\\Query\\PaginationQuery',
+              'eventrepositoryinterface' => 'App\\Domain\\Repository\\EventRepositoryInterface',
+              'eventid' => 'App\\Domain\\ValueObject\\EventId',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'int',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        4 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'eventExists',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Check if an event exists
+     * Business logic: Existence validation for business operations.
+     *
+     * @param int $id
+     *
+     * @return bool
+     */',
+             'namespace' => 'App\\Application\\Service',
+             'uses' => 
+            array (
+              'eventdto' => 'App\\Application\\DTO\\EventDto',
+              'paginatedresponse' => 'App\\Application\\DTO\\PaginatedResponse',
+              'eventmapper' => 'App\\Application\\Mapper\\EventMapper',
+              'paginationquery' => 'App\\Application\\Query\\PaginationQuery',
+              'eventrepositoryinterface' => 'App\\Domain\\Repository\\EventRepositoryInterface',
+              'eventid' => 'App\\Domain\\ValueObject\\EventId',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'bool',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'id',
+               'type' => 'int',
                'byRef' => false,
                'variadic' => false,
                'hasDefault' => false,
@@ -4209,11 +5627,11 @@ return [
       ),
     )),
   ),
-  '/var/www/src/Application/UseCase/CreateEventUseCaseInterface.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Service/EventServiceInterface.php' => 
   array (
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedInterfaceNode::__set_state(array(
-       'name' => 'App\\Application\\UseCase\\CreateEventUseCaseInterface',
+       'name' => 'App\\Application\\Service\\EventServiceInterface',
        'phpDoc' => NULL,
        'extends' => 
       array (
@@ -4222,21 +5640,171 @@ return [
       array (
         0 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'execute',
-           'phpDoc' => NULL,
+           'name' => 'getAllEvents',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Get all events with pagination.
+     *
+     * @param PaginationQuery $paginationQuery
+     *
+     * @return PaginatedResponse<EventDto>
+     */',
+             'namespace' => 'App\\Application\\Service',
+             'uses' => 
+            array (
+              'eventdto' => 'App\\Application\\DTO\\EventDto',
+              'paginatedresponse' => 'App\\Application\\DTO\\PaginatedResponse',
+              'paginationquery' => 'App\\Application\\Query\\PaginationQuery',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
            'byRef' => false,
            'public' => true,
            'private' => false,
            'abstract' => false,
            'final' => false,
            'static' => false,
-           'returnType' => 'App\\Application\\DTO\\EventDto',
+           'returnType' => 'App\\Application\\DTO\\PaginatedResponse',
            'parameters' => 
           array (
             0 => 
             \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
-               'name' => 'command',
-               'type' => 'App\\Application\\Command\\CreateEventCommand',
+               'name' => 'paginationQuery',
+               'type' => 'App\\Application\\Query\\PaginationQuery',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getEventById',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Get a single event by ID.
+     *
+     * @param int $id
+     *
+     * @return null|EventDto
+     */',
+             'namespace' => 'App\\Application\\Service',
+             'uses' => 
+            array (
+              'eventdto' => 'App\\Application\\DTO\\EventDto',
+              'paginatedresponse' => 'App\\Application\\DTO\\PaginatedResponse',
+              'paginationquery' => 'App\\Application\\Query\\PaginationQuery',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => '?App\\Application\\DTO\\EventDto',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'id',
+               'type' => 'int',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        2 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getEventCount',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Get total count of events.
+     *
+     * @return int
+     */',
+             'namespace' => 'App\\Application\\Service',
+             'uses' => 
+            array (
+              'eventdto' => 'App\\Application\\DTO\\EventDto',
+              'paginatedresponse' => 'App\\Application\\DTO\\PaginatedResponse',
+              'paginationquery' => 'App\\Application\\Query\\PaginationQuery',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'int',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        3 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'eventExists',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Check if an event exists.
+     *
+     * @param int $id
+     *
+     * @return bool
+     */',
+             'namespace' => 'App\\Application\\Service',
+             'uses' => 
+            array (
+              'eventdto' => 'App\\Application\\DTO\\EventDto',
+              'paginatedresponse' => 'App\\Application\\DTO\\PaginatedResponse',
+              'paginationquery' => 'App\\Application\\Query\\PaginationQuery',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'bool',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'id',
+               'type' => 'int',
                'byRef' => false,
                'variadic' => false,
                'hasDefault' => false,
@@ -4252,7 +5820,582 @@ return [
       ),
     )),
   ),
-  '/var/www/src/Application/UseCase/GetAllEventsUseCase.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Service/SearchService.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Application\\Service\\SearchService',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => false,
+       'extends' => NULL,
+       'implements' => 
+      array (
+        0 => 'App\\Application\\Service\\SearchServiceInterface',
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => '__construct',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => NULL,
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'eventRepository',
+               'type' => 'App\\Domain\\Repository\\EventRepositoryInterface',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'logger',
+               'type' => 'App\\Infrastructure\\Logging\\LoggerInterface',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'searchEvents',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'App\\Application\\DTO\\PaginatedResponse',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'searchQuery',
+               'type' => 'App\\Application\\Query\\SearchQuery',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        2 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'searchEventsFormatted',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @return array<string, mixed>
+     */',
+             'namespace' => 'App\\Application\\Service',
+             'uses' => 
+            array (
+              'paginatedresponse' => 'App\\Application\\DTO\\PaginatedResponse',
+              'eventmapper' => 'App\\Application\\Mapper\\EventMapper',
+              'searchquery' => 'App\\Application\\Query\\SearchQuery',
+              'eventrepositoryinterface' => 'App\\Domain\\Repository\\EventRepositoryInterface',
+              'loggerinterface' => 'App\\Infrastructure\\Logging\\LoggerInterface',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'array',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'searchQuery',
+               'type' => 'App\\Application\\Query\\SearchQuery',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        3 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getSearchSuggestions',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'array',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'query',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'limit',
+               'type' => 'int',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        4 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getPopularSearchTerms',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'array',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'limit',
+               'type' => 'int',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        5 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getEventsNearby',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'array',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'latitude',
+               'type' => 'float',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'longitude',
+               'type' => 'float',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            2 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'radius',
+               'type' => 'float',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+            3 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'limit',
+               'type' => 'int',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/Service/SearchServiceInterface.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedInterfaceNode::__set_state(array(
+       'name' => 'App\\Application\\Service\\SearchServiceInterface',
+       'phpDoc' => NULL,
+       'extends' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'searchEvents',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Search events with advanced filtering and pagination.
+     *
+     * @param SearchQuery $searchQuery
+     *
+     * @return PaginatedResponse<EventDto>
+     */',
+             'namespace' => 'App\\Application\\Service',
+             'uses' => 
+            array (
+              'eventdto' => 'App\\Application\\DTO\\EventDto',
+              'paginatedresponse' => 'App\\Application\\DTO\\PaginatedResponse',
+              'searchquery' => 'App\\Application\\Query\\SearchQuery',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'App\\Application\\DTO\\PaginatedResponse',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'searchQuery',
+               'type' => 'App\\Application\\Query\\SearchQuery',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'searchEventsFormatted',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Search events and return formatted response data.
+     *
+     * @param SearchQuery $searchQuery
+     *
+     * @return array<string, mixed>
+     */',
+             'namespace' => 'App\\Application\\Service',
+             'uses' => 
+            array (
+              'eventdto' => 'App\\Application\\DTO\\EventDto',
+              'paginatedresponse' => 'App\\Application\\DTO\\PaginatedResponse',
+              'searchquery' => 'App\\Application\\Query\\SearchQuery',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'array',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'searchQuery',
+               'type' => 'App\\Application\\Query\\SearchQuery',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        2 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getSearchSuggestions',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Get search suggestions based on partial input.
+     *
+     * @param string $query
+     * @param int    $limit
+     *
+     * @return array<string>
+     */',
+             'namespace' => 'App\\Application\\Service',
+             'uses' => 
+            array (
+              'eventdto' => 'App\\Application\\DTO\\EventDto',
+              'paginatedresponse' => 'App\\Application\\DTO\\PaginatedResponse',
+              'searchquery' => 'App\\Application\\Query\\SearchQuery',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'array',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'query',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'limit',
+               'type' => 'int',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        3 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getPopularSearchTerms',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Get popular search terms.
+     *
+     * @param int $limit
+     *
+     * @return array<string>
+     */',
+             'namespace' => 'App\\Application\\Service',
+             'uses' => 
+            array (
+              'eventdto' => 'App\\Application\\DTO\\EventDto',
+              'paginatedresponse' => 'App\\Application\\DTO\\PaginatedResponse',
+              'searchquery' => 'App\\Application\\Query\\SearchQuery',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'array',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'limit',
+               'type' => 'int',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        4 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getEventsNearby',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Get events near a location.
+     *
+     * @param float $latitude
+     * @param float $longitude
+     * @param float $radius
+     * @param int   $limit
+     *
+     * @return array<EventDto>
+     */',
+             'namespace' => 'App\\Application\\Service',
+             'uses' => 
+            array (
+              'eventdto' => 'App\\Application\\DTO\\EventDto',
+              'paginatedresponse' => 'App\\Application\\DTO\\PaginatedResponse',
+              'searchquery' => 'App\\Application\\Query\\SearchQuery',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'array',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'latitude',
+               'type' => 'float',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'longitude',
+               'type' => 'float',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            2 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'radius',
+               'type' => 'float',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+            3 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'limit',
+               'type' => 'int',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+    )),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/UseCase/GetAllEventsUseCase.php' => 
   array (
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
@@ -4353,7 +6496,7 @@ return [
       ),
     )),
   ),
-  '/var/www/src/Application/UseCase/GetAllEventsUseCaseInterface.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/UseCase/GetAllEventsUseCaseInterface.php' => 
   array (
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedInterfaceNode::__set_state(array(
@@ -4410,7 +6553,7 @@ return [
       ),
     )),
   ),
-  '/var/www/src/Application/UseCase/GetEventByIdUseCase.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/UseCase/GetEventByIdUseCase.php' => 
   array (
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
@@ -4495,7 +6638,7 @@ return [
       ),
     )),
   ),
-  '/var/www/src/Application/UseCase/GetEventByIdUseCaseInterface.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/UseCase/GetEventByIdUseCaseInterface.php' => 
   array (
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedInterfaceNode::__set_state(array(
@@ -4538,7 +6681,7 @@ return [
       ),
     )),
   ),
-  '/var/www/src/Application/UseCase/GetPaginatedEventsUseCase.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/UseCase/GetPaginatedEventsUseCase.php' => 
   array (
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
@@ -4640,7 +6783,7 @@ return [
       ),
     )),
   ),
-  '/var/www/src/Application/UseCase/GetPaginatedEventsUseCaseInterface.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Application/UseCase/GetPaginatedEventsUseCaseInterface.php' => 
   array (
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedInterfaceNode::__set_state(array(
@@ -4698,7 +6841,7 @@ return [
       ),
     )),
   ),
-  '/var/www/src/Domain/Entity/Event.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Domain/Entity/Event.php' => 
   array (
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
@@ -4890,93 +7033,6 @@ return [
         )),
         7 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'updateName',
-           'phpDoc' => NULL,
-           'byRef' => false,
-           'public' => true,
-           'private' => false,
-           'abstract' => false,
-           'final' => false,
-           'static' => false,
-           'returnType' => 'void',
-           'parameters' => 
-          array (
-            0 => 
-            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
-               'name' => 'name',
-               'type' => 'App\\Domain\\ValueObject\\EventName',
-               'byRef' => false,
-               'variadic' => false,
-               'hasDefault' => false,
-               'attributes' => 
-              array (
-              ),
-            )),
-          ),
-           'attributes' => 
-          array (
-          ),
-        )),
-        8 => 
-        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'updateLocation',
-           'phpDoc' => NULL,
-           'byRef' => false,
-           'public' => true,
-           'private' => false,
-           'abstract' => false,
-           'final' => false,
-           'static' => false,
-           'returnType' => 'void',
-           'parameters' => 
-          array (
-            0 => 
-            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
-               'name' => 'location',
-               'type' => 'App\\Domain\\ValueObject\\Location',
-               'byRef' => false,
-               'variadic' => false,
-               'hasDefault' => false,
-               'attributes' => 
-              array (
-              ),
-            )),
-          ),
-           'attributes' => 
-          array (
-          ),
-        )),
-        9 => 
-        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'updateCoordinates',
-           'phpDoc' => NULL,
-           'byRef' => false,
-           'public' => true,
-           'private' => false,
-           'abstract' => false,
-           'final' => false,
-           'static' => false,
-           'returnType' => 'void',
-           'parameters' => 
-          array (
-            0 => 
-            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
-               'name' => 'coordinates',
-               'type' => 'App\\Domain\\ValueObject\\Coordinates',
-               'byRef' => false,
-               'variadic' => false,
-               'hasDefault' => false,
-               'attributes' => 
-              array (
-              ),
-            )),
-          ),
-           'attributes' => 
-          array (
-          ),
-        )),
-        10 => 
-        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'distanceTo',
            'phpDoc' => NULL,
            'byRef' => false,
@@ -5004,7 +7060,7 @@ return [
           array (
           ),
         )),
-        11 => 
+        8 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'equals',
            'phpDoc' => NULL,
@@ -5033,19 +7089,17 @@ return [
           array (
           ),
         )),
-        12 => 
+        9 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'getDomainEvents',
+           'name' => 'toArray',
            'phpDoc' => 
           \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
              'phpDocString' => '/**
-     * @return array<object>
+     * @return array<string, mixed>
      */',
              'namespace' => 'App\\Domain\\Entity',
              'uses' => 
             array (
-              'eventcreated' => 'App\\Domain\\Event\\EventCreated',
-              'eventupdated' => 'App\\Domain\\Event\\EventUpdated',
               'coordinates' => 'App\\Domain\\ValueObject\\Coordinates',
               'eventid' => 'App\\Domain\\ValueObject\\EventId',
               'eventname' => 'App\\Domain\\ValueObject\\EventName',
@@ -5070,37 +7124,17 @@ return [
           array (
           ),
         )),
-        13 => 
+        10 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'clearDomainEvents',
-           'phpDoc' => NULL,
-           'byRef' => false,
-           'public' => true,
-           'private' => false,
-           'abstract' => false,
-           'final' => false,
-           'static' => false,
-           'returnType' => 'void',
-           'parameters' => 
-          array (
-          ),
-           'attributes' => 
-          array (
-          ),
-        )),
-        14 => 
-        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'toArray',
+           'name' => '__sleep',
            'phpDoc' => 
           \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
              'phpDocString' => '/**
-     * @return array<string, mixed>
+     * @return array<string>
      */',
              'namespace' => 'App\\Domain\\Entity',
              'uses' => 
             array (
-              'eventcreated' => 'App\\Domain\\Event\\EventCreated',
-              'eventupdated' => 'App\\Domain\\Event\\EventUpdated',
               'coordinates' => 'App\\Domain\\ValueObject\\Coordinates',
               'eventid' => 'App\\Domain\\ValueObject\\EventId',
               'eventname' => 'App\\Domain\\ValueObject\\EventName',
@@ -5131,289 +7165,7 @@ return [
       ),
     )),
   ),
-  '/var/www/src/Domain/Event/EventCreated.php' => 
-  array (
-    0 => 
-    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
-       'name' => 'App\\Domain\\Event\\EventCreated',
-       'phpDoc' => NULL,
-       'abstract' => false,
-       'final' => true,
-       'extends' => NULL,
-       'implements' => 
-      array (
-      ),
-       'usedTraits' => 
-      array (
-      ),
-       'traitUseAdaptations' => 
-      array (
-      ),
-       'statements' => 
-      array (
-        0 => 
-        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => '__construct',
-           'phpDoc' => NULL,
-           'byRef' => false,
-           'public' => true,
-           'private' => false,
-           'abstract' => false,
-           'final' => false,
-           'static' => false,
-           'returnType' => NULL,
-           'parameters' => 
-          array (
-            0 => 
-            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
-               'name' => 'event',
-               'type' => 'App\\Domain\\Entity\\Event',
-               'byRef' => false,
-               'variadic' => false,
-               'hasDefault' => false,
-               'attributes' => 
-              array (
-              ),
-            )),
-          ),
-           'attributes' => 
-          array (
-          ),
-        )),
-        1 => 
-        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'getEvent',
-           'phpDoc' => NULL,
-           'byRef' => false,
-           'public' => true,
-           'private' => false,
-           'abstract' => false,
-           'final' => false,
-           'static' => false,
-           'returnType' => 'App\\Domain\\Entity\\Event',
-           'parameters' => 
-          array (
-          ),
-           'attributes' => 
-          array (
-          ),
-        )),
-        2 => 
-        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'getOccurredAt',
-           'phpDoc' => NULL,
-           'byRef' => false,
-           'public' => true,
-           'private' => false,
-           'abstract' => false,
-           'final' => false,
-           'static' => false,
-           'returnType' => 'DateTimeImmutable',
-           'parameters' => 
-          array (
-          ),
-           'attributes' => 
-          array (
-          ),
-        )),
-        3 => 
-        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'getEventName',
-           'phpDoc' => NULL,
-           'byRef' => false,
-           'public' => true,
-           'private' => false,
-           'abstract' => false,
-           'final' => false,
-           'static' => false,
-           'returnType' => 'string',
-           'parameters' => 
-          array (
-          ),
-           'attributes' => 
-          array (
-          ),
-        )),
-        4 => 
-        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'toArray',
-           'phpDoc' => 
-          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
-             'phpDocString' => '/**
-     * @return array<string, mixed>
-     */',
-             'namespace' => 'App\\Domain\\Event',
-             'uses' => 
-            array (
-              'event' => 'App\\Domain\\Entity\\Event',
-              'datetimeimmutable' => 'DateTimeImmutable',
-            ),
-             'constUses' => 
-            array (
-            ),
-          )),
-           'byRef' => false,
-           'public' => true,
-           'private' => false,
-           'abstract' => false,
-           'final' => false,
-           'static' => false,
-           'returnType' => 'array',
-           'parameters' => 
-          array (
-          ),
-           'attributes' => 
-          array (
-          ),
-        )),
-      ),
-       'attributes' => 
-      array (
-      ),
-    )),
-  ),
-  '/var/www/src/Domain/Event/EventUpdated.php' => 
-  array (
-    0 => 
-    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
-       'name' => 'App\\Domain\\Event\\EventUpdated',
-       'phpDoc' => NULL,
-       'abstract' => false,
-       'final' => true,
-       'extends' => NULL,
-       'implements' => 
-      array (
-      ),
-       'usedTraits' => 
-      array (
-      ),
-       'traitUseAdaptations' => 
-      array (
-      ),
-       'statements' => 
-      array (
-        0 => 
-        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => '__construct',
-           'phpDoc' => NULL,
-           'byRef' => false,
-           'public' => true,
-           'private' => false,
-           'abstract' => false,
-           'final' => false,
-           'static' => false,
-           'returnType' => NULL,
-           'parameters' => 
-          array (
-            0 => 
-            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
-               'name' => 'event',
-               'type' => 'App\\Domain\\Entity\\Event',
-               'byRef' => false,
-               'variadic' => false,
-               'hasDefault' => false,
-               'attributes' => 
-              array (
-              ),
-            )),
-          ),
-           'attributes' => 
-          array (
-          ),
-        )),
-        1 => 
-        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'getEvent',
-           'phpDoc' => NULL,
-           'byRef' => false,
-           'public' => true,
-           'private' => false,
-           'abstract' => false,
-           'final' => false,
-           'static' => false,
-           'returnType' => 'App\\Domain\\Entity\\Event',
-           'parameters' => 
-          array (
-          ),
-           'attributes' => 
-          array (
-          ),
-        )),
-        2 => 
-        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'getOccurredAt',
-           'phpDoc' => NULL,
-           'byRef' => false,
-           'public' => true,
-           'private' => false,
-           'abstract' => false,
-           'final' => false,
-           'static' => false,
-           'returnType' => 'DateTimeImmutable',
-           'parameters' => 
-          array (
-          ),
-           'attributes' => 
-          array (
-          ),
-        )),
-        3 => 
-        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'getEventName',
-           'phpDoc' => NULL,
-           'byRef' => false,
-           'public' => true,
-           'private' => false,
-           'abstract' => false,
-           'final' => false,
-           'static' => false,
-           'returnType' => 'string',
-           'parameters' => 
-          array (
-          ),
-           'attributes' => 
-          array (
-          ),
-        )),
-        4 => 
-        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'toArray',
-           'phpDoc' => 
-          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
-             'phpDocString' => '/**
-     * @return array<string, mixed>
-     */',
-             'namespace' => 'App\\Domain\\Event',
-             'uses' => 
-            array (
-              'event' => 'App\\Domain\\Entity\\Event',
-              'datetimeimmutable' => 'DateTimeImmutable',
-            ),
-             'constUses' => 
-            array (
-            ),
-          )),
-           'byRef' => false,
-           'public' => true,
-           'private' => false,
-           'abstract' => false,
-           'final' => false,
-           'static' => false,
-           'returnType' => 'array',
-           'parameters' => 
-          array (
-          ),
-           'attributes' => 
-          array (
-          ),
-        )),
-      ),
-       'attributes' => 
-      array (
-      ),
-    )),
-  ),
-  '/var/www/src/Domain/Repository/EventRepositoryInterface.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Domain/Repository/EventRepositoryInterface.php' => 
   array (
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedInterfaceNode::__set_state(array(
@@ -5436,6 +7188,7 @@ return [
              'uses' => 
             array (
               'paginationquery' => 'App\\Application\\Query\\PaginationQuery',
+              'searchquery' => 'App\\Application\\Query\\SearchQuery',
               'event' => 'App\\Domain\\Entity\\Event',
               'eventid' => 'App\\Domain\\ValueObject\\EventId',
             ),
@@ -5469,6 +7222,7 @@ return [
              'uses' => 
             array (
               'paginationquery' => 'App\\Application\\Query\\PaginationQuery',
+              'searchquery' => 'App\\Application\\Query\\SearchQuery',
               'event' => 'App\\Domain\\Entity\\Event',
               'eventid' => 'App\\Domain\\ValueObject\\EventId',
             ),
@@ -5503,6 +7257,98 @@ return [
         )),
         2 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'search',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Search events with advanced filtering.
+     *
+     * @return Event[]
+     */',
+             'namespace' => 'App\\Domain\\Repository',
+             'uses' => 
+            array (
+              'paginationquery' => 'App\\Application\\Query\\PaginationQuery',
+              'searchquery' => 'App\\Application\\Query\\SearchQuery',
+              'event' => 'App\\Domain\\Entity\\Event',
+              'eventid' => 'App\\Domain\\ValueObject\\EventId',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'array',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'query',
+               'type' => 'App\\Application\\Query\\SearchQuery',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        3 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'countSearch',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Count events matching search criteria.
+     */',
+             'namespace' => 'App\\Domain\\Repository',
+             'uses' => 
+            array (
+              'paginationquery' => 'App\\Application\\Query\\PaginationQuery',
+              'searchquery' => 'App\\Application\\Query\\SearchQuery',
+              'event' => 'App\\Domain\\Entity\\Event',
+              'eventid' => 'App\\Domain\\ValueObject\\EventId',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'int',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'query',
+               'type' => 'App\\Application\\Query\\SearchQuery',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        4 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'findById',
            'phpDoc' => NULL,
            'byRef' => false,
@@ -5530,7 +7376,7 @@ return [
           array (
           ),
         )),
-        3 => 
+        5 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'count',
            'phpDoc' => NULL,
@@ -5548,86 +7394,10 @@ return [
           array (
           ),
         )),
-        4 => 
-        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'save',
-           'phpDoc' => NULL,
-           'byRef' => false,
-           'public' => true,
-           'private' => false,
-           'abstract' => false,
-           'final' => false,
-           'static' => false,
-           'returnType' => 'App\\Domain\\Entity\\Event',
-           'parameters' => 
-          array (
-            0 => 
-            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
-               'name' => 'event',
-               'type' => 'App\\Domain\\Entity\\Event',
-               'byRef' => false,
-               'variadic' => false,
-               'hasDefault' => false,
-               'attributes' => 
-              array (
-              ),
-            )),
-          ),
-           'attributes' => 
-          array (
-          ),
-        )),
-        5 => 
-        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'delete',
-           'phpDoc' => NULL,
-           'byRef' => false,
-           'public' => true,
-           'private' => false,
-           'abstract' => false,
-           'final' => false,
-           'static' => false,
-           'returnType' => 'bool',
-           'parameters' => 
-          array (
-            0 => 
-            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
-               'name' => 'id',
-               'type' => 'App\\Domain\\ValueObject\\EventId',
-               'byRef' => false,
-               'variadic' => false,
-               'hasDefault' => false,
-               'attributes' => 
-              array (
-              ),
-            )),
-          ),
-           'attributes' => 
-          array (
-          ),
-        )),
-        6 => 
-        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'nextId',
-           'phpDoc' => NULL,
-           'byRef' => false,
-           'public' => true,
-           'private' => false,
-           'abstract' => false,
-           'final' => false,
-           'static' => false,
-           'returnType' => 'App\\Domain\\ValueObject\\EventId',
-           'parameters' => 
-          array (
-          ),
-           'attributes' => 
-          array (
-          ),
-        )),
       ),
     )),
   ),
-  '/var/www/src/Domain/Service/EventDomainService.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Domain/Service/EventDomainService.php' => 
   array (
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
@@ -5863,7 +7633,7 @@ return [
       ),
     )),
   ),
-  '/var/www/src/Domain/ValueObject/Coordinates.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Domain/ValueObject/Coordinates.php' => 
   array (
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
@@ -6072,7 +7842,7 @@ return [
       ),
     )),
   ),
-  '/var/www/src/Domain/ValueObject/EventId.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Domain/ValueObject/EventId.php' => 
   array (
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
@@ -6192,7 +7962,7 @@ return [
       ),
     )),
   ),
-  '/var/www/src/Domain/ValueObject/EventName.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Domain/ValueObject/EventName.php' => 
   array (
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
@@ -6312,7 +8082,7 @@ return [
       ),
     )),
   ),
-  '/var/www/src/Domain/ValueObject/Location.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Domain/ValueObject/Location.php' => 
   array (
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
@@ -6432,7 +8202,7 @@ return [
       ),
     )),
   ),
-  '/var/www/src/Exception/EventNotFoundException.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Exception/EventNotFoundException.php' => 
   array (
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
@@ -6458,7 +8228,7 @@ return [
       ),
     )),
   ),
-  '/var/www/src/Exception/FileNotFoundException.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Exception/FileNotFoundException.php' => 
   array (
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
@@ -6484,7 +8254,7 @@ return [
       ),
     )),
   ),
-  '/var/www/src/Exception/RouteNotFoundException.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Exception/RouteNotFoundException.php' => 
   array (
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
@@ -6510,7 +8280,7 @@ return [
       ),
     )),
   ),
-  '/var/www/src/Infrastructure/Cache/CacheAction.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Cache/CacheAction.php' => 
   array (
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedEnumNode::__set_state(array(
@@ -6587,7 +8357,341 @@ return [
       ),
     )),
   ),
-  '/var/www/src/Infrastructure/Cache/CacheInterface.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Cache/CacheAnalytics.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Infrastructure\\Cache\\CacheAnalytics',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => false,
+       'extends' => NULL,
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => '__construct',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => NULL,
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'cache',
+               'type' => 'App\\Infrastructure\\Cache\\CacheInterface',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'logger',
+               'type' => 'App\\Infrastructure\\Logging\\LoggerInterface',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getPerformanceMetrics',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @return array<string, mixed>
+     */',
+             'namespace' => 'App\\Infrastructure\\Cache',
+             'uses' => 
+            array (
+              'loggerinterface' => 'App\\Infrastructure\\Logging\\LoggerInterface',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'array',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        2 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getCacheHealth',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @return array<string, mixed>
+     */',
+             'namespace' => 'App\\Infrastructure\\Cache',
+             'uses' => 
+            array (
+              'loggerinterface' => 'App\\Infrastructure\\Logging\\LoggerInterface',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'array',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        3 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getUsagePatterns',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @return array<string, mixed>
+     */',
+             'namespace' => 'App\\Infrastructure\\Cache',
+             'uses' => 
+            array (
+              'loggerinterface' => 'App\\Infrastructure\\Logging\\LoggerInterface',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'array',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        4 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getOptimizationSuggestions',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @return array<int, array<string, mixed>>
+     */',
+             'namespace' => 'App\\Infrastructure\\Cache',
+             'uses' => 
+            array (
+              'loggerinterface' => 'App\\Infrastructure\\Logging\\LoggerInterface',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'array',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        5 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'generateReport',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @return array<string, mixed>
+     */',
+             'namespace' => 'App\\Infrastructure\\Cache',
+             'uses' => 
+            array (
+              'loggerinterface' => 'App\\Infrastructure\\Logging\\LoggerInterface',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'array',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        6 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'trackKeyAccess',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'key',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'isHit',
+               'type' => 'bool',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Cache/CacheFactory.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Infrastructure\\Cache\\CacheFactory',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => false,
+       'extends' => NULL,
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'createFromStrategy',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => true,
+           'returnType' => 'App\\Infrastructure\\Cache\\CacheInterface',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'strategy',
+               'type' => 'App\\Infrastructure\\Cache\\CacheStrategy',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'createFromEnvironment',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => true,
+           'returnType' => 'App\\Infrastructure\\Cache\\CacheInterface',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Cache/CacheInterface.php' => 
   array (
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedInterfaceNode::__set_state(array(
@@ -6601,23 +8705,7 @@ return [
         0 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'get',
-           'phpDoc' => 
-          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
-             'phpDocString' => '/**
-     * Retrieve an item from the cache.
-     *
-     * @param string $key
-     *
-     * @return mixed Returns null if key doesn\'t exist
-     */',
-             'namespace' => 'App\\Infrastructure\\Cache',
-             'uses' => 
-            array (
-            ),
-             'constUses' => 
-            array (
-            ),
-          )),
+           'phpDoc' => NULL,
            'byRef' => false,
            'public' => true,
            'private' => false,
@@ -6646,25 +8734,7 @@ return [
         1 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'set',
-           'phpDoc' => 
-          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
-             'phpDocString' => '/**
-     * Store an item in the cache.
-     *
-     * @param string $key
-     * @param mixed  $value
-     * @param int    $ttl   Time to live in seconds (0 = no expiration)
-     *
-     * @return bool True on success
-     */',
-             'namespace' => 'App\\Infrastructure\\Cache',
-             'uses' => 
-            array (
-            ),
-             'constUses' => 
-            array (
-            ),
-          )),
+           'phpDoc' => NULL,
            'byRef' => false,
            'public' => true,
            'private' => false,
@@ -6699,7 +8769,7 @@ return [
             2 => 
             \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
                'name' => 'ttl',
-               'type' => 'int',
+               'type' => '?int',
                'byRef' => false,
                'variadic' => false,
                'hasDefault' => true,
@@ -6715,23 +8785,7 @@ return [
         2 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'delete',
-           'phpDoc' => 
-          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
-             'phpDocString' => '/**
-     * Remove an item from the cache.
-     *
-     * @param string $key
-     *
-     * @return bool True if item was removed or didn\'t exist
-     */',
-             'namespace' => 'App\\Infrastructure\\Cache',
-             'uses' => 
-            array (
-            ),
-             'constUses' => 
-            array (
-            ),
-          )),
+           'phpDoc' => NULL,
            'byRef' => false,
            'public' => true,
            'private' => false,
@@ -6760,21 +8814,7 @@ return [
         3 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'clear',
-           'phpDoc' => 
-          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
-             'phpDocString' => '/**
-     * Clear all items from the cache.
-     *
-     * @return bool True on success
-     */',
-             'namespace' => 'App\\Infrastructure\\Cache',
-             'uses' => 
-            array (
-            ),
-             'constUses' => 
-            array (
-            ),
-          )),
+           'phpDoc' => NULL,
            'byRef' => false,
            'public' => true,
            'private' => false,
@@ -6791,24 +8831,8 @@ return [
         )),
         4 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'exists',
-           'phpDoc' => 
-          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
-             'phpDocString' => '/**
-     * Check if an item exists in the cache.
-     *
-     * @param string $key
-     *
-     * @return bool
-     */',
-             'namespace' => 'App\\Infrastructure\\Cache',
-             'uses' => 
-            array (
-            ),
-             'constUses' => 
-            array (
-            ),
-          )),
+           'name' => 'has',
+           'phpDoc' => NULL,
            'byRef' => false,
            'public' => true,
            'private' => false,
@@ -6840,11 +8864,9 @@ return [
            'phpDoc' => 
           \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
              'phpDocString' => '/**
-     * Get multiple items from the cache.
-     *
      * @param array<string> $keys
      *
-     * @return array<string, mixed> Key-value pairs (missing keys will have null values)
+     * @return array<string, mixed>
      */',
              'namespace' => 'App\\Infrastructure\\Cache',
              'uses' => 
@@ -6885,12 +8907,7 @@ return [
            'phpDoc' => 
           \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
              'phpDocString' => '/**
-     * Set multiple items in the cache.
-     *
-     * @param array<string, mixed> $values Key-value pairs
-     * @param int                  $ttl    Time to live in seconds
-     *
-     * @return bool True on success
+     * @param array<string, mixed> $values
      */',
              'namespace' => 'App\\Infrastructure\\Cache',
              'uses' => 
@@ -6923,6 +8940,438 @@ return [
             1 => 
             \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
                'name' => 'ttl',
+               'type' => '?int',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        7 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'deleteMultiple',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string> $keys
+     */',
+             'namespace' => 'App\\Infrastructure\\Cache',
+             'uses' => 
+            array (
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'bool',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'keys',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        8 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'invalidateByTag',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'bool',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'tag',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        9 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'invalidateByTags',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string> $tags
+     */',
+             'namespace' => 'App\\Infrastructure\\Cache',
+             'uses' => 
+            array (
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'bool',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'tags',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        10 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'tag',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'bool',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'key',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'tag',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        11 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'tagMultiple',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string> $tags
+     */',
+             'namespace' => 'App\\Infrastructure\\Cache',
+             'uses' => 
+            array (
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'bool',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'key',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'tags',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        12 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getStats',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @return array<string, mixed>
+     */',
+             'namespace' => 'App\\Infrastructure\\Cache',
+             'uses' => 
+            array (
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'array',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        13 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getHitRate',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'float',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        14 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getMissRate',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'float',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        15 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getTotalRequests',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'int',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        16 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getTotalHits',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'int',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        17 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getTotalMisses',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'int',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        18 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'resetStats',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        19 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'calculateOptimalTtl',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'int',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'key',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'baseTtl',
+               'type' => 'int',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        20 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'setWithSmartTtl',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'bool',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'key',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'value',
+               'type' => 'mixed',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            2 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'baseTtl',
                'type' => 'int',
                'byRef' => false,
                'variadic' => false,
@@ -6939,7 +9388,242 @@ return [
       ),
     )),
   ),
-  '/var/www/src/Infrastructure/Cache/CacheStrategy.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Cache/CacheManager.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Infrastructure\\Cache\\CacheManager',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => false,
+       'extends' => NULL,
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => '__construct',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => NULL,
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'repository',
+               'type' => 'App\\Infrastructure\\Repository\\CachedEventRepository',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'warmer',
+               'type' => 'App\\Infrastructure\\Cache\\CacheWarmer',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            2 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'analytics',
+               'type' => 'App\\Infrastructure\\Cache\\CacheAnalytics',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            3 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'logger',
+               'type' => 'App\\Infrastructure\\Logging\\LoggerInterface',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getStats',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @return array<string, mixed>
+     */',
+             'namespace' => 'App\\Infrastructure\\Cache',
+             'uses' => 
+            array (
+              'loggerinterface' => 'App\\Infrastructure\\Logging\\LoggerInterface',
+              'cachedeventrepository' => 'App\\Infrastructure\\Repository\\CachedEventRepository',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'array',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        2 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getAnalytics',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @return array<string, mixed>
+     */',
+             'namespace' => 'App\\Infrastructure\\Cache',
+             'uses' => 
+            array (
+              'loggerinterface' => 'App\\Infrastructure\\Logging\\LoggerInterface',
+              'cachedeventrepository' => 'App\\Infrastructure\\Repository\\CachedEventRepository',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'array',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        3 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'warmUp',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        4 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'invalidateAll',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        5 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'invalidateEvent',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'eventId',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        6 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'invalidateSearch',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Cache/CacheStrategy.php' => 
   array (
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedEnumNode::__set_state(array(
@@ -7058,7 +9742,192 @@ return [
       ),
     )),
   ),
-  '/var/www/src/Infrastructure/Cache/InMemoryCache.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Cache/CacheWarmer.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Infrastructure\\Cache\\CacheWarmer',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => false,
+       'extends' => NULL,
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => '__construct',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => NULL,
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'cache',
+               'type' => 'App\\Infrastructure\\Cache\\CacheInterface',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'eventRepository',
+               'type' => 'App\\Domain\\Repository\\EventRepositoryInterface',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            2 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'logger',
+               'type' => 'App\\Infrastructure\\Logging\\LoggerInterface',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'warmUp',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        2 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'warmUpSpecificEvent',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'eventId',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        3 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'warmUpByTag',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'tag',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        4 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getWarmUpStats',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @return array<string, mixed>
+     */',
+             'namespace' => 'App\\Infrastructure\\Cache',
+             'uses' => 
+            array (
+              'eventrepositoryinterface' => 'App\\Domain\\Repository\\EventRepositoryInterface',
+              'loggerinterface' => 'App\\Infrastructure\\Logging\\LoggerInterface',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'array',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Cache/InMemoryCache.php' => 
   array (
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
@@ -7146,7 +10015,7 @@ return [
             2 => 
             \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
                'name' => 'ttl',
-               'type' => 'int',
+               'type' => '?int',
                'byRef' => false,
                'variadic' => false,
                'hasDefault' => true,
@@ -7208,7 +10077,7 @@ return [
         )),
         4 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'exists',
+           'name' => 'has',
            'phpDoc' => NULL,
            'byRef' => false,
            'public' => true,
@@ -7317,7 +10186,7 @@ return [
             1 => 
             \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
                'name' => 'ttl',
-               'type' => 'int',
+               'type' => '?int',
                'byRef' => false,
                'variadic' => false,
                'hasDefault' => true,
@@ -7331,6 +10200,209 @@ return [
           ),
         )),
         7 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'deleteMultiple',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string> $keys
+     */',
+             'namespace' => 'App\\Infrastructure\\Cache',
+             'uses' => 
+            array (
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'bool',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'keys',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        8 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'invalidateByTag',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'bool',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'tag',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        9 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'invalidateByTags',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string> $tags
+     */',
+             'namespace' => 'App\\Infrastructure\\Cache',
+             'uses' => 
+            array (
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'bool',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'tags',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        10 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'tag',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'bool',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'key',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'tag',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        11 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'tagMultiple',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string> $tags
+     */',
+             'namespace' => 'App\\Infrastructure\\Cache',
+             'uses' => 
+            array (
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'bool',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'key',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'tags',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        12 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'getStats',
            'phpDoc' => 
@@ -7360,13 +10432,212 @@ return [
           array (
           ),
         )),
+        13 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getHitRate',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'float',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        14 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getMissRate',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'float',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        15 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getTotalRequests',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'int',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        16 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getTotalHits',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'int',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        17 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getTotalMisses',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'int',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        18 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'resetStats',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        19 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'calculateOptimalTtl',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'int',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'key',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'baseTtl',
+               'type' => 'int',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        20 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'setWithSmartTtl',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'bool',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'key',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'value',
+               'type' => 'mixed',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            2 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'baseTtl',
+               'type' => 'int',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
       ),
        'attributes' => 
       array (
       ),
     )),
   ),
-  '/var/www/src/Infrastructure/Cache/NullCache.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Cache/NullCache.php' => 
   array (
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
@@ -7454,7 +10725,7 @@ return [
             2 => 
             \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
                'name' => 'ttl',
-               'type' => 'int',
+               'type' => '?int',
                'byRef' => false,
                'variadic' => false,
                'hasDefault' => true,
@@ -7516,7 +10787,7 @@ return [
         )),
         4 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'exists',
+           'name' => 'has',
            'phpDoc' => NULL,
            'byRef' => false,
            'public' => true,
@@ -7625,7 +10896,7 @@ return [
             1 => 
             \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
                'name' => 'ttl',
-               'type' => 'int',
+               'type' => '?int',
                'byRef' => false,
                'variadic' => false,
                'hasDefault' => true,
@@ -7639,6 +10910,209 @@ return [
           ),
         )),
         7 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'deleteMultiple',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string> $keys
+     */',
+             'namespace' => 'App\\Infrastructure\\Cache',
+             'uses' => 
+            array (
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'bool',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'keys',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        8 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'invalidateByTag',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'bool',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'tag',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        9 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'invalidateByTags',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string> $tags
+     */',
+             'namespace' => 'App\\Infrastructure\\Cache',
+             'uses' => 
+            array (
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'bool',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'tags',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        10 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'tag',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'bool',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'key',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'tag',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        11 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'tagMultiple',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string> $tags
+     */',
+             'namespace' => 'App\\Infrastructure\\Cache',
+             'uses' => 
+            array (
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'bool',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'key',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'tags',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        12 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'getStats',
            'phpDoc' => 
@@ -7668,13 +11142,212 @@ return [
           array (
           ),
         )),
+        13 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getHitRate',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'float',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        14 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getMissRate',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'float',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        15 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getTotalRequests',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'int',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        16 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getTotalHits',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'int',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        17 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getTotalMisses',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'int',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        18 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'resetStats',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        19 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'calculateOptimalTtl',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'int',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'key',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'baseTtl',
+               'type' => 'int',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        20 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'setWithSmartTtl',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'bool',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'key',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'value',
+               'type' => 'mixed',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            2 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'baseTtl',
+               'type' => 'int',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
       ),
        'attributes' => 
       array (
       ),
     )),
   ),
-  '/var/www/src/Infrastructure/Cache/RedisCache.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Cache/RedisCache.php' => 
   array (
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
@@ -7715,17 +11388,6 @@ return [
                'byRef' => false,
                'variadic' => false,
                'hasDefault' => false,
-               'attributes' => 
-              array (
-              ),
-            )),
-            1 => 
-            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
-               'name' => 'prefix',
-               'type' => 'string',
-               'byRef' => false,
-               'variadic' => false,
-               'hasDefault' => true,
                'attributes' => 
               array (
               ),
@@ -7802,7 +11464,7 @@ return [
             2 => 
             \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
                'name' => 'ttl',
-               'type' => 'int',
+               'type' => '?int',
                'byRef' => false,
                'variadic' => false,
                'hasDefault' => true,
@@ -7864,7 +11526,7 @@ return [
         )),
         5 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'exists',
+           'name' => 'has',
            'phpDoc' => NULL,
            'byRef' => false,
            'public' => true,
@@ -7905,7 +11567,6 @@ return [
              'uses' => 
             array (
               'redis' => 'Redis',
-              'redisexception' => 'RedisException',
             ),
              'constUses' => 
             array (
@@ -7948,7 +11609,6 @@ return [
              'uses' => 
             array (
               'redis' => 'Redis',
-              'redisexception' => 'RedisException',
             ),
              'constUses' => 
             array (
@@ -7977,7 +11637,7 @@ return [
             1 => 
             \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
                'name' => 'ttl',
-               'type' => 'int',
+               'type' => '?int',
                'byRef' => false,
                'variadic' => false,
                'hasDefault' => true,
@@ -7992,19 +11652,222 @@ return [
         )),
         8 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'deleteMultiple',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string> $keys
+     */',
+             'namespace' => 'App\\Infrastructure\\Cache',
+             'uses' => 
+            array (
+              'redis' => 'Redis',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'bool',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'keys',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        9 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'invalidateByTag',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'bool',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'tag',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        10 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'invalidateByTags',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string> $tags
+     */',
+             'namespace' => 'App\\Infrastructure\\Cache',
+             'uses' => 
+            array (
+              'redis' => 'Redis',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'bool',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'tags',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        11 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'tag',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'bool',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'key',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'tag',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        12 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'tagMultiple',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string> $tags
+     */',
+             'namespace' => 'App\\Infrastructure\\Cache',
+             'uses' => 
+            array (
+              'redis' => 'Redis',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'bool',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'key',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'tags',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        13 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'getStats',
            'phpDoc' => 
           \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
              'phpDocString' => '/**
-     * Get Redis connection statistics.
-     *
      * @return array<string, mixed>
      */',
              'namespace' => 'App\\Infrastructure\\Cache',
              'uses' => 
             array (
               'redis' => 'Redis',
-              'redisexception' => 'RedisException',
             ),
              'constUses' => 
             array (
@@ -8024,17 +11887,318 @@ return [
           array (
           ),
         )),
-        9 => 
+        14 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'createFromEnvironment',
+           'name' => 'getHitRate',
            'phpDoc' => NULL,
            'byRef' => false,
            'public' => true,
            'private' => false,
            'abstract' => false,
            'final' => false,
-           'static' => true,
-           'returnType' => 'self',
+           'static' => false,
+           'returnType' => 'float',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        15 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getMissRate',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'float',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        16 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getTotalRequests',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'int',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        17 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getTotalHits',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'int',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        18 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getTotalMisses',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'int',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        19 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'resetStats',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        20 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'calculateOptimalTtl',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'int',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'key',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'baseTtl',
+               'type' => 'int',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        21 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'setWithSmartTtl',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'bool',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'key',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'value',
+               'type' => 'mixed',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            2 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'baseTtl',
+               'type' => 'int',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/DataSource/DataSourceFactory.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Infrastructure\\DataSource\\DataSourceFactory',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => false,
+       'extends' => NULL,
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => '__construct',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => NULL,
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'container',
+               'type' => 'App\\Service\\Container',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'strategy',
+               'type' => 'App\\Infrastructure\\DataSource\\DataSourceStrategy',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'createRepository',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'App\\Domain\\Repository\\EventRepositoryInterface',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        2 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getStrategy',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'App\\Infrastructure\\DataSource\\DataSourceStrategy',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        3 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getStrategyDescription',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'string',
            'parameters' => 
           array (
           ),
@@ -8048,7 +12212,102 @@ return [
       ),
     )),
   ),
-  '/var/www/src/Infrastructure/Database/DatabaseConnection.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/DataSource/DataSourceStrategy.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedEnumNode::__set_state(array(
+       'name' => 'App\\Infrastructure\\DataSource\\DataSourceStrategy',
+       'scalarType' => 'string',
+       'phpDoc' => NULL,
+       'implements' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'fromString',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => true,
+           'returnType' => 'self',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'value',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getDisplayName',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'string',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        2 => 
+        \PHPStan\Dependency\ExportedNode\ExportedEnumCaseNode::__set_state(array(
+           'name' => 'DATABASE_FIRST',
+           'value' => '\'database_first\'',
+           'phpDoc' => NULL,
+        )),
+        3 => 
+        \PHPStan\Dependency\ExportedNode\ExportedEnumCaseNode::__set_state(array(
+           'name' => 'CSV_FIRST',
+           'value' => '\'csv_first\'',
+           'phpDoc' => NULL,
+        )),
+        4 => 
+        \PHPStan\Dependency\ExportedNode\ExportedEnumCaseNode::__set_state(array(
+           'name' => 'DATABASE_ONLY',
+           'value' => '\'database_only\'',
+           'phpDoc' => NULL,
+        )),
+        5 => 
+        \PHPStan\Dependency\ExportedNode\ExportedEnumCaseNode::__set_state(array(
+           'name' => 'CSV_ONLY',
+           'value' => '\'csv_only\'',
+           'phpDoc' => NULL,
+        )),
+        6 => 
+        \PHPStan\Dependency\ExportedNode\ExportedEnumCaseNode::__set_state(array(
+           'name' => 'AUTO',
+           'value' => '\'auto\'',
+           'phpDoc' => NULL,
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Database/DatabaseConnection.php' => 
   array (
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
@@ -8183,7 +12442,4825 @@ return [
       ),
     )),
   ),
-  '/var/www/src/Infrastructure/Repository/CachedEventRepository.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Logging/ApplicationLogger.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Infrastructure\\Logging\\ApplicationLogger',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => false,
+       'extends' => NULL,
+       'implements' => 
+      array (
+        0 => 'App\\Infrastructure\\Logging\\LoggerInterface',
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => '__construct',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => NULL,
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'logger',
+               'type' => 'Monolog\\Logger',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'logDatabaseOperation',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'logger' => 'Monolog\\Logger',
+              'loglevel' => 'Psr\\Log\\LogLevel',
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'operation',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        2 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'logCacheOperation',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'logger' => 'Monolog\\Logger',
+              'loglevel' => 'Psr\\Log\\LogLevel',
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'operation',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        3 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'logSecurityEvent',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'logger' => 'Monolog\\Logger',
+              'loglevel' => 'Psr\\Log\\LogLevel',
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'event',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        4 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'logApplicationEvent',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'logger' => 'Monolog\\Logger',
+              'loglevel' => 'Psr\\Log\\LogLevel',
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'event',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        5 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'logPerformance',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'logger' => 'Monolog\\Logger',
+              'loglevel' => 'Psr\\Log\\LogLevel',
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'operation',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'duration',
+               'type' => 'float',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            2 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        6 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'logBusinessEvent',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'logger' => 'Monolog\\Logger',
+              'loglevel' => 'Psr\\Log\\LogLevel',
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'event',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        7 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'logRequest',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'logger' => 'Monolog\\Logger',
+              'loglevel' => 'Psr\\Log\\LogLevel',
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'method',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'path',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            2 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        8 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'logResponse',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'logger' => 'Monolog\\Logger',
+              'loglevel' => 'Psr\\Log\\LogLevel',
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'statusCode',
+               'type' => 'int',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'method',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            2 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'path',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            3 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        9 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'emergency',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'logger' => 'Monolog\\Logger',
+              'loglevel' => 'Psr\\Log\\LogLevel',
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'message',
+               'type' => 'string|Stringable',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        10 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'alert',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'logger' => 'Monolog\\Logger',
+              'loglevel' => 'Psr\\Log\\LogLevel',
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'message',
+               'type' => 'string|Stringable',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        11 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'critical',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'logger' => 'Monolog\\Logger',
+              'loglevel' => 'Psr\\Log\\LogLevel',
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'message',
+               'type' => 'string|Stringable',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        12 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'error',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'logger' => 'Monolog\\Logger',
+              'loglevel' => 'Psr\\Log\\LogLevel',
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'message',
+               'type' => 'string|Stringable',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        13 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'warning',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'logger' => 'Monolog\\Logger',
+              'loglevel' => 'Psr\\Log\\LogLevel',
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'message',
+               'type' => 'string|Stringable',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        14 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'notice',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'logger' => 'Monolog\\Logger',
+              'loglevel' => 'Psr\\Log\\LogLevel',
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'message',
+               'type' => 'string|Stringable',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        15 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'info',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'logger' => 'Monolog\\Logger',
+              'loglevel' => 'Psr\\Log\\LogLevel',
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'message',
+               'type' => 'string|Stringable',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        16 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'debug',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'logger' => 'Monolog\\Logger',
+              'loglevel' => 'Psr\\Log\\LogLevel',
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'message',
+               'type' => 'string|Stringable',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        17 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'log',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'logger' => 'Monolog\\Logger',
+              'loglevel' => 'Psr\\Log\\LogLevel',
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'level',
+               'type' => 'mixed',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'message',
+               'type' => 'string|Stringable',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            2 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Logging/LoggerFactory.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Infrastructure\\Logging\\LoggerFactory',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => false,
+       'extends' => NULL,
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'createFromEnvironment',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => true,
+           'returnType' => 'Monolog\\Logger',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'name',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'createLogger',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => true,
+           'returnType' => 'Monolog\\Logger',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'name',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'level',
+               'type' => 'Monolog\\Level',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+            2 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'format',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+            3 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'handler',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        2 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'createApplicationLogger',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => true,
+           'returnType' => 'Monolog\\Logger',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        3 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'createDatabaseLogger',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => true,
+           'returnType' => 'Monolog\\Logger',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        4 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'createCacheLogger',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => true,
+           'returnType' => 'Monolog\\Logger',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        5 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'createSecurityLogger',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => true,
+           'returnType' => 'Monolog\\Logger',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        6 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'createErrorLogger',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => true,
+           'returnType' => 'Monolog\\Logger',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        7 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'createPerformanceLogger',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => true,
+           'returnType' => 'Monolog\\Logger',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        8 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'createRequestLogger',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => true,
+           'returnType' => 'Monolog\\Logger',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Logging/LoggerInterface.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedInterfaceNode::__set_state(array(
+       'name' => 'App\\Infrastructure\\Logging\\LoggerInterface',
+       'phpDoc' => NULL,
+       'extends' => 
+      array (
+        0 => 'Psr\\Log\\LoggerInterface',
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'logDatabaseOperation',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Log database operations.
+     *
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'psrloggerinterface' => 'Psr\\Log\\LoggerInterface',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'operation',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'logCacheOperation',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Log cache operations.
+     *
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'psrloggerinterface' => 'Psr\\Log\\LoggerInterface',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'operation',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        2 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'logSecurityEvent',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Log security events.
+     *
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'psrloggerinterface' => 'Psr\\Log\\LoggerInterface',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'event',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        3 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'logApplicationEvent',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Log application events.
+     *
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'psrloggerinterface' => 'Psr\\Log\\LoggerInterface',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'event',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        4 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'logPerformance',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Log performance metrics.
+     *
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'psrloggerinterface' => 'Psr\\Log\\LoggerInterface',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'operation',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'duration',
+               'type' => 'float',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            2 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        5 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'logBusinessEvent',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Log business events.
+     *
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'psrloggerinterface' => 'Psr\\Log\\LoggerInterface',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'event',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        6 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'logRequest',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Log HTTP requests.
+     *
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'psrloggerinterface' => 'Psr\\Log\\LoggerInterface',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'method',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'path',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            2 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        7 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'logResponse',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Log HTTP responses.
+     *
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'psrloggerinterface' => 'Psr\\Log\\LoggerInterface',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'statusCode',
+               'type' => 'int',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'method',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            2 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'path',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            3 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+    )),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Logging/MonologAdapter.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Infrastructure\\Logging\\MonologAdapter',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => false,
+       'extends' => NULL,
+       'implements' => 
+      array (
+        0 => 'App\\Infrastructure\\Logging\\LoggerInterface',
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => '__construct',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => NULL,
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'monologLogger',
+               'type' => 'Monolog\\Logger',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'logDatabaseOperation',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'monologlogger' => 'Monolog\\Logger',
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'operation',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        2 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'logCacheOperation',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'monologlogger' => 'Monolog\\Logger',
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'operation',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        3 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'logSecurityEvent',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'monologlogger' => 'Monolog\\Logger',
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'event',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        4 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'logApplicationEvent',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'monologlogger' => 'Monolog\\Logger',
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'event',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        5 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'logPerformance',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'monologlogger' => 'Monolog\\Logger',
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'operation',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'duration',
+               'type' => 'float',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            2 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        6 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'logBusinessEvent',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'monologlogger' => 'Monolog\\Logger',
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'event',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        7 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'logRequest',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'monologlogger' => 'Monolog\\Logger',
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'method',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'path',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            2 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        8 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'logResponse',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'monologlogger' => 'Monolog\\Logger',
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'statusCode',
+               'type' => 'int',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'method',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            2 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'path',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            3 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        9 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'emergency',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'monologlogger' => 'Monolog\\Logger',
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'message',
+               'type' => 'string|Stringable',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        10 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'alert',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'monologlogger' => 'Monolog\\Logger',
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'message',
+               'type' => 'string|Stringable',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        11 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'critical',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'monologlogger' => 'Monolog\\Logger',
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'message',
+               'type' => 'string|Stringable',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        12 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'error',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'monologlogger' => 'Monolog\\Logger',
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'message',
+               'type' => 'string|Stringable',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        13 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'warning',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'monologlogger' => 'Monolog\\Logger',
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'message',
+               'type' => 'string|Stringable',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        14 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'notice',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'monologlogger' => 'Monolog\\Logger',
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'message',
+               'type' => 'string|Stringable',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        15 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'info',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'monologlogger' => 'Monolog\\Logger',
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'message',
+               'type' => 'string|Stringable',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        16 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'debug',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'monologlogger' => 'Monolog\\Logger',
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'message',
+               'type' => 'string|Stringable',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        17 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'log',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'monologlogger' => 'Monolog\\Logger',
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'level',
+               'type' => 'mixed',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'message',
+               'type' => 'string|Stringable',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            2 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Logging/NullLogger.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Infrastructure\\Logging\\NullLogger',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => false,
+       'extends' => NULL,
+       'implements' => 
+      array (
+        0 => 'App\\Infrastructure\\Logging\\LoggerInterface',
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'logDatabaseOperation',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'operation',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'logCacheOperation',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'operation',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        2 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'logSecurityEvent',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'event',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        3 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'logApplicationEvent',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'event',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        4 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'logPerformance',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'operation',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'duration',
+               'type' => 'float',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            2 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        5 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'logBusinessEvent',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'event',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        6 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'logRequest',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'method',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'path',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            2 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        7 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'logResponse',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'statusCode',
+               'type' => 'int',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'method',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            2 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'path',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            3 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        8 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'emergency',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'message',
+               'type' => 'string|Stringable',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        9 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'alert',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'message',
+               'type' => 'string|Stringable',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        10 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'critical',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'message',
+               'type' => 'string|Stringable',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        11 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'error',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'message',
+               'type' => 'string|Stringable',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        12 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'warning',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'message',
+               'type' => 'string|Stringable',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        13 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'notice',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'message',
+               'type' => 'string|Stringable',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        14 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'info',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'message',
+               'type' => 'string|Stringable',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        15 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'debug',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'message',
+               'type' => 'string|Stringable',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        16 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'log',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'level',
+               'type' => 'mixed',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'message',
+               'type' => 'string|Stringable',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            2 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Logging/SpecializedLogger.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Infrastructure\\Logging\\SpecializedLogger',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => false,
+       'extends' => NULL,
+       'implements' => 
+      array (
+        0 => 'App\\Infrastructure\\Logging\\LoggerInterface',
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => '__construct',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => NULL,
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'logDatabaseOperation',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'logger' => 'Monolog\\Logger',
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'operation',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        2 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'logCacheOperation',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'logger' => 'Monolog\\Logger',
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'operation',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        3 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'logSecurityEvent',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'logger' => 'Monolog\\Logger',
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'event',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        4 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'logApplicationEvent',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'logger' => 'Monolog\\Logger',
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'event',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        5 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'logPerformance',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'logger' => 'Monolog\\Logger',
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'operation',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'duration',
+               'type' => 'float',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            2 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        6 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'logBusinessEvent',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'logger' => 'Monolog\\Logger',
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'event',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        7 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'logRequest',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'logger' => 'Monolog\\Logger',
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'method',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'path',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            2 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        8 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'logResponse',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'logger' => 'Monolog\\Logger',
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'statusCode',
+               'type' => 'int',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'method',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            2 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'path',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            3 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        9 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'emergency',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'logger' => 'Monolog\\Logger',
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'message',
+               'type' => 'string|Stringable',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        10 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'alert',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'logger' => 'Monolog\\Logger',
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'message',
+               'type' => 'string|Stringable',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        11 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'critical',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'logger' => 'Monolog\\Logger',
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'message',
+               'type' => 'string|Stringable',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        12 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'error',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'logger' => 'Monolog\\Logger',
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'message',
+               'type' => 'string|Stringable',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        13 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'warning',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'logger' => 'Monolog\\Logger',
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'message',
+               'type' => 'string|Stringable',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        14 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'notice',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'logger' => 'Monolog\\Logger',
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'message',
+               'type' => 'string|Stringable',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        15 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'info',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'logger' => 'Monolog\\Logger',
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'message',
+               'type' => 'string|Stringable',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        16 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'debug',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'logger' => 'Monolog\\Logger',
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'message',
+               'type' => 'string|Stringable',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        17 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'log',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, mixed> $context
+     */',
+             'namespace' => 'App\\Infrastructure\\Logging',
+             'uses' => 
+            array (
+              'logger' => 'Monolog\\Logger',
+              'stringable' => 'Stringable',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'level',
+               'type' => 'mixed',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'message',
+               'type' => 'string|Stringable',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            2 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'context',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Repository/CachedEventRepository.php' => 
   array (
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
@@ -8241,19 +17318,19 @@ return [
             )),
             2 => 
             \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
-               'name' => 'defaultTtl',
-               'type' => 'int',
+               'name' => 'analytics',
+               'type' => 'App\\Infrastructure\\Cache\\CacheAnalytics',
                'byRef' => false,
                'variadic' => false,
-               'hasDefault' => true,
+               'hasDefault' => false,
                'attributes' => 
               array (
               ),
             )),
             3 => 
             \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
-               'name' => 'keyPrefix',
-               'type' => 'string',
+               'name' => 'defaultTtl',
+               'type' => 'int',
                'byRef' => false,
                'variadic' => false,
                'hasDefault' => true,
@@ -8362,7 +17439,7 @@ return [
         )),
         5 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'save',
+           'name' => 'search',
            'phpDoc' => NULL,
            'byRef' => false,
            'public' => true,
@@ -8370,13 +17447,13 @@ return [
            'abstract' => false,
            'final' => false,
            'static' => false,
-           'returnType' => 'App\\Domain\\Entity\\Event',
+           'returnType' => 'array',
            'parameters' => 
           array (
             0 => 
             \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
-               'name' => 'event',
-               'type' => 'App\\Domain\\Entity\\Event',
+               'name' => 'query',
+               'type' => 'App\\Application\\Query\\SearchQuery',
                'byRef' => false,
                'variadic' => false,
                'hasDefault' => false,
@@ -8391,7 +17468,7 @@ return [
         )),
         6 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'delete',
+           'name' => 'countSearch',
            'phpDoc' => NULL,
            'byRef' => false,
            'public' => true,
@@ -8399,13 +17476,13 @@ return [
            'abstract' => false,
            'final' => false,
            'static' => false,
-           'returnType' => 'bool',
+           'returnType' => 'int',
            'parameters' => 
           array (
             0 => 
             \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
-               'name' => 'id',
-               'type' => 'App\\Domain\\ValueObject\\EventId',
+               'name' => 'query',
+               'type' => 'App\\Application\\Query\\SearchQuery',
                'byRef' => false,
                'variadic' => false,
                'hasDefault' => false,
@@ -8420,7 +17497,7 @@ return [
         )),
         7 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'nextId',
+           'name' => 'invalidateEventCache',
            'phpDoc' => NULL,
            'byRef' => false,
            'public' => true,
@@ -8428,9 +17505,20 @@ return [
            'abstract' => false,
            'final' => false,
            'static' => false,
-           'returnType' => 'App\\Domain\\ValueObject\\EventId',
+           'returnType' => 'void',
            'parameters' => 
           array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'eventId',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
           ),
            'attributes' => 
           array (
@@ -8438,32 +17526,15 @@ return [
         )),
         8 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'clearCache',
-           'phpDoc' => 
-          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
-             'phpDocString' => '/**
-     * Clear all cache entries for this repository.
-     */',
-             'namespace' => 'App\\Infrastructure\\Repository',
-             'uses' => 
-            array (
-              'paginationquery' => 'App\\Application\\Query\\PaginationQuery',
-              'event' => 'App\\Domain\\Entity\\Event',
-              'eventrepositoryinterface' => 'App\\Domain\\Repository\\EventRepositoryInterface',
-              'eventid' => 'App\\Domain\\ValueObject\\EventId',
-              'cacheinterface' => 'App\\Infrastructure\\Cache\\CacheInterface',
-            ),
-             'constUses' => 
-            array (
-            ),
-          )),
+           'name' => 'invalidateSearchCache',
+           'phpDoc' => NULL,
            'byRef' => false,
            'public' => true,
            'private' => false,
            'abstract' => false,
            'final' => false,
            'static' => false,
-           'returnType' => 'bool',
+           'returnType' => 'void',
            'parameters' => 
           array (
           ),
@@ -8472,6 +17543,24 @@ return [
           ),
         )),
         9 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'invalidateAllCache',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        10 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'getCacheStats',
            'phpDoc' => 
@@ -8483,9 +17572,11 @@ return [
              'uses' => 
             array (
               'paginationquery' => 'App\\Application\\Query\\PaginationQuery',
+              'searchquery' => 'App\\Application\\Query\\SearchQuery',
               'event' => 'App\\Domain\\Entity\\Event',
               'eventrepositoryinterface' => 'App\\Domain\\Repository\\EventRepositoryInterface',
               'eventid' => 'App\\Domain\\ValueObject\\EventId',
+              'cacheanalytics' => 'App\\Infrastructure\\Cache\\CacheAnalytics',
               'cacheinterface' => 'App\\Infrastructure\\Cache\\CacheInterface',
             ),
              'constUses' => 
@@ -8506,13 +17597,68 @@ return [
           array (
           ),
         )),
+        11 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getCacheAnalytics',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @return array<string, mixed>
+     */',
+             'namespace' => 'App\\Infrastructure\\Repository',
+             'uses' => 
+            array (
+              'paginationquery' => 'App\\Application\\Query\\PaginationQuery',
+              'searchquery' => 'App\\Application\\Query\\SearchQuery',
+              'event' => 'App\\Domain\\Entity\\Event',
+              'eventrepositoryinterface' => 'App\\Domain\\Repository\\EventRepositoryInterface',
+              'eventid' => 'App\\Domain\\ValueObject\\EventId',
+              'cacheanalytics' => 'App\\Infrastructure\\Cache\\CacheAnalytics',
+              'cacheinterface' => 'App\\Infrastructure\\Cache\\CacheInterface',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'array',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        12 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'warmUpCache',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
       ),
        'attributes' => 
       array (
       ),
     )),
   ),
-  '/var/www/src/Infrastructure/Repository/CsvEventRepository.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Repository/CsvEventRepository.php' => 
   array (
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
@@ -8640,6 +17786,64 @@ return [
         )),
         4 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'search',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'array',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'query',
+               'type' => 'App\\Application\\Query\\SearchQuery',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        5 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'countSearch',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'int',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'query',
+               'type' => 'App\\Application\\Query\\SearchQuery',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        6 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'count',
            'phpDoc' => NULL,
            'byRef' => false,
@@ -8656,89 +17860,13 @@ return [
           array (
           ),
         )),
-        5 => 
-        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'save',
-           'phpDoc' => NULL,
-           'byRef' => false,
-           'public' => true,
-           'private' => false,
-           'abstract' => false,
-           'final' => false,
-           'static' => false,
-           'returnType' => 'App\\Domain\\Entity\\Event',
-           'parameters' => 
-          array (
-            0 => 
-            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
-               'name' => 'event',
-               'type' => 'App\\Domain\\Entity\\Event',
-               'byRef' => false,
-               'variadic' => false,
-               'hasDefault' => false,
-               'attributes' => 
-              array (
-              ),
-            )),
-          ),
-           'attributes' => 
-          array (
-          ),
-        )),
-        6 => 
-        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'delete',
-           'phpDoc' => NULL,
-           'byRef' => false,
-           'public' => true,
-           'private' => false,
-           'abstract' => false,
-           'final' => false,
-           'static' => false,
-           'returnType' => 'bool',
-           'parameters' => 
-          array (
-            0 => 
-            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
-               'name' => 'id',
-               'type' => 'App\\Domain\\ValueObject\\EventId',
-               'byRef' => false,
-               'variadic' => false,
-               'hasDefault' => false,
-               'attributes' => 
-              array (
-              ),
-            )),
-          ),
-           'attributes' => 
-          array (
-          ),
-        )),
-        7 => 
-        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'nextId',
-           'phpDoc' => NULL,
-           'byRef' => false,
-           'public' => true,
-           'private' => false,
-           'abstract' => false,
-           'final' => false,
-           'static' => false,
-           'returnType' => 'App\\Domain\\ValueObject\\EventId',
-           'parameters' => 
-          array (
-          ),
-           'attributes' => 
-          array (
-          ),
-        )),
       ),
        'attributes' => 
       array (
       ),
     )),
   ),
-  '/var/www/src/Infrastructure/Repository/DatabaseEventRepository.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Repository/DatabaseEventRepository.php' => 
   array (
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
@@ -8776,6 +17904,17 @@ return [
             \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
                'name' => 'connection',
                'type' => 'PDO',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'logger',
+               'type' => 'App\\Infrastructure\\Logging\\LoggerInterface',
                'byRef' => false,
                'variadic' => false,
                'hasDefault' => false,
@@ -8866,6 +18005,64 @@ return [
         )),
         4 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'search',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'array',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'query',
+               'type' => 'App\\Application\\Query\\SearchQuery',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        5 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'countSearch',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'int',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'query',
+               'type' => 'App\\Application\\Query\\SearchQuery',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        6 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'count',
            'phpDoc' => NULL,
            'byRef' => false,
@@ -8882,9 +18079,36 @@ return [
           array (
           ),
         )),
-        5 => 
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Response/CsvResponseFormatter.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Infrastructure\\Response\\CsvResponseFormatter',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => false,
+       'extends' => NULL,
+       'implements' => 
+      array (
+        0 => 'App\\Infrastructure\\Response\\ResponseFormatterInterface',
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'save',
+           'name' => 'formatSuccess',
            'phpDoc' => NULL,
            'byRef' => false,
            'public' => true,
@@ -8892,16 +18116,27 @@ return [
            'abstract' => false,
            'final' => false,
            'static' => false,
-           'returnType' => 'App\\Domain\\Entity\\Event',
+           'returnType' => 'string',
            'parameters' => 
           array (
             0 => 
             \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
-               'name' => 'event',
-               'type' => 'App\\Domain\\Entity\\Event',
+               'name' => 'data',
+               'type' => 'array',
                'byRef' => false,
                'variadic' => false,
                'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'status',
+               'type' => 'App\\Presentation\\Response\\HttpStatus',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
                'attributes' => 
               array (
               ),
@@ -8911,9 +18146,9 @@ return [
           array (
           ),
         )),
-        6 => 
+        1 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'delete',
+           'name' => 'formatError',
            'phpDoc' => NULL,
            'byRef' => false,
            'public' => true,
@@ -8921,16 +18156,38 @@ return [
            'abstract' => false,
            'final' => false,
            'static' => false,
-           'returnType' => 'bool',
+           'returnType' => 'string',
            'parameters' => 
           array (
             0 => 
             \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
-               'name' => 'id',
-               'type' => 'App\\Domain\\ValueObject\\EventId',
+               'name' => 'message',
+               'type' => 'string',
                'byRef' => false,
                'variadic' => false,
                'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'status',
+               'type' => 'App\\Presentation\\Response\\HttpStatus',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+            2 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'details',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
                'attributes' => 
               array (
               ),
@@ -8940,9 +18197,9 @@ return [
           array (
           ),
         )),
-        7 => 
+        2 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'nextId',
+           'name' => 'getContentType',
            'phpDoc' => NULL,
            'byRef' => false,
            'public' => true,
@@ -8950,7 +18207,25 @@ return [
            'abstract' => false,
            'final' => false,
            'static' => false,
-           'returnType' => 'App\\Domain\\ValueObject\\EventId',
+           'returnType' => 'string',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        3 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getHeaders',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'array',
            'parameters' => 
           array (
           ),
@@ -8964,7 +18239,1694 @@ return [
       ),
     )),
   ),
-  '/var/www/src/Presentation/Controller/EventController.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Response/HtmlResponseFormatter.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Infrastructure\\Response\\HtmlResponseFormatter',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => false,
+       'extends' => NULL,
+       'implements' => 
+      array (
+        0 => 'App\\Infrastructure\\Response\\ResponseFormatterInterface',
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'formatSuccess',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'string',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'data',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'status',
+               'type' => 'App\\Presentation\\Response\\HttpStatus',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'formatError',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'string',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'message',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'status',
+               'type' => 'App\\Presentation\\Response\\HttpStatus',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+            2 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'details',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        2 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getContentType',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'string',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        3 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getHeaders',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'array',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Response/JsonResponseFormatter.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Infrastructure\\Response\\JsonResponseFormatter',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => false,
+       'extends' => NULL,
+       'implements' => 
+      array (
+        0 => 'App\\Infrastructure\\Response\\ResponseFormatterInterface',
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'formatSuccess',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'string',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'data',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'status',
+               'type' => 'App\\Presentation\\Response\\HttpStatus',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'formatError',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'string',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'message',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'status',
+               'type' => 'App\\Presentation\\Response\\HttpStatus',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+            2 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'details',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        2 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getContentType',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'string',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        3 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getHeaders',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'array',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Response/ResponseFormatStrategy.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedEnumNode::__set_state(array(
+       'name' => 'App\\Infrastructure\\Response\\ResponseFormatStrategy',
+       'scalarType' => 'string',
+       'phpDoc' => NULL,
+       'implements' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'fromString',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => true,
+           'returnType' => 'self',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'value',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'fromAcceptHeader',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => true,
+           'returnType' => 'self',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'acceptHeader',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        2 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getDisplayName',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'string',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        3 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getFileExtension',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'string',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        4 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'createFormatter',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'App\\Infrastructure\\Response\\ResponseFormatterInterface',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        5 => 
+        \PHPStan\Dependency\ExportedNode\ExportedEnumCaseNode::__set_state(array(
+           'name' => 'JSON',
+           'value' => '\'json\'',
+           'phpDoc' => NULL,
+        )),
+        6 => 
+        \PHPStan\Dependency\ExportedNode\ExportedEnumCaseNode::__set_state(array(
+           'name' => 'XML',
+           'value' => '\'xml\'',
+           'phpDoc' => NULL,
+        )),
+        7 => 
+        \PHPStan\Dependency\ExportedNode\ExportedEnumCaseNode::__set_state(array(
+           'name' => 'CSV',
+           'value' => '\'csv\'',
+           'phpDoc' => NULL,
+        )),
+        8 => 
+        \PHPStan\Dependency\ExportedNode\ExportedEnumCaseNode::__set_state(array(
+           'name' => 'HTML',
+           'value' => '\'html\'',
+           'phpDoc' => NULL,
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Response/ResponseFormatterInterface.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedInterfaceNode::__set_state(array(
+       'name' => 'App\\Infrastructure\\Response\\ResponseFormatterInterface',
+       'phpDoc' => NULL,
+       'extends' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'formatSuccess',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Format successful response.
+     *
+     * @param array<string, mixed> $data
+     * @param HttpStatus           $status
+     *
+     * @return string
+     */',
+             'namespace' => 'App\\Infrastructure\\Response',
+             'uses' => 
+            array (
+              'httpstatus' => 'App\\Presentation\\Response\\HttpStatus',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'string',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'data',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'status',
+               'type' => 'App\\Presentation\\Response\\HttpStatus',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'formatError',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Format error response.
+     *
+     * @param string               $message
+     * @param HttpStatus           $status
+     * @param array<string, mixed> $details
+     *
+     * @return string
+     */',
+             'namespace' => 'App\\Infrastructure\\Response',
+             'uses' => 
+            array (
+              'httpstatus' => 'App\\Presentation\\Response\\HttpStatus',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'string',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'message',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'status',
+               'type' => 'App\\Presentation\\Response\\HttpStatus',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+            2 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'details',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        2 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getContentType',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Get content type for this format.
+     *
+     * @return string
+     */',
+             'namespace' => 'App\\Infrastructure\\Response',
+             'uses' => 
+            array (
+              'httpstatus' => 'App\\Presentation\\Response\\HttpStatus',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'string',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        3 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getHeaders',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Get additional HTTP headers for this format.
+     *
+     * @return array<string, string>
+     */',
+             'namespace' => 'App\\Infrastructure\\Response',
+             'uses' => 
+            array (
+              'httpstatus' => 'App\\Presentation\\Response\\HttpStatus',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'array',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+    )),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Response/ResponseManager.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Infrastructure\\Response\\ResponseManager',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => false,
+       'extends' => NULL,
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => '__construct',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => NULL,
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'strategy',
+               'type' => '?App\\Infrastructure\\Response\\ResponseFormatStrategy',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'sendSuccess',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Send successful response.
+     *
+     * @param array<string, mixed> $data
+     * @param HttpStatus           $status
+     */',
+             'namespace' => 'App\\Infrastructure\\Response',
+             'uses' => 
+            array (
+              'httpstatus' => 'App\\Presentation\\Response\\HttpStatus',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'data',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'status',
+               'type' => 'App\\Presentation\\Response\\HttpStatus',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        2 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'sendError',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Send error response.
+     *
+     * @param string               $message
+     * @param HttpStatus           $status
+     * @param array<string, mixed> $details
+     */',
+             'namespace' => 'App\\Infrastructure\\Response',
+             'uses' => 
+            array (
+              'httpstatus' => 'App\\Presentation\\Response\\HttpStatus',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'message',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'status',
+               'type' => 'App\\Presentation\\Response\\HttpStatus',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+            2 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'details',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        3 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'sendNotFound',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Send 404 Not Found response.
+     */',
+             'namespace' => 'App\\Infrastructure\\Response',
+             'uses' => 
+            array (
+              'httpstatus' => 'App\\Presentation\\Response\\HttpStatus',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'message',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        4 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getStrategy',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Get the current format strategy.
+     */',
+             'namespace' => 'App\\Infrastructure\\Response',
+             'uses' => 
+            array (
+              'httpstatus' => 'App\\Presentation\\Response\\HttpStatus',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'App\\Infrastructure\\Response\\ResponseFormatStrategy',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        5 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getFormatter',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Get the current formatter.
+     */',
+             'namespace' => 'App\\Infrastructure\\Response',
+             'uses' => 
+            array (
+              'httpstatus' => 'App\\Presentation\\Response\\HttpStatus',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'App\\Infrastructure\\Response\\ResponseFormatterInterface',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        6 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'createFromRequest',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Create ResponseManager from environment/request.
+     */',
+             'namespace' => 'App\\Infrastructure\\Response',
+             'uses' => 
+            array (
+              'httpstatus' => 'App\\Presentation\\Response\\HttpStatus',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => true,
+           'returnType' => 'self',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        7 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'createWithFormat',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Create ResponseManager with specific format.
+     */',
+             'namespace' => 'App\\Infrastructure\\Response',
+             'uses' => 
+            array (
+              'httpstatus' => 'App\\Presentation\\Response\\HttpStatus',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => true,
+           'returnType' => 'self',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'strategy',
+               'type' => 'App\\Infrastructure\\Response\\ResponseFormatStrategy',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Response/XmlResponseFormatter.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Infrastructure\\Response\\XmlResponseFormatter',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => false,
+       'extends' => NULL,
+       'implements' => 
+      array (
+        0 => 'App\\Infrastructure\\Response\\ResponseFormatterInterface',
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'formatSuccess',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'string',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'data',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'status',
+               'type' => 'App\\Presentation\\Response\\HttpStatus',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'formatError',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'string',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'message',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'status',
+               'type' => 'App\\Presentation\\Response\\HttpStatus',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+            2 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'details',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        2 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getContentType',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'string',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        3 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getHeaders',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'array',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Validation/EventIdValidator.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Infrastructure\\Validation\\EventIdValidator',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => false,
+       'extends' => NULL,
+       'implements' => 
+      array (
+        0 => 'App\\Infrastructure\\Validation\\ValidatorInterface',
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'validate',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'App\\Infrastructure\\Validation\\ValidationResult',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'value',
+               'type' => 'mixed',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'rules',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Validation/PaginationValidator.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Infrastructure\\Validation\\PaginationValidator',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => false,
+       'extends' => NULL,
+       'implements' => 
+      array (
+        0 => 'App\\Infrastructure\\Validation\\ValidatorInterface',
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'validate',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'App\\Infrastructure\\Validation\\ValidationResult',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'value',
+               'type' => 'mixed',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'rules',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Validation/ValidatorBag.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Infrastructure\\Validation\\ValidatorBag',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => false,
+       'extends' => NULL,
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => '__construct',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => NULL,
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'eventIdValidator',
+               'type' => 'App\\Infrastructure\\Validation\\EventIdValidator',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'paginationValidator',
+               'type' => 'App\\Infrastructure\\Validation\\PaginationValidator',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'eventId',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'App\\Infrastructure\\Validation\\EventIdValidator',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        2 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'pagination',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'App\\Infrastructure\\Validation\\PaginationValidator',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Infrastructure/Validation/ValidatorInterface.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedInterfaceNode::__set_state(array(
+       'name' => 'App\\Infrastructure\\Validation\\ValidatorInterface',
+       'phpDoc' => NULL,
+       'extends' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'validate',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Validate input data.
+     *
+     * @param mixed                $value
+     * @param array<string, mixed> $rules
+     *
+     * @return ValidationResult
+     */',
+             'namespace' => 'App\\Infrastructure\\Validation',
+             'uses' => 
+            array (
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'App\\Infrastructure\\Validation\\ValidationResult',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'value',
+               'type' => 'mixed',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'rules',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+    )),
+    1 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Infrastructure\\Validation\\ValidationResult',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => true,
+       'extends' => NULL,
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => '__construct',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string> $errors
+     */',
+             'namespace' => 'App\\Infrastructure\\Validation',
+             'uses' => 
+            array (
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => NULL,
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'isValid',
+               'type' => 'bool',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'errors',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'isValid',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'bool',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        2 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getErrors',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @return array<string>
+     */',
+             'namespace' => 'App\\Infrastructure\\Validation',
+             'uses' => 
+            array (
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'array',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        3 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getFirstError',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => '?string',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        4 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'success',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => true,
+           'returnType' => 'self',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        5 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'failure',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string> $errors
+     */',
+             'namespace' => 'App\\Infrastructure\\Validation',
+             'uses' => 
+            array (
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => true,
+           'returnType' => 'self',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'errors',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Presentation/Controller/EventController.php' => 
   array (
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
@@ -8999,8 +19961,8 @@ return [
           array (
             0 => 
             \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
-               'name' => 'getAllEventsUseCase',
-               'type' => 'App\\Application\\UseCase\\GetAllEventsUseCaseInterface',
+               'name' => 'eventService',
+               'type' => 'App\\Application\\Service\\EventServiceInterface',
                'byRef' => false,
                'variadic' => false,
                'hasDefault' => false,
@@ -9010,8 +19972,8 @@ return [
             )),
             1 => 
             \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
-               'name' => 'getEventByIdUseCase',
-               'type' => 'App\\Application\\UseCase\\GetEventByIdUseCaseInterface',
+               'name' => 'searchService',
+               'type' => 'App\\Application\\Service\\SearchServiceInterface',
                'byRef' => false,
                'variadic' => false,
                'hasDefault' => false,
@@ -9021,8 +19983,8 @@ return [
             )),
             2 => 
             \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
-               'name' => 'getPaginatedEventsUseCase',
-               'type' => 'App\\Application\\UseCase\\GetPaginatedEventsUseCaseInterface',
+               'name' => 'eventRepository',
+               'type' => 'App\\Domain\\Repository\\EventRepositoryInterface',
                'byRef' => false,
                'variadic' => false,
                'hasDefault' => false,
@@ -9032,8 +19994,41 @@ return [
             )),
             3 => 
             \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
-               'name' => 'eventRepository',
-               'type' => 'App\\Domain\\Repository\\EventRepositoryInterface',
+               'name' => 'validators',
+               'type' => 'App\\Infrastructure\\Validation\\ValidatorBag',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            4 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'responseManager',
+               'type' => 'App\\Infrastructure\\Response\\ResponseManager',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            5 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'logger',
+               'type' => 'App\\Infrastructure\\Logging\\LoggerInterface',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            6 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'cacheManager',
+               'type' => 'App\\Infrastructure\\Cache\\CacheManager',
                'byRef' => false,
                'variadic' => false,
                'hasDefault' => false,
@@ -9066,24 +20061,6 @@ return [
         )),
         2 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'paginated',
-           'phpDoc' => NULL,
-           'byRef' => false,
-           'public' => true,
-           'private' => false,
-           'abstract' => false,
-           'final' => false,
-           'static' => false,
-           'returnType' => 'void',
-           'parameters' => 
-          array (
-          ),
-           'attributes' => 
-          array (
-          ),
-        )),
-        3 => 
-        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'show',
            'phpDoc' => 
           \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
@@ -9093,18 +20070,17 @@ return [
              'namespace' => 'App\\Presentation\\Controller',
              'uses' => 
             array (
-              'getalleventsquery' => 'App\\Application\\Query\\GetAllEventsQuery',
-              'geteventbyidquery' => 'App\\Application\\Query\\GetEventByIdQuery',
-              'getpaginatedeventsquery' => 'App\\Application\\Query\\GetPaginatedEventsQuery',
               'paginationquery' => 'App\\Application\\Query\\PaginationQuery',
-              'getalleventsusecaseinterface' => 'App\\Application\\UseCase\\GetAllEventsUseCaseInterface',
-              'geteventbyidusecaseinterface' => 'App\\Application\\UseCase\\GetEventByIdUseCaseInterface',
-              'getpaginatedeventsusecaseinterface' => 'App\\Application\\UseCase\\GetPaginatedEventsUseCaseInterface',
+              'searchquery' => 'App\\Application\\Query\\SearchQuery',
+              'eventserviceinterface' => 'App\\Application\\Service\\EventServiceInterface',
+              'searchserviceinterface' => 'App\\Application\\Service\\SearchServiceInterface',
               'eventrepositoryinterface' => 'App\\Domain\\Repository\\EventRepositoryInterface',
               'cacheaction' => 'App\\Infrastructure\\Cache\\CacheAction',
+              'cachemanager' => 'App\\Infrastructure\\Cache\\CacheManager',
+              'loggerinterface' => 'App\\Infrastructure\\Logging\\LoggerInterface',
               'cachedeventrepository' => 'App\\Infrastructure\\Repository\\CachedEventRepository',
+              'responsemanager' => 'App\\Infrastructure\\Response\\ResponseManager',
               'httpstatus' => 'App\\Presentation\\Response\\HttpStatus',
-              'jsonresponse' => 'App\\Presentation\\Response\\JsonResponse',
               'invalidargumentexception' => 'InvalidArgumentException',
             ),
              'constUses' => 
@@ -9136,7 +20112,7 @@ return [
           array (
           ),
         )),
-        4 => 
+        3 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'debug',
            'phpDoc' => NULL,
@@ -9154,9 +20130,188 @@ return [
           array (
           ),
         )),
-        5 => 
+        4 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'cache',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        5 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'cacheAnalytics',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        6 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'cacheWarmUp',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        7 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'invalidateCache',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        8 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'invalidateEventCache',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @param array<string, string> $parameters
+     */',
+             'namespace' => 'App\\Presentation\\Controller',
+             'uses' => 
+            array (
+              'paginationquery' => 'App\\Application\\Query\\PaginationQuery',
+              'searchquery' => 'App\\Application\\Query\\SearchQuery',
+              'eventserviceinterface' => 'App\\Application\\Service\\EventServiceInterface',
+              'searchserviceinterface' => 'App\\Application\\Service\\SearchServiceInterface',
+              'eventrepositoryinterface' => 'App\\Domain\\Repository\\EventRepositoryInterface',
+              'cacheaction' => 'App\\Infrastructure\\Cache\\CacheAction',
+              'cachemanager' => 'App\\Infrastructure\\Cache\\CacheManager',
+              'loggerinterface' => 'App\\Infrastructure\\Logging\\LoggerInterface',
+              'cachedeventrepository' => 'App\\Infrastructure\\Repository\\CachedEventRepository',
+              'responsemanager' => 'App\\Infrastructure\\Response\\ResponseManager',
+              'httpstatus' => 'App\\Presentation\\Response\\HttpStatus',
+              'invalidargumentexception' => 'InvalidArgumentException',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'parameters',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        9 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'invalidateSearchCache',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        10 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'search',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        11 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'nearby',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        12 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'suggestions',
            'phpDoc' => NULL,
            'byRef' => false,
            'public' => true,
@@ -9178,7 +20333,7 @@ return [
       ),
     )),
   ),
-  '/var/www/src/Presentation/Response/HttpStatus.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Presentation/Response/HttpStatus.php' => 
   array (
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedEnumNode::__set_state(array(
@@ -9358,7 +20513,7 @@ return [
       ),
     )),
   ),
-  '/var/www/src/Presentation/Response/JsonResponse.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Presentation/Response/JsonResponse.php' => 
   array (
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
@@ -9610,7 +20765,7 @@ return [
       ),
     )),
   ),
-  '/var/www/src/Router/HttpMethod.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Router/HttpMethod.php' => 
   array (
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedEnumNode::__set_state(array(
@@ -9735,7 +20890,7 @@ return [
       ),
     )),
   ),
-  '/var/www/src/Router/Route.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Router/Route.php' => 
   array (
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
@@ -10005,7 +21160,62 @@ return [
       ),
     )),
   ),
-  '/var/www/src/Router/Router.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Router/RouteProvider.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Router\\RouteProvider',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => false,
+       'extends' => NULL,
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'registerRoutes',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => true,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'router',
+               'type' => 'App\\Router\\Router',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Router/Router.php' => 
   array (
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
@@ -10169,6 +21379,57 @@ return [
         )),
         3 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'post',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'path',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'controller',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            2 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'action',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        4 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'resolve',
            'phpDoc' => NULL,
            'byRef' => false,
@@ -10207,7 +21468,7 @@ return [
           array (
           ),
         )),
-        4 => 
+        5 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'dispatch',
            'phpDoc' => NULL,
@@ -10253,7 +21514,7 @@ return [
       ),
     )),
   ),
-  '/var/www/src/Service/Container.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Container.php' => 
   array (
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
@@ -10274,6 +21535,24 @@ return [
        'statements' => 
       array (
         0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => '__construct',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => NULL,
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        1 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'bind',
            'phpDoc' => NULL,
@@ -10313,7 +21592,47 @@ return [
           array (
           ),
         )),
-        1 => 
+        2 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'singleton',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'abstract',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'concrete',
+               'type' => 'callable',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        3 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'get',
            'phpDoc' => NULL,
@@ -10342,7 +21661,7 @@ return [
           array (
           ),
         )),
-        2 => 
+        4 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'configure',
            'phpDoc' => NULL,
@@ -10366,7 +21685,1244 @@ return [
       ),
     )),
   ),
-  '/var/www/tests/Unit/Application/DTO/PaginatedResponseTest.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Providers/ApplicationServiceProvider.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Service\\Providers\\ApplicationServiceProvider',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => false,
+       'extends' => NULL,
+       'implements' => 
+      array (
+        0 => 'App\\Service\\ServiceProvider',
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'register',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'container',
+               'type' => 'App\\Service\\Container',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Providers/InfrastructureServiceProvider.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Service\\Providers\\InfrastructureServiceProvider',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => false,
+       'extends' => NULL,
+       'implements' => 
+      array (
+        0 => 'App\\Service\\ServiceProvider',
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'register',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'container',
+               'type' => 'App\\Service\\Container',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/Providers/PresentationServiceProvider.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Service\\Providers\\PresentationServiceProvider',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => false,
+       'extends' => NULL,
+       'implements' => 
+      array (
+        0 => 'App\\Service\\ServiceProvider',
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'register',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'container',
+               'type' => 'App\\Service\\Container',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/src/Service/ServiceProvider.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedInterfaceNode::__set_state(array(
+       'name' => 'App\\Service\\ServiceProvider',
+       'phpDoc' => NULL,
+       'extends' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'register',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'container',
+               'type' => 'App\\Service\\Container',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+    )),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Integration/EndpointTest.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'Tests\\Integration\\EndpointTest',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => false,
+       'extends' => 'PHPUnit\\Framework\\TestCase',
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testEventsEndpointWithValidParameters',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Test /events endpoint with various pagination parameters.
+     */',
+             'namespace' => 'Tests\\Integration',
+             'uses' => 
+            array (
+              'bootstrap' => 'App\\Application\\Bootstrap',
+              'testcase' => 'PHPUnit\\Framework\\TestCase',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testEventsEndpointWithDefaultParameters',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        2 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testEventsEndpointWithInvalidPage',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        3 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testEventsEndpointWithInvalidPageSize',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        4 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testEventsEndpointWithInvalidSortDirection',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        5 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testShowEventWithValidId',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Test /events/{id} endpoint.
+     */',
+             'namespace' => 'Tests\\Integration',
+             'uses' => 
+            array (
+              'bootstrap' => 'App\\Application\\Bootstrap',
+              'testcase' => 'PHPUnit\\Framework\\TestCase',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        6 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testShowEventWithInvalidId',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        7 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testShowEventWithNonExistentId',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        8 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testShowEventWithoutId',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        9 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testSearchEndpointWithTextSearch',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Test /search endpoint with various search parameters.
+     */',
+             'namespace' => 'Tests\\Integration',
+             'uses' => 
+            array (
+              'bootstrap' => 'App\\Application\\Bootstrap',
+              'testcase' => 'PHPUnit\\Framework\\TestCase',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        10 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testSearchEndpointWithLocationFilter',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        11 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testSearchEndpointWithGeographicSearch',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        12 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testSearchEndpointWithDateFilter',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        13 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testSearchEndpointWithAllFilters',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        14 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testSearchEndpointWithInvalidPage',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        15 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testSearchEndpointWithInvalidCoordinates',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        16 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testSearchEndpointWithInvalidDateRange',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        17 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testNearbyEndpointWithValidCoordinates',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Test /search/nearby endpoint.
+     */',
+             'namespace' => 'Tests\\Integration',
+             'uses' => 
+            array (
+              'bootstrap' => 'App\\Application\\Bootstrap',
+              'testcase' => 'PHPUnit\\Framework\\TestCase',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        18 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testNearbyEndpointWithDefaultParameters',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        19 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testNearbyEndpointWithoutLatitude',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        20 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testNearbyEndpointWithoutLongitude',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        21 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testNearbyEndpointWithInvalidCoordinates',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        22 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testNearbyEndpointWithInvalidRadius',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        23 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testSuggestionsEndpointWithQuery',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Test /search/suggestions endpoint.
+     */',
+             'namespace' => 'Tests\\Integration',
+             'uses' => 
+            array (
+              'bootstrap' => 'App\\Application\\Bootstrap',
+              'testcase' => 'PHPUnit\\Framework\\TestCase',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        24 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testSuggestionsEndpointWithoutQuery',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        25 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testSuggestionsEndpointWithDefaultLimit',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        26 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testSuggestionsEndpointWithCustomLimit',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        27 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testDebugEndpoint',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Test /debug endpoint.
+     */',
+             'namespace' => 'Tests\\Integration',
+             'uses' => 
+            array (
+              'bootstrap' => 'App\\Application\\Bootstrap',
+              'testcase' => 'PHPUnit\\Framework\\TestCase',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        28 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testCacheEndpointWithStatsAction',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Test /cache endpoint with various actions.
+     */',
+             'namespace' => 'Tests\\Integration',
+             'uses' => 
+            array (
+              'bootstrap' => 'App\\Application\\Bootstrap',
+              'testcase' => 'PHPUnit\\Framework\\TestCase',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        29 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testCacheEndpointWithClearAction',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        30 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testCacheEndpointWithDefaultAction',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        31 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testCacheEndpointWithInvalidAction',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        32 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testCacheAnalyticsEndpoint',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Test /cache/analytics endpoint.
+     */',
+             'namespace' => 'Tests\\Integration',
+             'uses' => 
+            array (
+              'bootstrap' => 'App\\Application\\Bootstrap',
+              'testcase' => 'PHPUnit\\Framework\\TestCase',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        33 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testCacheWarmUpEndpoint',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Test POST endpoints.
+     */',
+             'namespace' => 'Tests\\Integration',
+             'uses' => 
+            array (
+              'bootstrap' => 'App\\Application\\Bootstrap',
+              'testcase' => 'PHPUnit\\Framework\\TestCase',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        34 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testInvalidateCacheEndpoint',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        35 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testInvalidateEventCacheEndpointWithValidId',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        36 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testInvalidateEventCacheEndpointWithoutId',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        37 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testInvalidateSearchCacheEndpoint',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        38 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testNonExistentEndpoint',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Test error handling for non-existent endpoints.
+     */',
+             'namespace' => 'Tests\\Integration',
+             'uses' => 
+            array (
+              'bootstrap' => 'App\\Application\\Bootstrap',
+              'testcase' => 'PHPUnit\\Framework\\TestCase',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        39 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testNonExistentMethod',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        40 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testEventsEndpointWithMaximumPageSize',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Test edge cases and boundary conditions.
+     */',
+             'namespace' => 'Tests\\Integration',
+             'uses' => 
+            array (
+              'bootstrap' => 'App\\Application\\Bootstrap',
+              'testcase' => 'PHPUnit\\Framework\\TestCase',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        41 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testEventsEndpointWithLargePageNumber',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        42 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testSearchEndpointWithEmptySearchTerm',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        43 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testSearchEndpointWithSpecialCharacters',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        44 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testNearbyEndpointWithBoundaryCoordinates',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        45 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'setUp',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => false,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        46 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'tearDown',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => false,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/DTO/PaginatedResponseTest.php' => 
   array (
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
@@ -10770,7 +23326,7 @@ return [
       ),
     )),
   ),
-  '/var/www/tests/Unit/Application/Query/PaginationQueryTest.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/Query/PaginationQueryTest.php' => 
   array (
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
@@ -11030,11 +23586,11 @@ return [
       ),
     )),
   ),
-  '/var/www/tests/Unit/Application/UseCase/CreateEventUseCaseTest.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/Service/EventServiceTest.php' => 
   array (
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
-       'name' => 'Tests\\Unit\\Application\\UseCase\\CreateEventUseCaseTest',
+       'name' => 'Tests\\Unit\\Application\\Service\\EventServiceTest',
        'phpDoc' => NULL,
        'abstract' => false,
        'final' => false,
@@ -11052,7 +23608,7 @@ return [
       array (
         0 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'testExecuteCreatesEventAndReturnsDto',
+           'name' => 'testGetAllEventsReturnsPaginatedResponse',
            'phpDoc' => NULL,
            'byRef' => false,
            'public' => true,
@@ -11070,7 +23626,7 @@ return [
         )),
         1 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'testExecuteCallsRepositorySaveOnce',
+           'name' => 'testGetEventByIdReturnsEventDto',
            'phpDoc' => NULL,
            'byRef' => false,
            'public' => true,
@@ -11088,7 +23644,7 @@ return [
         )),
         2 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'testExecuteCreatesEventWithCorrectValueObjects',
+           'name' => 'testGetEventByIdReturnsNullWhenNotFound',
            'phpDoc' => NULL,
            'byRef' => false,
            'public' => true,
@@ -11106,7 +23662,7 @@ return [
         )),
         3 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'testExecuteReturnsCorrectDtoStructure',
+           'name' => 'testGetEventCountReturnsCorrectCount',
            'phpDoc' => NULL,
            'byRef' => false,
            'public' => true,
@@ -11123,6 +23679,114 @@ return [
           ),
         )),
         4 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testEventExistsReturnsTrueWhenEventExists',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        5 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testEventExistsReturnsFalseWhenEventDoesNotExist',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        6 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testEventExistsReturnsFalseForInvalidId',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        7 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testValidatePaginationBusinessRulesThrowsExceptionForLargePageSize',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        8 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testValidateEventIdThrowsExceptionForInvalidId',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        9 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testValidateEventIdThrowsExceptionForTooLargeId',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        10 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'setUp',
            'phpDoc' => NULL,
@@ -11146,7 +23810,141 @@ return [
       ),
     )),
   ),
-  '/var/www/tests/Unit/Application/UseCase/GetAllEventsUseCaseTest.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/Service/SearchServiceTest.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'Tests\\Unit\\Application\\Service\\SearchServiceTest',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => false,
+       'extends' => 'PHPUnit\\Framework\\TestCase',
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testSearchEventsFormattedReturnsCorrectStructure',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testSearchEventsFormattedWithGeographicSearch',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        2 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testSearchEventsFormattedWithDateFilter',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        3 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testSearchEventsFormattedWithNoFilters',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        4 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testSearchEventsFormattedCallsOriginalSearchEventsMethod',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        5 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'setUp',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => false,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/UseCase/GetAllEventsUseCaseTest.php' => 
   array (
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
@@ -11226,7 +24024,7 @@ return [
       ),
     )),
   ),
-  '/var/www/tests/Unit/Application/UseCase/GetEventByIdUseCaseTest.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/UseCase/GetEventByIdUseCaseTest.php' => 
   array (
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
@@ -11324,7 +24122,7 @@ return [
       ),
     )),
   ),
-  '/var/www/tests/Unit/Application/UseCase/GetPaginatedEventsUseCaseTest.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Application/UseCase/GetPaginatedEventsUseCaseTest.php' => 
   array (
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
@@ -11440,7 +24238,7 @@ return [
       ),
     )),
   ),
-  '/var/www/tests/Unit/ContainerTest.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/ContainerTest.php' => 
   array (
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
@@ -11462,7 +24260,7 @@ return [
       array (
         0 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'testPdoInstanceIsSingleton',
+           'name' => 'testContainerCanBeCreated',
            'phpDoc' => NULL,
            'byRef' => false,
            'public' => true,
@@ -11480,7 +24278,7 @@ return [
         )),
         1 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'testEventRepositoryCreation',
+           'name' => 'testContainerCanBindAndRetrieveServices',
            'phpDoc' => NULL,
            'byRef' => false,
            'public' => true,
@@ -11498,7 +24296,7 @@ return [
         )),
         2 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'testEventControllerCreation',
+           'name' => 'testContainerReturnsSameInstanceForSingleton',
            'phpDoc' => NULL,
            'byRef' => false,
            'public' => true,
@@ -11516,7 +24314,7 @@ return [
         )),
         3 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'testContainerInstancesAreCached',
+           'name' => 'testContainerThrowsExceptionForUnboundService',
            'phpDoc' => NULL,
            'byRef' => false,
            'public' => true,
@@ -11556,7 +24354,7 @@ return [
       ),
     )),
   ),
-  '/var/www/tests/Unit/Domain/Entity/EventTest.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Domain/Entity/EventTest.php' => 
   array (
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
@@ -11596,7 +24394,7 @@ return [
         )),
         1 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'testEventWithoutIdRaisesDomainEvent',
+           'name' => 'testEventDistanceTo',
            'phpDoc' => NULL,
            'byRef' => false,
            'public' => true,
@@ -11614,7 +24412,7 @@ return [
         )),
         2 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'testEventUpdateName',
+           'name' => 'testEventEquals',
            'phpDoc' => NULL,
            'byRef' => false,
            'public' => true,
@@ -11632,115 +24430,7 @@ return [
         )),
         3 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'testEventUpdateNameWithSameNameDoesNotRaiseDomainEvent',
-           'phpDoc' => NULL,
-           'byRef' => false,
-           'public' => true,
-           'private' => false,
-           'abstract' => false,
-           'final' => false,
-           'static' => false,
-           'returnType' => 'void',
-           'parameters' => 
-          array (
-          ),
-           'attributes' => 
-          array (
-          ),
-        )),
-        4 => 
-        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'testEventUpdateLocation',
-           'phpDoc' => NULL,
-           'byRef' => false,
-           'public' => true,
-           'private' => false,
-           'abstract' => false,
-           'final' => false,
-           'static' => false,
-           'returnType' => 'void',
-           'parameters' => 
-          array (
-          ),
-           'attributes' => 
-          array (
-          ),
-        )),
-        5 => 
-        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'testEventUpdateCoordinates',
-           'phpDoc' => NULL,
-           'byRef' => false,
-           'public' => true,
-           'private' => false,
-           'abstract' => false,
-           'final' => false,
-           'static' => false,
-           'returnType' => 'void',
-           'parameters' => 
-          array (
-          ),
-           'attributes' => 
-          array (
-          ),
-        )),
-        6 => 
-        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'testEventDistanceTo',
-           'phpDoc' => NULL,
-           'byRef' => false,
-           'public' => true,
-           'private' => false,
-           'abstract' => false,
-           'final' => false,
-           'static' => false,
-           'returnType' => 'void',
-           'parameters' => 
-          array (
-          ),
-           'attributes' => 
-          array (
-          ),
-        )),
-        7 => 
-        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'testEventEquals',
-           'phpDoc' => NULL,
-           'byRef' => false,
-           'public' => true,
-           'private' => false,
-           'abstract' => false,
-           'final' => false,
-           'static' => false,
-           'returnType' => 'void',
-           'parameters' => 
-          array (
-          ),
-           'attributes' => 
-          array (
-          ),
-        )),
-        8 => 
-        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'testEventToArray',
-           'phpDoc' => NULL,
-           'byRef' => false,
-           'public' => true,
-           'private' => false,
-           'abstract' => false,
-           'final' => false,
-           'static' => false,
-           'returnType' => 'void',
-           'parameters' => 
-          array (
-          ),
-           'attributes' => 
-          array (
-          ),
-        )),
-        9 => 
-        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'testClearDomainEvents',
            'phpDoc' => NULL,
            'byRef' => false,
            'public' => true,
@@ -11762,7 +24452,7 @@ return [
       ),
     )),
   ),
-  '/var/www/tests/Unit/Domain/Service/EventDomainServiceTest.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Domain/Service/EventDomainServiceTest.php' => 
   array (
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
@@ -12004,7 +24694,7 @@ return [
       ),
     )),
   ),
-  '/var/www/tests/Unit/Domain/ValueObject/CoordinatesTest.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Domain/ValueObject/CoordinatesTest.php' => 
   array (
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
@@ -12246,7 +24936,7 @@ return [
       ),
     )),
   ),
-  '/var/www/tests/Unit/InMemoryCacheTest.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/InMemoryCacheTest.php' => 
   array (
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
@@ -12452,7 +25142,7 @@ return [
       ),
     )),
   ),
-  '/var/www/tests/Unit/Infrastructure/Repository/CachedEventRepositoryTest.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Infrastructure/Repository/CachedEventRepositoryTest.php' => 
   array (
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
@@ -12600,7 +25290,7 @@ return [
         )),
         7 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'testSaveInvalidatesCacheAndCallsInnerRepository',
+           'name' => 'testCacheKeyGenerationForEvents',
            'phpDoc' => NULL,
            'byRef' => false,
            'public' => true,
@@ -12618,96 +25308,6 @@ return [
         )),
         8 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'testDeleteInvalidatesCacheAndCallsInnerRepository',
-           'phpDoc' => NULL,
-           'byRef' => false,
-           'public' => true,
-           'private' => false,
-           'abstract' => false,
-           'final' => false,
-           'static' => false,
-           'returnType' => 'void',
-           'parameters' => 
-          array (
-          ),
-           'attributes' => 
-          array (
-          ),
-        )),
-        9 => 
-        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'testNextIdCallsInnerRepositoryDirectly',
-           'phpDoc' => NULL,
-           'byRef' => false,
-           'public' => true,
-           'private' => false,
-           'abstract' => false,
-           'final' => false,
-           'static' => false,
-           'returnType' => 'void',
-           'parameters' => 
-          array (
-          ),
-           'attributes' => 
-          array (
-          ),
-        )),
-        10 => 
-        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'testClearCacheInvalidatesAllEventCaches',
-           'phpDoc' => NULL,
-           'byRef' => false,
-           'public' => true,
-           'private' => false,
-           'abstract' => false,
-           'final' => false,
-           'static' => false,
-           'returnType' => 'void',
-           'parameters' => 
-          array (
-          ),
-           'attributes' => 
-          array (
-          ),
-        )),
-        11 => 
-        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'testGetCacheStatsReturnsDefaultWhenNotAvailable',
-           'phpDoc' => NULL,
-           'byRef' => false,
-           'public' => true,
-           'private' => false,
-           'abstract' => false,
-           'final' => false,
-           'static' => false,
-           'returnType' => 'void',
-           'parameters' => 
-          array (
-          ),
-           'attributes' => 
-          array (
-          ),
-        )),
-        12 => 
-        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'testCacheKeyGenerationForEvents',
-           'phpDoc' => NULL,
-           'byRef' => false,
-           'public' => true,
-           'private' => false,
-           'abstract' => false,
-           'final' => false,
-           'static' => false,
-           'returnType' => 'void',
-           'parameters' => 
-          array (
-          ),
-           'attributes' => 
-          array (
-          ),
-        )),
-        13 => 
-        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'testMultipleCacheOperationsInSequence',
            'phpDoc' => NULL,
            'byRef' => false,
@@ -12724,7 +25324,7 @@ return [
           array (
           ),
         )),
-        14 => 
+        9 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'setUp',
            'phpDoc' => NULL,
@@ -12748,7 +25348,7 @@ return [
       ),
     )),
   ),
-  '/var/www/tests/Unit/Infrastructure/Repository/DatabaseEventRepositoryTest.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Infrastructure/Repository/DatabaseEventRepositoryTest.php' => 
   array (
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
@@ -12842,7 +25442,7 @@ return [
         )),
         4 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'testSaveInsertsNewEventWhenNoId',
+           'name' => 'testPrepareIsCalledOncePerQuery',
            'phpDoc' => NULL,
            'byRef' => false,
            'public' => true,
@@ -12860,78 +25460,6 @@ return [
         )),
         5 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'testSaveUpdatesExistingEventWhenHasId',
-           'phpDoc' => NULL,
-           'byRef' => false,
-           'public' => true,
-           'private' => false,
-           'abstract' => false,
-           'final' => false,
-           'static' => false,
-           'returnType' => 'void',
-           'parameters' => 
-          array (
-          ),
-           'attributes' => 
-          array (
-          ),
-        )),
-        6 => 
-        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'testDeleteRemovesEvent',
-           'phpDoc' => NULL,
-           'byRef' => false,
-           'public' => true,
-           'private' => false,
-           'abstract' => false,
-           'final' => false,
-           'static' => false,
-           'returnType' => 'void',
-           'parameters' => 
-          array (
-          ),
-           'attributes' => 
-          array (
-          ),
-        )),
-        7 => 
-        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'testNextIdReturnsNewEventId',
-           'phpDoc' => NULL,
-           'byRef' => false,
-           'public' => true,
-           'private' => false,
-           'abstract' => false,
-           'final' => false,
-           'static' => false,
-           'returnType' => 'void',
-           'parameters' => 
-          array (
-          ),
-           'attributes' => 
-          array (
-          ),
-        )),
-        8 => 
-        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'testPrepareIsCalledOncePerQuery',
-           'phpDoc' => NULL,
-           'byRef' => false,
-           'public' => true,
-           'private' => false,
-           'abstract' => false,
-           'final' => false,
-           'static' => false,
-           'returnType' => 'void',
-           'parameters' => 
-          array (
-          ),
-           'attributes' => 
-          array (
-          ),
-        )),
-        9 => 
-        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'testStatementExecuteIsCalledWithCorrectParameters',
            'phpDoc' => NULL,
            'byRef' => false,
@@ -12948,7 +25476,7 @@ return [
           array (
           ),
         )),
-        10 => 
+        6 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'setUp',
            'phpDoc' => NULL,
@@ -12972,7 +25500,275 @@ return [
       ),
     )),
   ),
-  '/var/www/tests/Unit/Presentation/Controller/EventControllerTest.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Infrastructure/Validation/ValidatorBagTest.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'Tests\\Unit\\Infrastructure\\Validation\\ValidatorBagTest',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => false,
+       'extends' => 'PHPUnit\\Framework\\TestCase',
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testEventIdReturnsCorrectValidator',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testPaginationReturnsCorrectValidator',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        2 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testEventIdValidatorWorksThroughBag',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        3 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testPaginationValidatorWorksThroughBag',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        4 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'setUp',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => false,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Presentation/Controller/EventControllerServiceTest.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'Tests\\Unit\\Presentation\\Controller\\EventControllerServiceTest',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => false,
+       'extends' => 'PHPUnit\\Framework\\TestCase',
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testIndexUsesServiceLayer',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testShowUsesServiceLayer',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        2 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testShowReturnsNotFoundWhenServiceReturnsNull',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        3 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testDebugUsesServiceLayer',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        4 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testShowRequiresIdParameter',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        5 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'testIndexWithInvalidParameters',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        6 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'setUp',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => false,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/Presentation/Controller/EventControllerTest.php' => 
   array (
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
@@ -12994,7 +25790,7 @@ return [
       array (
         0 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'testIndexReturnsAllEvents',
+           'name' => 'testSearchMethodUsesValidatorBagAndSearchService',
            'phpDoc' => NULL,
            'byRef' => false,
            'public' => true,
@@ -13012,7 +25808,7 @@ return [
         )),
         1 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'testIndexReturnsEmptyArrayWhenNoEvents',
+           'name' => 'testSearchMethodHandlesInvalidArgumentException',
            'phpDoc' => NULL,
            'byRef' => false,
            'public' => true,
@@ -13030,7 +25826,7 @@ return [
         )),
         2 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'testShowReturnsSpecificEvent',
+           'name' => 'testSearchMethodHandlesGenericException',
            'phpDoc' => NULL,
            'byRef' => false,
            'public' => true,
@@ -13048,7 +25844,7 @@ return [
         )),
         3 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'testShowReturnsErrorWhenEventNotFound',
+           'name' => 'testShowMethodUsesValidatorBag',
            'phpDoc' => NULL,
            'byRef' => false,
            'public' => true,
@@ -13066,7 +25862,7 @@ return [
         )),
         4 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'testShowWithValidIdParameter',
+           'name' => 'testShowMethodHandlesMissingId',
            'phpDoc' => NULL,
            'byRef' => false,
            'public' => true,
@@ -13084,7 +25880,7 @@ return [
         )),
         5 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'testShowWithInvalidIdParameter',
+           'name' => 'testShowMethodHandlesInvalidId',
            'phpDoc' => NULL,
            'byRef' => false,
            'public' => true,
@@ -13102,7 +25898,7 @@ return [
         )),
         6 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'testShowWithNegativeIdParameter',
+           'name' => 'testIndexMethodUsesValidatorBag',
            'phpDoc' => NULL,
            'byRef' => false,
            'public' => true,
@@ -13120,97 +25916,7 @@ return [
         )),
         7 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'testDebugReturnsSystemInformation',
-           'phpDoc' => NULL,
-           'byRef' => false,
-           'public' => true,
-           'private' => false,
-           'abstract' => false,
-           'final' => false,
-           'static' => false,
-           'returnType' => 'void',
-           'parameters' => 
-          array (
-          ),
-           'attributes' => 
-          array (
-          ),
-        )),
-        8 => 
-        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'testPaginatedReturnsFirstPage',
-           'phpDoc' => NULL,
-           'byRef' => false,
-           'public' => true,
-           'private' => false,
-           'abstract' => false,
-           'final' => false,
-           'static' => false,
-           'returnType' => 'void',
-           'parameters' => 
-          array (
-          ),
-           'attributes' => 
-          array (
-          ),
-        )),
-        9 => 
-        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'testPaginatedWithQueryParameters',
-           'phpDoc' => NULL,
-           'byRef' => false,
-           'public' => true,
-           'private' => false,
-           'abstract' => false,
-           'final' => false,
-           'static' => false,
-           'returnType' => 'void',
-           'parameters' => 
-          array (
-          ),
-           'attributes' => 
-          array (
-          ),
-        )),
-        10 => 
-        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'testPaginatedWithInvalidParameters',
-           'phpDoc' => NULL,
-           'byRef' => false,
-           'public' => true,
-           'private' => false,
-           'abstract' => false,
-           'final' => false,
-           'static' => false,
-           'returnType' => 'void',
-           'parameters' => 
-          array (
-          ),
-           'attributes' => 
-          array (
-          ),
-        )),
-        11 => 
-        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'setUp',
-           'phpDoc' => NULL,
-           'byRef' => false,
-           'public' => false,
-           'private' => false,
-           'abstract' => false,
-           'final' => false,
-           'static' => false,
-           'returnType' => 'void',
-           'parameters' => 
-          array (
-          ),
-           'attributes' => 
-          array (
-          ),
-        )),
-        12 => 
-        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'tearDown',
            'phpDoc' => NULL,
            'byRef' => false,
            'public' => false,
@@ -13232,7 +25938,7 @@ return [
       ),
     )),
   ),
-  '/var/www/tests/Unit/RouterTest.php' => 
+  '/Users/luis.monteiro.ext/Documents/3cket_events/tests/Unit/RouterTest.php' => 
   array (
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(

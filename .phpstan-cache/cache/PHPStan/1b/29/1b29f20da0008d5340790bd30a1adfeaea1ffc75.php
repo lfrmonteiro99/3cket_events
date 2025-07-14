@@ -1,0 +1,9 @@
+<?php declare(strict_types = 1);
+
+// odsl-/Users/luis.monteiro.ext/Documents/3cket_events/vendor/composer/../symfony/polyfill-intl-normalizer/Resources/stubs
+return \PHPStan\Cache\CacheItem::__set_state(array(
+   'variableKey' => 'v1',
+   'data' => 
+  array (
+  ),
+));

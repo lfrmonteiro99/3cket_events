@@ -29,6 +29,63 @@ class Bootstrap
         $this->logger->logApplicationEvent('Application bootstrap completed');
     }
 
+    /**
+     * Handle a request for testing purposes.
+     */
+    public function handleRequest(): void
+    {
+        $method = $_SERVER['REQUEST_METHOD'] ?? 'GET';
+        $path = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/';
+
+        try {
+            // Log the incoming request
+            $this->logger->logRequest($method, $path, [
+                'timestamp' => date('Y-m-d H:i:s'),
+                'headers' => $this->getRequestHeaders(),
+            ]);
+
+            $this->router->dispatch($method, $path);
+
+            // Log successful response
+            $this->logger->logResponse(200, $method, $path, [
+                'duration' => 0,
+                'memory_usage' => memory_get_usage(true),
+                'memory_peak' => memory_get_peak_usage(true),
+            ]);
+
+        } catch (RouteNotFoundException $e) {
+            // Log 404 response
+            $this->logger->logResponse(404, $method, $path, [
+                'duration' => 0,
+                'error' => $e->getMessage(),
+            ]);
+
+            $this->logger->logSecurityEvent('Route not found', [
+                'method' => $method,
+                'path' => $path,
+                'message' => $e->getMessage(),
+            ]);
+
+            JsonResponse::notFound('Route not found')->send();
+        } catch (\Exception $e) {
+            // Log 500 response
+            $this->logger->logResponse(500, $method, $path, [
+                'duration' => 0,
+                'error' => $e->getMessage(),
+            ]);
+
+            $this->logger->error('Unhandled exception', [
+                'exception' => get_class($e),
+                'message' => $e->getMessage(),
+                'file' => $e->getFile(),
+                'line' => $e->getLine(),
+                'trace' => $e->getTraceAsString(),
+            ]);
+
+            JsonResponse::error('Internal server error', HttpStatus::INTERNAL_SERVER_ERROR)->send();
+        }
+    }
+
     public function run(): void
     {
         $startTime = microtime(true);

@@ -5,97 +5,79 @@ declare(strict_types=1);
 namespace App\Infrastructure\Cache;
 
 use Redis;
-use RedisException;
 
 class RedisCache implements CacheInterface
 {
     private Redis $redis;
-    private string $prefix;
 
-    public function __construct(Redis $redis, string $prefix = '3cket:')
+    /** @var array<string, int> */
+    private array $stats = [
+        'requests' => 0,
+        'hits' => 0,
+        'misses' => 0,
+        'sets' => 0,
+        'deletes' => 0,
+    ];
+
+    public function __construct(Redis $redis)
     {
         $this->redis = $redis;
-        $this->prefix = $prefix;
     }
 
     public function get(string $key): mixed
     {
-        try {
-            $value = $this->redis->get($this->prefixKey($key));
+        $this->stats['requests']++;
 
-            if ($value === false) {
-                return null;
-            }
+        $value = $this->redis->get($key);
 
-            return unserialize($value);
-        } catch (RedisException $e) {
-            error_log("Redis get error for key {$key}: " . $e->getMessage());
+        if ($value === false) {
+            $this->stats['misses']++;
 
             return null;
         }
+
+        $this->stats['hits']++;
+
+        return unserialize($value);
     }
 
-    public function set(string $key, mixed $value, int $ttl = 3600): bool
+    public function set(string $key, mixed $value, ?int $ttl = null): bool
     {
-        try {
-            $serialized = serialize($value);
+        $this->stats['sets']++;
 
-            if ($ttl > 0) {
-                return $this->redis->setex($this->prefixKey($key), $ttl, $serialized);
-            }
+        $serializedValue = serialize($value);
 
-            return $this->redis->set($this->prefixKey($key), $serialized);
-
-        } catch (RedisException $e) {
-            error_log("Redis set error for key {$key}: " . $e->getMessage());
-
-            return false;
+        if ($ttl !== null && $ttl > 0) {
+            return $this->redis->setex($key, $ttl, $serializedValue);
         }
+
+        return $this->redis->set($key, $serializedValue);
     }
 
     public function delete(string $key): bool
     {
-        try {
-            $result = $this->redis->del($this->prefixKey($key));
+        $this->stats['deletes']++;
 
-            return is_int($result) && $result >= 0; // Redis returns number of keys deleted
-        } catch (RedisException $e) {
-            error_log("Redis delete error for key {$key}: " . $e->getMessage());
+        // Remove from tags
+        $this->removeFromTags($key);
 
-            return false;
-        }
+        $result = $this->redis->del($key);
+
+        return is_int($result) && $result > 0;
     }
 
     public function clear(): bool
     {
-        try {
-            $keys = $this->redis->keys($this->prefix . '*');
+        $this->resetStats();
 
-            if (!empty($keys)) {
-                $result = $this->redis->del($keys);
-
-                return is_int($result) && $result > 0;
-            }
-
-            return true;
-        } catch (RedisException $e) {
-            error_log('Redis clear error: ' . $e->getMessage());
-
-            return false;
-        }
+        return $this->redis->flushDB();
     }
 
-    public function exists(string $key): bool
+    public function has(string $key): bool
     {
-        try {
-            $result = $this->redis->exists($this->prefixKey($key));
+        $result = $this->redis->exists($key);
 
-            return is_int($result) && $result > 0;
-        } catch (RedisException $e) {
-            error_log("Redis exists error for key {$key}: " . $e->getMessage());
-
-            return false;
-        }
+        return is_int($result) && $result > 0;
     }
 
     /**
@@ -105,110 +87,235 @@ class RedisCache implements CacheInterface
      */
     public function getMultiple(array $keys): array
     {
-        try {
-            $prefixedKeys = array_map([$this, 'prefixKey'], $keys);
-            $values = $this->redis->mget($prefixedKeys);
-
-            $result = [];
-
-            foreach ($keys as $index => $key) {
-                $value = $values[$index];
-                $result[$key] = $value !== false ? unserialize($value) : null;
-            }
-
-            return $result;
-        } catch (RedisException $e) {
-            error_log('Redis getMultiple error: ' . $e->getMessage());
-
-            // Fallback to individual gets
-            $result = [];
-
-            foreach ($keys as $key) {
-                $result[$key] = $this->get($key);
-            }
-
-            return $result;
+        if (empty($keys)) {
+            return [];
         }
+
+        $values = $this->redis->mget($keys);
+        $result = [];
+
+        foreach ($keys as $index => $key) {
+            $value = $values[$index] ?? false;
+            $result[$key] = $value === false ? null : unserialize($value);
+        }
+
+        return $result;
     }
 
     /**
      * @param array<string, mixed> $values
      */
-    public function setMultiple(array $values, int $ttl = 3600): bool
+    public function setMultiple(array $values, ?int $ttl = null): bool
     {
-        try {
-            $pipe = $this->redis->pipeline();
-
-            foreach ($values as $key => $value) {
-                $serialized = serialize($value);
-
-                if ($ttl > 0) {
-                    $pipe->setex($this->prefixKey($key), $ttl, $serialized);
-                } else {
-                    $pipe->set($this->prefixKey($key), $serialized);
-                }
-            }
-
-            $results = $pipe->exec();
-
-            return !in_array(false, $results, true);
-
-        } catch (RedisException $e) {
-            error_log('Redis setMultiple error: ' . $e->getMessage());
-
-            return false;
+        if (empty($values)) {
+            return true;
         }
+
+        $pipeline = $this->redis->multi();
+
+        foreach ($values as $key => $value) {
+            $serializedValue = serialize($value);
+
+            if ($ttl !== null && $ttl > 0) {
+                $pipeline->setex($key, $ttl, $serializedValue);
+            } else {
+                $pipeline->set($key, $serializedValue);
+            }
+        }
+
+        $pipeline->exec();
+
+        return true;
     }
 
     /**
-     * Get Redis connection statistics.
-     *
+     * @param array<string> $keys
+     */
+    public function deleteMultiple(array $keys): bool
+    {
+        if (empty($keys)) {
+            return true;
+        }
+
+        // Remove from tags
+        foreach ($keys as $key) {
+            $this->removeFromTags($key);
+        }
+
+        $result = $this->redis->del(...$keys);
+
+        return is_int($result) && $result > 0;
+    }
+
+    public function invalidateByTag(string $tag): bool
+    {
+        $tagKey = "tag:{$tag}";
+        $keys = $this->redis->smembers($tagKey);
+
+        if (!empty($keys)) {
+            $this->redis->del(...$keys);
+            $this->redis->del($tagKey);
+        }
+
+        return true;
+    }
+
+    /**
+     * @param array<string> $tags
+     */
+    public function invalidateByTags(array $tags): bool
+    {
+        foreach ($tags as $tag) {
+            $this->invalidateByTag($tag);
+        }
+
+        return true;
+    }
+
+    public function tag(string $key, string $tag): bool
+    {
+        if (!$this->has($key)) {
+            return false;
+        }
+
+        $tagKey = "tag:{$tag}";
+        $this->redis->sadd($tagKey, $key);
+        $this->redis->setex("key_tag:{$key}:{$tag}", 86400, '1'); // 24h TTL for tag association
+
+        return true;
+    }
+
+    /**
+     * @param array<string> $tags
+     */
+    public function tagMultiple(string $key, array $tags): bool
+    {
+        foreach ($tags as $tag) {
+            $this->tag($key, $tag);
+        }
+
+        return true;
+    }
+
+    /**
      * @return array<string, mixed>
      */
     public function getStats(): array
     {
-        try {
-            $info = $this->redis->info();
+        $info = $this->redis->info();
 
-            return [
-                'redis_version' => $info['redis_version'] ?? 'unknown',
-                'connected_clients' => $info['connected_clients'] ?? 0,
-                'used_memory' => $info['used_memory'] ?? 0,
-                'used_memory_human' => $info['used_memory_human'] ?? '0',
-                'keyspace_hits' => $info['keyspace_hits'] ?? 0,
-                'keyspace_misses' => $info['keyspace_misses'] ?? 0,
-            ];
-        } catch (RedisException $e) {
-            error_log('Redis stats error: ' . $e->getMessage());
-
-            return [];
-        }
+        return [
+            'requests' => $this->stats['requests'],
+            'hits' => $this->stats['hits'],
+            'misses' => $this->stats['misses'],
+            'sets' => $this->stats['sets'],
+            'deletes' => $this->stats['deletes'],
+            'hit_rate' => $this->getHitRate(),
+            'miss_rate' => $this->getMissRate(),
+            'redis_used_memory' => $info['used_memory'] ?? 0,
+            'redis_used_memory_peak' => $info['used_memory_peak'] ?? 0,
+            'redis_connected_clients' => $info['connected_clients'] ?? 0,
+            'redis_total_commands_processed' => $info['total_commands_processed'] ?? 0,
+        ];
     }
 
-    public static function createFromEnvironment(): self
+    public function getHitRate(): float
     {
-        $redis = new Redis();
-
-        $host = $_ENV['REDIS_HOST'] ?? 'redis';
-        $port = (int) ($_ENV['REDIS_PORT'] ?? 6379);
-        $password = $_ENV['REDIS_PASSWORD'] ?? null;
-        $database = (int) ($_ENV['REDIS_DATABASE'] ?? 0);
-
-        $redis->connect($host, $port, 2.5); // 2.5 second timeout
-
-        if ($password) {
-            $redis->auth($password);
+        if ($this->stats['requests'] === 0) {
+            return 0.0;
         }
 
-        if ($database > 0) {
-            $redis->select($database);
-        }
-
-        return new self($redis);
+        return round(($this->stats['hits'] / $this->stats['requests']) * 100, 2);
     }
 
-    private function prefixKey(string $key): string
+    public function getMissRate(): float
     {
-        return $this->prefix . $key;
+        if ($this->stats['requests'] === 0) {
+            return 0.0;
+        }
+
+        return round(($this->stats['misses'] / $this->stats['requests']) * 100, 2);
+    }
+
+    public function getTotalRequests(): int
+    {
+        return $this->stats['requests'];
+    }
+
+    public function getTotalHits(): int
+    {
+        return $this->stats['hits'];
+    }
+
+    public function getTotalMisses(): int
+    {
+        return $this->stats['misses'];
+    }
+
+    public function resetStats(): void
+    {
+        $this->stats = [
+            'requests' => 0,
+            'hits' => 0,
+            'misses' => 0,
+            'sets' => 0,
+            'deletes' => 0,
+        ];
+    }
+
+    public function calculateOptimalTtl(string $key, int $baseTtl = 3600): int
+    {
+        // Get access pattern from Redis
+        $accessKey = "access:{$key}";
+        $accessData = $this->redis->get($accessKey);
+
+        if ($accessData === false) {
+            return $baseTtl;
+        }
+
+        $access = json_decode($accessData, true);
+        $hits = $access['hits'] ?? 0;
+        $misses = $access['misses'] ?? 0;
+        $totalAccess = $hits + $misses;
+
+        if ($totalAccess === 0) {
+            return $baseTtl;
+        }
+
+        $hitRate = $hits / $totalAccess;
+
+        // Adjust TTL based on hit rate
+        if ($hitRate > 0.8) {
+            return (int) ($baseTtl * 1.5);
+        }
+
+        if ($hitRate < 0.2) {
+            return (int) ($baseTtl * 0.5);
+        }
+
+        return $baseTtl;
+    }
+
+    public function setWithSmartTtl(string $key, mixed $value, int $baseTtl = 3600): bool
+    {
+        $optimalTtl = $this->calculateOptimalTtl($key, $baseTtl);
+
+        return $this->set($key, $value, $optimalTtl);
+    }
+
+    private function removeFromTags(string $key): void
+    {
+        // Find all tags for this key
+        $pattern = "key_tag:{$key}:*";
+        $tagKeys = $this->redis->keys($pattern);
+
+        foreach ($tagKeys as $tagKey) {
+            $parts = explode(':', $tagKey);
+            $tag = end($parts);
+            $tagSetKey = "tag:{$tag}";
+
+            $this->redis->srem($tagSetKey, $key);
+            $this->redis->del($tagKey);
+        }
     }
 }

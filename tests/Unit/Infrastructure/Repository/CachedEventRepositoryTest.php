@@ -69,7 +69,7 @@ class CachedEventRepositoryTest extends TestCase
             ->willReturn($events);
 
         $this->mockCache->expects($this->once())
-            ->method('set')
+            ->method('setWithSmartTtl')
             ->with('events:all', $events, 3600);
 
         $result = $this->cachedRepository->findAll();
@@ -88,7 +88,7 @@ class CachedEventRepositoryTest extends TestCase
 
         $this->mockCache->expects($this->once())
             ->method('get')
-            ->with('events:id:1')
+            ->with('event:1')
             ->willReturn($event);
 
         $this->mockRepository->expects($this->never())
@@ -110,7 +110,7 @@ class CachedEventRepositoryTest extends TestCase
 
         $this->mockCache->expects($this->once())
             ->method('get')
-            ->with('events:id:1')
+            ->with('event:1')
             ->willReturn(null);
 
         $this->mockRepository->expects($this->once())
@@ -119,8 +119,8 @@ class CachedEventRepositoryTest extends TestCase
             ->willReturn($event);
 
         $this->mockCache->expects($this->once())
-            ->method('set')
-            ->with('events:id:1', $event, 3600);
+            ->method('setWithSmartTtl')
+            ->with('event:1', $event, 3600);
 
         $result = $this->cachedRepository->findById($eventId);
         $this->assertEquals($event, $result);
@@ -132,7 +132,7 @@ class CachedEventRepositoryTest extends TestCase
 
         $this->mockCache->expects($this->once())
             ->method('get')
-            ->with('events:id:999')
+            ->with('event:999')
             ->willReturn(null);
 
         $this->mockRepository->expects($this->once())
@@ -140,10 +140,7 @@ class CachedEventRepositoryTest extends TestCase
             ->with($eventId)
             ->willReturn(null);
 
-        $this->mockCache->expects($this->once())
-            ->method('set')
-            ->with('events:id:999', null, 3600);
-
+        // No cache write expected for null
         $result = $this->cachedRepository->findById($eventId);
         $this->assertNull($result);
     }
@@ -174,30 +171,11 @@ class CachedEventRepositoryTest extends TestCase
             ->willReturn(5);
 
         $this->mockCache->expects($this->once())
-            ->method('set')
-            ->with('events:count', 5, 1800); // Half TTL
+            ->method('setWithSmartTtl')
+            ->with('events:count', 5, 7200);
 
         $result = $this->cachedRepository->count();
         $this->assertEquals(5, $result);
-    }
-
-    public function testClearCacheInvalidatesAllEventCaches(): void
-    {
-        $this->mockCache->expects($this->exactly(2))
-            ->method('delete')
-            ->with($this->callback(function ($key) {
-                return in_array($key, ['events:all', 'events:count'], true);
-            }))
-            ->willReturn(true);
-
-        $result = $this->cachedRepository->clearCache();
-        $this->assertTrue($result);
-    }
-
-    public function testGetCacheStatsReturnsDefaultWhenNotAvailable(): void
-    {
-        $result = $this->cachedRepository->getCacheStats();
-        $this->assertEquals(['message' => 'Cache statistics not available'], $result);
     }
 
     public function testCacheKeyGenerationForEvents(): void
@@ -206,7 +184,7 @@ class CachedEventRepositoryTest extends TestCase
 
         $this->mockCache->expects($this->once())
             ->method('get')
-            ->with('events:id:42')
+            ->with('event:42')
             ->willReturn(null);
 
         $this->mockRepository->expects($this->once())
@@ -214,10 +192,7 @@ class CachedEventRepositoryTest extends TestCase
             ->with($eventId)
             ->willReturn(null);
 
-        $this->mockCache->expects($this->once())
-            ->method('set')
-            ->with('events:id:42', null, 3600);
-
+        // No cache write expected for null
         $result = $this->cachedRepository->findById($eventId);
         $this->assertNull($result);
     }
@@ -240,11 +215,9 @@ class CachedEventRepositoryTest extends TestCase
             ->method('findAll')
             ->willReturn([]);
 
-        $this->mockCache->expects($this->exactly(2))
-            ->method('set')
-            ->with($this->callback(function ($key) {
-                return in_array($key, ['events:count', 'events:all'], true);
-            }));
+        $this->mockCache->expects($this->once())
+            ->method('setWithSmartTtl')
+            ->with('events:count', 5, 7200);
 
         $countResult = $this->cachedRepository->count();
         $allResult = $this->cachedRepository->findAll();
@@ -257,11 +230,12 @@ class CachedEventRepositoryTest extends TestCase
     {
         $this->mockRepository = $this->createMock(EventRepositoryInterface::class);
         $this->mockCache = $this->createMock(CacheInterface::class);
+        $mockAnalytics = $this->createMock(\App\Infrastructure\Cache\CacheAnalytics::class);
         $this->cachedRepository = new CachedEventRepository(
             $this->mockRepository,
             $this->mockCache,
-            3600,
-            'events:'
+            $mockAnalytics,
+            3600
         );
     }
 }

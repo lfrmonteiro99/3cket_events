@@ -7,17 +7,18 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
   array (
     '/var/www/src/Service/Container.php' => 
     array (
-      0 => '8163984ac252b6629b59d600544d13039851d981',
+      0 => 'c3fe17eca4164229211b21bbc641c53bd1467a35',
       1 => 
       array (
         0 => 'app\\service\\container',
       ),
       2 => 
       array (
-        0 => 'app\\service\\bind',
-        1 => 'app\\service\\get',
-        2 => 'app\\service\\configure',
-        3 => 'app\\service\\loadenvironmentconfig',
+        0 => 'app\\service\\__construct',
+        1 => 'app\\service\\bind',
+        2 => 'app\\service\\get',
+        3 => 'app\\service\\configure',
+        4 => 'app\\service\\registerproviders',
       ),
       3 => 
       array (
@@ -67,7 +68,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/var/www/src/Router/Route.php' => 
     array (
-      0 => '6b5bc654c5378cbfebc61b8785891bf2684d1c37',
+      0 => 'f6ec0b16b0d9685c1205427a3155b06186ab4030',
       1 => 
       array (
         0 => 'app\\router\\route',
@@ -90,7 +91,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/var/www/src/Router/Router.php' => 
     array (
-      0 => 'b048a7e162303aa6b23780faec55f53e892ab6c6',
+      0 => '12169b0c89cb661f81605026064643dd7cef9880',
       1 => 
       array (
         0 => 'app\\router\\router',
@@ -142,7 +143,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/var/www/src/Application/DTO/PaginatedResponse.php' => 
     array (
-      0 => 'a231b11cfb678b12f294c0574aa2e5678ab96daf',
+      0 => 'ff4a01f0f1f488a0c8434a57af41cf3b51d5c255',
       1 => 
       array (
         0 => 'app\\application\\dto\\paginatedresponse',
@@ -175,21 +176,6 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
       array (
         0 => 'app\\application\\mapper\\todto',
         1 => 'app\\application\\mapper\\todtoarray',
-      ),
-      3 => 
-      array (
-      ),
-    ),
-    '/var/www/src/Application/Command/CreateEventCommand.php' => 
-    array (
-      0 => 'd4994d711f11b382857da0cab9677f211bc44892',
-      1 => 
-      array (
-        0 => 'app\\application\\command\\createeventcommand',
-      ),
-      2 => 
-      array (
-        0 => 'app\\application\\command\\__construct',
       ),
       3 => 
       array (
@@ -244,7 +230,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/var/www/src/Application/UseCase/GetPaginatedEventsUseCaseInterface.php' => 
     array (
-      0 => '2488597df8280d4fc52ee0ab398b62abdcb2f708',
+      0 => '06fe1e3cd7903a5fd1b9416c63a25c0a41c4c999',
       1 => 
       array (
         0 => 'app\\application\\usecase\\getpaginatedeventsusecaseinterface',
@@ -252,22 +238,6 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
       2 => 
       array (
         0 => 'app\\application\\usecase\\execute',
-      ),
-      3 => 
-      array (
-      ),
-    ),
-    '/var/www/src/Application/UseCase/CreateEventUseCase.php' => 
-    array (
-      0 => '928496b375078d5ff2e31385590541b007ae7e2b',
-      1 => 
-      array (
-        0 => 'app\\application\\usecase\\createeventusecase',
-      ),
-      2 => 
-      array (
-        0 => 'app\\application\\usecase\\__construct',
-        1 => 'app\\application\\usecase\\execute',
       ),
       3 => 
       array (
@@ -290,7 +260,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/var/www/src/Application/UseCase/GetPaginatedEventsUseCase.php' => 
     array (
-      0 => '59d5d57711d34695de4562f3888ff7a29a5aad62',
+      0 => 'c50602f27794cb297a93fac457169b16e48c578e',
       1 => 
       array (
         0 => 'app\\application\\usecase\\getpaginatedeventsusecase',
@@ -304,24 +274,9 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
       array (
       ),
     ),
-    '/var/www/src/Application/UseCase/CreateEventUseCaseInterface.php' => 
-    array (
-      0 => '59183eafd7834e33ad723e2aef74265c32a1f2f4',
-      1 => 
-      array (
-        0 => 'app\\application\\usecase\\createeventusecaseinterface',
-      ),
-      2 => 
-      array (
-        0 => 'app\\application\\usecase\\execute',
-      ),
-      3 => 
-      array (
-      ),
-    ),
     '/var/www/src/Application/Query/GetPaginatedEventsQuery.php' => 
     array (
-      0 => '84c2e1b339d052c97c7bd50cb04ccc74fd09b985',
+      0 => '340c7bda2a6a08184cc8d597f959b300939bb77c',
       1 => 
       array (
         0 => 'app\\application\\query\\getpaginatedeventsquery',
@@ -336,7 +291,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/var/www/src/Application/Query/PaginationQuery.php' => 
     array (
-      0 => 'd6f947eb34e61a53f4485277932458aa16336279',
+      0 => 'c6bf4b592c60990ad4779321bfc6406b2bb6cf0f',
       1 => 
       array (
         0 => 'app\\application\\query\\paginationquery',
@@ -422,7 +377,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/var/www/src/Presentation/Controller/EventController.php' => 
     array (
-      0 => '832bc5e86e431ca2599ca2babcb3fbe5372d2ef4',
+      0 => '53ef629f6d3d3d61c45145b8b4dc852a98a14ba4',
       1 => 
       array (
         0 => 'app\\presentation\\controller\\eventcontroller',
@@ -431,10 +386,12 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
       array (
         0 => 'app\\presentation\\controller\\__construct',
         1 => 'app\\presentation\\controller\\index',
-        2 => 'app\\presentation\\controller\\paginated',
-        3 => 'app\\presentation\\controller\\show',
-        4 => 'app\\presentation\\controller\\debug',
-        5 => 'app\\presentation\\controller\\cache',
+        2 => 'app\\presentation\\controller\\show',
+        3 => 'app\\presentation\\controller\\debug',
+        4 => 'app\\presentation\\controller\\cache',
+        5 => 'app\\presentation\\controller\\search',
+        6 => 'app\\presentation\\controller\\nearby',
+        7 => 'app\\presentation\\controller\\suggestions',
       ),
       3 => 
       array (
@@ -442,7 +399,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/var/www/src/Infrastructure/Database/DatabaseConnection.php' => 
     array (
-      0 => '5f5d2fdea856ea58c73ff5c6273dce14136c35d6',
+      0 => '4b7e66aac9956a777025d6e74b54f34e81e8c073',
       1 => 
       array (
         0 => 'app\\infrastructure\\database\\databaseconnection',
@@ -459,7 +416,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/var/www/src/Infrastructure/Repository/CsvEventRepository.php' => 
     array (
-      0 => '0389e98096c4210af993293c8a86bfe27ebed370',
+      0 => '1a4073ffbae4f12972a6e77ac2441de35b655a49',
       1 => 
       array (
         0 => 'app\\infrastructure\\repository\\csveventrepository',
@@ -470,12 +427,13 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         1 => 'app\\infrastructure\\repository\\findall',
         2 => 'app\\infrastructure\\repository\\findpaginated',
         3 => 'app\\infrastructure\\repository\\findbyid',
-        4 => 'app\\infrastructure\\repository\\count',
-        5 => 'app\\infrastructure\\repository\\save',
-        6 => 'app\\infrastructure\\repository\\delete',
-        7 => 'app\\infrastructure\\repository\\nextid',
-        8 => 'app\\infrastructure\\repository\\loadeventsifneeded',
-        9 => 'app\\infrastructure\\repository\\loadevents',
+        4 => 'app\\infrastructure\\repository\\search',
+        5 => 'app\\infrastructure\\repository\\countsearch',
+        6 => 'app\\infrastructure\\repository\\count',
+        7 => 'app\\infrastructure\\repository\\loadeventsifneeded',
+        8 => 'app\\infrastructure\\repository\\loadevents',
+        9 => 'app\\infrastructure\\repository\\applysearchfilters',
+        10 => 'app\\infrastructure\\repository\\sortevents',
       ),
       3 => 
       array (
@@ -483,7 +441,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/var/www/src/Infrastructure/Repository/DatabaseEventRepository.php' => 
     array (
-      0 => 'ec663a64e8d20123407f8871f86a3c5fb07b7388',
+      0 => '1970d44e16c03e7cd87b739304faba0c636039f9',
       1 => 
       array (
         0 => 'app\\infrastructure\\repository\\databaseeventrepository',
@@ -494,12 +452,12 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         1 => 'app\\infrastructure\\repository\\findall',
         2 => 'app\\infrastructure\\repository\\findpaginated',
         3 => 'app\\infrastructure\\repository\\findbyid',
-        4 => 'app\\infrastructure\\repository\\count',
-        5 => 'app\\infrastructure\\repository\\save',
-        6 => 'app\\infrastructure\\repository\\delete',
-        7 => 'app\\infrastructure\\repository\\nextid',
-        8 => 'app\\infrastructure\\repository\\maprowtoevent',
-        9 => 'app\\infrastructure\\repository\\mapsortcolumn',
+        4 => 'app\\infrastructure\\repository\\search',
+        5 => 'app\\infrastructure\\repository\\countsearch',
+        6 => 'app\\infrastructure\\repository\\count',
+        7 => 'app\\infrastructure\\repository\\maprowtoevent',
+        8 => 'app\\infrastructure\\repository\\mapsortcolumn',
+        9 => 'app\\infrastructure\\repository\\buildsearchquery',
       ),
       3 => 
       array (
@@ -507,7 +465,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/var/www/src/Infrastructure/Repository/CachedEventRepository.php' => 
     array (
-      0 => '533fb6a645ab4dcc142df713e6403bf7b8ae7dd2',
+      0 => '6032b73c2c83fc06a431f540d2b1c40ebbf371b4',
       1 => 
       array (
         0 => 'app\\infrastructure\\repository\\cachedeventrepository',
@@ -518,13 +476,11 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         1 => 'app\\infrastructure\\repository\\findall',
         2 => 'app\\infrastructure\\repository\\findpaginated',
         3 => 'app\\infrastructure\\repository\\findbyid',
-        4 => 'app\\infrastructure\\repository\\count',
-        5 => 'app\\infrastructure\\repository\\save',
-        6 => 'app\\infrastructure\\repository\\delete',
-        7 => 'app\\infrastructure\\repository\\nextid',
-        8 => 'app\\infrastructure\\repository\\clearcache',
-        9 => 'app\\infrastructure\\repository\\getcachestats',
-        10 => 'app\\infrastructure\\repository\\invalidatelistcaches',
+        4 => 'app\\infrastructure\\repository\\search',
+        5 => 'app\\infrastructure\\repository\\countsearch',
+        6 => 'app\\infrastructure\\repository\\count',
+        7 => 'app\\infrastructure\\repository\\clearcache',
+        8 => 'app\\infrastructure\\repository\\getcachestats',
       ),
       3 => 
       array (
@@ -748,47 +704,9 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
       array (
       ),
     ),
-    '/var/www/src/Domain/Event/EventUpdated.php' => 
-    array (
-      0 => '851c8e5f8d508111210a7d6b13e9ae6cb2f7eb91',
-      1 => 
-      array (
-        0 => 'app\\domain\\event\\eventupdated',
-      ),
-      2 => 
-      array (
-        0 => 'app\\domain\\event\\__construct',
-        1 => 'app\\domain\\event\\getevent',
-        2 => 'app\\domain\\event\\getoccurredat',
-        3 => 'app\\domain\\event\\geteventname',
-        4 => 'app\\domain\\event\\toarray',
-      ),
-      3 => 
-      array (
-      ),
-    ),
-    '/var/www/src/Domain/Event/EventCreated.php' => 
-    array (
-      0 => '21c92ce123709b65847d9100213bce5523d7445d',
-      1 => 
-      array (
-        0 => 'app\\domain\\event\\eventcreated',
-      ),
-      2 => 
-      array (
-        0 => 'app\\domain\\event\\__construct',
-        1 => 'app\\domain\\event\\getevent',
-        2 => 'app\\domain\\event\\getoccurredat',
-        3 => 'app\\domain\\event\\geteventname',
-        4 => 'app\\domain\\event\\toarray',
-      ),
-      3 => 
-      array (
-      ),
-    ),
     '/var/www/src/Domain/Entity/Event.php' => 
     array (
-      0 => '914fd9fa39efbcb1badd8118501720ee3cd65f02',
+      0 => '8e098d9bde885ac6e804e6371cc597c44cd11da9',
       1 => 
       array (
         0 => 'app\\domain\\entity\\event',
@@ -802,15 +720,10 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         4 => 'app\\domain\\entity\\getcoordinates',
         5 => 'app\\domain\\entity\\getcreatedat',
         6 => 'app\\domain\\entity\\getupdatedat',
-        7 => 'app\\domain\\entity\\updatename',
-        8 => 'app\\domain\\entity\\updatelocation',
-        9 => 'app\\domain\\entity\\updatecoordinates',
-        10 => 'app\\domain\\entity\\distanceto',
-        11 => 'app\\domain\\entity\\equals',
-        12 => 'app\\domain\\entity\\getdomainevents',
-        13 => 'app\\domain\\entity\\cleardomainevents',
-        14 => 'app\\domain\\entity\\toarray',
-        15 => 'app\\domain\\entity\\raisedomainevent',
+        7 => 'app\\domain\\entity\\distanceto',
+        8 => 'app\\domain\\entity\\equals',
+        9 => 'app\\domain\\entity\\toarray',
+        10 => 'app\\domain\\entity\\__sleep',
       ),
       3 => 
       array (
@@ -818,7 +731,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/var/www/src/Domain/Repository/EventRepositoryInterface.php' => 
     array (
-      0 => '9c80f0b2eddb99a01ab9707627b306985e5f7f5e',
+      0 => '030a62d6cefa88ad84ae1225cb3a4cd72487e3e7',
       1 => 
       array (
         0 => 'app\\domain\\repository\\eventrepositoryinterface',
@@ -827,11 +740,611 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
       array (
         0 => 'app\\domain\\repository\\findall',
         1 => 'app\\domain\\repository\\findpaginated',
-        2 => 'app\\domain\\repository\\findbyid',
-        3 => 'app\\domain\\repository\\count',
-        4 => 'app\\domain\\repository\\save',
-        5 => 'app\\domain\\repository\\delete',
-        6 => 'app\\domain\\repository\\nextid',
+        2 => 'app\\domain\\repository\\search',
+        3 => 'app\\domain\\repository\\countsearch',
+        4 => 'app\\domain\\repository\\findbyid',
+        5 => 'app\\domain\\repository\\count',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/var/www/src/Application/Bootstrap.php' => 
+    array (
+      0 => '1abcb2213f3858efd84540a9fecbe6e941b22523',
+      1 => 
+      array (
+        0 => 'app\\application\\bootstrap',
+      ),
+      2 => 
+      array (
+        0 => 'app\\application\\__construct',
+        1 => 'app\\application\\run',
+        2 => 'app\\application\\getrequestheaders',
+        3 => 'app\\application\\setuperrorreporting',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/var/www/src/Application/Service/EventService.php' => 
+    array (
+      0 => '6082e7978da4979b4659b1989113670dce08a931',
+      1 => 
+      array (
+        0 => 'app\\application\\service\\eventservice',
+      ),
+      2 => 
+      array (
+        0 => 'app\\application\\service\\__construct',
+        1 => 'app\\application\\service\\getallevents',
+        2 => 'app\\application\\service\\geteventbyid',
+        3 => 'app\\application\\service\\geteventcount',
+        4 => 'app\\application\\service\\eventexists',
+        5 => 'app\\application\\service\\validateeventid',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/var/www/src/Application/Service/EventServiceInterface.php' => 
+    array (
+      0 => '7064a0fc19a442a4fce0caa65ba6448277eb8301',
+      1 => 
+      array (
+        0 => 'app\\application\\service\\eventserviceinterface',
+      ),
+      2 => 
+      array (
+        0 => 'app\\application\\service\\getallevents',
+        1 => 'app\\application\\service\\geteventbyid',
+        2 => 'app\\application\\service\\geteventcount',
+        3 => 'app\\application\\service\\eventexists',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/var/www/src/Service/Providers/PresentationServiceProvider.php' => 
+    array (
+      0 => '6f90ed0e059ce45cf5173008e0b1c3d9475d460f',
+      1 => 
+      array (
+        0 => 'app\\service\\providers\\presentationserviceprovider',
+      ),
+      2 => 
+      array (
+        0 => 'app\\service\\providers\\register',
+        1 => 'app\\service\\providers\\registercontrollers',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/var/www/src/Service/Providers/InfrastructureServiceProvider.php' => 
+    array (
+      0 => '4a3b30607186d4e6c88fc81a7c86ec6f0721ae61',
+      1 => 
+      array (
+        0 => 'app\\service\\providers\\infrastructureserviceprovider',
+      ),
+      2 => 
+      array (
+        0 => 'app\\service\\providers\\register',
+        1 => 'app\\service\\providers\\loadenvironmentconfig',
+        2 => 'app\\service\\providers\\registerlogging',
+        3 => 'app\\service\\providers\\registercache',
+        4 => 'app\\service\\providers\\registerdatabase',
+        5 => 'app\\service\\providers\\registerrepositories',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/var/www/src/Service/Providers/ApplicationServiceProvider.php' => 
+    array (
+      0 => 'ea7adf147b65f4ca12b6431cd4a00f7bd9169977',
+      1 => 
+      array (
+        0 => 'app\\service\\providers\\applicationserviceprovider',
+      ),
+      2 => 
+      array (
+        0 => 'app\\service\\providers\\register',
+        1 => 'app\\service\\providers\\registerservices',
+        2 => 'app\\service\\providers\\registervalidators',
+        3 => 'app\\service\\providers\\registerusecases',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/var/www/src/Service/ServiceProvider.php' => 
+    array (
+      0 => '7eddfdb9f888de1ee247b4c45367a6bcfaf7885a',
+      1 => 
+      array (
+        0 => 'app\\service\\serviceprovider',
+      ),
+      2 => 
+      array (
+        0 => 'app\\service\\register',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/var/www/src/Infrastructure/DataSource/DataSourceStrategy.php' => 
+    array (
+      0 => '0ce53083e90d7dd34130a9bad2b4a4a4db6b95f7',
+      1 => 
+      array (
+        0 => 'app\\infrastructure\\datasource\\datasourcestrategy',
+      ),
+      2 => 
+      array (
+        0 => 'app\\infrastructure\\datasource\\fromstring',
+        1 => 'app\\infrastructure\\datasource\\getdisplayname',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/var/www/src/Infrastructure/DataSource/DataSourceFactory.php' => 
+    array (
+      0 => '27aecee986912362f6391e4e4b0e2f706ed04f79',
+      1 => 
+      array (
+        0 => 'app\\infrastructure\\datasource\\datasourcefactory',
+      ),
+      2 => 
+      array (
+        0 => 'app\\infrastructure\\datasource\\__construct',
+        1 => 'app\\infrastructure\\datasource\\createrepository',
+        2 => 'app\\infrastructure\\datasource\\getstrategy',
+        3 => 'app\\infrastructure\\datasource\\getstrategydescription',
+        4 => 'app\\infrastructure\\datasource\\createdatabasefirstrepository',
+        5 => 'app\\infrastructure\\datasource\\createcsvfirstrepository',
+        6 => 'app\\infrastructure\\datasource\\createdatabaseonlyrepository',
+        7 => 'app\\infrastructure\\datasource\\createcsvonlyrepository',
+        8 => 'app\\infrastructure\\datasource\\createautorepository',
+        9 => 'app\\infrastructure\\datasource\\getcsvpath',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/var/www/src/Infrastructure/Response/JsonResponseFormatter.php' => 
+    array (
+      0 => '15dc8c66941abcafa376d262405804c6ac82d280',
+      1 => 
+      array (
+        0 => 'app\\infrastructure\\response\\jsonresponseformatter',
+      ),
+      2 => 
+      array (
+        0 => 'app\\infrastructure\\response\\formatsuccess',
+        1 => 'app\\infrastructure\\response\\formaterror',
+        2 => 'app\\infrastructure\\response\\getcontenttype',
+        3 => 'app\\infrastructure\\response\\getheaders',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/var/www/src/Infrastructure/Response/HtmlResponseFormatter.php' => 
+    array (
+      0 => 'fb03f393be9fd508ecf7110a1c116d0d633d41a5',
+      1 => 
+      array (
+        0 => 'app\\infrastructure\\response\\htmlresponseformatter',
+      ),
+      2 => 
+      array (
+        0 => 'app\\infrastructure\\response\\formatsuccess',
+        1 => 'app\\infrastructure\\response\\formaterror',
+        2 => 'app\\infrastructure\\response\\getcontenttype',
+        3 => 'app\\infrastructure\\response\\getheaders',
+        4 => 'app\\infrastructure\\response\\createhtmlpage',
+        5 => 'app\\infrastructure\\response\\createeventtable',
+        6 => 'app\\infrastructure\\response\\createeventdetail',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/var/www/src/Infrastructure/Response/ResponseFormatStrategy.php' => 
+    array (
+      0 => '328a1fe57b809db143de2ecfc2d5b978fe1a8301',
+      1 => 
+      array (
+        0 => 'app\\infrastructure\\response\\responseformatstrategy',
+      ),
+      2 => 
+      array (
+        0 => 'app\\infrastructure\\response\\fromstring',
+        1 => 'app\\infrastructure\\response\\fromacceptheader',
+        2 => 'app\\infrastructure\\response\\getdisplayname',
+        3 => 'app\\infrastructure\\response\\getfileextension',
+        4 => 'app\\infrastructure\\response\\createformatter',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/var/www/src/Infrastructure/Response/ResponseManager.php' => 
+    array (
+      0 => 'f94823f5d09824cb9922d0fa35d31b32eb5818d7',
+      1 => 
+      array (
+        0 => 'app\\infrastructure\\response\\responsemanager',
+      ),
+      2 => 
+      array (
+        0 => 'app\\infrastructure\\response\\__construct',
+        1 => 'app\\infrastructure\\response\\sendsuccess',
+        2 => 'app\\infrastructure\\response\\senderror',
+        3 => 'app\\infrastructure\\response\\sendnotfound',
+        4 => 'app\\infrastructure\\response\\getstrategy',
+        5 => 'app\\infrastructure\\response\\getformatter',
+        6 => 'app\\infrastructure\\response\\createfromrequest',
+        7 => 'app\\infrastructure\\response\\createwithformat',
+        8 => 'app\\infrastructure\\response\\detectformat',
+        9 => 'app\\infrastructure\\response\\sendresponse',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/var/www/src/Infrastructure/Response/XmlResponseFormatter.php' => 
+    array (
+      0 => '9e72730c2607ec7803131e181e84edb7bd95df76',
+      1 => 
+      array (
+        0 => 'app\\infrastructure\\response\\xmlresponseformatter',
+      ),
+      2 => 
+      array (
+        0 => 'app\\infrastructure\\response\\formatsuccess',
+        1 => 'app\\infrastructure\\response\\formaterror',
+        2 => 'app\\infrastructure\\response\\getcontenttype',
+        3 => 'app\\infrastructure\\response\\getheaders',
+        4 => 'app\\infrastructure\\response\\arraytoxml',
+        5 => 'app\\infrastructure\\response\\addarraytoxml',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/var/www/src/Infrastructure/Response/ResponseFormatterInterface.php' => 
+    array (
+      0 => '3198ade8c27124042417d35a96bdd1358b34d677',
+      1 => 
+      array (
+        0 => 'app\\infrastructure\\response\\responseformatterinterface',
+      ),
+      2 => 
+      array (
+        0 => 'app\\infrastructure\\response\\formatsuccess',
+        1 => 'app\\infrastructure\\response\\formaterror',
+        2 => 'app\\infrastructure\\response\\getcontenttype',
+        3 => 'app\\infrastructure\\response\\getheaders',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/var/www/src/Infrastructure/Response/CsvResponseFormatter.php' => 
+    array (
+      0 => 'aa078aa836342e75f30e67441dcadfab61edb821',
+      1 => 
+      array (
+        0 => 'app\\infrastructure\\response\\csvresponseformatter',
+      ),
+      2 => 
+      array (
+        0 => 'app\\infrastructure\\response\\formatsuccess',
+        1 => 'app\\infrastructure\\response\\formaterror',
+        2 => 'app\\infrastructure\\response\\getcontenttype',
+        3 => 'app\\infrastructure\\response\\getheaders',
+        4 => 'app\\infrastructure\\response\\arraytocsv',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/var/www/src/Infrastructure/Cache/CacheFactory.php' => 
+    array (
+      0 => '4cbace89e4d92e5366fcd12f81bdf541974ac0d8',
+      1 => 
+      array (
+        0 => 'app\\infrastructure\\cache\\cachefactory',
+      ),
+      2 => 
+      array (
+        0 => 'app\\infrastructure\\cache\\createfromstrategy',
+        1 => 'app\\infrastructure\\cache\\createfromenvironment',
+        2 => 'app\\infrastructure\\cache\\createrediscache',
+        3 => 'app\\infrastructure\\cache\\createautocache',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/var/www/src/Infrastructure/Logging/SpecializedLogger.php' => 
+    array (
+      0 => 'e2d50ea0f1383e5e7dced091c6804c62bb1ea4d3',
+      1 => 
+      array (
+        0 => 'app\\infrastructure\\logging\\specializedlogger',
+      ),
+      2 => 
+      array (
+        0 => 'app\\infrastructure\\logging\\__construct',
+        1 => 'app\\infrastructure\\logging\\logdatabaseoperation',
+        2 => 'app\\infrastructure\\logging\\logcacheoperation',
+        3 => 'app\\infrastructure\\logging\\logsecurityevent',
+        4 => 'app\\infrastructure\\logging\\logapplicationevent',
+        5 => 'app\\infrastructure\\logging\\logperformance',
+        6 => 'app\\infrastructure\\logging\\logbusinessevent',
+        7 => 'app\\infrastructure\\logging\\logrequest',
+        8 => 'app\\infrastructure\\logging\\logresponse',
+        9 => 'app\\infrastructure\\logging\\emergency',
+        10 => 'app\\infrastructure\\logging\\alert',
+        11 => 'app\\infrastructure\\logging\\critical',
+        12 => 'app\\infrastructure\\logging\\error',
+        13 => 'app\\infrastructure\\logging\\warning',
+        14 => 'app\\infrastructure\\logging\\notice',
+        15 => 'app\\infrastructure\\logging\\info',
+        16 => 'app\\infrastructure\\logging\\debug',
+        17 => 'app\\infrastructure\\logging\\log',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/var/www/src/Infrastructure/Logging/LoggerFactory.php' => 
+    array (
+      0 => '9ba22121218408d0e9c75070ca5dc423089017d0',
+      1 => 
+      array (
+        0 => 'app\\infrastructure\\logging\\loggerfactory',
+      ),
+      2 => 
+      array (
+        0 => 'app\\infrastructure\\logging\\createfromenvironment',
+        1 => 'app\\infrastructure\\logging\\createlogger',
+        2 => 'app\\infrastructure\\logging\\createapplicationlogger',
+        3 => 'app\\infrastructure\\logging\\createdatabaselogger',
+        4 => 'app\\infrastructure\\logging\\createcachelogger',
+        5 => 'app\\infrastructure\\logging\\createsecuritylogger',
+        6 => 'app\\infrastructure\\logging\\createerrorlogger',
+        7 => 'app\\infrastructure\\logging\\createperformancelogger',
+        8 => 'app\\infrastructure\\logging\\createrequestlogger',
+        9 => 'app\\infrastructure\\logging\\createfilehandler',
+        10 => 'app\\infrastructure\\logging\\createrotatingfilehandler',
+        11 => 'app\\infrastructure\\logging\\createstdouthandler',
+        12 => 'app\\infrastructure\\logging\\createstderrhandler',
+        13 => 'app\\infrastructure\\logging\\createnullhandler',
+        14 => 'app\\infrastructure\\logging\\createformatter',
+        15 => 'app\\infrastructure\\logging\\getloglevelfromenvironment',
+        16 => 'app\\infrastructure\\logging\\ensurelogdirectoryexists',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/var/www/src/Infrastructure/Logging/ApplicationLogger.php' => 
+    array (
+      0 => '800b6c43e38398333a227debc9f7acb786f5e051',
+      1 => 
+      array (
+        0 => 'app\\infrastructure\\logging\\applicationlogger',
+      ),
+      2 => 
+      array (
+        0 => 'app\\infrastructure\\logging\\__construct',
+        1 => 'app\\infrastructure\\logging\\logdatabaseoperation',
+        2 => 'app\\infrastructure\\logging\\logcacheoperation',
+        3 => 'app\\infrastructure\\logging\\logsecurityevent',
+        4 => 'app\\infrastructure\\logging\\logapplicationevent',
+        5 => 'app\\infrastructure\\logging\\logperformance',
+        6 => 'app\\infrastructure\\logging\\logbusinessevent',
+        7 => 'app\\infrastructure\\logging\\logrequest',
+        8 => 'app\\infrastructure\\logging\\logresponse',
+        9 => 'app\\infrastructure\\logging\\emergency',
+        10 => 'app\\infrastructure\\logging\\alert',
+        11 => 'app\\infrastructure\\logging\\critical',
+        12 => 'app\\infrastructure\\logging\\error',
+        13 => 'app\\infrastructure\\logging\\warning',
+        14 => 'app\\infrastructure\\logging\\notice',
+        15 => 'app\\infrastructure\\logging\\info',
+        16 => 'app\\infrastructure\\logging\\debug',
+        17 => 'app\\infrastructure\\logging\\log',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/var/www/src/Infrastructure/Logging/NullLogger.php' => 
+    array (
+      0 => '80b8533227f61178403df95b02564e2f513a8d86',
+      1 => 
+      array (
+        0 => 'app\\infrastructure\\logging\\nulllogger',
+      ),
+      2 => 
+      array (
+        0 => 'app\\infrastructure\\logging\\logdatabaseoperation',
+        1 => 'app\\infrastructure\\logging\\logcacheoperation',
+        2 => 'app\\infrastructure\\logging\\logsecurityevent',
+        3 => 'app\\infrastructure\\logging\\logapplicationevent',
+        4 => 'app\\infrastructure\\logging\\logperformance',
+        5 => 'app\\infrastructure\\logging\\logbusinessevent',
+        6 => 'app\\infrastructure\\logging\\logrequest',
+        7 => 'app\\infrastructure\\logging\\logresponse',
+        8 => 'app\\infrastructure\\logging\\emergency',
+        9 => 'app\\infrastructure\\logging\\alert',
+        10 => 'app\\infrastructure\\logging\\critical',
+        11 => 'app\\infrastructure\\logging\\error',
+        12 => 'app\\infrastructure\\logging\\warning',
+        13 => 'app\\infrastructure\\logging\\notice',
+        14 => 'app\\infrastructure\\logging\\info',
+        15 => 'app\\infrastructure\\logging\\debug',
+        16 => 'app\\infrastructure\\logging\\log',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/var/www/src/Infrastructure/Logging/LoggerInterface.php' => 
+    array (
+      0 => 'a71e34c04a42cc98d4cdcd09233bb709cbf7c5e8',
+      1 => 
+      array (
+        0 => 'app\\infrastructure\\logging\\loggerinterface',
+      ),
+      2 => 
+      array (
+        0 => 'app\\infrastructure\\logging\\logdatabaseoperation',
+        1 => 'app\\infrastructure\\logging\\logcacheoperation',
+        2 => 'app\\infrastructure\\logging\\logsecurityevent',
+        3 => 'app\\infrastructure\\logging\\logapplicationevent',
+        4 => 'app\\infrastructure\\logging\\logperformance',
+        5 => 'app\\infrastructure\\logging\\logbusinessevent',
+        6 => 'app\\infrastructure\\logging\\logrequest',
+        7 => 'app\\infrastructure\\logging\\logresponse',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/var/www/src/Infrastructure/Validation/EventIdValidator.php' => 
+    array (
+      0 => 'a98132c156e80f984741bf7fd9a7e40a4a69ccd4',
+      1 => 
+      array (
+        0 => 'app\\infrastructure\\validation\\eventidvalidator',
+      ),
+      2 => 
+      array (
+        0 => 'app\\infrastructure\\validation\\validate',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/var/www/src/Infrastructure/Validation/ValidatorInterface.php' => 
+    array (
+      0 => '5270208a225e92636dbdb10238d186fccf6b1282',
+      1 => 
+      array (
+        0 => 'app\\infrastructure\\validation\\validatorinterface',
+        1 => 'app\\infrastructure\\validation\\validationresult',
+      ),
+      2 => 
+      array (
+        0 => 'app\\infrastructure\\validation\\validate',
+        1 => 'app\\infrastructure\\validation\\__construct',
+        2 => 'app\\infrastructure\\validation\\isvalid',
+        3 => 'app\\infrastructure\\validation\\geterrors',
+        4 => 'app\\infrastructure\\validation\\getfirsterror',
+        5 => 'app\\infrastructure\\validation\\success',
+        6 => 'app\\infrastructure\\validation\\failure',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/var/www/src/Infrastructure/Validation/PaginationValidator.php' => 
+    array (
+      0 => 'edd137e8ce27de561b94c7df28fd831b32711e20',
+      1 => 
+      array (
+        0 => 'app\\infrastructure\\validation\\paginationvalidator',
+      ),
+      2 => 
+      array (
+        0 => 'app\\infrastructure\\validation\\validate',
+        1 => 'app\\infrastructure\\validation\\validatepage',
+        2 => 'app\\infrastructure\\validation\\validatepagesize',
+        3 => 'app\\infrastructure\\validation\\validatesortby',
+        4 => 'app\\infrastructure\\validation\\validatesortdirection',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/var/www/src/Router/RouteProvider.php' => 
+    array (
+      0 => '1d1ee8d02125a2ea6989d63ef66050a29ee153e1',
+      1 => 
+      array (
+        0 => 'app\\router\\routeprovider',
+      ),
+      2 => 
+      array (
+        0 => 'app\\router\\registerroutes',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/var/www/src/Application/Service/SearchServiceInterface.php' => 
+    array (
+      0 => '88a4ba8174d43a751391dceeca885e1f3cd93a2b',
+      1 => 
+      array (
+        0 => 'app\\application\\service\\searchserviceinterface',
+      ),
+      2 => 
+      array (
+        0 => 'app\\application\\service\\searchevents',
+        1 => 'app\\application\\service\\getsearchsuggestions',
+        2 => 'app\\application\\service\\getpopularsearchterms',
+        3 => 'app\\application\\service\\geteventsnearby',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/var/www/src/Application/Service/SearchService.php' => 
+    array (
+      0 => 'ae72b84c90d5194c9d7f39202ecbfa46e805bfab',
+      1 => 
+      array (
+        0 => 'app\\application\\service\\searchservice',
+      ),
+      2 => 
+      array (
+        0 => 'app\\application\\service\\__construct',
+        1 => 'app\\application\\service\\searchevents',
+        2 => 'app\\application\\service\\getsearchsuggestions',
+        3 => 'app\\application\\service\\getpopularsearchterms',
+        4 => 'app\\application\\service\\geteventsnearby',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/var/www/src/Application/Query/SearchQuery.php' => 
+    array (
+      0 => '867099abebb02450e52181b4a3d425b9810357dd',
+      1 => 
+      array (
+        0 => 'app\\application\\query\\searchquery',
+      ),
+      2 => 
+      array (
+        0 => 'app\\application\\query\\__construct',
+        1 => 'app\\application\\query\\hassearch',
+        2 => 'app\\application\\query\\haslocationfilter',
+        3 => 'app\\application\\query\\hasgeographicsearch',
+        4 => 'app\\application\\query\\hasdatefilter',
+        5 => 'app\\application\\query\\hasanyfilter',
+        6 => 'app\\application\\query\\getcachekey',
+        7 => 'app\\application\\query\\validatesearchparameters',
+        8 => 'app\\application\\query\\isvaliddate',
       ),
       3 => 
       array (

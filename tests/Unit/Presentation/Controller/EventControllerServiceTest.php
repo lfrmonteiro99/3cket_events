@@ -7,6 +7,7 @@ namespace Tests\Unit\Presentation\Controller;
 use App\Application\DTO\EventDto;
 use App\Application\DTO\PaginatedResponse;
 use App\Application\Service\EventServiceInterface;
+use App\Application\Service\SearchServiceInterface;
 use App\Domain\Repository\EventRepositoryInterface;
 use App\Infrastructure\Response\ResponseManager;
 use App\Infrastructure\Validation\EventIdValidator;
@@ -18,20 +19,45 @@ use PHPUnit\Framework\TestCase;
 
 class EventControllerServiceTest extends TestCase
 {
-    /** @var EventServiceInterface&MockObject */
+    /**
+     * @var EventServiceInterface&MockObject
+     */
     private $eventService;
 
-    /** @var EventRepositoryInterface&MockObject */
+    /**
+     * @var MockObject&SearchServiceInterface
+     */
+    private $searchService;
+
+    /**
+     * @var EventRepositoryInterface&MockObject
+     */
     private $eventRepository;
 
-    /** @var MockObject&PaginationValidator */
+    /**
+     * @var MockObject&PaginationValidator
+     */
     private $paginationValidator;
 
-    /** @var EventIdValidator&MockObject */
+    /**
+     * @var EventIdValidator&MockObject
+     */
     private $eventIdValidator;
 
-    /** @var MockObject&ResponseManager */
+    /**
+     * @var MockObject&ResponseManager
+     */
     private $responseManager;
+
+    /**
+     * @var \App\Infrastructure\Validation\ValidatorBag&MockObject
+     */
+    private $validatorBag;
+
+    /**
+     * @var \App\Infrastructure\Cache\CacheManager&MockObject
+     */
+    private $cacheManager;
 
     private EventController $controller;
 
@@ -190,18 +216,26 @@ class EventControllerServiceTest extends TestCase
     protected function setUp(): void
     {
         $this->eventService = $this->createMock(EventServiceInterface::class);
+        $this->searchService = $this->createMock(SearchServiceInterface::class);
         $this->eventRepository = $this->createMock(EventRepositoryInterface::class);
         $this->paginationValidator = $this->createMock(PaginationValidator::class);
         $this->eventIdValidator = $this->createMock(EventIdValidator::class);
         $this->responseManager = $this->createMock(ResponseManager::class);
+        $this->validatorBag = $this->createMock(\App\Infrastructure\Validation\ValidatorBag::class);
+        $this->cacheManager = $this->createMock(\App\Infrastructure\Cache\CacheManager::class);
+
+        // Set up the ValidatorBag mock to return the correct validator mocks
+        $this->validatorBag->method('pagination')->willReturn($this->paginationValidator);
+        $this->validatorBag->method('eventId')->willReturn($this->eventIdValidator);
 
         $this->controller = new EventController(
             $this->eventService,
+            $this->searchService,
             $this->eventRepository,
-            $this->paginationValidator,
-            $this->eventIdValidator,
+            $this->validatorBag,
             $this->responseManager,
-            new \App\Infrastructure\Logging\NullLogger()
+            new \App\Infrastructure\Logging\NullLogger(),
+            $this->cacheManager
         );
     }
 

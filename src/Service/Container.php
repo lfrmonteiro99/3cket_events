@@ -30,6 +30,11 @@ class Container
         $this->bindings[$abstract] = $concrete;
     }
 
+    public function singleton(string $abstract, callable $concrete): void
+    {
+        $this->bind($abstract, $concrete);
+    }
+
     public function get(string $abstract): mixed
     {
         if (isset($this->instances[$abstract])) {

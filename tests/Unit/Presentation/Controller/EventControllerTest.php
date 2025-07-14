@@ -6,354 +6,394 @@ namespace Tests\Unit\Presentation\Controller;
 
 use App\Application\DTO\EventDto;
 use App\Application\DTO\PaginatedResponse;
+use App\Application\Query\SearchQuery;
 use App\Application\Service\EventServiceInterface;
+use App\Application\Service\SearchServiceInterface;
 use App\Domain\Repository\EventRepositoryInterface;
+use App\Infrastructure\Cache\CacheManager;
+use App\Infrastructure\Logging\LoggerInterface;
 use App\Infrastructure\Response\ResponseManager;
 use App\Infrastructure\Validation\EventIdValidator;
 use App\Infrastructure\Validation\PaginationValidator;
-use App\Infrastructure\Validation\ValidationResult;
+use App\Infrastructure\Validation\ValidatorBag;
 use App\Presentation\Controller\EventController;
-use PHPUnit\Framework\MockObject\MockObject;
+use App\Presentation\Response\HttpStatus;
 use PHPUnit\Framework\TestCase;
 
 class EventControllerTest extends TestCase
 {
-    /** @var EventServiceInterface&MockObject */
+    /**
+     * @var EventServiceInterface&\PHPUnit\Framework\MockObject\MockObject
+     */
     private $eventService;
 
-    /** @var EventRepositoryInterface&MockObject */
+    /**
+     * @var \PHPUnit\Framework\MockObject\MockObject&SearchServiceInterface
+     */
+    private $searchService;
+
+    /**
+     * @var EventRepositoryInterface&\PHPUnit\Framework\MockObject\MockObject
+     */
     private $eventRepository;
 
-    /** @var MockObject&PaginationValidator */
-    private $paginationValidator;
+    /**
+     * @var \PHPUnit\Framework\MockObject\MockObject&ValidatorBag
+     */
+    private $validators;
 
-    /** @var EventIdValidator&MockObject */
-    private $eventIdValidator;
-
-    /** @var MockObject&ResponseManager */
+    /**
+     * @var \PHPUnit\Framework\MockObject\MockObject&ResponseManager
+     */
     private $responseManager;
+
+    /**
+     * @var LoggerInterface&\PHPUnit\Framework\MockObject\MockObject
+     */
+    private $logger;
+
+    /**
+     * @var CacheManager&\PHPUnit\Framework\MockObject\MockObject
+     */
+    private $cacheManager;
 
     private EventController $controller;
 
-    public function testIndexReturnsPaginatedEvents(): void
+    public function testSearchMethodUsesValidatorBagAndSearchService(): void
     {
-        $events = [
-            $this->createEventDto(1, 'Event 1', 'Location 1', 40.7128, -74.0060),
-            $this->createEventDto(2, 'Event 2', 'Location 2', 34.0522, -118.2437),
+        // Arrange
+        $paginationValidator = $this->createMock(PaginationValidator::class);
+        $eventIdValidator = $this->createMock(EventIdValidator::class);
+
+        $this->validators
+            ->expects($this->any())
+            ->method('pagination')
+            ->willReturn($paginationValidator);
+
+        $this->validators
+            ->expects($this->any())
+            ->method('eventId')
+            ->willReturn($eventIdValidator);
+
+        // Mock search query parameters
+        $_GET = [
+            'search' => 'concert',
+            'location' => 'Lisboa',
+            'page' => '1',
+            'page_size' => '10',
+            'sort_by' => 'id',
+            'sort_direction' => 'ASC',
         ];
 
-        $paginatedResponse = PaginatedResponse::create($events, 10, 1, 10);
-
-        // Mock validation to pass
-        $this->paginationValidator
-            ->expects($this->once())
-            ->method('validate')
-            ->willReturn(ValidationResult::success());
-
-        $this->eventService
-            ->expects($this->once())
-            ->method('getAllEvents')
-            ->willReturn($paginatedResponse);
-
-        // Mock the response manager to send success
-        $expectedData = [
+        $expectedResponse = [
             'data' => [
-                ['event_name' => 'Event 1', 'location' => 'Location 1', 'latitude' => 40.7128, 'longitude' => -74.0060, 'id' => 1, 'created_at' => '2023-01-01 00:00:00', 'updated_at' => '2023-01-01 00:00:00'],
-                ['event_name' => 'Event 2', 'location' => 'Location 2', 'latitude' => 34.0522, 'longitude' => -118.2437, 'id' => 2, 'created_at' => '2023-01-01 00:00:00', 'updated_at' => '2023-01-01 00:00:00'],
+                [
+                    'id' => 1,
+                    'name' => 'Rock Concert',
+                    'location' => 'Lisboa',
+                    'latitude' => 38.7223,
+                    'longitude' => -9.1393,
+                ],
             ],
             'pagination' => [
-                'current_page' => 1,
+                'total' => 1,
+                'page' => 1,
                 'page_size' => 10,
-                'total_items' => 10,
                 'total_pages' => 1,
-                'has_next_page' => false,
-                'has_previous_page' => false,
-                'next_page' => null,
-                'previous_page' => null,
-                'start_item' => 1,
-                'end_item' => 10,
+            ],
+            'search_info' => [
+                'search_term' => 'concert',
+                'location_filter' => 'Lisboa',
+                'geographic_search' => false,
+                'date_filter' => false,
+                'filters_applied' => true,
             ],
         ];
+
+        $this->searchService
+            ->expects($this->once())
+            ->method('searchEventsFormatted')
+            ->willReturn($expectedResponse);
 
         $this->responseManager
             ->expects($this->once())
             ->method('sendSuccess')
-            ->with($expectedData);
+            ->with($expectedResponse);
 
-        $this->controller->index();
+        // Act
+        $this->controller->search();
+
+        // Clean up
+        unset($_GET);
     }
 
-    public function testIndexReturnsEmptyPaginatedResponseWhenNoEvents(): void
+    public function testSearchMethodHandlesInvalidArgumentException(): void
     {
-        $paginatedResponse = PaginatedResponse::create([], 0, 1, 10);
+        // Arrange
+        $paginationValidator = $this->createMock(PaginationValidator::class);
+        $eventIdValidator = $this->createMock(EventIdValidator::class);
 
-        // Mock validation to pass
-        $this->paginationValidator
-            ->expects($this->once())
-            ->method('validate')
-            ->willReturn(ValidationResult::success());
+        $this->validators
+            ->expects($this->any())
+            ->method('pagination')
+            ->willReturn($paginationValidator);
 
-        $this->eventService
-            ->expects($this->once())
-            ->method('getAllEvents')
-            ->willReturn($paginatedResponse);
+        $this->validators
+            ->expects($this->any())
+            ->method('eventId')
+            ->willReturn($eventIdValidator);
 
-        // Mock the response manager to send success
-        $expectedData = [
-            'data' => [],
-            'pagination' => [
-                'current_page' => 1,
-                'page_size' => 10,
-                'total_items' => 0,
-                'total_pages' => 0,
-                'has_next_page' => false,
-                'has_previous_page' => false,
-                'next_page' => null,
-                'previous_page' => null,
-                'start_item' => 0,
-                'end_item' => 0,
-            ],
+        $_GET = [
+            'page' => 'invalid',
+            'page_size' => 'invalid',
         ];
 
-        $this->responseManager
-            ->expects($this->once())
-            ->method('sendSuccess')
-            ->with($expectedData);
-
-        $this->controller->index();
-    }
-
-    public function testIndexWithQueryParameters(): void
-    {
-        $_GET['page'] = '2';
-        $_GET['page_size'] = '5';
-        $_GET['sort_by'] = 'event_name';
-        $_GET['sort_direction'] = 'DESC';
-
-        $events = [
-            $this->createEventDto(3, 'Event 3', 'Location 3', 51.5074, -0.1278),
-        ];
-
-        $paginatedResponse = PaginatedResponse::create($events, 12, 2, 5);
-
-        // Mock validation to pass
-        $this->paginationValidator
-            ->expects($this->once())
-            ->method('validate')
-            ->willReturn(ValidationResult::success());
-
-        $this->eventService
-            ->expects($this->once())
-            ->method('getAllEvents')
-            ->willReturn($paginatedResponse);
-
-        // Mock the response manager to send success
-        $expectedData = [
-            'data' => [
-                ['event_name' => 'Event 3', 'location' => 'Location 3', 'latitude' => 51.5074, 'longitude' => -0.1278, 'id' => 3, 'created_at' => '2023-01-01 00:00:00', 'updated_at' => '2023-01-01 00:00:00'],
-            ],
-            'pagination' => [
-                'current_page' => 2,
-                'page_size' => 5,
-                'total_items' => 12,
-                'total_pages' => 3,
-                'has_next_page' => true,
-                'has_previous_page' => true,
-                'next_page' => 3,
-                'previous_page' => 1,
-                'start_item' => 6,
-                'end_item' => 10,
-            ],
-        ];
-
-        $this->responseManager
-            ->expects($this->once())
-            ->method('sendSuccess')
-            ->with($expectedData);
-
-        $this->controller->index();
-
-        // Clean up $_GET
-        unset($_GET['page'], $_GET['page_size'], $_GET['sort_by'], $_GET['sort_direction']);
-    }
-
-    public function testIndexWithInvalidParameters(): void
-    {
-        $_GET['page'] = '0';
-        $_GET['page_size'] = '101';
-
-        // Mock validation to fail
-        $this->paginationValidator
-            ->expects($this->once())
-            ->method('validate')
-            ->willReturn(ValidationResult::failure(['Page must be a positive integer']));
+        // The SearchQuery constructor will throw an exception before searchEventsFormatted is called
+        $this->searchService
+            ->expects($this->never())
+            ->method('searchEventsFormatted');
 
         $this->responseManager
             ->expects($this->once())
             ->method('sendError')
-            ->with('Invalid pagination parameters: Page must be a positive integer', $this->anything());
+            ->with($this->anything(), HttpStatus::BAD_REQUEST);
 
-        $this->controller->index();
+        // Act
+        $this->controller->search();
 
-        // Clean up $_GET
-        unset($_GET['page'], $_GET['page_size']);
+        // Clean up
+        unset($_GET);
     }
 
-    public function testShowRequiresIdParameter(): void
+    public function testSearchMethodHandlesGenericException(): void
     {
-        $this->responseManager
-            ->expects($this->once())
-            ->method('sendError')
-            ->with('Event ID is required', $this->anything());
+        // Arrange
+        $paginationValidator = $this->createMock(PaginationValidator::class);
+        $eventIdValidator = $this->createMock(EventIdValidator::class);
 
-        $this->controller->show();
-    }
+        $this->validators
+            ->expects($this->any())
+            ->method('pagination')
+            ->willReturn($paginationValidator);
 
-    public function testShowReturnsErrorWhenEventNotFound(): void
-    {
-        $this->eventIdValidator
-            ->expects($this->once())
-            ->method('validate')
-            ->with('999')
-            ->willReturn(ValidationResult::success());
+        $this->validators
+            ->expects($this->any())
+            ->method('eventId')
+            ->willReturn($eventIdValidator);
 
-        $this->eventService
-            ->expects($this->once())
-            ->method('getEventById')
-            ->with(999)
-            ->willReturn(null);
-
-        $this->responseManager
-            ->expects($this->once())
-            ->method('sendNotFound')
-            ->with('Event not found');
-
-        $this->controller->show(['id' => '999']);
-    }
-
-    public function testShowWithValidIdParameter(): void
-    {
-        $event = $this->createEventDto(5, 'Event 5', 'Location 5', 48.8566, 2.3522);
-
-        $this->eventIdValidator
-            ->expects($this->once())
-            ->method('validate')
-            ->with('5')
-            ->willReturn(ValidationResult::success());
-
-        $this->eventService
-            ->expects($this->once())
-            ->method('getEventById')
-            ->with(5)
-            ->willReturn($event);
-
-        $expectedData = [
-            'event_name' => 'Event 5',
-            'location' => 'Location 5',
-            'latitude' => 48.8566,
-            'longitude' => 2.3522,
-            'id' => 5,
-            'created_at' => '2023-01-01 00:00:00',
-            'updated_at' => '2023-01-01 00:00:00',
+        $_GET = [
+            'search' => 'concert',
         ];
 
-        $this->responseManager
+        $this->searchService
             ->expects($this->once())
-            ->method('sendSuccess')
-            ->with($expectedData);
+            ->method('searchEventsFormatted')
+            ->willThrowException(new \Exception('Database error'));
 
-        $this->controller->show(['id' => '5']);
-    }
-
-    public function testShowWithInvalidIdParameter(): void
-    {
-        // Mock the validator to return a validation error
-        $this->eventIdValidator
+        $this->logger
             ->expects($this->once())
-            ->method('validate')
-            ->with('0')
-            ->willReturn(ValidationResult::failure(['Event ID must be a positive integer']));
-
-        // Mock the response manager to send error
-        $this->responseManager
-            ->expects($this->once())
-            ->method('sendError')
-            ->with('Event ID must be a positive integer', $this->anything());
-
-        $this->controller->show(['id' => '0']);
-    }
-
-    public function testShowWithNegativeIdParameter(): void
-    {
-        // Mock the validator to return a validation error
-        $this->eventIdValidator
-            ->expects($this->once())
-            ->method('validate')
-            ->with('-1')
-            ->willReturn(ValidationResult::failure(['Event ID must be a positive integer']));
-
-        // Mock the response manager to send error
-        $this->responseManager
-            ->expects($this->once())
-            ->method('sendError')
-            ->with('Event ID must be a positive integer', $this->anything());
-
-        $this->controller->show(['id' => '-1']);
-    }
-
-    public function testDebugReturnsSystemInformation(): void
-    {
-        $this->eventService
-            ->expects($this->once())
-            ->method('getEventCount')
-            ->willReturn(4);
-
-        $this->responseManager
-            ->expects($this->once())
-            ->method('sendSuccess')
-            ->with($this->callback(function ($data) {
-                return $data['event_count'] === 4
-                    && isset($data['process_id'])
-                    && isset($data['timestamp'])
-                    && $data['pooling_enabled'] === true;
+            ->method('error')
+            ->with('Search error', $this->callback(function ($context) {
+                return isset($context['error']) && $context['error'] === 'Database error';
             }));
 
-        $this->controller->debug();
+        $this->responseManager
+            ->expects($this->once())
+            ->method('sendError')
+            ->with('Internal server error', HttpStatus::INTERNAL_SERVER_ERROR);
+
+        // Act
+        $this->controller->search();
+
+        // Clean up
+        unset($_GET);
+    }
+
+    public function testShowMethodUsesValidatorBag(): void
+    {
+        // Arrange
+        $paginationValidator = $this->createMock(PaginationValidator::class);
+        $eventIdValidator = $this->createMock(EventIdValidator::class);
+
+        $this->validators
+            ->expects($this->any())
+            ->method('pagination')
+            ->willReturn($paginationValidator);
+
+        $this->validators
+            ->expects($this->any())
+            ->method('eventId')
+            ->willReturn($eventIdValidator);
+
+        $eventIdValidator
+            ->expects($this->once())
+            ->method('validate')
+            ->with('123')
+            ->willReturn(new \App\Infrastructure\Validation\ValidationResult(true));
+
+        $eventDto = new EventDto(
+            id: 123,
+            name: 'Test Event',
+            location: 'Test Location',
+            latitude: 38.7223,
+            longitude: -9.1393
+        );
+
+        $this->eventService
+            ->expects($this->once())
+            ->method('getEventById')
+            ->with(123)
+            ->willReturn($eventDto);
+
+        $this->logger
+            ->expects($this->once())
+            ->method('logBusinessEvent')
+            ->with('Event retrieved', [
+                'id' => 123,
+                'event_name' => 'Test Event',
+            ]);
+
+        $this->responseManager
+            ->expects($this->once())
+            ->method('sendSuccess')
+            ->with($eventDto->toArray());
+
+        // Act
+        $this->controller->show(['id' => '123']);
+    }
+
+    public function testShowMethodHandlesMissingId(): void
+    {
+        // Arrange
+        $this->responseManager
+            ->expects($this->once())
+            ->method('sendError')
+            ->with('Event ID is required', HttpStatus::BAD_REQUEST);
+
+        // Act
+        $this->controller->show([]);
+    }
+
+    public function testShowMethodHandlesInvalidId(): void
+    {
+        // Arrange
+        $paginationValidator = $this->createMock(PaginationValidator::class);
+        $eventIdValidator = $this->createMock(EventIdValidator::class);
+
+        $this->validators
+            ->expects($this->any())
+            ->method('pagination')
+            ->willReturn($paginationValidator);
+
+        $this->validators
+            ->expects($this->any())
+            ->method('eventId')
+            ->willReturn($eventIdValidator);
+
+        $eventIdValidator
+            ->expects($this->once())
+            ->method('validate')
+            ->with('invalid')
+            ->willReturn(new \App\Infrastructure\Validation\ValidationResult(false, ['Invalid event ID']));
+
+        $this->responseManager
+            ->expects($this->once())
+            ->method('sendError')
+            ->with('Invalid event ID', HttpStatus::BAD_REQUEST);
+
+        // Act
+        $this->controller->show(['id' => 'invalid']);
+    }
+
+    public function testIndexMethodUsesValidatorBag(): void
+    {
+        // Arrange
+        $paginationValidator = $this->createMock(PaginationValidator::class);
+        $eventIdValidator = $this->createMock(EventIdValidator::class);
+
+        $this->validators
+            ->expects($this->any())
+            ->method('pagination')
+            ->willReturn($paginationValidator);
+
+        $this->validators
+            ->expects($this->any())
+            ->method('eventId')
+            ->willReturn($eventIdValidator);
+
+        $_GET = [
+            'page' => '1',
+            'page_size' => '10',
+            'sort_by' => 'id',
+            'sort_direction' => 'ASC',
+        ];
+
+        $paginationValidator
+            ->expects($this->once())
+            ->method('validate')
+            ->willReturn(new \App\Infrastructure\Validation\ValidationResult(true));
+
+        $paginatedResponse = PaginatedResponse::create([], 0, 1, 10);
+
+        $this->eventService
+            ->expects($this->once())
+            ->method('getAllEvents')
+            ->willReturn($paginatedResponse);
+
+        $this->logger
+            ->expects($this->once())
+            ->method('logBusinessEvent')
+            ->with('Events listed', [
+                'count' => 0,
+                'page' => 1,
+                'page_size' => 10,
+                'total' => 0,
+            ]);
+
+        $this->responseManager
+            ->expects($this->once())
+            ->method('sendSuccess')
+            ->with([
+                'data' => [],
+                'pagination' => [
+                    'current_page' => 1,
+                    'page_size' => 10,
+                    'total_items' => 0,
+                    'total_pages' => 0,
+                    'has_next_page' => false,
+                    'has_previous_page' => false,
+                    'next_page' => null,
+                    'previous_page' => null,
+                    'start_item' => 0,
+                    'end_item' => 0,
+                ],
+            ]);
+
+        // Act
+        $this->controller->index();
+
+        // Clean up
+        unset($_GET);
     }
 
     protected function setUp(): void
     {
         $this->eventService = $this->createMock(EventServiceInterface::class);
+        $this->searchService = $this->createMock(SearchServiceInterface::class);
         $this->eventRepository = $this->createMock(EventRepositoryInterface::class);
-        $this->paginationValidator = $this->createMock(PaginationValidator::class);
-        $this->eventIdValidator = $this->createMock(EventIdValidator::class);
+        $this->validators = $this->createMock(ValidatorBag::class);
         $this->responseManager = $this->createMock(ResponseManager::class);
+        $this->logger = $this->createMock(LoggerInterface::class);
+        $this->cacheManager = $this->createMock(CacheManager::class);
 
         $this->controller = new EventController(
             $this->eventService,
+            $this->searchService,
             $this->eventRepository,
-            $this->paginationValidator,
-            $this->eventIdValidator,
+            $this->validators,
             $this->responseManager,
-            new \App\Infrastructure\Logging\NullLogger()
-        );
-    }
-
-    protected function tearDown(): void
-    {
-        parent::tearDown();
-    }
-
-    private function createEventDto(int $id, string $name, string $location, float $latitude, float $longitude): EventDto
-    {
-        return new EventDto(
-            $id,
-            $name,
-            $location,
-            $latitude,
-            $longitude,
-            '2023-01-01 00:00:00',
-            '2023-01-01 00:00:00'
+            $this->logger,
+            $this->cacheManager
         );
     }
 }

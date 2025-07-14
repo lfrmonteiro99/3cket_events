@@ -8,7 +8,7 @@
 
 declare(strict_types=1);
 
-class Container_45d56c9e9a extends _PHPStan_ac6dae9b0\Nette\DI\Container
+class Container_73f8c6dee2 extends _PHPStan_ac6dae9b0\Nette\DI\Container
 {
 	protected $tags = [
 		'phpstan.parser.richParserNodeVisitor' => [
@@ -2357,7 +2357,7 @@ class Container_45d56c9e9a extends _PHPStan_ac6dae9b0\Nette\DI\Container
 			private $container;
 
 
-			public function __construct(Container_45d56c9e9a $container)
+			public function __construct(Container_73f8c6dee2 $container)
 			{
 				$this->container = $container;
 			}
@@ -2628,7 +2628,7 @@ class Container_45d56c9e9a extends _PHPStan_ac6dae9b0\Nette\DI\Container
 			private $container;
 
 
-			public function __construct(Container_45d56c9e9a $container)
+			public function __construct(Container_73f8c6dee2 $container)
 			{
 				$this->container = $container;
 			}
@@ -2697,7 +2697,7 @@ class Container_45d56c9e9a extends _PHPStan_ac6dae9b0\Nette\DI\Container
 			private $container;
 
 
-			public function __construct(Container_45d56c9e9a $container)
+			public function __construct(Container_73f8c6dee2 $container)
 			{
 				$this->container = $container;
 			}
@@ -2823,7 +2823,7 @@ class Container_45d56c9e9a extends _PHPStan_ac6dae9b0\Nette\DI\Container
 			private $container;
 
 
-			public function __construct(Container_45d56c9e9a $container)
+			public function __construct(Container_73f8c6dee2 $container)
 			{
 				$this->container = $container;
 			}
@@ -2843,7 +2843,7 @@ class Container_45d56c9e9a extends _PHPStan_ac6dae9b0\Nette\DI\Container
 			private $container;
 
 
-			public function __construct(Container_45d56c9e9a $container)
+			public function __construct(Container_73f8c6dee2 $container)
 			{
 				$this->container = $container;
 			}
@@ -2947,7 +2947,7 @@ class Container_45d56c9e9a extends _PHPStan_ac6dae9b0\Nette\DI\Container
 			private $container;
 
 
-			public function __construct(Container_45d56c9e9a $container)
+			public function __construct(Container_73f8c6dee2 $container)
 			{
 				$this->container = $container;
 			}
@@ -4689,7 +4689,7 @@ class Container_45d56c9e9a extends _PHPStan_ac6dae9b0\Nette\DI\Container
 			private $container;
 
 
-			public function __construct(Container_45d56c9e9a $container)
+			public function __construct(Container_73f8c6dee2 $container)
 			{
 				$this->container = $container;
 			}
@@ -5435,7 +5435,7 @@ class Container_45d56c9e9a extends _PHPStan_ac6dae9b0\Nette\DI\Container
 	}
 
 
-	public function createServiceContainer(): Container_45d56c9e9a
+	public function createServiceContainer(): Container_73f8c6dee2
 	{
 		return $this;
 	}
@@ -7486,12 +7486,14 @@ class Container_45d56c9e9a extends _PHPStan_ac6dae9b0\Nette\DI\Container
 			'cliAutoloadFile' => null,
 			'env' => [
 				'REDIS_PORT' => '6379',
+				'LOG_LEVEL' => 'INFO',
 				'LANGUAGE' => 'C',
 				'APP_DEBUG' => 'false',
-				'HOSTNAME' => '674e249e0f3c',
+				'HOSTNAME' => '87b986d2d43b',
 				'DB_PORT' => '3306',
 				'PHP_INI_DIR' => '/usr/local/etc/php',
 				'GIT_ASKPASS' => 'echo',
+				'LOG_FORMAT' => 'line',
 				'DB_CHARSET' => 'utf8mb4',
 				'HOME' => '/root',
 				'REDIS_DATABASE' => '0',
@@ -7506,23 +7508,25 @@ class Container_45d56c9e9a extends _PHPStan_ac6dae9b0\Nette\DI\Container
 				'SHELL_VERBOSITY' => '0',
 				'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
 				'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.2.29.tar.xz.asc',
+				'COMPOSER_DEV_MODE' => '1',
 				'PHP_URL' => 'https://www.php.net/distributions/php-8.2.29.tar.xz',
 				'TERM' => 'xterm',
-				'COLUMNS' => '108',
+				'LOG_HANDLER' => 'file',
 				'CACHE_PREFIX' => '3cket:',
 				'PATH' => '/var/www/vendor/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
-				'CACHE_STRATEGY' => 'redis',
+				'CACHE_STRATEGY' => 'auto',
 				'REDIS_PASSWORD' => '',
 				'PHP_BINARY' => '/usr/local/bin/php',
 				'DB_PASSWORD' => '3cket_password',
-				'REDIS_HOST' => 'redis',
 				'APP_ENV' => 'production',
+				'REDIS_HOST' => 'redis',
 				'PHPIZE_DEPS' => "autoconf \t\tdpkg-dev \t\tfile \t\tg++ \t\tgcc \t\tlibc-dev \t\tmake \t\tpkg-config \t\tre2c",
 				'PWD' => '/var/www',
 				'PHP_SHA256' => '475f991afd2d5b901fb410be407d929bc00c46285d3f439a02c59e8b6fe3589c',
 				'CACHE_TTL' => '3600',
-				'LINES' => '1',
 				'DB_HOST' => 'db',
+				'LINES' => '11',
+				'COLUMNS' => '108',
 			],
 		];
 	}

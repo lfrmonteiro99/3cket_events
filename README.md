@@ -361,42 +361,127 @@ src/
 
 ### Environment Variables
 
+The application uses environment variables for configuration. Copy `env.sample` to `.env` and modify as needed:
+
+```bash
+cp env.sample .env
+```
+
 #### Application Settings
 ```bash
-APP_ENV=development          # Environment (development, production)
-APP_DEBUG=true              # Debug mode
-APP_NAME="3cket PHP Challenge"
+APP_ENV=production                    # Environment mode
+APP_DEBUG=false                       # Debug mode (true/false)
+APP_NAME="3cket PHP Challenge"        # Application name
 ```
+
+**Details:**
+- **`APP_ENV`**: Set to `development` for dev mode, `production` for live deployment
+- **`APP_DEBUG`**: Enable debug mode for development (shows detailed errors)
+- **`APP_NAME`**: Application name used in logs and responses
 
 #### Database Configuration
 ```bash
-DB_HOST=db                  # Database host
-DB_PORT=3306               # Database port
-DB_DATABASE=3cket_events   # Database name
-DB_USERNAME=3cket_user     # Database username
-DB_PASSWORD=3cket_password # Database password
+DB_HOST=db                           # Database server hostname
+DB_PORT=3306                         # Database server port
+DB_DATABASE=3cket_events             # Database name
+DB_USERNAME=3cket_user               # Database username
+DB_PASSWORD=3cket_password           # Database password
+DB_CHARSET=utf8mb4                   # Database charset
 ```
+
+**Details:**
+- **`DB_HOST`**: Database server hostname (use `db` for Docker, `localhost` for local)
+- **`DB_PORT`**: MySQL port (default: 3306)
+- **`DB_DATABASE`**: Name of the database to connect to
+- **`DB_USERNAME`**: Database user with read permissions
+- **`DB_PASSWORD`**: Database user password
+- **`DB_CHARSET`**: Character set for database connections (utf8mb4 supports emojis)
+
+#### Data Source Strategy Configuration
+```bash
+DATA_SOURCE_STRATEGY=auto            # Data source selection strategy
+```
+
+**Available strategies:**
+- **`auto`**: Try database first, fallback to CSV if database fails *(recommended)*
+- **`database_first`**: Try database first, fallback to CSV if database fails
+- **`csv_first`**: Try CSV first, fallback to database if CSV fails
+- **`database_only`**: Use database only (no fallback, fails if database unavailable)
+- **`csv_only`**: Use CSV only (no database connection needed)
+
+**Use cases:**
+- **Production**: `auto` or `database_first` (reliable with fallback)
+- **Development**: `csv_only` (no database setup needed)
+- **Testing**: `database_only` (consistent data source)
 
 #### Cache Configuration
 ```bash
-CACHE_STRATEGY=auto        # Cache strategy (auto, redis, memory, none)
-CACHE_TTL=3600            # Cache TTL in seconds
-CACHE_PREFIX=3cket:       # Cache key prefix
-REDIS_HOST=redis          # Redis host
-REDIS_PORT=6379           # Redis port
+CACHE_STRATEGY=auto                  # Cache backend selection
+CACHE_TTL=3600                       # Cache time-to-live in seconds
+CACHE_PREFIX=3cket:                  # Cache key prefix
 ```
+
+**Available cache strategies:**
+- **`auto`**: Try Redis first, fallback to in-memory *(recommended for production)*
+- **`redis`**: Use Redis cache (requires Redis server)
+- **`memory`** / **`inmemory`**: Use in-memory cache (single server only)
+- **`none`** / **`null`**: Disable caching (useful for debugging)
+
+**Details:**
+- **`CACHE_TTL`**: How long cached data stays valid (3600 = 1 hour)
+- **`CACHE_PREFIX`**: Prefix for cache keys to avoid conflicts
+
+#### Redis Configuration
+```bash
+REDIS_HOST=redis                     # Redis server hostname
+REDIS_PORT=6379                      # Redis server port
+REDIS_PASSWORD=                      # Redis password (optional)
+REDIS_DATABASE=0                     # Redis database number
+```
+
+**Details:**
+- **`REDIS_HOST`**: Redis server hostname (use `redis` for Docker, `localhost` for local)
+- **`REDIS_PORT`**: Redis port (default: 6379)
+- **`REDIS_PASSWORD`**: Redis password (leave empty if no auth)
+- **`REDIS_DATABASE`**: Redis database number (0-15, default: 0)
 
 #### Logging Configuration
 ```bash
-LOG_LEVEL=INFO            # Log level (DEBUG, INFO, WARNING, ERROR)
-LOG_FORMAT=line           # Log format (line, json)
-LOG_HANDLER=file          # Log handler (file, stdout, stderr, rotating)
+LOG_LEVEL=INFO                       # Minimum log level
+LOG_FORMAT=line                      # Log output format
+LOG_HANDLER=file                     # Log output destination
 ```
 
-#### Data Source Configuration
+**Available log levels:**
+- **`DEBUG`**: Very detailed information (development only)
+- **`INFO`**: General information *(recommended for production)*
+- **`NOTICE`**: Normal but significant events
+- **`WARNING`**: Warning conditions
+- **`ERROR`**: Error conditions
+- **`CRITICAL`**: Critical conditions
+- **`ALERT`**: Action must be taken immediately
+- **`EMERGENCY`**: System is unusable
+
+**Available log formats:**
+- **`line`**: Human-readable format *(recommended)*
+- **`json`**: JSON format (for log aggregation tools)
+
+**Available log handlers:**
+- **`file`**: Write to log files in `logs/` directory *(recommended)*
+- **`stdout`**: Write to standard output
+- **`stderr`**: Write to standard error
+- **`rotating`**: Rotating file handler (creates new files daily)
+- **`null`**: Disable logging
+
+#### Legacy Environment Variables
+
+These variables are supported for backward compatibility:
+
 ```bash
-DATA_SOURCE_STRATEGY=auto # Data source strategy (auto, database, csv)
+CACHE_DRIVER=auto                    # Legacy alias for CACHE_STRATEGY
 ```
+
+**Note:** `CACHE_DRIVER` is an alias for `CACHE_STRATEGY`. Use `CACHE_STRATEGY` in new configurations.
 
 ## Performance Features
 
